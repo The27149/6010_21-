@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="72,61">
+  <displayList>
+    <image id="n0_xbe1" name="n0" src="bzm7k" fileName="room/mahjong/assets/mj2.png" xy="-2,0" scale="0.42,0.42"/>
+    <image id="n1_xbe1" name="n1" src="bzm7k" fileName="room/mahjong/assets/mj2.png" xy="35,0" scale="0.42,0.42"/>
+  </displayList>
+</component>

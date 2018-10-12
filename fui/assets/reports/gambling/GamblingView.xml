@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="719,570">
+  <displayList>
+    <loader id="n0_xbe1" name="n0" xy="0,0" size="719,570" locked="true" url="ui://93n3k04qmeev28" autoSize="true"/>
+    <loader id="n1_xbe1" name="lang_title" xy="337,43" pivot="0.5,0.5" size="50,30" customData="pjxq" url="ui://lm8w3mnoxbe173" align="center" vAlign="middle" autoSize="true"/>
+    <text id="n2_xbe1" name="lang_account" xy="74,128" size="149,21" font="FZZhunYuan-M02S" fontSize="15" color="#ffffff" text="会员帐号：65656326"/>
+    <text id="n3_xbe1" name="lang_single" xy="296,128" size="114,21" font="FZZhunYuan-M02S" fontSize="15" color="#ffffff" text="单号：02515542"/>
+    <text id="n4_xbe1" name="lang_expenditure" xy="502,128" size="85,21" font="FZZhunYuan-M02S" fontSize="15" color="#ffffff" text="收支：5000"/>
+    <text id="n5_xbe1" name="lang_dz" xy="74,157" size="74,21" font="FZZhunYuan-M02S" fontSize="15" color="#ffffff" text="底注：100"/>
+    <text id="n6_xbe1" name="lang_zr" xy="220,157" size="77,21" font="FZZhunYuan-M02S" fontSize="15" color="#ffffff" text="准入：200"/>
+    <list id="n16_xbe1" name="list" xy="62,281" size="588,240" overflow="scroll" defaultItem="ui://93n3k04qbzm7i" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n18_jqun" name="title2" src="bzm7l" fileName="gambling/DetailsTitle.xml" xy="53,222"/>
+    <component id="n19_mbzt" name="closeBtn" src="bzm7m" fileName="CloseBtn.xml" xy="650,43"/>
+  </displayList>
+</component>

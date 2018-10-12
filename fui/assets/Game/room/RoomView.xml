@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" designImage="ui://j9tv3reameev9v" designImageAlpha="80">
+  <controller name="c1" pages="0,L,1,P" selected="1">
+    <remark page="0" value="横版"/>
+    <remark page="1" value="竖版"/>
+  </controller>
+  <displayList>
+    <image id="n0_s48i" name="n0" src="s48i1n" fileName="room/assets/table.png" xy="24,109">
+      <gearDisplay controller="c1" pages="0"/>
+    </image>
+    <image id="n53_meev" name="n53" src="meev9w" fileName="room/assets/table2.png" xy="-30,148" locked="true">
+      <gearDisplay controller="c1" pages="1"/>
+    </image>
+    <image id="n54_meev" name="n54" src="meev9x" fileName="room/vassets/chip10.png" xy="99,1110">
+      <gearDisplay controller="c1" pages="1"/>
+    </image>
+    <image id="n55_meev" name="n55" src="meev9y" fileName="room/vassets/chip6.png" xy="121,609">
+      <gearDisplay controller="c1" pages="1"/>
+    </image>
+    <image id="n56_meev" name="n56" src="meev9z" fileName="room/vassets/chip7.png" xy="925,698">
+      <gearDisplay controller="c1" pages="1"/>
+    </image>
+    <image id="n57_meev" name="n57" src="meeva0" fileName="room/vassets/chip8.png" xy="932,1175">
+      <gearDisplay controller="c1" pages="1"/>
+    </image>
+    <image id="n58_meev" name="n58" src="meeva1" fileName="room/vassets/chip9.png" xy="398,1594">
+      <gearDisplay controller="c1" pages="1"/>
+    </image>
+    <image id="n2_t9kv" name="n2" src="t9kv86" fileName="room/assets/chip.png" xy="333,218" scale="0.92,0.92">
+      <gearXY controller="c1" pages="1" values="333,218" default="735,175"/>
+      <gearSize controller="c1" pages="1" values="456,141,0.92,0.92" default="456,141,1,1"/>
+    </image>
+    <image id="n1_t9kv" name="n1" src="t9kv85" fileName="room/assets/girl.png" xy="199,-246" locked="true" scale="0.9,0.9">
+      <gearXY controller="c1" pages="1" values="199,-246" default="610,-313"/>
+      <gearSize controller="c1" pages="1" values="705,606,0.9,0.9" default="705,606,1,1"/>
+    </image>
+    <image id="n3_t9kv" name="n3" src="t9kv87" fileName="room/assets/cardbox1.png" xy="740,233" locked="true" scale="0.9,0.9">
+      <gearXY controller="c1" pages="1" values="740,233" default="1273,92"/>
+      <gearSize controller="c1" pages="1" values="294,248,0.9,0.9" default="294,248,1,1"/>
+    </image>
+    <image id="n48_kiid" name="n48" src="kiid91" fileName="room/assets/tablez.png" xy="198,433" locked="true">
+      <gearXY controller="c1" pages="1" values="198,433" default="622,342"/>
+    </image>
+    <image id="n4_t9kv" name="cardsBox_full" src="t9kv88" fileName="room/assets/cardbox2.png" xy="164,319" scale="0.9,0.9" visible="false">
+      <gearXY controller="c1" pages="1" values="164,319" default="276,153"/>
+      <gearSize controller="c1" pages="1" values="166,167,0.9,0.9" default="166,167,1,1"/>
+    </image>
+    <image id="n5_t9kv" name="cardsBox_null" src="t9kv89" fileName="room/assets/cardbox3.png" xy="163,319" scale="0.9,0.9">
+      <gearXY controller="c1" pages="1" values="163,319" default="276,153"/>
+      <gearSize controller="c1" pages="1" values="166,167,0.9,0.9" default="166,167,1,1"/>
+    </image>
+    <image id="n6_t9kv" name="chip1" src="t9kv8a" fileName="room/assets/chip1.png" xy="1683,354">
+      <gearDisplay controller="c1" pages="0"/>
+    </image>
+    <image id="n7_t9kv" name="chip2" src="t9kv8b" fileName="room/assets/chip2.png" xy="1367,666">
+      <gearDisplay controller="c1" pages="0"/>
+    </image>
+    <image id="n8_t9kv" name="chip3" src="t9kv8c" fileName="room/assets/chip3.png" xy="783,811">
+      <gearDisplay controller="c1" pages="0"/>
+    </image>
+    <image id="n9_t9kv" name="chip4" src="t9kv8d" fileName="room/assets/chip4.png" xy="303,620">
+      <gearDisplay controller="c1" pages="0"/>
+    </image>
+    <image id="n10_t9kv" name="chip5" src="t9kv8e" fileName="room/assets/chip5.png" xy="177,320">
+      <gearDisplay controller="c1" pages="0"/>
+    </image>
+    <image id="n23_t9kv" name="n23" src="t9kv8n" fileName="room/assets/hand.png" xy="227,1560">
+      <gearXY controller="c1" pages="1" values="227,1560" default="638,754"/>
+    </image>
+    <image id="n11_t9kv" name="n11" src="t9kv8f" fileName="room/assets/dz.png" xy="45,199" scale="0.9,0.9">
+      <gearXY controller="c1" pages="1" values="45,199" default="441,119"/>
+      <gearSize controller="c1" pages="1" values="228,165,0.9,0.9" default="228,165,1,1"/>
+    </image>
+    <component id="n18_t9kv" name="player1" src="t9kv8j" fileName="room/PlayerBox.xml" xy="844,578">
+      <gearXY controller="c1" pages="1" values="844,578" default="1716,459"/>
+    </component>
+    <component id="n19_t9kv" name="player2" src="t9kv8j" fileName="room/PlayerBox.xml" xy="861,1026">
+      <gearXY controller="c1" pages="1" values="861,1026" default="1418,665"/>
+    </component>
+    <component id="n21_t9kv" name="player4" src="t9kv8j" fileName="room/PlayerBox.xml" xy="30,1017">
+      <gearXY controller="c1" pages="1" values="30,1017" default="295,654"/>
+    </component>
+    <component id="n22_t9kv" name="player5" src="t9kv8j" fileName="room/PlayerBox.xml" xy="44,514">
+      <gearXY controller="c1" default="44,514"/>
+    </component>
+    <component id="n25_t9kv" name="chipBox5" src="t9kv8o" fileName="room/BetsChipBox.xml" xy="299,845" skew="360,0">
+      <gearXY controller="c1" pages="0,1" values="281,469|299,845"/>
+      <gearSize controller="c1" pages="1" values="86,30,1,1" default="86,30,0.82,1.05"/>
+      <gearLook controller="c1" pages="1" values="1,0,0,1" default="1,55,0,1"/>
+    </component>
+    <component id="n26_t9kv" name="chipBox4" src="t9kv8o" fileName="room/BetsChipBox.xml" xy="299,1255" skew="360,0">
+      <gearXY controller="c1" pages="0,1" values="527,684|299,1255"/>
+      <gearSize controller="c1" pages="0" values="86,30,0.95,1" default="86,30,1,1"/>
+      <gearLook controller="c1" pages="0,1" values="1,30,0,1|1,0,0,1"/>
+    </component>
+    <component id="n27_t9kv" name="chipBox3" src="t9kv8o" fileName="room/BetsChipBox.xml" xy="500,1563" skew="360,0">
+      <gearXY controller="c1" pages="0" values="915,775" default="500,1563"/>
+      <gearSize controller="c1" default="86,30,1,1"/>
+      <gearLook controller="c1" default="1,0,0,1"/>
+    </component>
+    <component id="n28_t9kv" name="chipBox2" src="t9kv8o" fileName="room/BetsChipBox.xml" xy="710,1255" skew="360,0">
+      <gearXY controller="c1" pages="0,1" values="1300,734|710,1255"/>
+      <gearSize controller="c1" default="86,30,1,1"/>
+      <gearLook controller="c1" pages="1" values="1,0,0,1" default="1,-28,0,1"/>
+    </component>
+    <component id="n29_t9kv" name="chipBox1" src="t9kv8o" fileName="room/BetsChipBox.xml" xy="702,845" skew="360,0">
+      <gearXY controller="c1" pages="0,1" values="1590,528|702,845"/>
+      <gearSize controller="c1" pages="0,1" values="86,30,0.9,1|86,30,1,1"/>
+      <gearLook controller="c1" pages="1" values="1,0,0,1" default="1,-45,0,1"/>
+    </component>
+    <component id="n30_t9kv" name="player3" src="t9kv8q" fileName="room/MyPlayerBox.xml" xy="7,1746">
+      <gearXY controller="c1" pages="0" values="15,899" default="7,1746"/>
+    </component>
+    <component id="n31_t9kv" name="sendPoker6" src="t9kv8v" fileName="room/poker/SendPoker.xml" xy="748,412" scale="0.9,0.9" skew="5,5" rotation="-70">
+      <gearXY controller="c1" pages="1" values="748,412" default="1282,291"/>
+      <gearSize controller="c1" pages="1" values="66,89,0.9,0.9" default="66,89,1,1"/>
+    </component>
+    <component id="n32_t9kv" name="sendPoker5" src="t9kv8v" fileName="room/poker/SendPoker.xml" xy="748,412" scale="0.9,0.9" skew="5,5" rotation="-70">
+      <gearXY controller="c1" pages="1" values="748,412" default="1282,291"/>
+      <gearSize controller="c1" pages="1" values="66,89,0.9,0.9" default="66,89,1,1"/>
+    </component>
+    <component id="n33_t9kv" name="sendPoker4" src="t9kv8v" fileName="room/poker/SendPoker.xml" xy="748,412" scale="0.9,0.9" skew="5,5" rotation="-70">
+      <gearXY controller="c1" pages="1" values="748,412" default="1282,291"/>
+      <gearSize controller="c1" pages="1" values="66,89,0.9,0.9" default="66,89,1,1"/>
+    </component>
+    <component id="n34_t9kv" name="sendPoker3" src="t9kv8v" fileName="room/poker/SendPoker.xml" xy="748,412" scale="0.9,0.9" skew="5,5" rotation="-70">
+      <gearXY controller="c1" pages="1" values="748,412" default="1282,291"/>
+      <gearSize controller="c1" pages="1" values="66,89,0.9,0.9" default="66,89,1,1"/>
+    </component>
+    <component id="n35_t9kv" name="sendPoker2" src="t9kv8v" fileName="room/poker/SendPoker.xml" xy="748,412" scale="0.9,0.9" skew="5,5" rotation="-70">
+      <gearXY controller="c1" pages="1" values="748,412" default="1282,291"/>
+      <gearSize controller="c1" pages="1" values="66,89,0.9,0.9" default="66,89,1,1"/>
+    </component>
+    <component id="n36_t9kv" name="sendPoker1" src="t9kv8v" fileName="room/poker/SendPoker.xml" xy="748,412" scale="0.9,0.9" skew="5,5" rotation="-70">
+      <gearXY controller="c1" pages="1" values="748,412" default="1282,291"/>
+      <gearSize controller="c1" pages="1" values="66,89,0.9,0.9" default="66,89,1,1"/>
+    </component>
+    <component id="n39_kiid" name="sendBtn" src="kiid90" fileName="room/assets/Button5.xml" xy="432,1808">
+      <gearXY controller="c1" pages="0,1" values="865,877|432,1808"/>
+    </component>
+    <component id="n49_kiid" name="betBtnView" src="kiid9o" fileName="room/BetBtnView.xml" xy="134,1686">
+      <gearXY controller="c1" pages="1" values="134,1686" default="554,976"/>
+    </component>
+    <component id="n50_nur6" name="pokerBtnView" src="kiid9t" fileName="room/PokerBtnView.xml" xy="135,1689">
+      <gearXY controller="c1" pages="0" values="554,976" default="135,1689"/>
+    </component>
+    <component id="n51_nur6" name="insuranceBtn" src="nur69u" fileName="room/InsuranceBtnView.xml" xy="646,1806">
+      <gearXY controller="c1" pages="1" values="646,1806" default="1466,943"/>
+    </component>
+  </displayList>
+  <transition name="t2"/>
+</component>

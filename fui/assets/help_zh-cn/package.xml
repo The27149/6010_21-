@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="fmle8vp5" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="n5qo0" name="help_title.png" path="/" exported="true"/>
+  </resources>
+  <publish name="help_zh-cn" path="{rootPath}\assets\help\zh-cn"/>
+</packageDescription>

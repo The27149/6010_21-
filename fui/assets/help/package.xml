@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="fzzpxcn5" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="n5qo1" name="下拉.png" path="/assest/"/>
+    <image id="n5qo2" name="kk4.png" path="/assest/"/>
+    <component id="n5qo3" name="HelpView.xml" path="/" exported="true"/>
+    <component id="n5qo4" name="ShowList.xml" path="/"/>
+    <component id="n5qo5" name="CloseBtn.xml" path="/"/>
+    <image id="n5qo6" name="close.png" path="/assest/"/>
+  </resources>
+  <publish name="help" path="{rootPath}\assets\help" genCode="true"/>
+</packageDescription>

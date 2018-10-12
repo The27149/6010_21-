@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="761,28">
+  <displayList>
+    <text id="n9_jqun" name="lang_0" xy="16,3" pivot="0.5,0.5" size="35,21" customData="107061" font="FZZhunYuan-M30" fontSize="15" color="#d7e0ff" align="center" text="单号"/>
+    <text id="n10_jqun" name="lang_1" xy="79,3" pivot="0.5,0.5" size="51,21" customData="107054" font="FZZhunYuan-M30" fontSize="15" color="#d7e0ff" align="center" text="牌局ID"/>
+    <text id="n11_jqun" name="lang_2" xy="155,3" pivot="0.5,0.5" size="65,21" customData="107062" font="FZZhunYuan-M30" fontSize="15" color="#d7e0ff" align="center" text="开始时间"/>
+    <text id="n12_jqun" name="lang_3" xy="240,3" pivot="0.5,0.5" size="80,21" customData="200021" font="FZZhunYuan-M30" fontSize="15" color="#d7e0ff" align="center" text="总下注金额"/>
+    <text id="n13_jqun" name="lang_4" xy="343,3" pivot="0.5,0.5" size="65,21" customData="200022" font="FZZhunYuan-M30" fontSize="15" color="#d7e0ff" align="center" text="有效下注"/>
+    <text id="n15_jqun" name="lang_5" xy="444,3" pivot="0.5,0.5" size="35,21" customData="107063" font="FZZhunYuan-M30" fontSize="15" color="#d7e0ff" align="center" text="收支"/>
+    <text id="n16_jqun" name="lang_6" xy="510,3" pivot="0.5,0.5" size="65,21" customData="107064" font="FZZhunYuan-M30" fontSize="15" color="#d7e0ff" align="center" text="开始筹码"/>
+    <text id="n17_jqun" name="lang_7" xy="603,3" pivot="0.5,0.5" size="65,21" customData="107065" font="FZZhunYuan-M30" fontSize="15" color="#d7e0ff" align="center" text="结束筹码"/>
+    <text id="n18_jqun" name="lang_8" xy="697,3" pivot="0.5,0.5" size="35,21" customData="107072" font="FZZhunYuan-M30" fontSize="15" color="#d7e0ff" align="center" text="详情"/>
+  </displayList>
+</component>

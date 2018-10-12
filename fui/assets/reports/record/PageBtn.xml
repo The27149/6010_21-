@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="358,54">
+  <displayList>
+    <image id="n4_bzm7" name="pgDn" src="bzm71t" fileName="record/assets1/fyk.png" xy="0,0"/>
+    <image id="n5_bzm7" name="n5" src="bzm71q" fileName="record/assets1/fy.png" xy="104,9"/>
+    <text id="n3_9qkj" name="pageTxt" xy="110,14" size="135,27" font="FZCuYuan-M03" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="1/5"/>
+    <loader id="n6_bzm7" name="lang_dn" xy="21,15" pivot="0.5,0.5" size="64,22" url="ui://93n3k04qbzm71r" align="center" vAlign="middle" autoSize="true"/>
+    <image id="n7_bzm7" name="pgUp" src="bzm71t" fileName="record/assets1/fyk.png" xy="254,0"/>
+    <loader id="n8_bzm7" name="lang_on" xy="275,15" pivot="0.5,0.5" size="64,22" url="ui://93n3k04qbzm71r" align="center" vAlign="middle" autoSize="true"/>
+  </displayList>
+</component>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="fqdhitys" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="n5qo4" name="room_music.png" path="/menu/" exported="true"/>
+    <image id="n5qo5" name="room_home.png" path="/menu/" exported="true"/>
+    <image id="n5qo6" name="room_reports.png" path="/menu/" exported="true"/>
+    <image id="n5qo7" name="room_help.png" path="/menu/" exported="true"/>
+    <image id="n5qo8" name="music_title.png" path="/music/" exported="true"/>
+    <image id="n5qo9" name="music_yx.png" path="/music/" exported="true"/>
+    <image id="n5qoa" name="music_yy.png" path="/music/" exported="true"/>
+    <image id="nur6b" name="zdz_btn.png" path="/room/btn/" exported="true"/>
+    <image id="nur6c" name="zxz_btn.png" path="/room/btn/" exported="true"/>
+    <image id="nur6d" name="yp_btn.png" path="/room/btn/" exported="true"/>
+    <image id="nur6e" name="tp_btn.png" path="/room/btn/" exported="true"/>
+    <image id="nur6f" name="xy_btn.png" path="/room/btn/" exported="true"/>
+    <image id="nur6g" name="xz_btn.png" path="/room/btn/" exported="true"/>
+    <image id="nur6h" name="fp_btn.png" path="/room/btn/" exported="true"/>
+    <image id="nur6i" name="sb_btn.png" path="/room/btn/" exported="true"/>
+    <image id="nur6j" name="bm_btn.png" path="/room/btn/" exported="true"/>
+    <image id="nur6k" name="mbx_btn.png" path="/room/btn/" exported="true"/>
+  </resources>
+  <publish name="zh_cn" path="{rootPath}\assets\zh-cn"/>
+</packageDescription>

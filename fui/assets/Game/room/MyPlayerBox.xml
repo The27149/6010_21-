@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="391,176">
+  <displayList>
+    <image id="n0_t9kv" name="n0" src="t9kv8r" fileName="room/assets/Goldcoin.png" xy="152,106"/>
+    <image id="n1_t9kv" name="n1" src="t9kv8s" fileName="room/assets/Headk1.png" xy="0,0"/>
+    <image id="n2_t9kv" name="n2" src="t9kv8t" fileName="room/assets/gold.png" xy="163,110"/>
+    <text id="n3_t9kv" name="coin" xy="210,119" size="169,34" font="FZZhunYuan-M02S" fontSize="24" color="#ffff00" align="center" autoSize="none" text="3500.48"/>
+    <loader id="n4_t9kv" name="avatar" xy="8,5" size="146,145" url="ui://j9tv3reat9kv8k" fill="scaleMatchHeight"/>
+    <text id="n5_t9kv" name="playerNmae" xy="163,64" size="223,34" font="FZZhunYuan-M02S" fontSize="24" color="#ffffff" align="center" autoSize="none" text="奥特曼打小怪兽"/>
+  </displayList>
+</component>

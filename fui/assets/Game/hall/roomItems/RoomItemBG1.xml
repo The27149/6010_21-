@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="236,240" designImage="ui://j9tv3reaooir66" designImageAlpha="80">
+  <displayList>
+    <image id="n10_ooir" name="n10" src="ooir65" fileName="components/hall/roomItems/assets/cck.png" xy="38,233"/>
+    <text id="n4_ey5e" name="lowest1" xy="85,251" size="81,24" font="Microsoft YaHei" fontSize="15" color="#ffffff" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="3.00">
+      <relation target="n7_ms3n" sidePair="right-right"/>
+    </text>
+    <text id="n7_ms3n" name="lang_zr" xy="45,251" size="39,24" customData="200000" font="Microsoft YaHei" fontSize="15" color="#ffffff" align="center" vAlign="middle" text="准入:"/>
+    <text id="n12_ooir" name="antes1" xy="115,232" size="81,24" font="Microsoft YaHei" fontSize="15" color="#ffffff" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="3.00">
+      <relation target="n13_ooir" sidePair="right-right"/>
+    </text>
+    <text id="n13_ooir" name="lang_dz" xy="45,232" size="69,24" customData="200001" font="Microsoft YaHei" fontSize="15" color="#ffffff" align="center" vAlign="middle" text="投注限额:"/>
+    <image id="n14_n5qo" name="n14" src="ooir66" fileName="components/hall/roomItems/assets/dzk1.png" xy="0,0"/>
+  </displayList>
+</component>

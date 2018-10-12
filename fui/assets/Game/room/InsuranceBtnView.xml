@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="418,91">
+  <displayList>
+    <component id="n0_nur6" name="noBtn" src="kiid9q" fileName="room/assets/Button7.xml" xy="0,0"/>
+    <component id="n1_nur6" name="yesBtn" src="kiid9r" fileName="room/assets/Button8.xml" xy="217,2"/>
+  </displayList>
+</component>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="j9tv3rea" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="s48i0" name="m2.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i1" name="m3.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i2" name="m4.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i3" name="m5.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i4" name="m6.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i5" name="m7.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i6" name="m8.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i7" name="m9.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i8" name="m10.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i9" name="ma.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48ia" name="mj.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48ib" name="mk.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48ic" name="mq.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48id" name="r2.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48ie" name="r3.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48if" name="r4.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48ig" name="r5.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48ih" name="r6.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48ii" name="r7.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48ij" name="r8.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48ik" name="r9.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48il" name="r10.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48im" name="ra.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48in" name="rj.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48io" name="rk.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48ip" name="rq.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48iq" name="xg.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48ir" name="bg.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48is" name="dg.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48it" name="f2.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48iu" name="f3.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48iv" name="f4.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48iw" name="f5.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48ix" name="f6.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48iy" name="f7.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48iz" name="f8.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i10" name="f9.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i11" name="f10.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i12" name="fa.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i13" name="fj.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i14" name="fk.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i15" name="fq.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i16" name="h2.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i17" name="h3.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i18" name="h4.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i19" name="h5.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i1a" name="h6.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i1b" name="h7.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i1c" name="h8.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i1d" name="h9.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i1e" name="h10.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i1f" name="ha.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i1g" name="hj.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i1h" name="hk.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i1i" name="hq.png" path="/room/poker/assets/" exported="true"/>
+    <image id="s48i1j" name="21点房间效果图.png" path="/room/assets/"/>
+    <component id="s48i1k" name="RoomView.xml" path="/room/" exported="true"/>
+    <image id="s48i1m" name="bg.png" path="/room/assets/"/>
+    <image id="s48i1n" name="table.png" path="/room/assets/"/>
+    <component id="npwg2h" name="BriefBar.xml" path="/hall/briefBar/" exported="true"/>
+    <image id="npwg2i" name="avatar_2.png" path="/room/avatar/" exported="true"/>
+    <component id="npwg2q" name="MenuView.xml" path="/hall/menu/" exported="true"/>
+    <component id="npwg2r" name="help.xml" path="/hall/menu/"/>
+    <component id="npwg2s" name="home.xml" path="/hall/menu/"/>
+    <component id="npwg2t" name="music.xml" path="/hall/menu/"/>
+    <component id="npwg2u" name="reports.xml" path="/hall/menu/"/>
+    <component id="npwg2v" name="room_help.xml" path="/hall/menu/"/>
+    <component id="npwg2w" name="room_home.xml" path="/hall/menu/"/>
+    <component id="npwg2x" name="room_music.xml" path="/hall/menu/"/>
+    <component id="npwg2y" name="room_reports.xml" path="/hall/menu/"/>
+    <component id="npwg2z" name="switch_on.xml" path="/hall/menu/"/>
+    <component id="npwg30" name="switch_off.xml" path="/hall/menu/"/>
+    <image id="npwg34" name="music_grip.png" path="/hall/music/assets/"/>
+    <component id="npwg38" name="MusicView.xml" path="/hall/music/" exported="true"/>
+    <component id="npwg39" name="SoundBtn.xml" path="/hall/music/"/>
+    <component id="npwg3c" name="CloseBtn.xml" path="/components/"/>
+    <image id="npwg3d" name="closeBtnImg.png" path="/components/popup/"/>
+    <component id="npwg57" name="BackgroundL.xml" path="/hall/背景/" exported="true"/>
+    <component id="npwg5h" name="BackgroundP.xml" path="/hall/背景/" exported="true"/>
+    <component id="npwg5v" name="RoomItemBG1.xml" path="/hall/roomItems/" exported="true"/>
+    <component id="npwg5y" name="RoomItemBG2.xml" path="/hall/roomItems/" exported="true"/>
+    <component id="npwg5z" name="RoomItemBG3.xml" path="/hall/roomItems/" exported="true"/>
+    <component id="npwg60" name="RoomItemBG4.xml" path="/hall/roomItems/" exported="true"/>
+    <component id="npwg62" name="RoomItems.xml" path="/hall/roomItems/" exported="true"/>
+    <image id="npwg63" name="bj.png" path="/hall/背景/assets/"/>
+    <image id="npwg64" name="bjs.png" path="/hall/背景/assets/"/>
+    <image id="ooir65" name="cck.png" path="/hall/roomItems/assets/"/>
+    <image id="ooir66" name="dzk1.png" path="/hall/roomItems/assets/"/>
+    <image id="ooir67" name="dzk2.png" path="/hall/roomItems/assets/"/>
+    <image id="ooir68" name="dzk3.png" path="/hall/roomItems/assets/"/>
+    <image id="ooir69" name="dzk4.png" path="/hall/roomItems/assets/"/>
+    <movieclip id="baul6b" name="logoAni.jta" path="/hall/背景/"/>
+    <image id="baul6c" name="lg_05.png" path="/hall/背景/logo/"/>
+    <image id="baul6d" name="lg_06.png" path="/hall/背景/logo/"/>
+    <image id="baul6e" name="lg_07.png" path="/hall/背景/logo/"/>
+    <image id="baul6f" name="lg_08.png" path="/hall/背景/logo/"/>
+    <image id="baul6g" name="lg_09.png" path="/hall/背景/logo/"/>
+    <image id="baul6h" name="lg_10.png" path="/hall/背景/logo/"/>
+    <image id="baul6i" name="lg_11.png" path="/hall/背景/logo/"/>
+    <image id="baul6j" name="lg_12.png" path="/hall/背景/logo/"/>
+    <image id="baul6k" name="lg_13.png" path="/hall/背景/logo/"/>
+    <image id="baul6l" name="lg_14.png" path="/hall/背景/logo/"/>
+    <image id="baul6m" name="lg_15.png" path="/hall/背景/logo/"/>
+    <image id="baul6n" name="lg_16.png" path="/hall/背景/logo/"/>
+    <image id="baul6o" name="lg_17.png" path="/hall/背景/logo/"/>
+    <image id="baul6p" name="lg_18.png" path="/hall/背景/logo/"/>
+    <image id="baul6q" name="lg_19.png" path="/hall/背景/logo/"/>
+    <image id="baul6r" name="lg_00.png" path="/hall/背景/logo/"/>
+    <image id="baul6s" name="lg_01.png" path="/hall/背景/logo/"/>
+    <image id="baul6t" name="lg_02.png" path="/hall/背景/logo/"/>
+    <image id="baul6u" name="lg_03.png" path="/hall/背景/logo/"/>
+    <image id="baul6v" name="lg_04.png" path="/hall/背景/logo/"/>
+    <component id="baul6w" name="logoView.xml" path="/hall/背景/" exported="true"/>
+    <image id="n5qo6z" name="txk.png" path="/hall/背景/assets/"/>
+    <image id="n5qo71" name="jbk.png" path="/hall/briefBar/assets/"/>
+    <image id="n5qo72" name="jb.png" path="/hall/briefBar/assets/"/>
+    <image id="n5qo73" name="bz.png" path="/hall/menu/assets/"/>
+    <image id="n5qo74" name="dt.png" path="/hall/menu/assets/"/>
+    <image id="n5qo75" name="sz.png" path="/hall/menu/assets/"/>
+    <image id="n5qo76" name="bb.png" path="/hall/menu/assets/"/>
+    <image id="n5qo77" name="yt.png" path="/hall/menu/assets/"/>
+    <image id="n5qo78" name="k.png" path="/hall/menu/assets/"/>
+    <image id="n5qo79" name="dt0.png" path="/hall/menu/assets/"/>
+    <image id="n5qo7a" name="dtk.png" path="/hall/menu/assets/"/>
+    <image id="n5qo7b" name="txk1.png" path="/hall/briefBar/assets/"/>
+    <image id="n5qo7c" name="avatar_1.png" path="/room/avatar/" exported="true"/>
+    <image id="n5qo7d" name="avatar_3.png" path="/room/avatar/" exported="true"/>
+    <image id="n5qo7e" name="avatar_4.png" path="/room/avatar/" exported="true"/>
+    <image id="n5qo7f" name="avatar_5.png" path="/room/avatar/" exported="true"/>
+    <image id="n5qo7g" name="avatar_1001.png" path="/room/avatar/" exported="true"/>
+    <image id="n5qo7h" name="avatar_1002.png" path="/room/avatar/" exported="true"/>
+    <image id="n5qo7i" name="avatar_1003.png" path="/room/avatar/" exported="true"/>
+    <image id="n5qo7j" name="avatar_1004.png" path="/room/avatar/" exported="true"/>
+    <image id="n5qo7k" name="avatar_1005.png" path="/room/avatar/" exported="true"/>
+    <image id="n5qo7l" name="close.png" path="/components/"/>
+    <image id="n5qo7m" name="k5.png" path="/hall/music/assets/"/>
+    <image id="n5qo7n" name="musick.png" path="/hall/music/assets/"/>
+    <image id="n5qo7o" name="musick0.png" path="/hall/music/assets/" scale="tile" scale9grid="87,6,174,12"/>
+    <image id="n5qo7r" name="yx.png" path="/hall/music/assets/"/>
+    <image id="n5qo7t" name="yy.png" path="/hall/music/assets/"/>
+    <image id="n5qo7v" name="musick1.png" path="/hall/music/assets/"/>
+    <component id="n5qo7w" name="SliderMusic_grip.xml" path="/hall/music/"/>
+    <component id="n5qo7x" name="SliderMusic.xml" path="/hall/music/"/>
+    <component id="n5qo7y" name="RoomBGView.xml" path="/room/" exported="true"/>
+    <image id="t9kv85" name="girl.png" path="/room/assets/"/>
+    <image id="t9kv86" name="chip.png" path="/room/assets/"/>
+    <image id="t9kv87" name="cardbox1.png" path="/room/assets/"/>
+    <image id="t9kv88" name="cardbox2.png" path="/room/assets/"/>
+    <image id="t9kv89" name="cardbox3.png" path="/room/assets/"/>
+    <image id="t9kv8a" name="chip1.png" path="/room/assets/"/>
+    <image id="t9kv8b" name="chip2.png" path="/room/assets/"/>
+    <image id="t9kv8c" name="chip3.png" path="/room/assets/"/>
+    <image id="t9kv8d" name="chip4.png" path="/room/assets/"/>
+    <image id="t9kv8e" name="chip5.png" path="/room/assets/"/>
+    <image id="t9kv8f" name="dz.png" path="/room/assets/"/>
+    <component id="t9kv8g" name="ChipItem.xml" path="/room/" exported="true"/>
+    <image id="t9kv8h" name="c1.png" path="/room/assets/"/>
+    <image id="t9kv8i" name="c2.png" path="/room/assets/"/>
+    <component id="t9kv8j" name="PlayerBox.xml" path="/room/" exported="true"/>
+    <image id="t9kv8k" name="Head.png" path="/room/avatar/"/>
+    <image id="t9kv8l" name="Countdown.png" path="/room/assets/"/>
+    <image id="t9kv8m" name="Headk.png" path="/room/assets/"/>
+    <image id="t9kv8n" name="hand.png" path="/room/assets/"/>
+    <component id="t9kv8o" name="BetsChipBox.xml" path="/room/" exported="true"/>
+    <image id="t9kv8p" name="szk1.png" path="/room/assets/"/>
+    <component id="t9kv8q" name="MyPlayerBox.xml" path="/room/" exported="true"/>
+    <image id="t9kv8r" name="Goldcoin.png" path="/room/assets/"/>
+    <image id="t9kv8s" name="Headk1.png" path="/room/assets/"/>
+    <image id="t9kv8t" name="gold.png" path="/room/assets/"/>
+    <component id="t9kv8u" name="PokerItem.xml" path="/room/poker/" exported="true"/>
+    <component id="t9kv8v" name="SendPoker.xml" path="/room/poker/"/>
+    <image id="kiid8w" name="Button1.png" path="/room/assets/"/>
+    <image id="kiid8x" name="Button2.png" path="/room/assets/"/>
+    <image id="kiid8y" name="Button3.png" path="/room/assets/"/>
+    <image id="kiid8z" name="Button4.png" path="/room/assets/"/>
+    <component id="kiid90" name="Button5.xml" path="/room/assets/"/>
+    <image id="kiid91" name="tablez.png" path="/room/assets/"/>
+    <image id="kiid92" name="djxz.png" path="/room/assets/"/>
+    <image id="kiid93" name="dragon.png" path="/room/assets/"/>
+    <image id="kiid94" name="fj.png" path="/room/assets/"/>
+    <image id="kiid97" name="jxyx.png" path="/room/assets/"/>
+    <image id="kiid98" name="jz.png" path="/room/assets/"/>
+    <image id="kiid9c" name="tp.png" path="/room/assets/"/>
+    <image id="kiid9f" name="xzwc.png" path="/room/assets/"/>
+    <image id="kiid9h" name="yp.png" path="/room/assets/"/>
+    <image id="kiid9j" name="zk1.png" path="/room/assets/"/>
+    <image id="kiid9k" name="zk2.png" path="/room/assets/"/>
+    <image id="kiid9m" name="blackjack.png" path="/room/assets/"/>
+    <image id="kiid9n" name="care.png" path="/room/assets/"/>
+    <component id="kiid9o" name="BetBtnView.xml" path="/room/"/>
+    <component id="kiid9p" name="Button6.xml" path="/room/assets/"/>
+    <component id="kiid9q" name="Button7.xml" path="/room/assets/"/>
+    <component id="kiid9r" name="Button8.xml" path="/room/assets/"/>
+    <component id="kiid9t" name="PokerBtnView.xml" path="/room/"/>
+    <component id="nur69u" name="InsuranceBtnView.xml" path="/room/"/>
+    <image id="meev9v" name="bg2.png" path="/room/assets/"/>
+    <image id="meev9w" name="table2.png" path="/room/assets/"/>
+    <image id="meev9x" name="chip10.png" path="/room/vassets/"/>
+    <image id="meev9y" name="chip6.png" path="/room/vassets/"/>
+    <image id="meev9z" name="chip7.png" path="/room/vassets/"/>
+    <image id="meeva0" name="chip8.png" path="/room/vassets/"/>
+    <image id="meeva1" name="chip9.png" path="/room/vassets/"/>
+  </resources>
+  <publish name="Game" path="{rootPath}\assets\preload" genCode="true"/>
+</packageDescription>

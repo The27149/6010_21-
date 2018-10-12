@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="757,28">
+  <displayList>
+    <text id="n6_dvvd" name="lang_0" xy="21,4" pivot="0.5,0.5" size="35,21" customData="107061" font="FZZhunYuan-M03" fontSize="15" color="#bac4ff" align="center" vAlign="middle" text="单号"/>
+    <text id="n7_dvvd" name="lang_1" xy="133,4" pivot="0.5,0.5" size="35,21" font="FZZhunYuan-M03" fontSize="15" color="#bac4ff" align="center" vAlign="middle" text="类型"/>
+    <text id="n8_dvvd" name="lang_2" xy="276,4" pivot="0.5,0.5" size="65,21" customData="107062" font="FZZhunYuan-M03" fontSize="15" color="#bac4ff" align="center" vAlign="middle" text="开始时间"/>
+    <text id="n9_dvvd" name="lang_3" xy="438,4" pivot="0.5,0.5" size="35,21" customData="107060" font="FZZhunYuan-M03" fontSize="15" color="#bac4ff" align="center" vAlign="middle" text="收支"/>
+    <text id="n10_dvvd" name="lang_4" xy="537,4" pivot="0.5,0.5" size="65,21" customData="107064" font="FZZhunYuan-M03" fontSize="15" color="#bac4ff" align="center" vAlign="middle" text="开始筹码"/>
+    <text id="n11_dvvd" name="lang_5" xy="664,4" pivot="0.5,0.5" size="65,21" customData="107065" font="FZZhunYuan-M03" fontSize="15" color="#bac4ff" align="center" vAlign="middle" text="结束筹码"/>
+  </displayList>
+</component>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="227,43">
+  <displayList>
+    <loader id="n0_jo66" name="n0" xy="1,1" size="225,34" url="ui://93n3k04qmeev23" autoSize="true"/>
+    <loader id="n2_jo66" name="pgDn" xy="-3,-1" size="48,45" url="ui://93n3k04qmeev1z" autoSize="true"/>
+    <loader id="n3_jo66" name="pgUp" xy="233,-1" size="48,45" scale="-1,1" url="ui://93n3k04qmeev1z" autoSize="true"/>
+    <text id="n4_jo66" name="pageTxt" xy="45,7" size="139,25" font="FZZhunYuan-M03" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="2018年"/>
+  </displayList>
+</component>

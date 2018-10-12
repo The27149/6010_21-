@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="727,796">
+  <controller name="c1" pages="0,L,1,P" selected="0"/>
+  <displayList>
+    <component id="n0_7oen" name="item1" src="npwg5v" fileName="components/hall/roomItems/RoomItemBG1.xml" xy="0,0">
+      <gearXY controller="c1" default="0,0"/>
+    </component>
+    <component id="n6_7oen" name="item2" src="npwg5y" fileName="components/hall/roomItems/RoomItemBG2.xml" xy="344,0">
+      <gearXY controller="c1" pages="0" values="344,0" default="261,191"/>
+    </component>
+    <component id="n12_7oen" name="item3" src="npwg5z" fileName="components/hall/roomItems/RoomItemBG3.xml" xy="180,281">
+      <gearXY controller="c1" pages="0" values="180,281" default="0,346"/>
+    </component>
+    <component id="n15_7oen" name="item4" src="npwg60" fileName="components/hall/roomItems/RoomItemBG4.xml" xy="505,281">
+      <gearXY controller="c1" pages="0" values="505,281" default="275,560"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="602,362" overflow="scroll" scrollBar="visible" scrollBarRes="ui://fzzpxcn5t9kvl,">
+  <displayList>
+    <text id="n0_n5qo" name="n0" xy="0,0" size="601,242" customData="200005" font="FZCuYuan-M03" fontSize="18" color="#735b9f" autoSize="height" text="用牌：利用中国麻将中，单一色筒子牌（一筒到九筒，每一种花色4张牌，一共36张牌），外加白皮4张牌，共有40张牌，发完所有牌为一轮，共5轮。\n玩家：通过抢庄，将同桌四个玩家分为庄家（1方）跟闲家（3方），总共四方。\n发牌：根据掷出2个骰子之和决定发牌顺序，1是庄家，2是庄家的下家，逆时针以此类推。\n派彩：根据大小判断输赢，庄家依次跟3个闲家比较大小，独立赔付，牌型完全一样时，庄家赢。\n抢庄：抢庄时，玩家可以通过选择抢庄倍数进行抢庄，最高100倍，选择抢庄倍数越高的玩家成为庄家的概率越大，抢庄倍数是指抢庄玩家本局能承受的最大赔付金额是底注的多少倍。\n下注：下注时，玩家可以通过选择下注倍数进行下注。下注倍数是指玩家本局实际下注金额是底注的多少倍。"/>
+  </displayList>
+</component>

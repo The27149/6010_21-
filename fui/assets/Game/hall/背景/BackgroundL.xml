@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1280,720">
+  <displayList>
+    <image id="n15_npwg" name="n15" src="npwg63" fileName="components/hall/背景/assets/bj.png" xy="0,0"/>
+  </displayList>
+</component>

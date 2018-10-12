@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="159,41">
+  <displayList>
+    <image id="n5_bzm7" name="n5" src="bzm71q" fileName="record/assets1/fy.png" xy="1,4"/>
+    <text id="n2_9qkj" name="txt" xy="8,10" size="116,24" font="FZZhunYuan-M02S" fontSize="16" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="2017/07/10"/>
+    <image id="n6_bzm7" name="n6" src="bzm71x" fileName="record/assets1/fxa.png" xy="119,-2" pivot="0.5,0.5" rotation="270"/>
+  </displayList>
+</component>

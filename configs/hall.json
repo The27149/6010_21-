@@ -1,0 +1,243 @@
+{
+    "hall": {
+        "hallBgSound": "",
+        "background": {
+            "landscape": {
+                "url": "fui.Game.FUI_BackgroundL"
+            },
+            "portrait": {
+                "url": "fui.Game.FUI_BackgroundP"
+            },
+            "scaleMode": "none"
+        },
+        "logo": {
+            "url": "fui.Game.FUI_logoView",
+            "landscape": {
+                "x": "left",
+                "y": "bottom",
+                "marginLeft": "2%",
+                "marginTop": 0,
+                "marginRight": 0,
+                "marginBottom": "1%",
+                "scaleMode": "none"
+            },
+            "portrait": {
+                "x": "center",
+                "y": "bottom",
+                "marginLeft": "2%",
+                "marginTop": 0,
+                "marginRight": 0,
+                "marginBottom": "1%",
+                "scaleMode": "none"
+            }
+        },
+        "brief": { //简要配置
+            "ui_nickname": "nickname", //别名控件属性名
+            "ui_coin": "coin", //金币控件属性名
+            "ui_avatar": "avatar", //头像 GLoader 属性名
+            "url": "fui.Game.FUI_BriefBar", // 简要 fui 组件名
+            "isClick":false
+        },
+        "menu": { //菜单配置
+            "url": "fui.Game.FUI_MenuView",
+            "shrinkedWhenClickOther": true, //当菜单栏展开时，点击非菜单栏，菜单是否自动收缩,弹窗的时候无效
+            "crt": { //控制器，控制着你菜单栏的每个状态
+                "out_l_off": 0, //房间外_横屏_关闭
+                "out_l_on": 1, //房间外_横屏_展开
+                "out_p_off": 0, //房间外_竖屏_关闭
+                "out_p_on": 1, //房间外_竖屏_展开
+                "in_l_off": 4, //房间内_横屏_关闭 如果为-1 则为out_l_off
+                "in_l_on": 5, //房间内_横屏_展开 如果为-1 则为out_l_on
+                "in_p_off": 4, //房间内_竖屏_关闭 如果为-1 则为out_p_off
+                "in_p_on": 5 //房间内_竖屏_展开 如果为-1 则为out_p_on
+            },
+            "soundName": "",
+            "expandedWhenStart_out": true, //启动时是否打开状态    
+            "expandedWhenStart_in": false, //启动时是否打开状态      
+            "out": {
+                "x": "right:-10", //x 坐标
+                "y": "top:5", //y 坐标
+                "fringe_x": "right:-10", //x 坐标(刘海屏app)
+                "fringe_y": "top:40" //y 坐标(刘海屏app)
+            },
+            "in": {
+                "x": "left:40", //x 坐标
+                "y": "top:60", //y 坐标
+                "fringe_x": "left:40", //x 坐标(刘海屏app)
+                "fringe_y": "top:60" //y 坐标(刘海屏app)
+            }
+        },
+        "gameSetting": { //每个项目展示的不同（可根据下面的命名）
+            
+            "url": "fui.Game.FUI_MusicView", //组件路径
+            "musicSlider": "musicSlider", //音乐滑动条组件命名
+            "soundSlider": "soundSlider", //音效滑动条组件命名
+            "digSlider": "", //对话滑动条组件命名
+            "closeBtn": "closeBtn", //关闭按钮组件命名
+            "musicTog": "musicTog", //音乐开关按钮组件命名
+            "soundTog": "soundTog", //音效开关按钮组件命名
+            "dialogTog": "", //对话开关按钮组件命名
+            "closeSoundName": "", //关闭按钮音效
+            "musicTogSoundName": "", //音乐开关音效
+            "soundTogSoundName": "", //音效开关音效
+            "dialogTogSoundName": "", //对话开关音效
+            "landscape": {
+                "marginLeft": "25%",
+                "marginTop": "25%",
+                "marginRight": "25%",
+                "marginBottom": "25%",
+                "scaleMode": "show_all"
+            },
+            "portrait": {
+                "marginLeft": "10%",
+                "marginTop": "15%",
+                "marginRight": "10%",
+                "marginBottom": "15%",
+                "scaleMode": "show_all"
+            }
+        },
+        "role": { //大厅角色 - 仅 x,y,scaleX,scaleY 属性支持横竖屏
+            "url": "girl.sk", //资源地址
+            "name_idle": "idle", //空闲动画名
+            "scaleX": 0.8,
+            "scaleY": 0.8,
+            "skinName": "", //皮肤名字
+            "randomSkin": "", //随机皮肤名字
+            "randomTime": 0, //随机时间
+            "landscape": {
+                "show": true,
+                "x": "center",
+                "y": "bottom",
+                "marginLeft": 0,
+                "marginTop": "20%",
+                "marginRight": "50%",
+                "marginBottom": "-10%",
+                "width": 0,
+                "height": 0,
+                "scaleMode": "none"
+            },
+            "portrait": {
+                "show": false,
+                "x": "center",
+                "y": "bottom",
+                "marginLeft": "5%",
+                "marginTop": "20%",
+                "marginRight": "40%",
+                "marginBottom": 0,
+                "width": 0,
+                "height": 0,
+                "scaleMode": "none"
+            }
+        },
+        "help": {
+            "url": "fui.help.FUI_HelpView", //fui组件
+            "btnClose": {
+                "name": "closeBtn", //关闭按钮 在fui组建上的属性名
+                "soundName": "" //按钮的音效
+            },
+            "helpList": {
+                "name": "", //GList帮助按钮列表  --具体的排列和距离由你自己在项目的Glist控制，但需要指定默认资源（默认资源为下面的item）
+                "soundName": "" //点击音效
+            },
+            "item": { //helpList的默认资源 GButton复选框 自行创建，具体效果要自己在子项目搞 
+                "title": "" //GLoader --在item组件上的属性名                
+            },
+            "itemContent": { //显示内容 PS:这是一个GComponent里面放一个loader 记得GComponent 要选择溢出处理为垂直滚动，当然你的需求是横向的，就选横向滚动
+                "name": "itemContent", //GLoader 在itemContent组件上的属性名
+                "contentUrl": "" //fui资源名  --如果没有列表的话默认显示的资源PS如果你的项目不需要按钮列表，只是一张图片的话，这里是默认的资源名
+            },
+            "landscape": {
+                "x": "center",
+                "y": "middle",
+                "scaleX": 1,
+                "scaleY": 1,
+                "marginLeft": "15%",
+                "marginTop": "15%",
+                "marginRight": "15%",
+                "marginBottom": "15%",
+                "scaleMode": "show_all"
+            },
+            "portrait": {
+                "x": "center",
+                "y": "middle",
+                "scaleX": 1,
+                "scaleY": 1,
+                "marginLeft": "10%",
+                "marginTop": "10%",
+                "marginRight": "10%",
+                "marginBottom": "10%",
+                "scaleMode": "show_all"
+            }
+            
+        },
+        "room_items": {
+            "url": "fui.Game.FUI_RoomItems",
+            "itemPreName": "item",
+            "itemCount": 4,
+            "soundName": "",
+            "skeleton_flag": true, //是否动态创建skeleton
+            "skeleton_flag_ctl": false,
+            "itemFormat": 2, //数字的格式化
+            "ctl": "c1",
+            "items_ctl": "",
+            "skeleton_list": [ //skeleton列表
+                {
+                    "url": "21d_cjc.sk", // 如果横竖屏骨骼动画不相同   ["横屏骨骼.sk","竖屏骨骼.sk"]  或者  "通用骨骼.sk"
+                    "x": 0, // ["横屏X","竖屏Y" ]
+                    "y": 0,
+                    "skin": "", //骨骼皮肤名称
+                    "playName": "chujichang", //骨骼动画默认播放名称
+                    "playNameLang": false, //骨骼动画播放名称是否支持后缀加多语言
+                    "layout": 0
+                },
+                {
+                    "url": "21d_zjc.sk",
+                    "x": 0,
+                    "y": 0,
+                    "playName": "", //骨骼动画默认播放名称
+                    "playNameLang": false, //骨骼动画播放名称是否支持后缀加多语言
+                    "layout": 0
+                },
+                {
+                    "url": "21d_gjc.sk",
+                    "x": 0,
+                    "y": 0,
+                    "playName": "", //骨骼动画默认播放名称
+                    "playNameLang": false, //骨骼动画播放名称是否支持后缀加多语言
+                    "layout": 0
+                },
+                {
+                    "url": "21d_zzc.sk",
+                    "x": 0,
+                    "y": 0,
+                    "playName": "", //骨骼动画默认播放名称
+                    "playNameLang": false, //骨骼动画播放名称是否支持后缀加多语言
+                    "layout": 0
+                }
+            ],
+            "landscape": {
+                "x": "center",
+                "y": "middle",
+                "width": "780",
+                "height": "577",
+                "marginLeft": "35%",
+                "marginTop": "18%",
+                "marginRight": "0%",
+                "marginBottom": "2%",
+                "scaleMode": "show_all"
+            },
+            "portrait": {
+                "x": "center",
+                "y": "middle",
+                "width": "420",
+                "height": "1084",
+                "marginLeft": 0,
+                "marginTop": "20%",
+                "marginRight": 0,
+                "marginBottom": "5%",
+                "scaleMode": "show_all"
+            }
+        }
+        
+    }
+}

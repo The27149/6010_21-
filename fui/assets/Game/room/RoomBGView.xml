@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1280">
+  <controller name="c1" pages="0,,1," selected="1"/>
+  <displayList>
+    <image id="n13_t9kv" name="n13" src="s48i1m" fileName="room/assets/bg.png" xy="0,0">
+      <gearDisplay controller="c1" pages="0"/>
+    </image>
+    <image id="n14_meev" name="n14" src="meev9v" fileName="room/assets/bg2.png" xy="0,0">
+      <gearDisplay controller="c1" pages="1"/>
+    </image>
+  </displayList>
+</component>

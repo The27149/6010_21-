@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="757,28">
+  <displayList>
+    <text id="n6_jqun" name="lang_0" xy="21,4" pivot="0.5,0.5" size="35,21" customData="107061" font="FZZhunYuan-M03" fontSize="15" color="#d7e0ff" align="center" vAlign="middle" text="单号"/>
+    <text id="n7_jqun" name="lang_1" xy="134,4" pivot="0.5,0.5" size="35,21" customData="107066" font="FZZhunYuan-M03" fontSize="15" color="#d7e0ff" align="center" vAlign="middle" text="类型"/>
+    <text id="n8_jqun" name="lang_2" xy="278,4" pivot="0.5,0.5" size="65,21" customData="107062" font="FZZhunYuan-M03" fontSize="15" color="#d7e0ff" align="center" vAlign="middle" text="开始时间"/>
+    <text id="n9_jqun" name="lang_3" xy="439,4" pivot="0.5,0.5" size="35,21" customData="107063" font="FZZhunYuan-M03" fontSize="15" color="#d7e0ff" align="center" vAlign="middle" text="收支"/>
+    <text id="n10_jqun" name="lang_4" xy="538,4" pivot="0.5,0.5" size="65,21" customData="107064" font="FZZhunYuan-M03" fontSize="15" color="#d7e0ff" align="center" vAlign="middle" text="开始筹码"/>
+    <text id="n11_jqun" name="lang_5" xy="665,4" pivot="0.5,0.5" size="65,21" customData="107065" font="FZZhunYuan-M03" fontSize="15" color="#d7e0ff" align="center" vAlign="middle" text="结束筹码"/>
+  </displayList>
+</component>

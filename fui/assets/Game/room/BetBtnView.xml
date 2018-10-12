@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="864,89">
+  <displayList>
+    <component id="n1_kiid" name="maxBet" src="kiid9p" fileName="room/assets/Button6.xml" xy="221,0"/>
+    <component id="n2_kiid" name="bet" src="kiid9q" fileName="room/assets/Button7.xml" xy="442,0"/>
+    <component id="n3_kiid" name="goBet" src="kiid9r" fileName="room/assets/Button8.xml" xy="663,0"/>
+    <component id="n5_kiid" name="minBet" src="kiid90" fileName="room/assets/Button5.xml" xy="0,0"/>
+  </displayList>
+</component>

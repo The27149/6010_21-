@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="700,541">
+  <displayList>
+    <image id="n0_n5qo" name="n0" src="n5qo2" fileName="assest/kk4.png" xy="0,0"/>
+    <loader id="n1_n5qo" name="lang_title" xy="265,36" pivot="0.5,0.5" size="159,40" customData="help_title" url="ui://fmle8vp5n5qo0" align="center" vAlign="middle" autoSize="true"/>
+    <component id="n4_n5qo" name="itemContent" src="n5qo4" fileName="ShowList.xml" xy="48,130"/>
+    <component id="n5_n5qo" name="closeBtn" src="n5qo5" fileName="CloseBtn.xml" xy="635,40"/>
+  </displayList>
+</component>

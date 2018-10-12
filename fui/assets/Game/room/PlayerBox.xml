@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="195,244">
+  <displayList>
+    <loader id="n5_t9kv" name="avatar" xy="0,0" size="195,192" url="ui://j9tv3reat9kv8k" autoSize="true"/>
+    <image id="n2_t9kv" name="n2" src="t9kv8m" fileName="room/assets/Headk.png" xy="4,163"/>
+    <loader id="n1_t9kv" name="timeBox" xy="1,162" size="192,82" url="ui://j9tv3reat9kv8l"/>
+    <text id="n3_t9kv" name="playerNmae" xy="15,173" size="165,27" font="FZZhunYuan-M02S" fontSize="20" color="#ffffff" align="center" autoSize="none" text="大圣不是猴"/>
+    <text id="n4_t9kv" name="coin" xy="15,203" size="165,29" font="FZZhunYuan-M02S" fontSize="24" color="#ffff00" align="center" autoSize="none" text="320.15"/>
+  </displayList>
+</component>

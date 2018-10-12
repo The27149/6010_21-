@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="832,597">
+  <controller name="ctl" pages="4,,5," selected="1"/>
+  <displayList>
+    <loader id="n60_bzm7" name="n60" xy="0,0" size="790,597" locked="true" url="ui://93n3k04qbzm71u" autoSize="true"/>
+    <image id="n61_bzm7" name="n61" src="bzm71l" fileName="record/assets1/bt.png" xy="168,27"/>
+    <component id="n21_jqun" name="searchBtn" src="bzm7z" fileName="record/Button1.xml" xy="673,105">
+      <gearXY controller="ctl" pages="5" values="673,105" default="643,105"/>
+    </component>
+    <component id="n17_jqun" name="recordStart" src="bzm710" fileName="record/TimeBox.xml" xy="225,115" group="n22_jqun"/>
+    <component id="n18_jqun" name="recordEnd" src="bzm710" fileName="record/TimeBox.xml" xy="431,114" group="n22_jqun"/>
+    <text id="n19_jqun" name="lang_time" xy="173,124" pivot="0.5,0.5" size="43,24" group="n22_jqun" customData="107079" font="FZZhunYuan-M02S" fontSize="18" color="#7079c5" align="center" bold="true" text="时间"/>
+    <text id="n20_jqun" name="lang_to" xy="393,124" pivot="0.5,0.5" size="24,24" group="n22_jqun" customData="107080" font="FZZhunYuan-M02S" fontSize="18" color="#7079c5" align="center" bold="true" text="到"/>
+    <group id="n22_jqun" name="n22" xy="173,114" size="417,42" advanced="true" collapsed="true">
+      <gearDisplay controller="ctl" pages="4"/>
+    </group>
+    <component id="n34_jqun" name="n34" src="bzm711" fileName="record/CardRecord.xml" xy="23,177">
+      <gearDisplay controller="ctl" pages="4"/>
+    </component>
+    <list id="n36_jqun" name="recordList" xy="30,221" size="769,215" overflow="scroll" lineGap="10" defaultItem="ui://93n3k04qbzm712" autoClearItems="true">
+      <gearDisplay controller="ctl" pages="4"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n37_jqun" name="page" src="bzm713" fileName="record/PageBtn.xml" xy="231,507"/>
+    <component id="n38_jqun" name="accountStart" src="bzm710" fileName="record/TimeBox.xml" xy="303,115" group="n44_jqun"/>
+    <component id="n39_jqun" name="accountEnd" src="bzm710" fileName="record/TimeBox.xml" xy="506,114" group="n44_jqun"/>
+    <component id="n40_jqun" name="accountType" src="bzm710" fileName="record/TimeBox.xml" xy="83,115" group="n44_jqun"/>
+    <text id="n41_jqun" name="lang_type" xy="31,125" pivot="0.5,0.5" size="43,24" group="n44_jqun" customData="107066" font="FZZhunYuan-M02S" fontSize="18" color="#7079c5" align="center" vAlign="middle" bold="true" text="类型"/>
+    <text id="n42_jqun" name="lang_time" xy="251,124" pivot="0.5,0.5" size="43,24" group="n44_jqun" customData="107079" font="FZZhunYuan-M02S" fontSize="18" color="#7079c5" align="center" vAlign="middle" bold="true" text="时间"/>
+    <text id="n43_jqun" name="lang_to" xy="470,125" pivot="0.5,0.5" size="24,24" group="n44_jqun" customData="107080" font="FZZhunYuan-M02S" fontSize="18" color="#7079c5" align="center" vAlign="middle" bold="true" text="到"/>
+    <group id="n44_jqun" name="n44" xy="31,114" size="634,42" advanced="true" collapsed="true">
+      <gearDisplay controller="ctl" pages="5"/>
+    </group>
+    <component id="n45_jqun" name="n45" src="bzm714" fileName="record/AccountFlow.xml" xy="17,169">
+      <gearDisplay controller="ctl" pages="5"/>
+    </component>
+    <list id="n46_jqun" name="accountList" xy="18,212" size="762,291" overflow="scroll" lineGap="9" defaultItem="ui://93n3k04qbzm715" autoClearItems="true">
+      <gearDisplay controller="ctl" pages="5"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n50_dvvd" name="lang_xj" xy="50,446" size="35,21" group="n56_dvvd" customData="200023" font="FZZhunYuan-M03" fontSize="15" color="#bac4ff" align="center" vAlign="middle" text="小计"/>
+    <text id="n51_dvvd" name="lang_all" xy="50,471" size="35,21" group="n56_dvvd" customData="200024" font="FZZhunYuan-M03" fontSize="15" color="#bac4ff" align="center" vAlign="middle" text="总计"/>
+    <text id="n52_dvvd" name="x_all_eff_dama" xy="396,446" pivot="0.5,0.5" size="12,21" group="n56_dvvd" font="FZZhunYuan-M03" fontSize="15" color="#bac4ff" align="center" vAlign="middle" text="0"/>
+    <text id="n53_dvvd" name="x_all_bpay" xy="485,446" pivot="0.5,0.5" size="12,21" group="n56_dvvd" font="FZZhunYuan-M03" fontSize="15" color="#bac4ff" align="center" vAlign="middle" text="0"/>
+    <text id="n54_dvvd" name="all_eff_dama" xy="396,471" pivot="0.5,0.5" size="12,21" group="n56_dvvd" font="FZZhunYuan-M03" fontSize="15" color="#bac4ff" align="center" vAlign="middle" text="0"/>
+    <text id="n55_dvvd" name="all_bpay" xy="485,471" pivot="0.5,0.5" size="12,21" group="n56_dvvd" font="FZZhunYuan-M03" fontSize="15" color="#bac4ff" align="center" vAlign="middle" text="0"/>
+    <text id="n57_dvvd" name="x_all_bets" xy="304,446" pivot="0.5,0.5" size="12,21" group="n56_dvvd" font="FZZhunYuan-M03" fontSize="15" color="#bac4ff" align="center" vAlign="middle" text="0"/>
+    <text id="n58_dvvd" name="all_bets" xy="304,471" pivot="0.5,0.5" size="12,21" group="n56_dvvd" font="FZZhunYuan-M03" fontSize="15" color="#bac4ff" align="center" vAlign="middle" text="0"/>
+    <group id="n56_dvvd" name="n56" xy="50,446" size="447,46" advanced="true">
+      <gearDisplay controller="ctl" pages="4"/>
+    </group>
+    <component id="n59_mbzt" name="closeBtn" src="bzm7m" fileName="CloseBtn.xml" xy="722,42"/>
+    <component id="n48_jqun" name="recordBtn" src="bzm716" fileName="record/recordBtn.xml" xy="179,36"/>
+    <component id="n16_jqun" name="accountBtn" src="bzm717" fileName="record/accountBtn.xml" xy="402,36"/>
+  </displayList>
+</component>
