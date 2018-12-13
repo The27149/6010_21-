@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="fb15s0nv" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="o4400" name="djxz.png" path="/" exported="true"/>
+    <image id="o4401" name="fj.png" path="/" exported="true"/>
+    <image id="o4402" name="fp.png" path="/" exported="true"/>
+    <image id="o4403" name="jxyx.png" path="/" exported="true"/>
+    <image id="o4405" name="mbx.png" path="/" exported="true"/>
+    <image id="o4406" name="qd.png" path="/" exported="true"/>
+    <image id="o4407" name="sb2.png" path="/" exported="true"/>
+    <image id="o4408" name="sb.png" path="/" exported="true"/>
+    <image id="o4409" name="tablez.png" path="/" exported="true"/>
+    <image id="o440a" name="tp (2).png" path="/" exported="true"/>
+    <image id="o440b" name="tp.png" path="/" exported="true"/>
+    <image id="o440g" name="xy.png" path="/" exported="true"/>
+    <image id="o440h" name="xz.png" path="/" exported="true"/>
+    <image id="o440i" name="xzwc.png" path="/" exported="true"/>
+    <image id="o440j" name="xzwc2.png" path="/" exported="true"/>
+    <image id="o440k" name="yp (2).png" path="/" exported="true"/>
+    <image id="o440l" name="yp.png" path="/" exported="true"/>
+    <image id="o440m" name="zdz.png" path="/" exported="true"/>
+    <image id="o440n" name="zxz.png" path="/" exported="true"/>
+    <image id="o440o" name="bd.png" path="/" exported="true"/>
+    <image id="o440p" name="bm.png" path="/" exported="true"/>
+    <image id="o4401u" name="content.png" path="/tanchuang/Strategy/" exported="true"/>
+    <image id="o4401v" name="ds.png" path="/tanchuang/Strategy/" exported="true"/>
+    <image id="o4401w" name="mpds.png" path="/tanchuang/Strategy/" exported="true"/>
+    <image id="o4401x" name="spds.png" path="/tanchuang/Strategy/" exported="true"/>
+    <image id="o4401y" name="Strategy.png" path="/tanchuang/Strategy/" exported="true"/>
+    <image id="o4401z" name="tips.png" path="/tanchuang/tips/" exported="true"/>
+    <image id="l3ii20" name="double.png" path="/" exported="true"/>
+  </resources>
+  <publish name="room_en-us" path="{rootPath}\assets\room\en-us"/>
+</packageDescription>

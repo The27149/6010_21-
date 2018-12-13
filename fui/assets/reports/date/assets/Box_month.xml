@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<component size="190,43">
-  <displayList>
-    <image id="n0_jo66" name="n0" src="bzm72" fileName="date/assets/k1.png" xy="29,7"/>
-    <component id="n1_jo66" name="btn_pre" src="bzm75" fileName="date/Btn_pre.xml" xy="0,0"/>
-    <component id="n2_jo66" name="btn_next" src="bzm76" fileName="date/Btn_next.xml" xy="161,0"/>
-    <text id="n3_jo66" name="label_time" xy="36,14" size="116,19" font="Microsoft JhengHei" fontSize="14" color="#ffffff" align="center" autoSize="none" text="7月"/>
-  </displayList>
-</component>

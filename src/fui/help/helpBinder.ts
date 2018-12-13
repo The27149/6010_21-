@@ -4,9 +4,9 @@ module fui.help {
 
 	export class helpBinder{
 		public static bindAll():void {
-			fairygui.UIObjectFactory.setPackageItemExtension(FUI_HelpView.URL, FUI_HelpView);
-			fairygui.UIObjectFactory.setPackageItemExtension(FUI_ShowList.URL, FUI_ShowList);
-			fairygui.UIObjectFactory.setPackageItemExtension(FUI_CloseBtn.URL, FUI_CloseBtn);
+			fairygui.UIObjectFactory.setPackageItemExtension(FUI_help.URL, FUI_help);
+			fairygui.UIObjectFactory.setPackageItemExtension(FUI_help_tab.URL, FUI_help_tab);
+			fairygui.UIObjectFactory.setPackageItemExtension(FUI_help_info.URL, FUI_help_info);
 		}
 	}
 }

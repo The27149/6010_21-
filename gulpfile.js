@@ -54,7 +54,7 @@ var context = {
     },
     "consts": {
         "name": "GConst",
-        "namespaceName": "",
+        "namespaceName": "point21",
         "outPath": "src/common/"
     },
     "protos": {

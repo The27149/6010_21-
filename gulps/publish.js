@@ -24,8 +24,8 @@ module.exports = function (context) {
             if (devIdx >= 0)
                 context['prog'].execSync(`call ${pubPath}/upload_dev.bat ${projName} ${winscpPath} ${projPath}`);
             //发布sit
-            if (sitIdx >= 0)
-                context['prog'].execSync(`call ${pubPath}/upload_sit.bat ${projName} ${winscpPath} ${projPath}`);
+            // if (sitIdx >= 0)
+            //     context['prog'].execSync(`call ${pubPath}/upload_sit.bat ${projName} ${winscpPath} ${projPath}`);
     
             context["remove"](`${projPath}`);
         };

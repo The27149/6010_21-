@@ -6,9 +6,9 @@ module fui.Game {
 
 		public m_button:fairygui.Controller;
 		public m_n3:fairygui.GImage;
-		public m_lang_home:fairygui.GLoader;
+		public m_lang_option:fairygui.GLoader;
 
-		public static URL:string = "ui://j9tv3reanpwg2w";
+		public static URL:string = "ui://8oy4o0mbd8322t";
 
 		public static createInstance():FUI_room_home {
 			return <FUI_room_home><any>(fairygui.UIPackage.createObject("Game","room_home"));
@@ -23,7 +23,7 @@ module fui.Game {
 
 			this.m_button = this.getControllerAt(0);
 			this.m_n3 = <fairygui.GImage><any>(this.getChildAt(0));
-			this.m_lang_home = <fairygui.GLoader><any>(this.getChildAt(1));
+			this.m_lang_option = <fairygui.GLoader><any>(this.getChildAt(1));
 		}
 	}
 }

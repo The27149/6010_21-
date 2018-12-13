@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<component size="42,33">
-  <controller name="ctl" pages="0,,1," selected="1"/>
-  <displayList>
-    <text id="n0_uaz7" name="txt" xy="1,1" size="40,30" font="FZCuYuan-M03" fontSize="20" color="#666666" align="center" vAlign="middle" autoSize="none" text="07">
-      <gearColor controller="ctl" pages="0,1" values="#99411f,#000000|#666666,#000000"/>
-    </text>
-  </displayList>
-</component>

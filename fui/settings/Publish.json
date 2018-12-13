@@ -1,4 +1,5 @@
 {
+	"binaryFormat":true,
 	"codeGeneration":{
 		"classNamePrefix":"FUI_",
 		"codePath":"{rootPath}\\src\\fui",

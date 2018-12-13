@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<component size="86,30">
-  <displayList>
-    <image id="n0_t9kv" name="n0" src="t9kv8p" fileName="room/assets/szk1.png" xy="0,0"/>
-    <text id="n1_t9kv" name="chipNum" xy="3,1" size="79,27" font="FZZhunYuan-M02S" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="1000"/>
-  </displayList>
-</component>

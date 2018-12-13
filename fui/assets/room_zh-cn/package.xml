@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="hp1jnrh2" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="wuvl2" name="xy.png" path="/" exported="true"/>
+    <image id="wuvl3" name="xz.png" path="/" exported="true"/>
+    <image id="wuvl5" name="fp.png" path="/" exported="true"/>
+    <image id="wuvl6" name="sb.png" path="/" exported="true"/>
+    <image id="wuvl7" name="mbx.png" path="/" exported="true"/>
+    <image id="wuvl8" name="bm.png" path="/" exported="true"/>
+    <image id="wuvl9" name="yp (2).png" path="/" exported="true"/>
+    <image id="wuvla" name="tp (2).png" path="/" exported="true"/>
+    <image id="wuvlb" name="jxyx.png" path="/" exported="true"/>
+    <image id="u1w8c" name="djxz.png" path="/" exported="true"/>
+    <image id="u1w8d" name="dragon.png" path="/" exported="true"/>
+    <image id="u1w8e" name="blackjack.png" path="/" exported="true"/>
+    <image id="u1w8f" name="fj.png" path="/" exported="true"/>
+    <image id="u1w8g" name="tp.png" path="/" exported="true"/>
+    <image id="u1w8h" name="xzwc.png" path="/" exported="true"/>
+    <image id="u1w8i" name="yp.png" path="/" exported="true"/>
+    <image id="u1w8j" name="sb2.png" path="/" exported="true"/>
+    <image id="ujigx" name="tips.png" path="/tankuang/tips/" exported="true"/>
+    <image id="ujig12" name="content.png" path="/tankuang/Strategy/" exported="true"/>
+    <image id="ujig13" name="ds.png" path="/tankuang/Strategy/" exported="true"/>
+    <image id="ujig15" name="mpds.png" path="/tankuang/Strategy/" exported="true"/>
+    <image id="ujig17" name="spds.png" path="/tankuang/Strategy/" exported="true"/>
+    <image id="ujig18" name="Strategy.png" path="/tankuang/Strategy/" exported="true"/>
+    <image id="ujig19" name="qd.png" path="/" exported="true"/>
+    <image id="f3g11a" name="zxz.png" path="/" exported="true"/>
+    <image id="f3g11b" name="zdz.png" path="/" exported="true"/>
+    <image id="u4ep1c" name="xzwc2.png" path="/" exported="true"/>
+    <image id="o4401d" name="bd.png" path="/" exported="true"/>
+    <image id="v5fh1e" name="tablez.png" path="/" exported="true"/>
+    <image id="l3ii1f" name="double.png" path="/" exported="true"/>
+  </resources>
+  <publish name="room_zh-cn" path="{rootPath}\assets\room\zh-cn"/>
+</packageDescription>

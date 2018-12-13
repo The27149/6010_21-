@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<component size="74,99">
-  <displayList>
-    <loader id="n0_kiid" name="poker_z" xy="0,0" size="186,248" scale="0.45,0.45" url="ui://j9tv3reas48i11" autoSize="true"/>
-    <image id="n1_kiid" name="poker_f" src="s48ir" fileName="poker/assets/bg.png" xy="-51,-68" pivot="0.5,0.5" scale="0.45,0.45"/>
-  </displayList>
-</component>

@@ -14,9 +14,14 @@
 </head>
 
 <body style="padding:0;margin:0;width:100%;height:100%;overflow:hidden;background-color:black">
-    <!--prescripts start-->
-    <!--prescripts end-->
-    <script id="bxInit" type="text/javascript" src="init.js"></script>
+    <script id="commonSrcNode" type="text/javascript">
+        window.commonSrc = "../../poker_common/";
+        var initJs = document.createElement('script');
+        initJs.id = "initJsNode";
+        initJs.async = false;
+        initJs.src = window.commonSrc + "init.js?v=" + (new Date()).getTime();
+        document.body.appendChild(initJs);
+    </script>
 </body>
 
 </html>

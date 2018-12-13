@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="300,130">
+  <displayList>
+    <list id="n5_hyur" name="cardList" xy="0,0" size="300,130" layout="row" selectionMode="none" overflow="hidden" colGap="-45" defaultItem="ui://2mffi74ewuvl36" align="center" vAlign="middle">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n4_wuvl" name="cardPoint" src="wuvl3b" fileName="component/cards/cardsPoint1.xml" xy="299,92"/>
+    <component id="n6_u4ep" name="cardType" src="u1w84i" fileName="component/player/tips/cardType.xml" xy="35,70"/>
+  </displayList>
+</component>

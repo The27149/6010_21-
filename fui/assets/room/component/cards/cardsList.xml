@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="167,130">
+  <displayList>
+    <list id="n11_wuvl" name="list2" xy="10,-45" size="147,130" layout="row" selectionMode="none" overflow="hidden" colGap="-45" defaultItem="ui://2mffi74ewuvl36" align="center" vAlign="middle" autoClearItems="true">
+      <item/>
+      <item/>
+    </list>
+    <list id="n12_wuvl" name="list1" xy="0,0" size="167,130" layout="row" selectionMode="none" overflow="hidden" colGap="-60" defaultItem="ui://2mffi74ewuvl36" align="center" vAlign="middle" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <loader id="n13_l3ii" name="lang_double" xy="116,0" pivot="0.5,0.5" size="51,55" customData="double" url="ui://hp1jnrh2l3ii1f" align="center" vAlign="middle" autoSize="true"/>
+  </displayList>
+</component>

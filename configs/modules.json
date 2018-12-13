@@ -1,1 +1,1 @@
-{"modules+":["bx.MBetBtnView","bx.MBetsChipBox","bx.MInsuranceBtnView","bx.MMyPlayerBox","bx.MPlayer","bx.MPlayerBox","bx.MPokerBtnView","bx.MPokerItem"]}
+{"modules+":["xys.MGM","point21.MMarquee","point21.MStrategy","point21.MWalletBtn"]}

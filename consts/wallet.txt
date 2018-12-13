@@ -1,0 +1,8 @@
+//显示免转按钮
+show_wallet_btn
+
+//隐藏免转按钮
+hide_wallet_btn
+
+//设置按钮
+set_wallet_btn

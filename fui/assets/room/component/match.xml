@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="981,497">
+  <displayList>
+    <image id="n4_l3ii" name="n4" src="l3iif7" fileName="resource/Horizontal/tanchuang/tips/hkk.png" xy="102,186"/>
+    <text id="n3_ujig" name="lang_word" xy="30,150" size="920,196" customData="201315" fontSize="35" color="#ffffff" align="center" vAlign="middle" leading="0" autoSize="none" autoClearText="true" text="正在为您匹配牌"/>
+  </displayList>
+</component>

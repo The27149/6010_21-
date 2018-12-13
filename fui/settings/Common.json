@@ -1,14 +1,14 @@
 {
 	"buttonClickSound":"",
 	"colorScheme":["自定义颜色 #FF0000"],
-	"font":"_sans",
+	"font":"FZZhunYuan-M02S",
 	"fontScheme":["默认字体"],
 	"fontSize":12,
 	"fontSizeScheme":["自定义字体大小 30"],
 	"scrollBars":{
 		"defaultDisplay":"visible",
 		"horizontal":"",
-		"vertical":"ui://fzzpxcn5n5qo1"
+		"vertical":""
 	},
 	"textColor":"#000000",
 	"tipsRes":""

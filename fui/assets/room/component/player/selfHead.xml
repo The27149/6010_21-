@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="143,150" mask="n1_wuvl">
+  <displayList>
+    <graph id="n1_wuvl" name="n1" xy="0,0" size="143,150" type="eclipse" lineSize="0"/>
+    <loader id="n0_wuvl" name="head" xy="-26,0" pivot="0.5,0.5" size="195,192" url="ui://2mffi74egeyyo" align="center" vAlign="middle"/>
+  </displayList>
+</component>

@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="fqdhitys" jpegQuality="80" compressPNG="true">
+<packageDescription id="rt3448ma" jpegQuality="80" compressPNG="true">
   <resources>
-    <image id="n5qo4" name="room_music.png" path="/menu/" exported="true"/>
-    <image id="n5qo5" name="room_home.png" path="/menu/" exported="true"/>
-    <image id="n5qo6" name="room_reports.png" path="/menu/" exported="true"/>
-    <image id="n5qo7" name="room_help.png" path="/menu/" exported="true"/>
-    <image id="n5qo8" name="music_title.png" path="/music/" exported="true"/>
-    <image id="n5qo9" name="music_yx.png" path="/music/" exported="true"/>
-    <image id="n5qoa" name="music_yy.png" path="/music/" exported="true"/>
-    <image id="nur6b" name="zdz_btn.png" path="/room/btn/" exported="true"/>
-    <image id="nur6c" name="zxz_btn.png" path="/room/btn/" exported="true"/>
-    <image id="nur6d" name="yp_btn.png" path="/room/btn/" exported="true"/>
-    <image id="nur6e" name="tp_btn.png" path="/room/btn/" exported="true"/>
-    <image id="nur6f" name="xy_btn.png" path="/room/btn/" exported="true"/>
-    <image id="nur6g" name="xz_btn.png" path="/room/btn/" exported="true"/>
-    <image id="nur6h" name="fp_btn.png" path="/room/btn/" exported="true"/>
-    <image id="nur6i" name="sb_btn.png" path="/room/btn/" exported="true"/>
-    <image id="nur6j" name="bm_btn.png" path="/room/btn/" exported="true"/>
-    <image id="nur6k" name="mbx_btn.png" path="/room/btn/" exported="true"/>
+    <image id="mtpm0" name="cjc.png" path="/" exported="true"/>
+    <image id="mtpm1" name="gjc.png" path="/" exported="true"/>
+    <image id="mtpm2" name="zzc.png" path="/" exported="true"/>
+    <image id="mtpm3" name="zjc.png" path="/" exported="true"/>
+    <image id="d8324" name="wdtx.png" path="/head/" exported="true"/>
+    <image id="d8325" name="bcxg.png" path="/head/" exported="true"/>
+    <image id="d8326" name="head.png" path="/head/" exported="true"/>
+    <image id="d8327" name="xlan1.png" path="/menu/" exported="true"/>
+    <image id="d8328" name="xlan2.png" path="/menu/" exported="true"/>
+    <image id="d8329" name="xlan3.png" path="/menu/" exported="true"/>
+    <image id="d832a" name="xlan4.png" path="/menu/" exported="true"/>
+    <image id="d832b" name="setTitle.png" path="/set/" exported="true"/>
+    <image id="d832c" name="words_01.png" path="/set/" exported="true"/>
+    <image id="d832d" name="words_02.png" path="/set/" exported="true"/>
+    <image id="o440e" name="Reconnect.png" path="/reconnect/" exported="true"/>
+    <image id="o440f" name="Reconnect_b.png" path="/reconnect/" exported="true"/>
+    <image id="o440g" name="Return.png" path="/reconnect/"/>
+    <image id="o440h" name="qd1.png" path="/leave/" exported="true"/>
+    <image id="o440i" name="qx.png" path="/leave/" exported="true"/>
+    <image id="o440j" name="logo.png" path="/" exported="true"/>
   </resources>
   <publish name="zh_cn" path="{rootPath}\assets\zh-cn"/>
 </packageDescription>

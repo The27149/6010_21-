@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="fvac1nmb" jpegQuality="80" compressPNG="true">
+<packageDescription id="tafu3gfz" jpegQuality="80" compressPNG="true">
   <resources>
-    <image id="n5qo1" name="help_title.png" path="/" exported="true"/>
+    <image id="o4400" name="wz02.png" path="/" exported="true"/>
+    <image id="o4401" name="wz03.png" path="/" exported="true"/>
+    <image id="o4402" name="help_title.png" path="/" exported="true"/>
+    <image id="o4403" name="words12.png" path="/" exported="true"/>
+    <image id="o4404" name="words1.png" path="/" exported="true"/>
+    <image id="o4405" name="words22.png" path="/" exported="true"/>
+    <image id="o4406" name="words2.png" path="/" exported="true"/>
+    <image id="o4407" name="words32.png" path="/" exported="true"/>
+    <image id="o4408" name="words3.png" path="/" exported="true"/>
+    <image id="o4409" name="wz01.png" path="/" exported="true"/>
   </resources>
   <publish name="help_en-us" path="{rootPath}\assets\help\en-us"/>
 </packageDescription>

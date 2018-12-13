@@ -5,9 +5,9 @@ module.exports = function (context, outPath, config) {
 
         if(outPath == context["out"]["releasePath"])
         {
-            var initJs = context["fs"].readFileSync(`${outPath}/init.js`,'utf-8');
-            initJs = initJs.replace(/..\/..\/poker_common/g,`../poker_common`);
-            context["fs"].writeFileSync(`${outPath}/init.js`, initJs);
+            var indexHtml = context["fs"].readFileSync(`${outPath}/index.html`, 'utf-8');
+            indexHtml = indexHtml.replace(/..\/..\/poker_common/g, `../poker_common`);
+            context["fs"].writeFileSync(`${outPath}/index.html`, indexHtml);
         }
 
         var scriptsNodes = "<!--prescripts start-->";

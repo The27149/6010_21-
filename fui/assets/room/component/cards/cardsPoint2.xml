@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="68,34">
+  <displayList>
+    <image id="n0_wuvl" name="n0" src="geyy2l" fileName="resource/Horizontal/szk.png" xy="0,0" pivot="0.5,0.5" scale="1.3,1" rotation="180"/>
+    <text id="n1_wuvl" name="value" xy="-5,0" size="77,39" fontSize="28" color="#ffffff" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="cards exceed 21"/>
+  </displayList>
+</component>

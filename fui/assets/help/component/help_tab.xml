@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="310,70" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n6_ujig" name="n6" src="uz6j3" fileName="source/Label1.png" xy="0,0">
+      <gearDisplay controller="button" pages="1"/>
+    </image>
+    <image id="n7_ujig" name="n7" src="uz6j1" fileName="source/Label2.png" xy="0,0">
+      <gearDisplay controller="button" pages="0"/>
+    </image>
+    <loader id="n8_ujig" name="lang_tab" xy="130,20" pivot="0.5,0.5" size="50,30" align="center" vAlign="middle" autoSize="true"/>
+  </displayList>
+  <Button mode="Check"/>
+</component>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<component size="70,70" extention="Button">
-  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
-  <displayList>
-    <image id="n1_n5qo" name="n1" src="n5qo74" fileName="hall/menu/assets/dt.png" xy="0,0"/>
-  </displayList>
-  <Button/>
-</component>

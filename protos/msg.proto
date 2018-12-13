@@ -1,0 +1,10 @@
+// cmd 必须是小写
+// 大于20的协议登陆之后才能处理
+enum cmd {
+    msg_base = 0; // 心跳
+    msg_login = 1; // 登陆
+    msg_role = 21; // 角色
+    msg_room = 22; // 房间
+    msg_broadcast = 23; // 广播
+    msg_room_bj = 24; // 21点游戏状态机相关
+}

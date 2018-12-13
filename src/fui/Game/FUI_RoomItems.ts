@@ -2,18 +2,18 @@
 
 module fui.Game {
 
-	export class FUI_RoomItems extends fairygui.GComponent {
+	export class FUI_Roomitems extends fairygui.GComponent {
 
-		public m_c1:fairygui.Controller;
-		public m_item1:FUI_RoomItemBG1;
-		public m_item2:FUI_RoomItemBG2;
-		public m_item3:FUI_RoomItemBG3;
-		public m_item4:FUI_RoomItemBG4;
+		public m_h_v:fairygui.Controller;
+		public m_item1:FUI_item1;
+		public m_item2:FUI_item2;
+		public m_item3:FUI_item3;
+		public m_item4:FUI_item4;
 
-		public static URL:string = "ui://j9tv3reanpwg62";
+		public static URL:string = "ui://8oy4o0mbcsvz9";
 
-		public static createInstance():FUI_RoomItems {
-			return <FUI_RoomItems><any>(fairygui.UIPackage.createObject("Game","RoomItems"));
+		public static createInstance():FUI_Roomitems {
+			return <FUI_Roomitems><any>(fairygui.UIPackage.createObject("Game","Roomitems"));
 		}
 
 		public constructor() {
@@ -23,11 +23,11 @@ module fui.Game {
 		protected constructFromXML(xml: any): void {
 			super.constructFromXML(xml);
 
-			this.m_c1 = this.getControllerAt(0);
-			this.m_item1 = <FUI_RoomItemBG1><any>(this.getChildAt(0));
-			this.m_item2 = <FUI_RoomItemBG2><any>(this.getChildAt(1));
-			this.m_item3 = <FUI_RoomItemBG3><any>(this.getChildAt(2));
-			this.m_item4 = <FUI_RoomItemBG4><any>(this.getChildAt(3));
+			this.m_h_v = this.getControllerAt(0);
+			this.m_item1 = <FUI_item1><any>(this.getChildAt(0));
+			this.m_item2 = <FUI_item2><any>(this.getChildAt(1));
+			this.m_item3 = <FUI_item3><any>(this.getChildAt(2));
+			this.m_item4 = <FUI_item4><any>(this.getChildAt(3));
 		}
 	}
 }

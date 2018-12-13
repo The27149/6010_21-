@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="229,77">
+  <controller name="typeChoose" pages="0,,1,,2," selected="0">
+    <remark page="0" value="隐藏静态图"/>
+    <remark page="1" value="五小龙"/>
+    <remark page="2" value="黑杰克"/>
+  </controller>
+  <displayList>
+    <loader id="n0_u1w8" name="lang_dragon" xy="0,0" pivot="0.5,0.5" size="229,77" customData="dragon" url="ui://hp1jnrh2u1w8d" align="center" vAlign="middle" autoSize="true">
+      <gearDisplay controller="typeChoose" pages="1"/>
+    </loader>
+    <loader id="n1_u1w8" name="lang_blackjack" xy="1,0" pivot="0.5,0.5" size="227,77" customData="blackjack" url="ui://hp1jnrh2u1w8e" align="center" vAlign="middle" autoSize="true">
+      <gearDisplay controller="typeChoose" pages="2"/>
+    </loader>
+  </displayList>
+</component>

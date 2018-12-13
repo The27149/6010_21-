@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="325,346" extention="Button" designImage="ui://8oy4o0mbcsvz0" designImageOffsetX="-22" designImageOffsetY="-4">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n30_mtpm" name="n30" src="mtpmd" fileName="assets/roomItem/gjc.png" xy="0,9"/>
+    <loader id="n24_mtpm" name="lang_name" xy="48,263" pivot="0.5,0.5" size="228,82" customData="gjc" url="ui://rt3448mamtpm1" align="center" vAlign="middle" autoSize="true"/>
+    <image id="n31_d832" name="n31" src="d83236" fileName="assets/roomItem/cck.png" xy="41,358"/>
+    <text id="n26_mtpm" name="lang_base" xy="177,378" pivot="1,0.5" anchor="true" size="71,28" customData="201317" fontSize="22" color="#ffffff" align="right" vAlign="middle" autoClearText="true" text="底注："/>
+    <text id="n27_mtpm" name="antes3" xy="182,378" pivot="0,0.5" anchor="true" size="66,28" fontSize="22" color="#ffffff" vAlign="middle" text="2-200"/>
+    <text id="n28_mtpm" name="lang_zhunru" xy="177,411" pivot="1,0.5" anchor="true" size="71,28" customData="201316" fontSize="22" color="#ffffff" align="right" vAlign="middle" autoClearText="true" text="准入："/>
+    <text id="n29_mtpm" name="lowest3" xy="182,411" pivot="0,0.5" anchor="true" size="47,28" fontSize="22" color="#ffffff" vAlign="middle" autoClearText="true" text="2.00"/>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.98"/>
+</component>
