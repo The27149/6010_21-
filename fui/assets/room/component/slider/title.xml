@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<component size="120,69">
-  <displayList>
-    <image id="n0_u1w8" name="n0" src="u1w84q" fileName="resource/Horizontal/d3.png" xy="0,0"/>
-    <text id="n1_u1w8" name="value" xy="23,7" pivot="0.5,0.5" size="73,39" fontSize="30" color="#ffffff" align="center" vAlign="middle" leading="0" text="2500"/>
-  </displayList>
-</component>

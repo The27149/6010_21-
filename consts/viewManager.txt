@@ -1,8 +1,0 @@
-//通知 玩家区域类的管理
-n_Vmanager_playerArea
-
-//通知 操作按钮类的管理
-n_Vmanager_btnPlay
-
-//通知 玩家头像类的管理
-n_Vmanager_player

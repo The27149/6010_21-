@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<component size="241,86" extention="Button">
-  <controller name="button" pages="0,up,1,down" selected="0"/>
-  <displayList>
-    <loader id="n3_ujig" name="n3" xy="0,0" pivot="0.5,0.5" size="241,86" url="ui://8oy4o0mbo4403e" align="center" vAlign="middle" autoSize="true"/>
-    <loader id="n4_ujig" name="lang_reconnect" xy="95,28" pivot="0.5,0.5" size="50,30" customData="Reconnect" align="center" vAlign="middle" autoSize="true"/>
-  </displayList>
-  <Button downEffect="scale" downEffectValue="0.95"/>
-</component>
