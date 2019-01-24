@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="rphve4wx" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="o440q" name="Return.png" path="/Reconnect/" exported="true"/>
+    <image id="o440r" name="qd1.png" path="/leave/" exported="true"/>
+    <image id="o440s" name="qx.png" path="/leave/" exported="true"/>
+    <image id="eia3t" name="logo.png" path="/" exported="true"/>
+  </resources>
+  <publish name="en_us" path="{rootPath}\assets\en-us"/>
+</packageDescription>

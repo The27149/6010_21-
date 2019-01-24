@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="195,256">
+  <controller name="talkPos" pages="0,,1," selected="0">
+    <remark page="0" value="说话气泡在左边"/>
+    <remark page="1" value="说话气泡在右边"/>
+  </controller>
+  <displayList>
+    <loader id="n0_wuvl" name="head" xy="0,0" size="195,192" url="ui://2mffi74egeyyo" align="center" vAlign="middle"/>
+    <image id="n1_wuvl" name="n1" src="geyyp" fileName="resource/Horizontal/Headk.png" xy="4,171" locked="true"/>
+    <text id="n2_wuvl" name="nick" xy="29,178" pivot="0.5,0.5" size="135,30" font="YouYuan" fontSize="26" color="#ffffff" align="center" vAlign="middle" leading="0" text="大圣不是猴"/>
+    <text id="n3_wuvl" name="coin" xy="62,210" pivot="0.5,0.5" size="70,30" font="YouYuan" fontSize="26" color="#fee300" align="center" vAlign="middle" leading="0" text="27149"/>
+    <component id="n6_u1w8" name="timeCircle" src="u1w84v" fileName="component/player/timeCircle.xml" xy="1,168"/>
+    <image id="n7_u1w8" name="talkBgRight" src="u1w84x" fileName="resource/Horizontal/zk1.png" xy="107,-61">
+      <gearDisplay controller="talkPos" pages="1"/>
+    </image>
+    <image id="n11_u1w8" name="talkBgLeft" src="u1w84x" fileName="resource/Horizontal/zk1.png" xy="81,-59" skew="0,180">
+      <gearDisplay controller="talkPos" pages="0"/>
+    </image>
+    <component id="n10_u1w8" name="talk" src="u1w852" fileName="component/player/tips/talk.xml" xy="-29,-51">
+      <gearXY controller="talkPos" pages="0" values="-29,-51" default="146,-53"/>
+    </component>
+  </displayList>
+</component>

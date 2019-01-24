@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="89,89">
+  <controller name="ctr" pages="0,,1,,2,,3,,4,,5,,6,,7," selected="0">
+    <remark page="0" value="房间外_横_关闭"/>
+    <remark page="1" value="房间外_横_展开"/>
+    <remark page="2" value="房间外_竖_关闭"/>
+    <remark page="3" value="房间外_竖_展开"/>
+    <remark page="4" value="房间内_横_关闭"/>
+    <remark page="5" value="房间内_横_展开"/>
+    <remark page="6" value="房间内_竖_关闭"/>
+    <remark page="7" value="房间内_竖_展开"/>
+  </controller>
+  <displayList>
+    <component id="n12_cexw" name="n12" src="d83220" fileName="component/menu/hall_home.xml" xy="-300,0" customData="home">
+      <gearDisplay controller="ctr" pages="1,3"/>
+    </component>
+    <component id="n8_gpja" name="n8" src="d83224" fileName="component/menu/hall_rep.xml" xy="-200,0" customData="reports">
+      <gearDisplay controller="ctr" pages="1,3"/>
+    </component>
+    <component id="n10_gpja" name="n10" src="d83226" fileName="component/menu/hall_help.xml" xy="-100,0" customData="help">
+      <gearDisplay controller="ctr" pages="1,3"/>
+    </component>
+    <component id="n9_gpja" name="n9" src="d83228" fileName="component/menu/hall_sound.xml" xy="0,0" customData="music">
+      <gearDisplay controller="ctr" pages="1,3"/>
+    </component>
+    <component id="n17_d832" name="on" src="d8322o" fileName="component/menu/switch.xml" xy="0,0" customData="switch_on">
+      <gearDisplay controller="ctr" pages="4,6"/>
+    </component>
+    <component id="n24_d832" name="off" src="d8322o" fileName="component/menu/switch.xml" xy="0,0" customData="switch_off">
+      <gearDisplay controller="ctr" pages="5,7"/>
+    </component>
+    <image id="n18_d832" name="n18" src="d8322l" fileName="assets/menu/xlk.png" xy="0,107">
+      <gearDisplay controller="ctr" pages="5,7"/>
+    </image>
+    <component id="n19_d832" name="n19" src="d8322t" fileName="component/menu/room_home.xml" xy="26,136" customData="back">
+      <gearDisplay controller="ctr" pages="5,7"/>
+    </component>
+    <component id="n20_d832" name="n20" src="d8322s" fileName="component/menu/room_rep.xml" xy="26,236" customData="reports">
+      <gearDisplay controller="ctr" pages="5,7"/>
+    </component>
+    <component id="n21_d832" name="n21" src="d8322u" fileName="component/menu/room_sound.xml" xy="26,337" customData="music">
+      <gearDisplay controller="ctr" pages="5,7"/>
+    </component>
+    <component id="n22_d832" name="n22" src="d8322p" fileName="component/menu/room_help.xml" xy="26,438" customData="help">
+      <gearDisplay controller="ctr" pages="5,7"/>
+    </component>
+  </displayList>
+</component>

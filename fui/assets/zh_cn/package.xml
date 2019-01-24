@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="rt3448ma" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="o440g" name="Return.png" path="/reconnect/"/>
+    <image id="o440h" name="qd1.png" path="/leave/" exported="true"/>
+    <image id="o440i" name="qx.png" path="/leave/" exported="true"/>
+    <image id="o440j" name="logo.png" path="/" exported="true"/>
+  </resources>
+  <publish name="zh_cn" path="{rootPath}\assets\zh-cn"/>
+</packageDescription>

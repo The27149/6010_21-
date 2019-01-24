@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="70,33">
+  <controller name="word" pages="0,,1,,2,,3,,4," selected="0">
+    <remark page="0" value="分解"/>
+    <remark page="1" value="双倍"/>
+    <remark page="2" value="要牌"/>
+    <remark page="3" value="停牌"/>
+    <remark page="4" value="下注完成"/>
+  </controller>
+  <displayList>
+    <loader id="n0_u1w8" name="lang_fj" xy="0,0" pivot="0.5,0.5" size="69,34" customData="fj" align="center" vAlign="middle" autoSize="true">
+      <gearDisplay controller="word" pages="0"/>
+    </loader>
+    <loader id="n1_u1w8" name="lang_sb2" xy="0,0" pivot="0.5,0.5" size="69,34" customData="sb2" align="center" vAlign="middle" autoSize="true">
+      <gearDisplay controller="word" pages="1"/>
+    </loader>
+    <loader id="n2_u1w8" name="lang_yp" xy="0,0" pivot="0.5,0.5" size="69,34" customData="yp" align="center" vAlign="middle" autoSize="true">
+      <gearDisplay controller="word" pages="2"/>
+    </loader>
+    <loader id="n3_u1w8" name="lang_tp" xy="0,0" pivot="0.5,0.5" size="69,34" customData="tp" align="center" vAlign="middle" autoSize="true">
+      <gearDisplay controller="word" pages="3"/>
+    </loader>
+    <loader id="n4_u1w8" name="lang_xzwc" xy="0,0" pivot="0.5,0.5" size="69,34" customData="xzwc" align="center" vAlign="middle" autoSize="true">
+      <gearDisplay controller="word" pages="4"/>
+    </loader>
+  </displayList>
+</component>

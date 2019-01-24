@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="393,166">
+  <displayList>
+    <image id="n0_wuvl" name="n0" src="geyyq" fileName="resource/Horizontal/Headk1.png" xy="0,0"/>
+    <text id="n1_wuvl" name="nick" xy="211,75" pivot="0.5,0.5" size="117,36" fontSize="28" color="#ffffff" align="center" vAlign="middle" leading="0" text="奥特之父"/>
+    <image id="n3_wuvl" name="n3" src="geyym" fileName="resource/Horizontal/Goldcoin.png" xy="148,109"/>
+    <image id="n4_wuvl" name="n4" src="geyyl" fileName="resource/Horizontal/gold.png" xy="160,113"/>
+    <text id="n2_wuvl" name="coin" xy="213,120" pivot="0,0.5" size="74,36" fontSize="28" color="#fee300" align="center" vAlign="middle" leading="0" autoClearText="true" text="27149"/>
+    <component id="n6_wuvl" name="headComp" src="wuvl34" fileName="component/player/selfHead.xml" xy="10,-4"/>
+  </displayList>
+</component>

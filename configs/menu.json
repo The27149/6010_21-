@@ -1,0 +1,144 @@
+{
+    "menu": {
+        "isOpen": false,//是否开启
+        "url": "fui.game.FUI_VMenu",//菜单栏组件 默认是用公共库的 如果你没什么大的变化，这里默认
+        "soundName": "",        //音效
+        "itemUrl": "fui.game.FUI_VMenuItem",//菜单栏按钮组件 默认是用公共库的 如果你没什么大的变化，这里默认
+        "resPath": "assets/menu/", // 资源路径
+        "out": {
+            "expandedWhenStart": true, //启动时是否打开状态    如果你的大厅没有缩放 一直展开的，这个一定得设为true
+            "landscape": {
+                "space": 10,//横屏时才当按钮的间距
+                "layoutDir": "landscape",//横屏时菜单按钮的弹出方向 是横着弹还是竖着弹--landscape----portrait
+                "popDir": "left",// 菜单按钮的弹出方向 ，是往左边弹还是右边弹  记住 layoutDir==landscape 时 popDir有效值为 left或right layoutDir==portrait 时 popDir有效值为 down或up
+
+                "x": "right", //x 坐标  这些是布局 跟以前的是一样的
+                "y": "top", //y 坐标
+                "fringe_x": "", //x 坐标(刘海屏app)
+                "fringe_y": "" //y 坐标(刘海屏app)
+            },
+            "portrait": {
+                "space": 10,
+                "layoutDir": "landscape",
+                "popDir": "left",
+                "x": "right", //x 坐标
+                "y": "top", //y 坐标
+                "fringe_x": "", //x 坐标(刘海屏app)
+                "fringe_y": "" //y 坐标(刘海屏app)
+            },
+            "items": [
+                {
+                    "width": 89,//按钮的宽
+                    "height": 89,//按钮的高
+                    "data": "help",//按钮的自定义数据
+                    "iconUrl": "help",//按钮未点击时 显示的图片资源名
+                    "iconUrl1": "",//按钮点击时 显示的图片资源名  如果没有的话 跟 iconUrl是一样的
+                    "isLan": false //是否需要多语言  
+                },
+                {
+                    "width": 89,//按钮的宽
+                    "height": 89,//按钮的高
+                    "data": "music",//按钮的自定义数据
+                    "iconUrl": "Set",//按钮未点击时 显示的图片资源名
+                    "iconUrl1": "",//按钮点击时 显示的图片资源名  如果没有的话 跟 iconUrl是一样的
+                    "isLan": false //是否需要多语言  
+                },
+                {
+                    "width": 89,//按钮的宽
+                    "height": 89,//按钮的高
+                    "data": "reports",//按钮的自定义数据
+                    "iconUrl": "Report",//按钮未点击时 显示的图片资源名
+                    "iconUrl1": "",//按钮点击时 显示的图片资源名  如果没有的话 跟 iconUrl是一样的
+                    "isLan": false //是否需要多语言  
+                },
+                {
+                    "width": 89,//按钮的宽
+                    "height": 89,//按钮的高
+                    "data": "home",//按钮的自定义数据
+                    "iconUrl": "hall",//按钮未点击时 显示的图片资源名
+                    "iconUrl1": "",//按钮点击时 显示的图片资源名  如果没有的话 跟 iconUrl是一样的
+                    "isLan": false //是否需要多语言  
+                }
+            ]
+        },
+        "in": {
+            "xlk": {//下拉框 如果你房间内展开时是有一个框框的话 这里是那个框框的配置
+                "url": "xlk",//下拉框的资源名 如果你配置了这个，我就当你是有下拉框
+                "offset":20,// 这个下拉框与按钮的初始间隔
+                "width": 350,//下拉框的宽
+                "height": 464,//下拉宽的高
+                "x":0,//位置
+                "y":110//
+            },
+            "expandedWhenStart": false, //启动时是否打开状态    
+            "landscape": {
+                "space": 10,
+                "layoutDir": "portrait",
+                "popDir": "down",
+                "x": "left", //x 坐标
+                "y": "top", //y 坐标
+                "fringe_x": "", //x 坐标(刘海屏app)
+                "fringe_y": "" //y 坐标(刘海屏app)
+            },
+            "portrait": {
+                "space": 10,
+                "layoutDir": "portrait",
+                "popDir": "down",
+                "x": "left", //x 坐标
+                "y": "top", //y 坐标
+                "fringe_x": "", //x 坐标(刘海屏app)
+                "fringe_y": "" //y 坐标(刘海屏app)
+            },
+            "items": [
+                {
+                    "width": 108,//按钮的宽
+                    "height": 106,//按钮的高
+                    "data": "switch_on",//按钮的自定义数据
+                    "iconUrl": "xln",//按钮未点击时 显示的图片资源名
+                    "iconUrl1": "",//按钮点击时 显示的图片资源名  如果没有的话 跟 iconUrl是一样的
+                    "isLan": false //是否需要多语言  
+                },
+                {
+                    "width": 108,//按钮的宽
+                    "height": 106,//按钮的高
+                    "data": "switch_off",//按钮的自定义数据
+                    "iconUrl": "xln",//按钮未点击时 显示的图片资源名
+                    "iconUrl1": "",//按钮点击时 显示的图片资源名  如果没有的话 跟 iconUrl是一样的
+                    "isLan": false //是否需要多语言  
+                },
+                {
+                    "width": 236,//按钮的宽
+                    "height": 69,//按钮的高
+                    "data": "help",//按钮的自定义数据
+                    "iconUrl": "xlan1",//按钮未点击时 显示的图片资源名
+                    "iconUrl1": "xdk",//按钮点击时 显示的图片资源名  如果没有的话 跟 iconUrl是一样的
+                    "isLan": true //是否需要多语言  
+                },
+                {
+                    "width": 236,//按钮的宽
+                    "height": 69,//按钮的高
+                    "data": "music",//按钮的自定义数据
+                    "iconUrl": "xlan4",//按钮未点击时 显示的图片资源名
+                    "iconUrl1": "xdk",//按钮点击时 显示的图片资源名  如果没有的话 跟 iconUrl是一样的
+                    "isLan": true //是否需要多语言  
+                },
+                {
+                    "width": 236,//按钮的宽
+                    "height": 69,//按钮的高
+                    "data": "reports",//按钮的自定义数据
+                    "iconUrl": "xlan2",//按钮未点击时 显示的图片资源名
+                    "iconUrl1": "xdk",//按钮点击时 显示的图片资源名  如果没有的话 跟 iconUrl是一样的
+                    "isLan": true //是否需要多语言
+                },
+                {
+                    "width": 236,//按钮的宽
+                    "height": 69,//按钮的高
+                    "data": "back",//按钮的自定义数据
+                    "iconUrl": "xlan3",//按钮未点击时 显示的图片资源名
+                    "iconUrl1": "xdk",//按钮点击时 显示的图片资源名  如果没有的话 跟 iconUrl是一样的
+                    "isLan": true //是否需要多语言
+                }
+            ]
+        }
+    }
+}

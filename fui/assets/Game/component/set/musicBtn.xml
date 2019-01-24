@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="50,44" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n3_clre" name="n3" src="d83233" fileName="assets/tanchuang/set/voice1.png" xy="0,0">
+      <gearDisplay controller="button" pages="0"/>
+    </image>
+    <image id="n4_clre" name="n4" src="d83234" fileName="assets/tanchuang/set/voice2.png" xy="-2,0">
+      <gearDisplay controller="button" pages="1"/>
+    </image>
+  </displayList>
+  <Button mode="Check" downEffect="scale" downEffectValue="0.95"/>
+</component>

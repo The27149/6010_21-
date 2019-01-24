@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1345,891">
+  <displayList>
+    <loader id="n0_ujig" name="n0" xy="0,0" size="1345,891" customData="frame5" autoSize="true"/>
+    <loader id="n1_ujig" name="lang_title" xy="647,39" pivot="0.5,0.5" size="50,30" customData="Strategy" align="center" vAlign="middle" autoSize="true"/>
+    <component id="n2_ujig" name="close" src="uz6j5q" fileName="component/close.xml" xy="1238,14"/>
+    <image id="n3_ujig" name="n3" src="uz6j7z" fileName="resource/Horizontal/tanchuang/Strategy/number.png" xy="245,189"/>
+    <loader id="n4_ujig" name="lang_point" xy="110,159" pivot="0.5,0.5" size="59,29" customData="ds" url="ui://hp1jnrh2ujig13" align="center" vAlign="middle" autoSize="true"/>
+    <loader id="n5_ujig" name="lang_self" xy="93,330" pivot="0.5,0.5" size="30,229" customData="spds" url="ui://hp1jnrh2ujig17" align="center" vAlign="middle" autoSize="true"/>
+    <loader id="n6_ujig" name="lang_banker" xy="647,125" pivot="0.5,0.5" size="50,30" customData="mpds" align="center" vAlign="middle" autoSize="true"/>
+    <component id="n8_ujig" name="n8" src="ujigbc" fileName="component/strategy/content.xml" xy="143,238"/>
+  </displayList>
+</component>

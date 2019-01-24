@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1047,808">
+  <displayList>
+    <image id="n1_ujig" name="n1" src="uz6j2" fileName="source/frame1.png" xy="0,0" locked="true"/>
+    <loader id="n2_ujig" name="lang_title" xy="456,24" pivot="0.5,0.5" size="135,63" customData="help_title" align="center" vAlign="middle" autoSize="true"/>
+    <list id="n3_ujig" name="tab" xy="25,116" size="996,92" layout="row" overflow="scroll" scroll="horizontal" margin="10,10,10,10" colGap="20" defaultItem="ui://txmqgqddujig5" align="center" vAlign="middle"/>
+    <component id="n5_ujig" name="info" src="ujig6" fileName="component/help_info.xml" xy="48,215"/>
+    <component id="n7_d832" name="close" src="d83216" fileName="component/close.xml" pkg="8oy4o0mb" xy="958,6"/>
+  </displayList>
+</component>

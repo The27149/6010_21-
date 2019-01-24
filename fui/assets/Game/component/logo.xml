@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="291,159">
+  <controller name="ctl" pages="0,,1," selected="1">
+    <remark page="0" value="中文"/>
+    <remark page="1" value="英文"/>
+  </controller>
+  <displayList>
+    <loader id="n1_o440" name="logo" xy="0,-24" pivot="0.5,0.5" size="291,159" url="ui://rphve4wxeia3t" align="center" vAlign="middle">
+      <gearXY controller="ctl" pages="0,1" values="0,0|0,-24"/>
+      <gearIcon controller="ctl" pages="1" values="ui://rphve4wxeia3t" default="ui://rt3448mao440j"/>
+    </loader>
+  </displayList>
+</component>

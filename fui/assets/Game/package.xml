@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="8oy4o0mb" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="csvz5" name="item1.xml" path="/component/roomitem/"/>
+    <component id="csvz9" name="Roomitems.xml" path="/component/roomitem/" exported="true"/>
+    <image id="mtpmc" name="cjc.png" path="/assets/roomItem/"/>
+    <image id="mtpmd" name="gjc.png" path="/assets/roomItem/"/>
+    <image id="mtpme" name="zzc.png" path="/assets/roomItem/"/>
+    <image id="mtpmf" name="zjc.png" path="/assets/roomItem/"/>
+    <component id="mtpmh" name="item2.xml" path="/component/roomitem/"/>
+    <component id="mtpmi" name="item3.xml" path="/component/roomitem/"/>
+    <component id="mtpmj" name="item4.xml" path="/component/roomitem/"/>
+    <component id="d832k" name="hallBg_h.xml" path="/component/" exported="true"/>
+    <component id="d832m" name="hallBg_v.xml" path="/component/" exported="true"/>
+    <component id="d832p" name="brief.xml" path="/component/brief/" exported="true"/>
+    <component id="d832w" name="briefPopup.xml" path="/component/brief/" exported="true"/>
+    <image id="d832y" name="Headk1.png" path="/assets/tanchuang/head/"/>
+    <image id="d83210" name="Head.png" path="/assets/tanchuang/head/"/>
+    <component id="d83211" name="saveHead.xml" path="/component/brief/"/>
+    <component id="d83213" name="headItem.xml" path="/component/brief/"/>
+    <image id="d83214" name="kk5.png" path="/assets/tanchuang/head/"/>
+    <image id="d83215" name="kk6.png" path="/assets/tanchuang/head/"/>
+    <component id="d83216" name="close.xml" path="/component/" exported="true"/>
+    <image id="d8321g" name="messagebox.png" path="/assets/tanchuang/head/"/>
+    <image id="d8321h" name="gold.png" path="/assets/tanchuang/head/"/>
+    <component id="d8321z" name="menu.xml" path="/component/menu/" exported="true"/>
+    <component id="d83220" name="hall_home.xml" path="/component/menu/"/>
+    <component id="d83224" name="hall_rep.xml" path="/component/menu/"/>
+    <component id="d83226" name="hall_help.xml" path="/component/menu/"/>
+    <component id="d83228" name="hall_sound.xml" path="/component/menu/"/>
+    <image id="d8322c" name="Report.png" path="/assets/menu/" exported="true"/>
+    <image id="d8322d" name="Set.png" path="/assets/menu/" exported="true"/>
+    <image id="d8322e" name="hall.png" path="/assets/menu/" exported="true"/>
+    <image id="d8322f" name="help.png" path="/assets/menu/" exported="true"/>
+    <image id="d8322g" name="xdk.png" path="/assets/menu/" exported="true"/>
+    <image id="d8322l" name="xlk.png" path="/assets/menu/" exported="true"/>
+    <image id="d8322m" name="xln.png" path="/assets/menu/" exported="true"/>
+    <component id="d8322o" name="switch.xml" path="/component/menu/"/>
+    <component id="d8322p" name="room_help.xml" path="/component/menu/"/>
+    <component id="d8322s" name="room_rep.xml" path="/component/menu/"/>
+    <component id="d8322t" name="room_home.xml" path="/component/menu/"/>
+    <component id="d8322u" name="room_sound.xml" path="/component/roomitem/"/>
+    <component id="d8322v" name="set.xml" path="/component/set/" exported="true"/>
+    <image id="d8322w" name="frame2.png" path="/assets/tanchuang/set/"/>
+    <component id="d8322x" name="musicSlider.xml" path="/component/set/"/>
+    <image id="d8322y" name="bar1.png" path="/assets/tanchuang/set/"/>
+    <image id="d8322z" name="bar2.png" path="/assets/tanchuang/set/"/>
+    <component id="d83230" name="musicSlider_grip.xml" path="/component/set/"/>
+    <image id="d83231" name="button.png" path="/assets/tanchuang/set/"/>
+    <component id="d83232" name="musicBtn.xml" path="/component/set/"/>
+    <image id="d83233" name="voice1.png" path="/assets/tanchuang/set/"/>
+    <image id="d83234" name="voice2.png" path="/assets/tanchuang/set/"/>
+    <image id="d83235" name="close.png" path="/assets/tanchuang/"/>
+    <image id="d83236" name="cck.png" path="/assets/roomItem/"/>
+    <component id="o44037" name="gm.xml" path="/component/gm/" exported="true"/>
+    <component id="o44039" name="player.xml" path="/component/gm/"/>
+    <component id="o4403a" name="gmSubmit.xml" path="/component/gm/"/>
+    <component id="o4403b" name="reconnect.xml" path="/component/reconnect/" exported="true"/>
+    <component id="o4403d" name="btn_reconnect.xml" path="/component/reconnect/"/>
+    <image id="o4403e" name="button_orange.png" path="/assets/tanchuang/"/>
+    <component id="o4403f" name="btn_return.xml" path="/component/reconnect/"/>
+    <image id="o4403g" name="button_blue.png" path="/assets/tanchuang/"/>
+    <component id="o4403h" name="reconnectCircle.xml" path="/component/reconnect/" exported="true"/>
+    <image id="o4403i" name="connecting.png" path="/assets/tanchuang/Reconnect/"/>
+    <component id="o4403n" name="leaveRoom.xml" path="/component/leave/" exported="true"/>
+    <component id="o4403p" name="sure.xml" path="/component/leave/"/>
+    <component id="o4403r" name="cancle.xml" path="/component/leave/"/>
+    <component id="o4403t" name="logo.xml" path="/component/" exported="true"/>
+    <component id="l3ii3u" name="gmKeys.xml" path="/component/gm/"/>
+    <component id="l3ii3w" name="setGM.xml" path="/component/gm/"/>
+    <component id="l3ii3x" name="AddWalletBtn.xml" path="/component/wallet/" exported="true"/>
+    <image id="l3ii3y" name="addMoneyBtn.png" path="/assets/wallet/"/>
+  </resources>
+  <publish name="Game" path="{rootPath}\assets\preload" genCode="true" npot="true"/>
+</packageDescription>

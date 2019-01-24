@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <displayList>
+    <loader id="n0_wuvl" name="roombg" xy="0,0" size="1080,1920" autoSize="true"/>
+  </displayList>
+</component>

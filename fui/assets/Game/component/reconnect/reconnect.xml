@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1056,617">
+  <displayList>
+    <loader id="n0_ujig" name="n0" xy="0,0" size="1056,617" customData="frame4" autoSize="true"/>
+    <loader id="n2_ujig" name="lang_title" xy="503,39" pivot="0.5,0.5" size="50,30" customData="Reconnect_b" align="center" vAlign="middle" autoSize="true"/>
+    <text id="n3_ujig" name="tips" xy="88,202" size="878,146" customData="107099" fontSize="40" color="#ffffff" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="网络连接异常，请重新登陆"/>
+    <component id="n4_ujig" name="reconnect" src="o4403d" fileName="component/reconnect/btn_reconnect.xml" xy="220,389"/>
+    <component id="n5_ujig" name="return" src="o4403f" fileName="component/reconnect/btn_return.xml" xy="594,389"/>
+  </displayList>
+</component>

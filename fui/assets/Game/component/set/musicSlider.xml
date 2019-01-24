@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="520,32" extention="Slider">
+  <displayList>
+    <image id="n0_clre" name="n0" src="d8322y" fileName="resource/Horizontal/tanchuang/set/bar1.png" xy="0,0" size="520,32">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_clre" name="bar" src="d8322z" fileName="resource/Horizontal/tanchuang/set/bar2.png" xy="5,3" size="492,24"/>
+    <component id="n2_clre" name="grip" src="d83230" fileName="component/menu_set/musicSlider_grip.xml" xy="464,-14">
+      <relation target="n1_clre" sidePair="right-right"/>
+    </component>
+  </displayList>
+  <Slider/>
+</component>

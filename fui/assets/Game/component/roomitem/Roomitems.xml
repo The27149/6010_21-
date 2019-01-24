@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1080,1080">
+  <controller name="h_v" pages="0,,1," selected="0"/>
+  <displayList>
+    <component id="n0_ga1s" name="item1" src="csvz5" fileName="component/roomitem/item1.xml" xy="77,114">
+      <gearXY controller="h_v" pages="1" values="181,127" default="77,114"/>
+    </component>
+    <component id="n4_l95r" name="item2" src="mtpmh" fileName="component/roomitem/item2.xml" xy="478,114">
+      <gearXY controller="h_v" pages="1" values="572,-16" default="478,114"/>
+    </component>
+    <component id="n5_l95r" name="item3" src="mtpmi" fileName="component/roomitem/item3.xml" xy="278,562">
+      <gearXY controller="h_v" pages="1" values="180,637" default="278,562"/>
+    </component>
+    <component id="n6_l95r" name="item4" src="mtpmj" fileName="component/roomitem/item4.xml" xy="677,562">
+      <gearXY controller="h_v" pages="1" values="569,453" default="677,562"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,16 @@
+{
+	"binaryFormat":true,
+	"codeGeneration":{
+		"classNamePrefix":"FUI_",
+		"codePath":"{rootPath}\\src\\fui",
+		"codeType":"TS",
+		"getMemberByName":false,
+		"ignoreNoname":false,
+		"memberNamePrefix":"m_",
+		"packageName":"fui"
+	},
+	"compressDesc":true,
+	"fileExtension":"",
+	"packageCount":2,
+	"path":""
+}

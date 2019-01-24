@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1056,617">
+  <displayList>
+    <loader id="n8_o440" name="n8" xy="0,0" size="50,30" customData="frame4" autoSize="true"/>
+    <text id="n3_p0l3" name="tips" xy="88,202" size="878,146" customData="107099" fontSize="40" color="#ffffff" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="确定要退出吗？"/>
+    <component id="n6_o440" name="sure" src="o4403p" fileName="component/leave/sure.xml" xy="220,389"/>
+    <component id="n7_o440" name="cancle" src="o4403r" fileName="component/leave/cancle.xml" xy="594,389"/>
+  </displayList>
+</component>

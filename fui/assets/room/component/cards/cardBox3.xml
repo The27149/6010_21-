@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="134,102">
+  <displayList>
+    <component id="n1_wuvl" name="n1" src="wuvl3a" fileName="component/room/cardsList.xml" xy="0,0"/>
+    <component id="n2_wuvl" name="n2" src="wuvl3b" fileName="component/room/cardsPoint1.xml" xy="55,109"/>
+  </displayList>
+</component>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="273,245">
+  <controller name="fen" pages="0,,1," selected="0">
+    <remark page="0" value="分牌前"/>
+    <remark page="1" value="分牌后"/>
+  </controller>
+  <controller name="activeCtl" pages="0,,1," selected="0">
+    <remark page="0" value="未激活状态"/>
+    <remark page="1" value="激活状态"/>
+  </controller>
+  <controller name="careCtl" pages="0,,1," selected="0">
+    <remark page="0" value="隐藏保险标志"/>
+    <remark page="1" value="显示保险标志"/>
+  </controller>
+  <displayList>
+    <component id="n41_drj3" name="centerCard_hide" src="wuvl36" fileName="component/cards/card.xml" xy="89,17" hideByEditor="true" scale="0.8,0.8" visible="false"/>
+    <component id="n11_wuvl" name="cardsList0" src="wuvl3a" fileName="component/cards/cardsList.xml" xy="53,-6" size="167,130">
+      <gearDisplay controller="fen" pages="0"/>
+    </component>
+    <component id="n12_wuvl" name="cardsList1" src="wuvl3a" fileName="component/cards/cardsList.xml" xy="0,20" scale="0.8,0.8">
+      <gearDisplay controller="fen" pages="1"/>
+    </component>
+    <component id="n13_wuvl" name="cardsList2" src="wuvl3a" fileName="component/cards/cardsList.xml" xy="139,20" scale="0.8,0.8">
+      <gearDisplay controller="fen" pages="1"/>
+    </component>
+    <component id="n36_d5fb" name="chipsList0_hide" src="hyur4c" fileName="component/chips/chip.xml" xy="138,182" pivot="0.5,0.5" anchor="true" locked="true" hideByEditor="true" visible="false"/>
+    <component id="n37_d5fb" name="chipsList1_hide" src="hyur4c" fileName="component/chips/chip.xml" xy="104,183" pivot="0.5,0.5" anchor="true" locked="true" hideByEditor="true" visible="false"/>
+    <component id="n38_d5fb" name="chipsList2_hide" src="hyur4c" fileName="component/chips/chip.xml" xy="172,182" pivot="0.5,0.5" anchor="true" locked="true" hideByEditor="true" visible="false"/>
+    <component id="n14_wuvl" name="chipArea" src="wuvl3i" fileName="component/chips/playerChip.xml" xy="71,114"/>
+    <graph id="n44_drj3" name="activeMark" xy="90,134" size="92,92" aspect="true" alpha="0.6" type="eclipse" lineSize="0" fillColor="#fffff000">
+      <gearDisplay controller="activeCtl" pages="1"/>
+    </graph>
+    <component id="n15_wuvl" name="chipCount0" src="wuvl3y" fileName="component/chips/chipCount.xml" xy="93,233">
+      <gearDisplay controller="fen" pages="0"/>
+    </component>
+    <component id="n42_drj3" name="chipCount1" src="wuvl3y" fileName="component/chips/chipCount.xml" xy="21,237">
+      <gearDisplay controller="fen" pages="1"/>
+    </component>
+    <component id="n43_drj3" name="chipCount2" src="wuvl3y" fileName="component/chips/chipCount.xml" xy="173,237">
+      <gearDisplay controller="fen" pages="1"/>
+    </component>
+    <component id="n17_wuvl" name="point1" src="wuvl3d" fileName="component/cards/cardsPoint2.xml" xy="2,75">
+      <gearDisplay controller="fen" pages="1"/>
+    </component>
+    <component id="n16_wuvl" name="point2" src="wuvl3b" fileName="component/cards/cardsPoint1.xml" xy="202,75">
+      <gearDisplay controller="fen" pages="1"/>
+    </component>
+    <component id="n18_wuvl" name="point0" src="wuvl3b" fileName="component/cards/cardsPoint1.xml" xy="183,54">
+      <gearDisplay controller="fen" pages="0"/>
+    </component>
+    <list id="n22_hyur" name="chipsList1" xy="104,183" pivot="0.5,0.8" anchor="true" size="54,99" touchable="false" selectionMode="none" lineGap="-32" defaultItem="ui://2mffi74ehyur4c" align="center" vAlign="bottom" renderOrder="descent">
+      <gearDisplay controller="fen" pages="1"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n19_hyur" name="chipsList0" xy="138,182" pivot="0.5,0.8" anchor="true" size="54,99" touchable="false" selectionMode="none" lineGap="-32" defaultItem="ui://2mffi74ehyur4c" align="center" vAlign="bottom" renderOrder="descent">
+      <gearDisplay controller="fen" pages="0"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n23_hyur" name="chipsList2" xy="172,182" pivot="0.5,0.8" anchor="true" size="54,99" touchable="false" selectionMode="none" lineGap="-32" defaultItem="ui://2mffi74ehyur4c" align="center" vAlign="bottom" renderOrder="descent">
+      <gearDisplay controller="fen" pages="1"/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n28_u1w8" name="clickToBet" src="u1w84h" fileName="component/player/tips/clickToBet.xml" xy="135,115" pivot="0,1" touchable="false"/>
+    <component id="n33_u1w8" name="cardType0" src="u1w84i" fileName="component/player/tips/cardType.xml" xy="21,77" touchable="false">
+      <gearDisplay controller="fen" pages="0"/>
+    </component>
+    <component id="n34_u1w8" name="cardType1" src="u1w84i" fileName="component/player/tips/cardType.xml" xy="-17,95" size="229,77" scale="0.7,0.7" touchable="false"/>
+    <component id="n35_u1w8" name="cardType2" src="u1w84i" fileName="component/player/tips/cardType.xml" xy="134,94" size="229,77" scale="0.7,0.7" touchable="false"/>
+    <image id="n46_l3ii" name="careSign" src="l3iif9" fileName="resource/Horizontal/care.png" xy="117,200">
+      <gearDisplay controller="careCtl" pages="1"/>
+    </image>
+  </displayList>
+  <transition name="beActive" autoPlay="true" autoPlayRepeat="-1">
+    <item time="0" type="Alpha" target="n44_drj3" tween="true" startValue="0.6" endValue="0.1" duration="6"/>
+    <item time="6" type="Alpha" target="n44_drj3" tween="true" startValue="0.1" endValue="0.6" duration="6"/>
+  </transition>
+</component>
