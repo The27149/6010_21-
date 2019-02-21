@@ -32,6 +32,7 @@ namespace point21{
         setBaseBet(arr:Array<number>):void{
             this.bet_max = arr[1] / 100;
             this.bet_min = arr[0] / 100;
+            //if(MRoom.selfMoney < this.bet_max) this.bet_max = Math.floor(MRoom.selfMoney);
             this.view.setBaseBet(this.bet_max,this.bet_min);
         }
 
@@ -67,20 +68,39 @@ namespace point21{
                 this.sliderHidden = true;
                 this.currentBetPos = 3;
                 this.showAsBetComplete = false;
-                if(!this.view.betValue || MRoom.selfMoney < this.view.betValue) this.view.btnUnable('continueBet');
+                if(!this.view.betValue || !this.isEnoughMoney) this.view.btnUnable('continueBet');
                 this.view.setContinueBetContent(0);
+                if(MRoom.selfMoney < this.bet_min){
+                    this.view.btnUnable('minBet');
+                    this.view.btnUnable('maxBet');
+                    this.view.btnUnable('bet');
+                    this.view.btnUnable('continueBet');
+                }else if(this.view.betValue && MRoom.selfMoney < this.view.betValue){
+                    this.view.btnUnable('continueBet');
+                }
             }else if(stage == 1){
                 if(this.card1 && (this.card1 % 16 == this.card2 % 16) && (this.activyId == 0)){
                     this.view.btnEnable('divideCard');
                 }else{
                     this.view.btnUnable('divideCard');
                 }
-
-                if(MRoom.selfMoney < this.view.betValue){
+                if(!this.isEnoughMoney){
                     this.view.btnUnable('divideCard');
                     this.view.btnUnable('double');
                 }
+            }else if(stage == 2){
+                let insuranceMoney = this.view.betValue / 2;
+                if(MRoom.selfMoney < insuranceMoney){
+                    this.view.btnUnable('insurance');
+                }
             }
+        }
+
+        /**
+         * 判断当前余额是否大于当前下注金额
+         */
+        isEnoughMoney():boolean{
+            return MRoom.selfMoney > this.view.betValue;
         }
 
         //设置cards

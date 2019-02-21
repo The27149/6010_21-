@@ -196,6 +196,7 @@
     <image id="l3iife" name="chip4.png" path="/resource/Vertical/"/>
     <image id="l3iiff" name="chip3.png" path="/resource/Vertical/"/>
     <image id="eia3fg" name="c1.png" path="/resource/Horizontal/"/>
+    <image id="ve7zfh" name="f2.png" path="/resource/Design sketch/"/>
   </resources>
   <publish name="room" path="{rootPath}\assets\room" genCode="true" npot="true"/>
 </packageDescription>

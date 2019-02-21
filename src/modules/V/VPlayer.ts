@@ -11,8 +11,10 @@ namespace point21{
         constructor(v:fui.room.FUI_otherPlayer | fui.room.FUI_selfPlayer,i:number){
             if(i == 2){
                 this._viewSelf = v as fui.room.FUI_selfPlayer;
+                //this._viewSelf.displayObject.cacheAs = "bitmap";
             }else{
                 this._view = v as fui.room.FUI_otherPlayer;
+                //this._view.displayObject.cacheAs = 'bitmap';
                 if(i < 2){
                     this._view.m_talkPos.selectedIndex = 1;
                 }else{
@@ -49,7 +51,11 @@ namespace point21{
             let headUrl = Utils.getHeadUrl(info.avatar);
             if(this._view){
                 this._view.m_head.url = headUrl;
-                this._view.m_nick.text = info.name;
+                let name = info.name;
+                if(name.length > 8){
+                    name = name.substr(0, 8) + '...';
+                }
+                this._view.m_nick.text = name;
                 this.setCoin(info.chips);
             }else{
                 this._viewSelf.m_headComp.m_head.url = headUrl;

@@ -141,6 +141,7 @@ namespace point21 {
                     MRoom.selfMoney = data[0] / 100;
                     if(coins < this.mBtnPlay.bet_max){
                         this.mBtnPlay.bet_max = coins;
+                        this.mBtnPlay.view.setBaseBet(coins, this.mBtnPlay.bet_min);
                     }
                     break;
 
@@ -184,7 +185,7 @@ namespace point21 {
                     break;
                 //更新玩家金币
                 case protos.CMD.chips_push:
-                    this.mPlayer.setCoin(3,data[0].chips);
+                    this.mPlayer && this.mPlayer.setCoin(3,data[0].chips);
                     break;
 
 
@@ -683,7 +684,7 @@ namespace point21 {
                 this.view._view.m_table.url = 'assets/room_dt/vertical/pzs.png';
                 this.viewBg._view.m_roombg.url = 'assets/room_dt/vertical/bg2.png';
                 let index = this.view._view.m_lightCtl.selectedIndex;
-                if(index < 15) this.view._view.m_lightCtl.selectedIndex = index + 15;
+                if(index < 15 || index == 15) this.view._view.m_lightCtl.selectedIndex = index + 15;
             }
         }
     }

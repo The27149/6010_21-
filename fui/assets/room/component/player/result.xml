@@ -5,10 +5,10 @@
     <remark page="1" value="赢"/>
   </controller>
   <displayList>
-    <text id="n0_6xef" name="win" xy="0,0" pivot="0.5,0.5" size="178,64" font="ui://2mffi74e6xefbq" fontSize="14" align="center" vAlign="middle" leading="0" autoClearText="true" text="99.00">
+    <text id="n0_6xef" name="win" xy="-3,0" pivot="0.5,0.5" size="184,64" font="ui://2mffi74e6xefbq" fontSize="14" align="center" vAlign="middle" leading="0" autoClearText="true" text="9,9.00">
       <gearDisplay controller="resultCtl" pages="1"/>
     </text>
-    <text id="n1_6xef" name="fail" xy="0,0" pivot="0.5,0.5" size="178,64" font="ui://2mffi74e6xefch" fontSize="14" align="center" vAlign="middle" leading="0" autoClearText="true" text="99.00">
+    <text id="n1_6xef" name="fail" xy="0,0" pivot="0.5,0.5" size="178,64" font="ui://2mffi74e6xefch" fontSize="14" align="center" vAlign="middle" leading="0" autoClearText="true" text="99,00">
       <gearDisplay controller="resultCtl" pages="0"/>
     </text>
   </displayList>

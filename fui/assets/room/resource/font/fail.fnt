@@ -1,6 +1,6 @@
 info creator=UIBuilder size=12 resizable=true
 char id=45 img=6xefbr xoffset=0 yoffset=0 xadvance=0
-char id=44 img=6xefbs xoffset=0 yoffset=0 xadvance=0
+char id=44 img=6xefbs xoffset=-18 yoffset=0 xadvance=5
 char id=46 img=6xefbt xoffset=-18 yoffset=0 xadvance=5
 char id=48 img=6xefbu xoffset=0 yoffset=0 xadvance=0
 char id=49 img=6xefbv xoffset=0 yoffset=0 xadvance=0

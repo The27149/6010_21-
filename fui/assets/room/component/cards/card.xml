@@ -5,7 +5,7 @@
     <remark page="1" value="显示遮罩"/>
   </controller>
   <displayList>
-    <loader id="n0_wuvl" name="card" xy="0,0" pivot="0.5,0.5" size="95,130" url="ui://2mffi74eo440e9" align="center" vAlign="middle" fill="scaleFree"/>
+    <loader id="n0_wuvl" name="card" xy="0,0" pivot="0.5,0.5" size="95,130" url="ui://2mffi74eve7zfh" align="center" vAlign="middle" fill="scaleFree"/>
     <graph id="n1_drj3" name="mask" xy="0,0" size="95,130" alpha="0.3" type="rect" lineSize="0" fillColor="#ff000000" corner="3,3,3,3">
       <gearDisplay controller="maskCtl" pages="1"/>
     </graph>

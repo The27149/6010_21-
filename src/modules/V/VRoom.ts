@@ -252,6 +252,9 @@ namespace point21{
             this._view['m_namebg' + pos].visible = state;
             this._view['m_name' + pos].visible = state;
             if(state && name){
+                if(name.length > 8){
+                    name = name.substr(0) + '...';
+                }
                 this._view['m_name' + pos].text = name;
             }
         }

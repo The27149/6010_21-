@@ -4,7 +4,7 @@ namespace point21{
         constructor(){
             super('fui.room.FUI_strategy','room_dt');
             this._view = this.ui as fui.room.FUI_strategy;
-            this._view.m_close.onClick(this,function(){
+            this._view && this._view.m_close.onClick(this,function(){
                 bx.UIManager.closePopup(this);
             });
         }
