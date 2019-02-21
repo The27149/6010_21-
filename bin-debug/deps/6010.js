@@ -14,2593 +14,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_AddWalletBtn = /** @class */ (function (_super) {
-            __extends(FUI_AddWalletBtn, _super);
-            function FUI_AddWalletBtn() {
-                return _super.call(this) || this;
-            }
-            FUI_AddWalletBtn.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "AddWalletBtn"));
-            };
-            FUI_AddWalletBtn.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-            };
-            FUI_AddWalletBtn.URL = "ui://8oy4o0mbl3ii3x";
-            return FUI_AddWalletBtn;
-        }(fairygui.GComponent));
-        Game.FUI_AddWalletBtn = FUI_AddWalletBtn;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_brief = /** @class */ (function (_super) {
-            __extends(FUI_brief, _super);
-            function FUI_brief() {
-                return _super.call(this) || this;
-            }
-            FUI_brief.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "brief"));
-            };
-            FUI_brief.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_h_v = this.getControllerAt(0);
-                this.m_avatar = (this.getChildAt(0));
-                this.m_n4 = (this.getChildAt(1));
-                this.m_nickname = (this.getChildAt(2));
-                this.m_n5 = (this.getChildAt(3));
-                this.m_n8 = (this.getChildAt(4));
-                this.m_coin = (this.getChildAt(5));
-            };
-            FUI_brief.URL = "ui://8oy4o0mbd832p";
-            return FUI_brief;
-        }(fairygui.GComponent));
-        Game.FUI_brief = FUI_brief;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_briefPopup = /** @class */ (function (_super) {
-            __extends(FUI_briefPopup, _super);
-            function FUI_briefPopup() {
-                return _super.call(this) || this;
-            }
-            FUI_briefPopup.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "briefPopup"));
-            };
-            FUI_briefPopup.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n10 = (this.getChildAt(0));
-                this.m_lang_head = (this.getChildAt(1));
-                this.m_lang_des = (this.getChildAt(2));
-                this.m_btnSave = (this.getChildAt(3));
-                this.m_headList = (this.getChildAt(4));
-                this.m_close = (this.getChildAt(5));
-                this.m_current = (this.getChildAt(6));
-            };
-            FUI_briefPopup.URL = "ui://8oy4o0mbd832w";
-            return FUI_briefPopup;
-        }(fairygui.GComponent));
-        Game.FUI_briefPopup = FUI_briefPopup;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_btn_reconnect = /** @class */ (function (_super) {
-            __extends(FUI_btn_reconnect, _super);
-            function FUI_btn_reconnect() {
-                return _super.call(this) || this;
-            }
-            FUI_btn_reconnect.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "btn_reconnect"));
-            };
-            FUI_btn_reconnect.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_lang_reconnect = (this.getChildAt(1));
-            };
-            FUI_btn_reconnect.URL = "ui://8oy4o0mbo4403d";
-            return FUI_btn_reconnect;
-        }(fairygui.GButton));
-        Game.FUI_btn_reconnect = FUI_btn_reconnect;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_btn_return = /** @class */ (function (_super) {
-            __extends(FUI_btn_return, _super);
-            function FUI_btn_return() {
-                return _super.call(this) || this;
-            }
-            FUI_btn_return.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "btn_return"));
-            };
-            FUI_btn_return.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_lang_return = (this.getChildAt(1));
-            };
-            FUI_btn_return.URL = "ui://8oy4o0mbo4403f";
-            return FUI_btn_return;
-        }(fairygui.GButton));
-        Game.FUI_btn_return = FUI_btn_return;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_cancle = /** @class */ (function (_super) {
-            __extends(FUI_cancle, _super);
-            function FUI_cancle() {
-                return _super.call(this) || this;
-            }
-            FUI_cancle.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "cancle"));
-            };
-            FUI_cancle.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n5 = (this.getChildAt(0));
-                this.m_lang_cancle = (this.getChildAt(1));
-            };
-            FUI_cancle.URL = "ui://8oy4o0mbo4403r";
-            return FUI_cancle;
-        }(fairygui.GButton));
-        Game.FUI_cancle = FUI_cancle;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_close = /** @class */ (function (_super) {
-            __extends(FUI_close, _super);
-            function FUI_close() {
-                return _super.call(this) || this;
-            }
-            FUI_close.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "close"));
-            };
-            FUI_close.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-            };
-            FUI_close.URL = "ui://8oy4o0mbd83216";
-            return FUI_close;
-        }(fairygui.GButton));
-        Game.FUI_close = FUI_close;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_gm = /** @class */ (function (_super) {
-            __extends(FUI_gm, _super);
-            function FUI_gm() {
-                return _super.call(this) || this;
-            }
-            FUI_gm.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "gm"));
-            };
-            FUI_gm.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n19 = (this.getChildAt(0));
-                this.m_keys = (this.getChildAt(1));
-                this.m_n0 = (this.getChildAt(2));
-                this.m_n1 = (this.getChildAt(3));
-                this.m_roomType = (this.getChildAt(4));
-                this.m_playerNumb = (this.getChildAt(5));
-                this.m_n2 = (this.getChildAt(6));
-                this.m_n3 = (this.getChildAt(7));
-                this.m_n4 = (this.getChildAt(8));
-                this.m_n9 = (this.getChildAt(9));
-                this.m_n10 = (this.getChildAt(10));
-                this.m_n16 = (this.getChildAt(11));
-                this.m_cards_0 = (this.getChildAt(12));
-                this.m_cards_1 = (this.getChildAt(13));
-                this.m_cards_2 = (this.getChildAt(14));
-                this.m_cards_3 = (this.getChildAt(15));
-                this.m_cards_4 = (this.getChildAt(16));
-                this.m_cards_5 = (this.getChildAt(17));
-                this.m_submit = (this.getChildAt(18));
-                this.m_close = (this.getChildAt(19));
-            };
-            FUI_gm.URL = "ui://8oy4o0mbo44037";
-            return FUI_gm;
-        }(fairygui.GComponent));
-        Game.FUI_gm = FUI_gm;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_gmKeys = /** @class */ (function (_super) {
-            __extends(FUI_gmKeys, _super);
-            function FUI_gmKeys() {
-                return _super.call(this) || this;
-            }
-            FUI_gmKeys.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "gmKeys"));
-            };
-            FUI_gmKeys.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n6 = (this.getChildAt(0));
-                this.m_n7 = (this.getChildAt(1));
-                this.m_n8 = (this.getChildAt(2));
-                this.m_n9 = (this.getChildAt(3));
-                this.m_n10 = (this.getChildAt(4));
-                this.m_n11 = (this.getChildAt(5));
-                this.m_n12 = (this.getChildAt(6));
-                this.m_n13 = (this.getChildAt(7));
-                this.m_n14 = (this.getChildAt(8));
-                this.m_n15 = (this.getChildAt(9));
-                this.m_n16 = (this.getChildAt(10));
-                this.m_n17 = (this.getChildAt(11));
-                this.m_n18 = (this.getChildAt(12));
-                this.m_n19 = (this.getChildAt(13));
-                this.m_n20 = (this.getChildAt(14));
-                this.m_n21 = (this.getChildAt(15));
-                this.m_n22 = (this.getChildAt(16));
-                this.m_n23 = (this.getChildAt(17));
-                this.m_n24 = (this.getChildAt(18));
-                this.m_n25 = (this.getChildAt(19));
-                this.m_n26 = (this.getChildAt(20));
-                this.m_n27 = (this.getChildAt(21));
-                this.m_n28 = (this.getChildAt(22));
-                this.m_n29 = (this.getChildAt(23));
-                this.m_n30 = (this.getChildAt(24));
-                this.m_n31 = (this.getChildAt(25));
-                this.m_n32 = (this.getChildAt(26));
-                this.m_n33 = (this.getChildAt(27));
-                this.m_n34 = (this.getChildAt(28));
-                this.m_n35 = (this.getChildAt(29));
-                this.m_n36 = (this.getChildAt(30));
-                this.m_n37 = (this.getChildAt(31));
-                this.m_n38 = (this.getChildAt(32));
-                this.m_n39 = (this.getChildAt(33));
-                this.m_n40 = (this.getChildAt(34));
-                this.m_n41 = (this.getChildAt(35));
-                this.m_n42 = (this.getChildAt(36));
-                this.m_n43 = (this.getChildAt(37));
-                this.m_n44 = (this.getChildAt(38));
-                this.m_n45 = (this.getChildAt(39));
-                this.m_n46 = (this.getChildAt(40));
-                this.m_n47 = (this.getChildAt(41));
-                this.m_n48 = (this.getChildAt(42));
-                this.m_n49 = (this.getChildAt(43));
-                this.m_n50 = (this.getChildAt(44));
-                this.m_n51 = (this.getChildAt(45));
-                this.m_n52 = (this.getChildAt(46));
-                this.m_n53 = (this.getChildAt(47));
-                this.m_n54 = (this.getChildAt(48));
-                this.m_n55 = (this.getChildAt(49));
-                this.m_n56 = (this.getChildAt(50));
-                this.m_n57 = (this.getChildAt(51));
-            };
-            FUI_gmKeys.URL = "ui://8oy4o0mbl3ii3u";
-            return FUI_gmKeys;
-        }(fairygui.GComponent));
-        Game.FUI_gmKeys = FUI_gmKeys;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_gmSubmit = /** @class */ (function (_super) {
-            __extends(FUI_gmSubmit, _super);
-            function FUI_gmSubmit() {
-                return _super.call(this) || this;
-            }
-            FUI_gmSubmit.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "gmSubmit"));
-            };
-            FUI_gmSubmit.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_n4 = (this.getChildAt(1));
-            };
-            FUI_gmSubmit.URL = "ui://8oy4o0mbo4403a";
-            return FUI_gmSubmit;
-        }(fairygui.GButton));
-        Game.FUI_gmSubmit = FUI_gmSubmit;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_hallBg_h = /** @class */ (function (_super) {
-            __extends(FUI_hallBg_h, _super);
-            function FUI_hallBg_h() {
-                return _super.call(this) || this;
-            }
-            FUI_hallBg_h.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "hallBg_h"));
-            };
-            FUI_hallBg_h.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-            };
-            FUI_hallBg_h.URL = "ui://8oy4o0mbd832k";
-            return FUI_hallBg_h;
-        }(fairygui.GComponent));
-        Game.FUI_hallBg_h = FUI_hallBg_h;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_hallBg_v = /** @class */ (function (_super) {
-            __extends(FUI_hallBg_v, _super);
-            function FUI_hallBg_v() {
-                return _super.call(this) || this;
-            }
-            FUI_hallBg_v.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "hallBg_v"));
-            };
-            FUI_hallBg_v.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-            };
-            FUI_hallBg_v.URL = "ui://8oy4o0mbd832m";
-            return FUI_hallBg_v;
-        }(fairygui.GComponent));
-        Game.FUI_hallBg_v = FUI_hallBg_v;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_hall_help = /** @class */ (function (_super) {
-            __extends(FUI_hall_help, _super);
-            function FUI_hall_help() {
-                return _super.call(this) || this;
-            }
-            FUI_hall_help.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "hall_help"));
-            };
-            FUI_hall_help.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n1 = (this.getChildAt(0));
-            };
-            FUI_hall_help.URL = "ui://8oy4o0mbd83226";
-            return FUI_hall_help;
-        }(fairygui.GButton));
-        Game.FUI_hall_help = FUI_hall_help;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_hall_home = /** @class */ (function (_super) {
-            __extends(FUI_hall_home, _super);
-            function FUI_hall_home() {
-                return _super.call(this) || this;
-            }
-            FUI_hall_home.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "hall_home"));
-            };
-            FUI_hall_home.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n4 = (this.getChildAt(0));
-            };
-            FUI_hall_home.URL = "ui://8oy4o0mbd83220";
-            return FUI_hall_home;
-        }(fairygui.GButton));
-        Game.FUI_hall_home = FUI_hall_home;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_hall_rep = /** @class */ (function (_super) {
-            __extends(FUI_hall_rep, _super);
-            function FUI_hall_rep() {
-                return _super.call(this) || this;
-            }
-            FUI_hall_rep.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "hall_rep"));
-            };
-            FUI_hall_rep.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n1 = (this.getChildAt(0));
-            };
-            FUI_hall_rep.URL = "ui://8oy4o0mbd83224";
-            return FUI_hall_rep;
-        }(fairygui.GButton));
-        Game.FUI_hall_rep = FUI_hall_rep;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_hall_sound = /** @class */ (function (_super) {
-            __extends(FUI_hall_sound, _super);
-            function FUI_hall_sound() {
-                return _super.call(this) || this;
-            }
-            FUI_hall_sound.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "hall_sound"));
-            };
-            FUI_hall_sound.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n1 = (this.getChildAt(0));
-            };
-            FUI_hall_sound.URL = "ui://8oy4o0mbd83228";
-            return FUI_hall_sound;
-        }(fairygui.GButton));
-        Game.FUI_hall_sound = FUI_hall_sound;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_headItem = /** @class */ (function (_super) {
-            __extends(FUI_headItem, _super);
-            function FUI_headItem() {
-                return _super.call(this) || this;
-            }
-            FUI_headItem.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "headItem"));
-            };
-            FUI_headItem.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n2 = (this.getChildAt(0));
-                this.m_head = (this.getChildAt(1));
-                this.m_n3 = (this.getChildAt(2));
-            };
-            FUI_headItem.URL = "ui://8oy4o0mbd83213";
-            return FUI_headItem;
-        }(fairygui.GButton));
-        Game.FUI_headItem = FUI_headItem;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_item1 = /** @class */ (function (_super) {
-            __extends(FUI_item1, _super);
-            function FUI_item1() {
-                return _super.call(this) || this;
-            }
-            FUI_item1.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "item1"));
-            };
-            FUI_item1.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n23 = (this.getChildAt(0));
-                this.m_lang_name = (this.getChildAt(1));
-                this.m_n30 = (this.getChildAt(2));
-                this.m_lang_base = (this.getChildAt(3));
-                this.m_antes1 = (this.getChildAt(4));
-                this.m_lang_zhunru = (this.getChildAt(5));
-                this.m_lowest1 = (this.getChildAt(6));
-            };
-            FUI_item1.URL = "ui://8oy4o0mbcsvz5";
-            return FUI_item1;
-        }(fairygui.GButton));
-        Game.FUI_item1 = FUI_item1;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_item2 = /** @class */ (function (_super) {
-            __extends(FUI_item2, _super);
-            function FUI_item2() {
-                return _super.call(this) || this;
-            }
-            FUI_item2.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "item2"));
-            };
-            FUI_item2.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n30 = (this.getChildAt(0));
-                this.m_lang_name = (this.getChildAt(1));
-                this.m_n31 = (this.getChildAt(2));
-                this.m_lang_base = (this.getChildAt(3));
-                this.m_antes2 = (this.getChildAt(4));
-                this.m_lang_zhunru = (this.getChildAt(5));
-                this.m_lowest2 = (this.getChildAt(6));
-            };
-            FUI_item2.URL = "ui://8oy4o0mbmtpmh";
-            return FUI_item2;
-        }(fairygui.GButton));
-        Game.FUI_item2 = FUI_item2;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_item3 = /** @class */ (function (_super) {
-            __extends(FUI_item3, _super);
-            function FUI_item3() {
-                return _super.call(this) || this;
-            }
-            FUI_item3.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "item3"));
-            };
-            FUI_item3.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n30 = (this.getChildAt(0));
-                this.m_lang_name = (this.getChildAt(1));
-                this.m_n31 = (this.getChildAt(2));
-                this.m_lang_base = (this.getChildAt(3));
-                this.m_antes3 = (this.getChildAt(4));
-                this.m_lang_zhunru = (this.getChildAt(5));
-                this.m_lowest3 = (this.getChildAt(6));
-            };
-            FUI_item3.URL = "ui://8oy4o0mbmtpmi";
-            return FUI_item3;
-        }(fairygui.GButton));
-        Game.FUI_item3 = FUI_item3;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_item4 = /** @class */ (function (_super) {
-            __extends(FUI_item4, _super);
-            function FUI_item4() {
-                return _super.call(this) || this;
-            }
-            FUI_item4.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "item4"));
-            };
-            FUI_item4.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n30 = (this.getChildAt(0));
-                this.m_lang_name = (this.getChildAt(1));
-                this.m_n31 = (this.getChildAt(2));
-                this.m_lang_base = (this.getChildAt(3));
-                this.m_antes4 = (this.getChildAt(4));
-                this.m_lang_zhunru = (this.getChildAt(5));
-                this.m_lowest4 = (this.getChildAt(6));
-            };
-            FUI_item4.URL = "ui://8oy4o0mbmtpmj";
-            return FUI_item4;
-        }(fairygui.GButton));
-        Game.FUI_item4 = FUI_item4;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_leaveRoom = /** @class */ (function (_super) {
-            __extends(FUI_leaveRoom, _super);
-            function FUI_leaveRoom() {
-                return _super.call(this) || this;
-            }
-            FUI_leaveRoom.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "leaveRoom"));
-            };
-            FUI_leaveRoom.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n8 = (this.getChildAt(0));
-                this.m_tips = (this.getChildAt(1));
-                this.m_sure = (this.getChildAt(2));
-                this.m_cancle = (this.getChildAt(3));
-            };
-            FUI_leaveRoom.URL = "ui://8oy4o0mbo4403n";
-            return FUI_leaveRoom;
-        }(fairygui.GComponent));
-        Game.FUI_leaveRoom = FUI_leaveRoom;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_logo = /** @class */ (function (_super) {
-            __extends(FUI_logo, _super);
-            function FUI_logo() {
-                return _super.call(this) || this;
-            }
-            FUI_logo.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "logo"));
-            };
-            FUI_logo.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_ctl = this.getControllerAt(0);
-                this.m_logo = (this.getChildAt(0));
-            };
-            FUI_logo.URL = "ui://8oy4o0mbo4403t";
-            return FUI_logo;
-        }(fairygui.GComponent));
-        Game.FUI_logo = FUI_logo;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_menu = /** @class */ (function (_super) {
-            __extends(FUI_menu, _super);
-            function FUI_menu() {
-                return _super.call(this) || this;
-            }
-            FUI_menu.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "menu"));
-            };
-            FUI_menu.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_ctr = this.getControllerAt(0);
-                this.m_n12 = (this.getChildAt(0));
-                this.m_n8 = (this.getChildAt(1));
-                this.m_n10 = (this.getChildAt(2));
-                this.m_n9 = (this.getChildAt(3));
-                this.m_on = (this.getChildAt(4));
-                this.m_off = (this.getChildAt(5));
-                this.m_n18 = (this.getChildAt(6));
-                this.m_n19 = (this.getChildAt(7));
-                this.m_n20 = (this.getChildAt(8));
-                this.m_n21 = (this.getChildAt(9));
-                this.m_n22 = (this.getChildAt(10));
-            };
-            FUI_menu.URL = "ui://8oy4o0mbd8321z";
-            return FUI_menu;
-        }(fairygui.GComponent));
-        Game.FUI_menu = FUI_menu;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_musicBtn = /** @class */ (function (_super) {
-            __extends(FUI_musicBtn, _super);
-            function FUI_musicBtn() {
-                return _super.call(this) || this;
-            }
-            FUI_musicBtn.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "musicBtn"));
-            };
-            FUI_musicBtn.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_n4 = (this.getChildAt(1));
-            };
-            FUI_musicBtn.URL = "ui://8oy4o0mbd83232";
-            return FUI_musicBtn;
-        }(fairygui.GButton));
-        Game.FUI_musicBtn = FUI_musicBtn;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_musicSlider = /** @class */ (function (_super) {
-            __extends(FUI_musicSlider, _super);
-            function FUI_musicSlider() {
-                return _super.call(this) || this;
-            }
-            FUI_musicSlider.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "musicSlider"));
-            };
-            FUI_musicSlider.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-                this.m_bar = (this.getChildAt(1));
-                this.m_grip = (this.getChildAt(2));
-            };
-            FUI_musicSlider.URL = "ui://8oy4o0mbd8322x";
-            return FUI_musicSlider;
-        }(fairygui.GSlider));
-        Game.FUI_musicSlider = FUI_musicSlider;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_musicSlider_grip = /** @class */ (function (_super) {
-            __extends(FUI_musicSlider_grip, _super);
-            function FUI_musicSlider_grip() {
-                return _super.call(this) || this;
-            }
-            FUI_musicSlider_grip.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "musicSlider_grip"));
-            };
-            FUI_musicSlider_grip.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n0 = (this.getChildAt(0));
-            };
-            FUI_musicSlider_grip.URL = "ui://8oy4o0mbd83230";
-            return FUI_musicSlider_grip;
-        }(fairygui.GButton));
-        Game.FUI_musicSlider_grip = FUI_musicSlider_grip;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_player = /** @class */ (function (_super) {
-            __extends(FUI_player, _super);
-            function FUI_player() {
-                return _super.call(this) || this;
-            }
-            FUI_player.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "player"));
-            };
-            FUI_player.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_card1 = (this.getChildAt(0));
-                this.m_card2 = (this.getChildAt(1));
-                this.m_card3 = (this.getChildAt(2));
-                this.m_card4 = (this.getChildAt(3));
-                this.m_card5 = (this.getChildAt(4));
-                this.m_set = (this.getChildAt(5));
-            };
-            FUI_player.URL = "ui://8oy4o0mbo44039";
-            return FUI_player;
-        }(fairygui.GComponent));
-        Game.FUI_player = FUI_player;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_reconnect = /** @class */ (function (_super) {
-            __extends(FUI_reconnect, _super);
-            function FUI_reconnect() {
-                return _super.call(this) || this;
-            }
-            FUI_reconnect.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "reconnect"));
-            };
-            FUI_reconnect.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-                this.m_lang_title = (this.getChildAt(1));
-                this.m_tips = (this.getChildAt(2));
-                this.m_reconnect = (this.getChildAt(3));
-                this.m_return = (this.getChildAt(4));
-            };
-            FUI_reconnect.URL = "ui://8oy4o0mbo4403b";
-            return FUI_reconnect;
-        }(fairygui.GComponent));
-        Game.FUI_reconnect = FUI_reconnect;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_reconnectCircle = /** @class */ (function (_super) {
-            __extends(FUI_reconnectCircle, _super);
-            function FUI_reconnectCircle() {
-                return _super.call(this) || this;
-            }
-            FUI_reconnectCircle.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "reconnectCircle"));
-            };
-            FUI_reconnectCircle.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_lang_1 = (this.getChildAt(0));
-                this.m_circle = (this.getChildAt(1));
-                this.m_t0 = this.getTransitionAt(0);
-            };
-            FUI_reconnectCircle.URL = "ui://8oy4o0mbo4403h";
-            return FUI_reconnectCircle;
-        }(fairygui.GComponent));
-        Game.FUI_reconnectCircle = FUI_reconnectCircle;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_Roomitems = /** @class */ (function (_super) {
-            __extends(FUI_Roomitems, _super);
-            function FUI_Roomitems() {
-                return _super.call(this) || this;
-            }
-            FUI_Roomitems.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "Roomitems"));
-            };
-            FUI_Roomitems.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_h_v = this.getControllerAt(0);
-                this.m_item1 = (this.getChildAt(0));
-                this.m_item2 = (this.getChildAt(1));
-                this.m_item3 = (this.getChildAt(2));
-                this.m_item4 = (this.getChildAt(3));
-            };
-            FUI_Roomitems.URL = "ui://8oy4o0mbcsvz9";
-            return FUI_Roomitems;
-        }(fairygui.GComponent));
-        Game.FUI_Roomitems = FUI_Roomitems;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_room_help = /** @class */ (function (_super) {
-            __extends(FUI_room_help, _super);
-            function FUI_room_help() {
-                return _super.call(this) || this;
-            }
-            FUI_room_help.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "room_help"));
-            };
-            FUI_room_help.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_lang_option = (this.getChildAt(1));
-            };
-            FUI_room_help.URL = "ui://8oy4o0mbd8322p";
-            return FUI_room_help;
-        }(fairygui.GButton));
-        Game.FUI_room_help = FUI_room_help;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_room_home = /** @class */ (function (_super) {
-            __extends(FUI_room_home, _super);
-            function FUI_room_home() {
-                return _super.call(this) || this;
-            }
-            FUI_room_home.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "room_home"));
-            };
-            FUI_room_home.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_lang_option = (this.getChildAt(1));
-            };
-            FUI_room_home.URL = "ui://8oy4o0mbd8322t";
-            return FUI_room_home;
-        }(fairygui.GButton));
-        Game.FUI_room_home = FUI_room_home;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_room_rep = /** @class */ (function (_super) {
-            __extends(FUI_room_rep, _super);
-            function FUI_room_rep() {
-                return _super.call(this) || this;
-            }
-            FUI_room_rep.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "room_rep"));
-            };
-            FUI_room_rep.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_lang_option = (this.getChildAt(1));
-            };
-            FUI_room_rep.URL = "ui://8oy4o0mbd8322s";
-            return FUI_room_rep;
-        }(fairygui.GButton));
-        Game.FUI_room_rep = FUI_room_rep;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_room_sound = /** @class */ (function (_super) {
-            __extends(FUI_room_sound, _super);
-            function FUI_room_sound() {
-                return _super.call(this) || this;
-            }
-            FUI_room_sound.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "room_sound"));
-            };
-            FUI_room_sound.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_lang_option = (this.getChildAt(1));
-            };
-            FUI_room_sound.URL = "ui://8oy4o0mbd8322u";
-            return FUI_room_sound;
-        }(fairygui.GButton));
-        Game.FUI_room_sound = FUI_room_sound;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_saveHead = /** @class */ (function (_super) {
-            __extends(FUI_saveHead, _super);
-            function FUI_saveHead() {
-                return _super.call(this) || this;
-            }
-            FUI_saveHead.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "saveHead"));
-            };
-            FUI_saveHead.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n7 = (this.getChildAt(0));
-                this.m_lang_save = (this.getChildAt(1));
-            };
-            FUI_saveHead.URL = "ui://8oy4o0mbd83211";
-            return FUI_saveHead;
-        }(fairygui.GButton));
-        Game.FUI_saveHead = FUI_saveHead;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_set = /** @class */ (function (_super) {
-            __extends(FUI_set, _super);
-            function FUI_set() {
-                return _super.call(this) || this;
-            }
-            FUI_set.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "set"));
-            };
-            FUI_set.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-                this.m_lang_title = (this.getChildAt(1));
-                this.m_lang_music = (this.getChildAt(2));
-                this.m_slider_music = (this.getChildAt(3));
-                this.m_slider_sound = (this.getChildAt(4));
-                this.m_lang_sound = (this.getChildAt(5));
-                this.m_btn_music = (this.getChildAt(6));
-                this.m_btn_sound = (this.getChildAt(7));
-                this.m_close = (this.getChildAt(8));
-            };
-            FUI_set.URL = "ui://8oy4o0mbd8322v";
-            return FUI_set;
-        }(fairygui.GComponent));
-        Game.FUI_set = FUI_set;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_setGM = /** @class */ (function (_super) {
-            __extends(FUI_setGM, _super);
-            function FUI_setGM() {
-                return _super.call(this) || this;
-            }
-            FUI_setGM.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "setGM"));
-            };
-            FUI_setGM.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_n4 = (this.getChildAt(1));
-            };
-            FUI_setGM.URL = "ui://8oy4o0mbl3ii3w";
-            return FUI_setGM;
-        }(fairygui.GButton));
-        Game.FUI_setGM = FUI_setGM;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_sure = /** @class */ (function (_super) {
-            __extends(FUI_sure, _super);
-            function FUI_sure() {
-                return _super.call(this) || this;
-            }
-            FUI_sure.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "sure"));
-            };
-            FUI_sure.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_lang_sure = (this.getChildAt(1));
-            };
-            FUI_sure.URL = "ui://8oy4o0mbo4403p";
-            return FUI_sure;
-        }(fairygui.GButton));
-        Game.FUI_sure = FUI_sure;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_switch = /** @class */ (function (_super) {
-            __extends(FUI_switch, _super);
-            function FUI_switch() {
-                return _super.call(this) || this;
-            }
-            FUI_switch.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "switch"));
-            };
-            FUI_switch.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n2 = (this.getChildAt(0));
-            };
-            FUI_switch.URL = "ui://8oy4o0mbd8322o";
-            return FUI_switch;
-        }(fairygui.GButton));
-        Game.FUI_switch = FUI_switch;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var GameBinder = /** @class */ (function () {
-            function GameBinder() {
-            }
-            GameBinder.bindAll = function () {
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item1.URL, Game.FUI_item1);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_Roomitems.URL, Game.FUI_Roomitems);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_saveHead.URL, Game.FUI_saveHead);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_headItem.URL, Game.FUI_headItem);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_close.URL, Game.FUI_close);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_menu.URL, Game.FUI_menu);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hall_home.URL, Game.FUI_hall_home);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hall_rep.URL, Game.FUI_hall_rep);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hall_help.URL, Game.FUI_hall_help);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hall_sound.URL, Game.FUI_hall_sound);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_switch.URL, Game.FUI_switch);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_room_help.URL, Game.FUI_room_help);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_room_rep.URL, Game.FUI_room_rep);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_room_home.URL, Game.FUI_room_home);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_room_sound.URL, Game.FUI_room_sound);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_set.URL, Game.FUI_set);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_musicSlider.URL, Game.FUI_musicSlider);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_musicSlider_grip.URL, Game.FUI_musicSlider_grip);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_musicBtn.URL, Game.FUI_musicBtn);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hallBg_h.URL, Game.FUI_hallBg_h);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hallBg_v.URL, Game.FUI_hallBg_v);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_brief.URL, Game.FUI_brief);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_briefPopup.URL, Game.FUI_briefPopup);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_gmKeys.URL, Game.FUI_gmKeys);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_setGM.URL, Game.FUI_setGM);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_AddWalletBtn.URL, Game.FUI_AddWalletBtn);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item2.URL, Game.FUI_item2);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item3.URL, Game.FUI_item3);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item4.URL, Game.FUI_item4);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_gm.URL, Game.FUI_gm);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_player.URL, Game.FUI_player);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_gmSubmit.URL, Game.FUI_gmSubmit);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_reconnect.URL, Game.FUI_reconnect);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_btn_reconnect.URL, Game.FUI_btn_reconnect);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_btn_return.URL, Game.FUI_btn_return);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_reconnectCircle.URL, Game.FUI_reconnectCircle);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_leaveRoom.URL, Game.FUI_leaveRoom);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_sure.URL, Game.FUI_sure);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_cancle.URL, Game.FUI_cancle);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_logo.URL, Game.FUI_logo);
-            };
-            return GameBinder;
-        }());
-        Game.GameBinder = GameBinder;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var help;
-    (function (help) {
-        var FUI_help = /** @class */ (function (_super) {
-            __extends(FUI_help, _super);
-            function FUI_help() {
-                return _super.call(this) || this;
-            }
-            FUI_help.createInstance = function () {
-                return (fairygui.UIPackage.createObject("help", "help"));
-            };
-            FUI_help.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n1 = (this.getChildAt(0));
-                this.m_lang_title = (this.getChildAt(1));
-                this.m_tab = (this.getChildAt(2));
-                this.m_info = (this.getChildAt(3));
-                this.m_close = (this.getChildAt(4));
-            };
-            FUI_help.URL = "ui://txmqgqddujig4";
-            return FUI_help;
-        }(fairygui.GComponent));
-        help.FUI_help = FUI_help;
-    })(help = fui.help || (fui.help = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var help;
-    (function (help) {
-        var FUI_help_info = /** @class */ (function (_super) {
-            __extends(FUI_help_info, _super);
-            function FUI_help_info() {
-                return _super.call(this) || this;
-            }
-            FUI_help_info.createInstance = function () {
-                return (fairygui.UIPackage.createObject("help", "help_info"));
-            };
-            FUI_help_info.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_lang_info = (this.getChildAt(0));
-            };
-            FUI_help_info.URL = "ui://txmqgqddujig6";
-            return FUI_help_info;
-        }(fairygui.GComponent));
-        help.FUI_help_info = FUI_help_info;
-    })(help = fui.help || (fui.help = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var help;
-    (function (help) {
-        var FUI_help_tab = /** @class */ (function (_super) {
-            __extends(FUI_help_tab, _super);
-            function FUI_help_tab() {
-                return _super.call(this) || this;
-            }
-            FUI_help_tab.createInstance = function () {
-                return (fairygui.UIPackage.createObject("help", "help_tab"));
-            };
-            FUI_help_tab.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n6 = (this.getChildAt(0));
-                this.m_n7 = (this.getChildAt(1));
-                this.m_lang_tab = (this.getChildAt(2));
-            };
-            FUI_help_tab.URL = "ui://txmqgqddujig5";
-            return FUI_help_tab;
-        }(fairygui.GButton));
-        help.FUI_help_tab = FUI_help_tab;
-    })(help = fui.help || (fui.help = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var help;
-    (function (help) {
-        var helpBinder = /** @class */ (function () {
-            function helpBinder() {
-            }
-            helpBinder.bindAll = function () {
-                fairygui.UIObjectFactory.setPackageItemExtension(help.FUI_help.URL, help.FUI_help);
-                fairygui.UIObjectFactory.setPackageItemExtension(help.FUI_help_tab.URL, help.FUI_help_tab);
-                fairygui.UIObjectFactory.setPackageItemExtension(help.FUI_help_info.URL, help.FUI_help_info);
-            };
-            return helpBinder;
-        }());
-        help.helpBinder = helpBinder;
-    })(help = fui.help || (fui.help = {}));
-})(fui || (fui = {}));
-var point21;
-(function (point21) {
-    var VBtnPlay = /** @class */ (function () {
-        function VBtnPlay(v) {
-            this._view = v;
-            var bg = this._view.m_betSlider.m_bg;
-            this.range = bg.height;
-            this.gripY_min = bg.y;
-            this.gripy_max = bg.y + this.range;
-        }
-        //得到最大注 最小注
-        VBtnPlay.prototype.setBaseBet = function (max, min) {
-            this.bet_max = max;
-            this.bet_min = min;
-        };
-        //隐藏
-        VBtnPlay.prototype.hide = function () {
-            this._view.visible = false;
-        };
-        //显示(0:下注块  1：要牌块  2：保险块  3：继续游戏)
-        VBtnPlay.prototype.show = function (index) {
-            this._view.visible = true;
-            this._view.m_btnCtl.selectedIndex = index;
-            for (var i = 0; i < this._view.numChildren; i++) {
-                this._view.getChildAt(i).enabled = true;
-            }
-            if (index === 0) {
-                this._view.m_maxBet.m_value.text = '(' + this.bet_max + ')';
-                this._view.m_minBet.m_value.text = '(' + this.bet_min + ')';
-            }
-        };
-        //某个按钮变灰(下注组和要牌组共8个)
-        VBtnPlay.prototype.btnUnable = function (name) {
-            var target = this._view['m_' + name];
-            if (target) {
-                target.enabled = false;
-            }
-        };
-        //变灰的按钮恢复
-        VBtnPlay.prototype.btnEnable = function (name) {
-            var target = this._view['m_' + name];
-            if (target) {
-                target.enabled = true;
-            }
-        };
-        //是否设置为显示滑动条
-        VBtnPlay.prototype.setSliderVisible = function (state) {
-            this._view.m_betSlider.visible = state;
-            this._view.m_bet.m_contentCtl.selectedIndex = state ? 1 : 0;
-        };
-        //按下时鼠标与滑块的坐标差距
-        VBtnPlay.prototype.getMouseRange = function () {
-            var grip = this._view.m_betSlider.m_grip;
-            var p = grip.parent.globalToLocal(0, Laya.MouseManager.instance.mouseY);
-            var gripY = grip.y;
-            this.mouseRange = p.y - gripY;
-        };
-        //移动时更改下注值
-        VBtnPlay.prototype.setSliderOnBet = function () {
-            var grip = this._view.m_betSlider.m_grip;
-            var p = grip.parent.globalToLocal(0, Laya.MouseManager.instance.mouseY);
-            var currentY = p.y - this.mouseRange;
-            this.setGripY(currentY);
-        };
-        //设置滑块坐标
-        VBtnPlay.prototype.setGripY = function (v) {
-            var grip = this._view.m_betSlider.m_grip;
-            var rate, betNumber;
-            if (v >= this.gripy_max) {
-                grip.y = this.gripy_max;
-                this.setCurrentChip(this.bet_min);
-            }
-            else if (v <= this.gripY_min) {
-                grip.y = this.gripY_min;
-                this.setCurrentChip(this.bet_max);
-            }
-            else {
-                grip.y = v;
-                rate = 1 - (v - this.gripY_min) / this.range;
-                betNumber = Math.round(rate * (this.bet_max - this.bet_min) + this.bet_min);
-                this.setCurrentChip(betNumber);
-                this.betValue = betNumber;
-            }
-        };
-        //设置当前筹码显示值
-        VBtnPlay.prototype.setCurrentChip = function (v) {
-            this._view.m_betSlider.m_title.m_value.text = v.toString();
-        };
-        //点击slider背景时
-        VBtnPlay.prototype.onClickSlider = function () {
-            var mouse = Laya.MouseManager.instance;
-            var point = this._view.m_betSlider.globalToLocal(mouse.mouseX, mouse.mouseY);
-            this.setGripY(point.y);
-        };
-        //设置最大注/最小注 1:最大  0: 最小
-        VBtnPlay.prototype.setMaxOrMin = function (v) {
-            if (v === 1) {
-                this.setGripY(this.gripY_min);
-            }
-            else {
-                this.setGripY(this.gripy_max);
-            }
-        };
-        //设置续压按钮的显示内容 content 0:续压  1 下注完成
-        VBtnPlay.prototype.setContinueBetContent = function (content) {
-            this._view.m_continueBet.m_contentCtl.selectedIndex = content;
-        };
-        return VBtnPlay;
-    }());
-    point21.VBtnPlay = VBtnPlay;
-})(point21 || (point21 = {}));
-var point21;
-(function (point21) {
-    var VChip = /** @class */ (function (_super) {
-        __extends(VChip, _super);
-        function VChip(v) {
-            var _this = _super.call(this, 'fui.room.FUI_chip') || this;
-            _this._view = _this.ui;
-            _this._view.m_img.url = point21.Utils.getChipImg(v);
-            return _this;
-        }
-        return VChip;
-    }(bx.Layout));
-    point21.VChip = VChip;
-})(point21 || (point21 = {}));
-var xys;
-(function (xys) {
-    var VGM = /** @class */ (function (_super) {
-        __extends(VGM, _super);
-        function VGM() {
-            var _this = _super.call(this, 'fui.Game.FUI_gm') || this;
-            _this._view = _this.ui;
-            _this.btn_close = _this._view.m_close;
-            _this.btn_submit = _this._view.m_submit;
-            _this.bindEvent();
-            return _this;
-        }
-        VGM.prototype.reset = function () {
-            this._view.m_keys.visible = false;
-        };
-        VGM.prototype.bindEvent = function () {
-            var list = this._view.m_keys;
-            for (var i = 0; i < list.numChildren; i++) {
-                list.getChildAt(i).onClick(this, this.clickCard, [i]);
-            }
-            for (var j = 0; j < 6; j++) {
-                this._view['m_cards_' + j].m_set.onClick(this, this.clickSet, [j]);
-            }
-        };
-        //点击设置
-        VGM.prototype.clickSet = function (id) {
-            this.activeId = id;
-            this.activeNumb = 1;
-            this._view.m_keys.visible = true;
-        };
-        //点击牌面
-        VGM.prototype.clickCard = function (index) {
-            var key = this._view.m_keys.getChildAt(index);
-            var txt = key.text;
-            var data = key.data;
-            var target = this._view['m_cards_' + this.activeId]['m_card' + this.activeNumb];
-            if (target) {
-                target.text = txt;
-                target.data = data;
-                if ((data > 16 && data < 30) || (data > 48 && data < 62)) {
-                    target.color = '#FF0000';
-                }
-                else {
-                    target.color = '#000000';
-                }
-                this.activeNumb++;
-                if (this.activeNumb > 5) {
-                    this.activeNumb = 1;
-                    this._view.m_keys.visible = false;
-                }
-            }
-        };
-        /**
-         * 获取人数
-        */
-        VGM.prototype.getPlayerNumb = function () {
-            return Number(this._view.m_playerNumb.text);
-        };
-        /**
-         * 获取房间类型
-        */
-        VGM.prototype.getRoomType = function () {
-            return Number(this._view.m_roomType.text);
-        };
-        /**
-         * 获取所有牌
-        */
-        VGM.prototype.getCards = function () {
-            var list = [];
-            for (var i = 0; i < 6; i++) {
-                var cards = this._view['m_cards_' + i];
-                var item = {};
-                item.pos = i;
-                item.cards = [];
-                for (var j = 0; j < cards.numChildren; j++) {
-                    var value = Number(cards.getChildAt(j).data);
-                    if (value > 16 && value < 78) {
-                        item.cards.push(value);
-                    }
-                }
-                list.push(item);
-            }
-            return list;
-        };
-        return VGM;
-    }(bx.Layout));
-    xys.VGM = VGM;
-})(xys || (xys = {}));
-var point21;
-(function (point21) {
-    var VMatch = /** @class */ (function (_super) {
-        __extends(VMatch, _super);
-        function VMatch() {
-            var _this = _super.call(this, 'fui.room.FUI_match', "room_") || this;
-            _this.str = '';
-            _this._view = _this.ui;
-            _this.oldStr = _this._view.m_lang_word.text;
-            return _this;
-        }
-        VMatch.prototype.requestGS = function () {
-            var params = [];
-            for (var _i = 0; _i < arguments.length; _i++) {
-                params[_i] = arguments[_i];
-            }
-            var _a;
-            (_a = bx.Framework).notify.apply(_a, [bx.GConst.n_gs_send].concat(params));
-        };
-        VMatch.prototype.reset = function () {
-            Laya.timer.loop(400, this, this.wordLoop);
-        };
-        //文字循环动态
-        VMatch.prototype.wordLoop = function () {
-            this.str += '.';
-            if (this.str == '....')
-                this.str = '';
-            this._view.m_lang_word.text = this.oldStr + this.str;
-        };
-        //关闭弹窗前
-        VMatch.prototype.beforeClose = function () {
-            Laya.timer.clearAll(this);
-        };
-        return VMatch;
-    }(bx.Layout));
-    point21.VMatch = VMatch;
-})(point21 || (point21 = {}));
-var point21;
-(function (point21) {
-    var VPlayer = /** @class */ (function () {
-        function VPlayer(v, i) {
-            if (i == 2) {
-                this._viewSelf = v;
-                //this._viewSelf.displayObject.cacheAs = "bitmap";
-            }
-            else {
-                this._view = v;
-                //this._view.displayObject.cacheAs = 'bitmap';
-                if (i < 2) {
-                    this._view.m_talkPos.selectedIndex = 1;
-                }
-                else {
-                    this._view.m_talkPos.selectedIndex = 0;
-                }
-            }
-            this.seatId = i + 1;
-        }
-        //显示
-        VPlayer.prototype.show = function () {
-            if (this._view) {
-                this._view.visible = true;
-                this._view.m_timeCircle.m_circle.visible = false;
-                this.setTalkingVisible(false);
-            }
-            else {
-                this._viewSelf.visible = true;
-            }
-        };
-        //隐藏
-        VPlayer.prototype.hide = function () {
-            if (this._view) {
-                this._view.visible = false;
-            }
-            else {
-                this._viewSelf.visible = false;
-            }
-        };
-        //设置玩家信息
-        VPlayer.prototype.setPlayer = function (info) {
-            this.show();
-            this.playerName = info.name;
-            var headUrl = point21.Utils.getHeadUrl(info.avatar);
-            if (this._view) {
-                this._view.m_head.url = headUrl;
-                var name_1 = info.name;
-                if (name_1.length > 8) {
-                    name_1 = name_1.substr(0, 8) + '...';
-                }
-                this._view.m_nick.text = name_1;
-                this.setCoin(info.chips);
-            }
-            else {
-                this._viewSelf.m_headComp.m_head.url = headUrl;
-                this._viewSelf.m_nick.text = info.name;
-                this.setCoin(info.chips);
-            }
-        };
-        //设置金币
-        VPlayer.prototype.setCoin = function (n) {
-            if (this._view) {
-                this._view.m_coin.text = bx.GData.formatNumber(n);
-            }
-            else {
-                bx.Framework.notify(point21.GConst.n_selfMoneyChange, n);
-                this._viewSelf.m_coin.text = bx.GData.formatNumber(n);
-            }
-        };
-        Object.defineProperty(VPlayer.prototype, "maskDeg", {
-            /////////////////以下为其他玩家独有/////////////////////////////
-            get: function () {
-                return this._maskDeg;
-            },
-            set: function (v) {
-                if (v != this._maskDeg)
-                    this._maskDeg = v;
-                var circle = this._view.m_timeCircle.m_circle;
-                var width = circle.width;
-                var height = circle.height;
-                var all = width * 2 + height * 2;
-                var rateWidth = width / all, rateHeight = height / all;
-                var rate1 = 1 - height / 2 / all, rate2 = rate1 - rateWidth, rate3 = rate2 - rateHeight, rate4 = rate3 - rateWidth;
-                var p1 = new Laya.Point(width, height / 2), p2 = new Laya.Point(width, 0), p3 = new Laya.Point(0, 0), p4 = new Laya.Point(0, height), p5 = new Laya.Point(width, height);
-                var arr = [], change;
-                if (v < rate4) {
-                    change = (rate4 - v) * all;
-                    arr = [p1.x - 9, p1.y, p1.x, change];
-                }
-                else if (v < rate3) {
-                    change = width - (v - rate4) * all;
-                    arr = [p1.x - 9, p1.y, p2.x, p2.y, change, p2.y];
-                }
-                else if (v < rate2) {
-                    change = (v - rate3) * all;
-                    arr = [p1.x, p1.y, p2.x, p2.y, p3.x, p3.y, p3.x, change];
-                }
-                else if (v < rate1) {
-                    change = (v - rate2) * all;
-                    arr = [p1.x, p1.y, p2.x, p2.y, p3.x, p3.y, p4.x, p4.y, change, p4.y];
-                }
-                else {
-                    change = height - (v - rate1) * all;
-                    arr = [p1.x, p1.y, p2.x, p2.y, p3.x, p3.y, p4.x, p4.y, p5.x, p5.y, p1.x, change];
-                }
-                this.mask.graphics.clear();
-                this.mask.graphics.drawLines(0, 0, arr, '#ffffff', 13);
-            },
-            enumerable: true,
-            configurable: true
-        });
-        //倒计时光圈启动
-        VPlayer.prototype.timeCircleStart = function (time) {
-            if (!this._view)
-                return;
-            this.clockTime = time;
-            var component = this._view.m_timeCircle;
-            component.m_circle.visible = true;
-            if (!this.mask) {
-                this.mask = new Laya.Sprite();
-            }
-            component.mask = this.mask;
-            this.maskDeg = 1;
-            this.timeTween = Laya.Tween.to(this, { maskDeg: 0 }, time * 1000, Laya.Ease.linearNone, Laya.Handler.create(this, function () {
-                this.timeCircleEnd();
-            }));
-        };
-        //倒计时光圈结束
-        VPlayer.prototype.timeCircleEnd = function () {
-            if (!this._view)
-                return;
-            this._view.m_timeCircle.m_circle.visible = false;
-            this.timeTween && Laya.Tween.clear(this.timeTween);
-        };
-        //说话显示控制 0:分解  1:双倍  2:要牌  3:停牌  4:下注完成
-        VPlayer.prototype.setTalkingVisible = function (state, content) {
-            if (!this._view)
-                return;
-            this._view.m_talk.visible = state;
-            this._view.m_talkBgLeft.visible = state;
-            this._view.m_talkBgRight.visible = state;
-            if (state) {
-                this._view.m_talk.m_word.selectedIndex = content;
-                Laya.timer.once(2000, this, function () {
-                    this.setTalkingVisible(false);
-                });
-            }
-        };
-        return VPlayer;
-    }());
-    point21.VPlayer = VPlayer;
-})(point21 || (point21 = {}));
-var point21;
-(function (point21) {
-    var VPlayerArea = /** @class */ (function () {
-        function VPlayerArea(v, i) {
-            this.recoverDuration = 300; //回收牌动作时间
-            this.skArr1 = [null, null, null]; //牌型骨骼动画保存,0,1,2分别保存 左中右的sk
-            this.skArr2 = [null, null, null]; //牌型骨骼动画保存,0,1,2分别保存 左中右的sk
-            if (i === 0) {
-                this._view_banker = v;
-            }
-            else {
-                this._view = v;
-            }
-            this.seatId = i;
-        }
-        VPlayerArea.prototype.requestGS = function () {
-            var params = [];
-            for (var _i = 0; _i < arguments.length; _i++) {
-                params[_i] = arguments[_i];
-            }
-            var _a;
-            (_a = bx.Framework).notify.apply(_a, [bx.GConst.n_gs_send].concat(params));
-        };
-        VPlayerArea.prototype.init = function (roomView) {
-            this.roomView = roomView;
-            //this.recoverCard_endNode = roomView.m_recoverNode;
-            this.deal_startNode = roomView.m_card1;
-        };
-        VPlayerArea.prototype.reset = function () {
-            if (this._view) {
-                this.setPoint(0, 0);
-                this.setPoint(0, 1);
-                this.setPoint(0, 2);
-                this.removeChildrenFromList(0);
-                this.removeChildrenFromList(1);
-                this.removeChildrenFromList(2);
-                this._view.m_fen.selectedIndex = 0;
-                this.removeChildrenFromChipList(0);
-                this.removeChildrenFromChipList(1);
-                this.removeChildrenFromChipList(2);
-                this.setChip(0, 0);
-                this.setChip(0, 1);
-                this.setChip(0, 2);
-                this.setTipsToBetVisible(false);
-                this.setCardTypeTipVisible(false, 0);
-                this.setCardTypeTipVisible(false, 1);
-                this.setCardTypeTipVisible(false, 2);
-                this.doubleSignVisible(false, 0);
-                this.doubleSignVisible(false, 1);
-                this.doubleSignVisible(false, 2);
-                this.insuranceSignVisible(false);
-            }
-            else {
-                this.setPoint(0);
-                this.removeChildrenFromList();
-                this.setCardTypeTipVisible(false);
-            }
-        };
-        /////////////////以下为两种类型 公共部分///////////////
-        //设置点数(左 中 右 庄)
-        VPlayerArea.prototype.setPoint = function (point, id) {
-            var str = point.toString();
-            if (point > 21)
-                str = bx.GData.getLanguage('201314');
-            if (point === 0) {
-                if (this._view) {
-                    this._view['m_point' + id].visible = false;
-                }
-                else {
-                    this._view_banker.m_cardPoint.visible = false;
-                }
-                return;
-            }
-            else {
-                if (this._view) {
-                    this._view['m_point' + id].visible = true;
-                    this._view['m_point' + id].m_value.text = str;
-                }
-                else {
-                    this._view_banker.m_cardPoint.visible = true;
-                    this._view_banker.m_cardPoint.m_value.text = str;
-                }
-            }
-        };
-        //移除牌列表item(左 中 右  庄)
-        VPlayerArea.prototype.removeChildrenFromList = function (id) {
-            if (this._view) {
-                this._view['m_cardsList' + id].m_list1.removeChildrenToPool();
-                this._view['m_cardsList' + id].m_list2.removeChildrenToPool();
-            }
-            else {
-                this._view_banker.m_cardList.removeChildrenToPool();
-            }
-        };
-        //牌列表添加子元素(闲家需要指定上下列表序号)
-        VPlayerArea.prototype.addChildToList = function (id, index) {
-            var child;
-            var list;
-            if (this._view) {
-                list = this._view['m_cardsList' + id]['m_list' + index];
-            }
-            else {
-                list = this._view_banker.m_cardList;
-            }
-            child = list.addItemFromPool();
-            //立刻重排，以便获取正确位置
-            list.ensureBoundsCorrect();
-            return child;
-        };
-        //发牌
-        VPlayerArea.prototype.dealCard = function (endNode, data, type) {
-            var _this = this;
-            var card = Laya.Pool.getItemByCreateFun('card', function () {
-                return fui.room.FUI_card.createInstance();
-            });
-            card.m_card.url = point21.Utils.getCardImg(0);
-            this.roomView.addChild(card);
-            var deal = Laya.Pool.getItemByClass('move', Tools.Move);
-            deal.target = card;
-            deal.start = this.deal_startNode;
-            deal.end = endNode;
-            deal.duration = 300;
-            deal.props = { scaleX: [deal.start.scaleX, deal.end.scaleX], scaleY: [deal.start.scaleY, deal.end.scaleY] };
-            deal.complete = function () {
-                card.removeFromParent();
-                Laya.Pool.recover('card', this.target);
-                Laya.Pool.recover('move', deal);
-                this.end.visible = true;
-                this.end.m_card.url = point21.Utils.getCardImg(0);
-                _this.dealComplete(this.end, data, type);
-            };
-            deal.move();
-            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('deal'));
-        };
-        //收牌
-        VPlayerArea.prototype.recoverCards = function () {
-            if (this._view) {
-                if (this._view.m_fen.selectedIndex === 0) {
-                    this.recoverCardsList(this._view.m_cardsList0.m_list2, 0);
-                    this.recoverCardsList(this._view.m_cardsList0.m_list1, 0);
-                    //一定要在回收列表执行之后再清空列表
-                    this.removeChildrenFromList(0);
-                }
-                else {
-                    this.recoverCardsList(this._view.m_cardsList1.m_list2, 1);
-                    this.recoverCardsList(this._view.m_cardsList1.m_list1, 1);
-                    this.recoverCardsList(this._view.m_cardsList2.m_list2, 2);
-                    this.recoverCardsList(this._view.m_cardsList2.m_list1, 2);
-                    this.removeChildrenFromList(1);
-                    this.removeChildrenFromList(2);
-                }
-            }
-            else {
-                this.recoverCardsList(this._view_banker.m_cardList);
-                this.removeChildrenFromList();
-            }
-        };
-        //循环某个牌列表 收回列表中所有的牌 动作
-        VPlayerArea.prototype.recoverCardsList = function (list, id) {
-            for (var i = 0; i < list.numChildren; i++) {
-                var card = Laya.Pool.getItemByCreateFun('card', function () {
-                    return fui.room.FUI_card.createInstance();
-                });
-                this.roomView.addChild(card);
-                var recover = Laya.Pool.getItemByClass('move', Tools.Move);
-                recover.target = card;
-                recover.start = list.getChildAt(i);
-                recover.end = this.recoverCard_endNode;
-                recover.duration = 500;
-                //recover.duration = this.recoverDuration;
-                recover.props = { skewX: [this._view.skewX, this.recoverCard_endNode.skewX], skewY: [this._view.skewY, this.recoverCard_endNode.skewY] };
-                recover.complete = function () {
-                    Laya.Pool.recover('card', this.target);
-                    this.target.removeFromParent();
-                    Laya.Pool.recover('recoverMove', this);
-                };
-                recover.move();
-            }
-        };
-        //发牌完成后
-        VPlayerArea.prototype.dealComplete = function (target, data, type) {
-            var cardImg;
-            var cardInfo;
-            if (type == 0) {
-                cardInfo = data.cards[0];
-                this.renderCardType(data, type);
-            }
-            else if (type == 1) {
-                cardInfo = data.cards[0];
-            }
-            else if (type == 2) {
-                cardInfo = data.cards[1];
-                this.renderCardType(data, type);
-            }
-            cardImg = point21.Utils.getCardImg(cardInfo);
-            var cardWidth = target.width;
-            if (cardInfo === 0) {
-                target.m_card.url = cardImg;
-            }
-            else {
-                target.m_trun.setHook('change', Laya.Handler.create(this, function () {
-                    target.m_card.url = cardImg;
-                }));
-                target.m_trun.play();
-                Laya.timer.once(500, this, function () {
-                    target.m_card.url = cardImg;
-                    target.skewY = 0;
-                    target.width = cardWidth;
-                });
-            }
-        };
-        //牌型和点数设置
-        VPlayerArea.prototype.setCardAndPoint = function (type, playSound, whichOne, min, max) {
-            if (type == 3) { //五小龙
-                playSound && SoundManager.instance.playSound(AssetsUtils.getSoundUrl('blackjack'));
-                this.setCardTypeTipVisible(true, whichOne, 1);
-                this.setPoint(0, whichOne);
-            }
-            else if (type == 4) { //黑杰克
-                playSound && SoundManager.instance.playSound(AssetsUtils.getSoundUrl('blackjack'));
-                this.setCardTypeTipVisible(true, whichOne, 2);
-                this.setPoint(0, whichOne);
-            }
-            else if (type == 0) { //爆牌
-                playSound && SoundManager.instance.playSound(AssetsUtils.getSoundUrl('boom'));
-                this.setCardTypeTipVisible(true, whichOne, 0);
-                this.setPoint(22, whichOne);
-            }
-            else if (type == 1 || type == 2) { //其他点数
-                if (min == max) {
-                    this.setPoint(min, whichOne);
-                }
-                else {
-                    this.setPoint(min + '/' + max, whichOne);
-                }
-            }
-        };
-        //庄家暗牌翻牌
-        VPlayerArea.prototype.turnBankerCard = function (card) {
-            var cardImg = point21.Utils.getCardImg(card[0]);
-            var type = card[1];
-            var min = card[2];
-            var max = card[3];
-            this.setCardAndPoint(type, true, 0, min, max);
-            var target = this._view_banker.m_cardList.getChildAt(1);
-            target.m_trun.setHook('change', Laya.Handler.create(this, function () {
-                target.m_card.url = cardImg;
-            }));
-            target.m_trun.play();
-        };
-        //渲染牌型相关
-        VPlayerArea.prototype.renderCardType = function (data, dealType) {
-            var type = data.cardType;
-            this.setCardAndPoint(type, true, data.whichOne, data.minSum, data.maxSum);
-            if (dealType === 0) { //只有在后面渲染牌型时才判断是否需要隐藏操作按钮
-                if (type == 3 || type == 4 || type == 0) {
-                    bx.Framework.notify(point21.GConst.n_hideBtns);
-                }
-            }
-        };
-        //牌型提示 显示/隐藏    type 0:爆牌  1：五小龙 2:黑杰克
-        VPlayerArea.prototype.setCardTypeTipVisible = function (state, id, type) {
-            if (id === void 0) { id = 0; }
-            var target = this._view ? this._view['m_cardType' + id] : this._view_banker.m_cardType;
-            //target.m_typeChoose.selectedIndex = 0;//隐藏静态图
-            if (state) {
-                var sk1_1, sk2 = void 0;
-                if (type == 1) { //五小龙
-                    sk1_1 = this.getSK('sk_dragon1', 'wuxiaolong1.sk');
-                    sk2 = this.getSK('sk_dragon2', 'wuxiaolong2.sk');
-                    this.skArr1[id] = sk1_1;
-                    this.skArr2[id] = sk2;
-                    if (!point21.MPlayerArea.dragonLoaded) {
-                        point21.MPlayerArea.dragonLoaded = true;
-                        sk1_1.loadCompleteShow = this.playSk.bind(this, sk1_1, id);
-                        sk2.loadCompleteShow = this.playSk.bind(this, sk2, id);
-                    }
-                    else {
-                        this.playSk(sk1_1, id);
-                        this.playSk(sk2, id);
-                    }
-                }
-                else if (type == 2) { //黑杰克
-                    sk1_1 = this.getSK('sk_bj1', 'heijieke1.sk');
-                    sk2 = this.getSK('sk_bj2', 'heijieke2.sk');
-                    this.skArr1[id] = sk1_1;
-                    this.skArr2[id] = sk2;
-                    if (!point21.MPlayerArea.bjLoaded) {
-                        point21.MPlayerArea.bjLoaded = true;
-                        sk1_1.loadCompleteShow = this.playSk.bind(this, sk1_1, id);
-                        sk2.loadCompleteShow = this.playSk.bind(this, sk2, id);
-                    }
-                    else {
-                        this.playSk(sk1_1, id);
-                        this.playSk(sk2, id);
-                    }
-                }
-                else if (type == 0) { //爆牌
-                    sk1_1 = this.getSK('boom', 'baopai.sk');
-                    this.skArr1[id] = sk1_1;
-                    if (!point21.MPlayerArea.boomLoaded) {
-                        point21.MPlayerArea.boomLoaded = true;
-                        sk1_1.loadCompleteShow = function () {
-                            target.displayObject.addChild(sk1_1.sk);
-                            sk1_1.sk.x = target.width / 2;
-                            sk1_1.sk.y = target.height / 2;
-                            sk1_1.play('animation', false);
-                        };
-                    }
-                    else {
-                        target.displayObject.addChild(sk1_1.sk);
-                        sk1_1.sk.x = target.width / 2;
-                        sk1_1.sk.y = target.height / 2;
-                        sk1_1.play('animation', false);
-                    }
-                }
-                // Laya.timer.once(300,this,function(){
-                //     target.m_typeChoose.selectedIndex = type;
-                // })
-            }
-            else {
-                var oldSk1 = this.skArr1[id];
-                var oldSk2 = this.skArr2[id];
-                if (oldSk1) {
-                    oldSk1.sk.removeSelf();
-                    Laya.Pool.recover(oldSk1['sign'], oldSk1);
-                    this.skArr1[id] = null;
-                }
-                if (oldSk2) {
-                    oldSk2.sk.removeSelf();
-                    Laya.Pool.recover(oldSk2['sign'], oldSk2);
-                    this.skArr2[id] = null;
-                }
-            }
-        };
-        //由对象池取得牌型的骨骼动画
-        VPlayerArea.prototype.getSK = function (sign, name) {
-            return Laya.Pool.getItemByCreateFun(sign, function () {
-                var sk = new bx.Skeleton(name);
-                sk['sign'] = sign;
-                return sk;
-            });
-        };
-        //播放五小龙，黑杰克牌型动画
-        VPlayerArea.prototype.playSk = function (sk, id) {
-            var target = this._view ? this._view['m_cardType' + id] : this._view_banker.m_cardType;
-            var name;
-            switch (bx.GData.curLanguage) {
-                case 'zh-cn':
-                    name = 'zhongwen';
-                    break;
-                case 'en-us':
-                    name = 'yingwen';
-                    break;
-            }
-            target.displayObject.addChild(sk.sk);
-            sk.sk.x = target.width / 2;
-            sk.sk.y = target.height / 2;
-            sk.play(name, false);
-        };
-        //////////////////////以下为 闲家 特有部分//////////////////////////////////
-        //修改筹码值
-        VPlayerArea.prototype.setChip = function (n, id) {
-            if (id === void 0) { id = 0; }
-            if (!this._view)
-                return;
-            var str = n.toString();
-            if (n == 0) {
-                str = '';
-            }
-            this._view['m_chipCount' + id].m_value.text = str;
-        };
-        //筹码列表移除子元素（左 中 右）
-        VPlayerArea.prototype.removeChildrenFromChipList = function (id) {
-            this._view['m_chipsList' + id].removeChildrenToPool();
-        };
-        //筹码列表添加子元素（左 中 右）
-        VPlayerArea.prototype.addChildToChipList = function (id, value) {
-            var url = point21.Utils.getChipImg(value);
-            var chip;
-            chip = this._view['m_chipsList' + id].addItemFromPool();
-            chip.m_img.url = url;
-            this._view['m_chipsList' + id].ensureBoundsCorrect();
-            return chip;
-        };
-        //设置筹码列表旋转角度（初始化时三个都要设置一次）
-        VPlayerArea.prototype.setChipListRotation = function (rotation) {
-            if (!this._view)
-                return;
-            this._view.m_chipsList0.rotation = rotation;
-            this._view.m_chipsList1.rotation = rotation;
-            this._view.m_chipsList2.rotation = rotation;
-            this._view.m_clickToBet.rotation = rotation;
-        };
-        //设置筹码列表倾斜值
-        // setChipListSkew(x:number,y:number):void{
-        //     if(!this._view) return;
-        //     this._view.m_chipsList0.setSkew(x,y);
-        //     this._view.m_chipsList1.setSkew(x,y);
-        //     this._view.m_chipsList2.setSkew(x,y);
-        //     this._view.m_clickToBet.setSkew(x,y);
-        // }
-        //是否在此区域下注 的显示/隐藏
-        VPlayerArea.prototype.setTipsToBetVisible = function (state) {
-            if (this._view) {
-                this._view.m_clickToBet.visible = state;
-                this._view.m_chipArea.m_selectedCtl.selectedIndex = state ? 1 : 0;
-                this.canClick = state;
-            }
-        };
-        //分牌
-        VPlayerArea.prototype.divideCard = function (card1, card2) {
-            if (!this._view)
-                return;
-            this._view.m_fen.selectedIndex = 1;
-            this.addChildToList(1, 1).visible = false;
-            this.addChildToList(2, 1).visible = false;
-            var cardInfo = [card1, card2];
-            var card;
-            var _loop_1 = function (i) {
-                card = Laya.Pool.getItemByCreateFun('card', function () {
-                    return fui.room.FUI_card.createInstance();
-                });
-                card.m_card.url = point21.Utils.getCardImg(cardInfo[i]);
-                card.setScale(0.8, 0.8);
-                this_1._view.addChild(card);
-                var divideMove = Laya.Pool.getItemByClass('move', Tools.Move);
-                divideMove.target = card;
-                divideMove.start = this_1._view.m_centerCard_hide;
-                divideMove.end = this_1._view['m_cardsList' + (i + 1)].m_list1.getChildAt(0);
-                //divideMove.duration = this.recoverDuration;
-                divideMove.duration = 300;
-                divideMove.complete = function () {
-                    this.target.removeFromParent();
-                    Laya.Pool.recover('card', this.target);
-                    Laya.Pool.recover('move', divideMove);
-                    this.end.visible = true;
-                    var url = point21.Utils.getCardImg(cardInfo[i]);
-                    this.end.m_card.url = url;
-                };
-                divideMove.move();
-            };
-            var this_1 = this;
-            for (var i = 0; i < 2; i++) {
-                _loop_1(i);
-            }
-        };
-        //轮到某玩家的标志控制
-        // ActivedMarkVisible(state:boolean,id:number = 0):void{
-        //     if(!this._view) return;
-        //     this._view.m_activeCtl.selectedIndex = state ? 1 : 0;
-        //     if(state){
-        //         if(id == 0) return;
-        //         if(id == 1){
-        //             this.cardListMaskVisible(false,1);
-        //             this.cardListMaskVisible(true,2);
-        //         }else if(id == 2){
-        //             this.cardListMaskVisible(true,1);
-        //             this.cardListMaskVisible(false,2);
-        //         }
-        //     }
-        // }
-        //显示或隐藏某牌列表遮罩
-        VPlayerArea.prototype.cardListMaskVisible = function (state, id) {
-            var list1 = this._view['m_cardsList' + id].m_list1;
-            var list2 = this._view['m_cardsList' + id].m_list2;
-            if (list1.numItems > 0) {
-                for (var i = 0; i < list1.numItems; i++) {
-                    list1.getChildAt(i).m_maskCtl.selectedIndex = state ? 1 : 0;
-                }
-            }
-            if (list2.numItems > 0) {
-                for (var i = 0; i < list2.numItems; i++) {
-                    list2.getChildAt(i).m_maskCtl.selectedIndex = state ? 1 : 0;
-                }
-            }
-        };
-        //根据筹码值给某个筹码列表添加item,并返回所有子节点  state:子节点是否显示
-        VPlayerArea.prototype.getChipListChildren = function (value, state, id) {
-            if (id === void 0) { id = 0; }
-            var chips = point21.Utils.getChipImgObj(value);
-            var children = [];
-            this.removeChildrenFromChipList(id);
-            for (var item in chips) {
-                for (var i = 0; i < chips[item]; i++) {
-                    var child = this.addChildToChipList(id, Number(item));
-                    child.visible = state;
-                    children.push(child);
-                }
-            }
-            return children;
-        };
-        //下注动画
-        VPlayerArea.prototype.playerBet = function (value, startNodeid, id) {
-            if (id === void 0) { id = 0; }
-            var _this = this;
-            var chips = point21.Utils.getChipImgObj(value);
-            var count = 0;
-            var children = this.getChipListChildren(value, false, id);
-            Laya.timer.once(1, this, function () {
-                for (var item in chips) {
-                    var _loop_2 = function (j) {
-                        var chip = Laya.Pool.getItemByCreateFun('chip', function () {
-                            return fui.room.FUI_chip.createInstance();
-                        });
-                        chip.m_img.url = point21.Utils.getChipImg(Number(item));
-                        chip.visible = false;
-                        this_2.roomView.addChild(chip);
-                        var betMove = Laya.Pool.getItemByClass('move', Tools.Move);
-                        betMove.target = chip;
-                        betMove.start = this_2.roomView['m_chip' + startNodeid];
-                        betMove.end = children[children.length - 1 - count];
-                        betMove.duration = this_2.recoverDuration;
-                        betMove.complete = function () {
-                            this.end.visible = true;
-                            this.target.removeFromParent();
-                            Laya.Pool.recover('chip', this.target);
-                            Laya.Pool.recover('move', this);
-                        };
-                        Laya.timer.once(count * 50, this_2, function () {
-                            betMove.target.visible = true;
-                            betMove.move();
-                            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('bet'));
-                        });
-                        count++;
-                    };
-                    var this_2 = this;
-                    for (var j = 0; j < chips[item]; j++) {
-                        _loop_2(j);
-                    }
-                }
-            });
-        };
-        //双倍标志 显示/隐藏
-        VPlayerArea.prototype.doubleSignVisible = function (state, id) {
-            if (!this._view)
-                return;
-            this._view['m_cardsList' + id].m_lang_double.visible = state;
-        };
-        //保险标志 显示/隐藏
-        VPlayerArea.prototype.insuranceSignVisible = function (state) {
-            if (!this._view)
-                return;
-            this._view.m_careCtl.selectedIndex = state ? 1 : 0;
-        };
-        //收筹码
-        VPlayerArea.prototype.playerBetBack = function (value, endNodeId, id) {
-            var _this = this;
-            var chips = point21.Utils.getChipImgObj(value);
-            var count = 0;
-            var list = this._view['m_chipsList' + id];
-            for (var item in chips) {
-                var _loop_3 = function (i) {
-                    var chip = Laya.Pool.getItemByCreateFun('chip', function () {
-                        return fui.room.FUI_chip.createInstance();
-                    });
-                    chip.m_img.url = point21.Utils.getChipImg(Number(item));
-                    chip.visible = false;
-                    this_3.roomView.addChild(chip);
-                    var action = Laya.Pool.getItemByClass('move', Tools.Move);
-                    action.target = chip;
-                    action.start = list.getChildAt(count);
-                    action.end = this_3.roomView['m_chip' + endNodeId];
-                    action.duration = 500;
-                    action.complete = function () {
-                        this.target.removeFromParent();
-                        Laya.Pool.recover('chip', this.target);
-                        Laya.Pool.recover('move', action);
-                        if (count >= list.numChildren - 1) {
-                            _this.removeChildrenFromChipList(id);
-                        }
-                    };
-                    Laya.timer.once(count * 50, this_3, function () {
-                        action.target.visible = true;
-                        action.start.visible = false;
-                        action.move();
-                        SoundManager.instance.playSound(AssetsUtils.getSoundUrl('bet'));
-                    });
-                    count++;
-                };
-                var this_3 = this;
-                for (var i = 0; i < chips[item]; i++) {
-                    _loop_3(i);
-                }
-            }
-        };
-        //筹码从玩家飞向庄家/从庄家飞向玩家,to~ 0:推向庄家  1：推向自己
-        VPlayerArea.prototype.moveChipList = function (to, id) {
-            var _this = this;
-            var action = Laya.Pool.getItemByClass('move', Tools.Move);
-            action.target = this._view['m_chipsList' + id];
-            action.start = this._view['m_chipsList' + id + '_hide'];
-            action.end = this.roomView.m_chipBank;
-            action.duration = 500;
-            action.complete = function () {
-                Laya.timer.frameOnce(1, this, function () {
-                    if (to === 0) {
-                        action.target.x = action.start.x;
-                        action.target.y = action.start.y;
-                        _this.removeChildrenFromChipList(id);
-                    }
-                });
-                Laya.Pool.recover('move', action);
-            };
-            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('betBack'));
-            (to == 0) ? action.move() : action.moveReverse();
-        };
-        //赢得筹码动画
-        VPlayerArea.prototype.win = function (playerId, value, id) {
-            if (id === void 0) { id = 0; }
-            var _this = this;
-            this.getChipListChildren(value, true, id);
-            this.moveChipList(1, id);
-            Laya.timer.once(500, this, function () {
-                _this.playerBetBack(value, playerId, id);
-            });
-        };
-        return VPlayerArea;
-    }());
-    point21.VPlayerArea = VPlayerArea;
-})(point21 || (point21 = {}));
-var point21;
-(function (point21) {
-    var VRoom = /** @class */ (function (_super) {
-        __extends(VRoom, _super);
-        function VRoom() {
-            var _this_1 = _super.call(this, 'fui.room.FUI_roomView', "room_dt") || this;
-            _this_1.dealDuration = 300; //发牌过程持续时间
-            _this_1.isPlayingClockSound = false; //正在播放倒计时声音
-            _this_1._view = _this_1.ui;
-            _this_1.dispatchView();
-            _this_1.insuranceList = [_this_1._view.m_insurance1, _this_1._view.m_insurance2, _this_1._view.m_insurance3, _this_1._view.m_insurance4, _this_1._view.m_insurance5];
-            _this_1.insuranceList_hide = [_this_1._view.m_insurance1_hide, _this_1._view.m_insurance2_hide, _this_1._view.m_insurance3_hide, _this_1._view.m_insurance4_hide, _this_1._view.m_insurance5_hide];
-            _this_1.chips = [_this_1._view.m_chip1, _this_1._view.m_chip2, _this_1._view.m_chip3, _this_1._view.m_chip4, _this_1._view.m_chip5];
-            _this_1.seatIdArr = [_this_1._view.m_numb1, _this_1._view.m_numb2, _this_1._view.m_numb3, _this_1._view.m_numb4, _this_1._view.m_numb5];
-            _this_1.init();
-            return _this_1;
-        }
-        //初始化
-        VRoom.prototype.init = function () {
-            this._view.m_result1.m_win.pivotX = 0;
-            this._view.m_result1.m_fail.pivotX = 0;
-            this._view.m_result5.m_win.pivotX = 1;
-            this._view.m_result5.m_fail.pivotX = 1;
-        };
-        //将视图分配给其他类管理
-        VRoom.prototype.dispatchView = function () {
-            var areas = [];
-            areas.push(this._view.m_playerArea0, this._view.m_playerArea1, this._view.m_playerArea2, this._view.m_playerArea3, this._view.m_playerArea4, this._view.m_playerArea5);
-            bx.Framework.notify(point21.GConst.n_Vmanager_playerArea, areas, this._view);
-            var btnPlay;
-            bx.Framework.notify(point21.GConst.n_Vmanager_btnPlay, this._view.m_btnPlay);
-            var players = [];
-            players.push(this._view.m_player1, this._view.m_player2, this._view.m_player3, this._view.m_player4, this._view.m_player5);
-            bx.Framework.notify(point21.GConst.n_Vmanager_player, players);
-        };
-        VRoom.prototype.reset = function () {
-            this.isPlayingClockSound = false;
-            this._view.m_clock.visible = false;
-            this._view.m_card1.visible = false;
-            for (var j = 0; j < this.insuranceList.length; j++) {
-                this.removeInsuranceList(j + 1);
-                this.setSeatIdOnDesk(j + 1, 0);
-                this.setChipsVisible(false, j + 1);
-                this.hideResult(j + 1);
-                this.seatNameVisible(false, j + 1);
-            }
-        };
-        //买保险 pos:买家位置   index：要买保险的位置序号
-        VRoom.prototype.betInsurance = function (value, pos, index) {
-            var chips = point21.Utils.getChipImgObj(value);
-            var count = 0;
-            var children = this.addChildToInsuranceList(index, value, false);
-            for (var item in chips) {
-                var _loop_4 = function (i) {
-                    var chip = Laya.Pool.getItemByCreateFun('chip', function () {
-                        return fui.room.FUI_chip.createInstance();
-                    });
-                    chip.m_img.url = point21.Utils.getChipImg(Number(item));
-                    this_4._view.addChild(chip);
-                    chip.visible = false;
-                    var action = Laya.Pool.getItemByClass('move', Tools.Move);
-                    action.target = chip;
-                    action.start = this_4.chips[pos - 1];
-                    action.end = children[children.length - 1 - count];
-                    action.duration = this_4.dealDuration;
-                    action.complete = function () {
-                        this.end.visible = true;
-                        this.target.removeFromParent();
-                        Laya.Pool.recover('chip', this.target);
-                        Laya.Pool.recover('move', action);
-                    };
-                    Laya.timer.once(count * 50, this_4, function () {
-                        action.target.visible = true;
-                        action.move();
-                    });
-                    count++;
-                };
-                var this_4 = this;
-                for (var i = 0; i < chips[item]; i++) {
-                    _loop_4(i);
-                }
-            }
-        };
-        //清空某个保险列表
-        VRoom.prototype.removeInsuranceList = function (index) {
-            this.insuranceList[index - 1].removeChildrenToPool();
-        };
-        //向某个保险列表添加item
-        VRoom.prototype.addChildToInsuranceList = function (index, value, visible) {
-            if (value <= 0)
-                return;
-            var chips = point21.Utils.getChipImgObj(value);
-            var children = [];
-            for (var item in chips) {
-                for (var i = 0; i < chips[item]; i++) {
-                    var url = point21.Utils.getChipImg(Number(item));
-                    var child = this.insuranceList[index - 1].addItemFromPool();
-                    child.m_img.url = url;
-                    child.visible = visible;
-                    children.push(child);
-                }
-            }
-            this.insuranceList[index - 1].ensureBoundsCorrect();
-            return children;
-        };
-        //庄家收保险筹码
-        VRoom.prototype.pushInsuranceToBanker = function (index) {
-            var _this = this;
-            var action = Laya.Pool.getItemByClass('move', Tools.Move);
-            action.target = this.insuranceList[index - 1];
-            action.start = this.insuranceList_hide[index - 1];
-            action.end = this._view.m_chipBank;
-            action.duration = this.dealDuration;
-            action.complete = function () {
-                Laya.timer.frameOnce(1, this, function () {
-                    action.target.x = action.start.x;
-                    action.target.y = action.start.y;
-                    _this.removeInsuranceList(index);
-                    Laya.Pool.recover('move', action);
-                });
-            };
-            // Laya.timer.once(action.duration, this, function(){
-            //     action.target.x = action.start.x;
-            //     action.target.y = action.start.y;
-            //     //_this.removeInsuranceList(index);
-            //     Laya.Pool.recover('move',action);
-            // })
-            action.move();
-        };
-        //设置桌面上座位编号的值(已废除，暂时保留函数，初始化时清空界面上暂存的座位号)
-        VRoom.prototype.setSeatIdOnDesk = function (pos, v) {
-            var str = v.toString();
-            if (v === 0)
-                str = '';
-            this.seatIdArr[pos - 1].text = str;
-        };
-        //设置某个筹码条的显示状态
-        VRoom.prototype.setChipsVisible = function (state, pos) {
-            this._view['m_chip' + pos].visible = state;
-        };
-        //隐藏结果
-        VRoom.prototype.hideResult = function (pos) {
-            this._view['m_result' + pos].visible = false;
-        };
-        //显示结算结果 
-        VRoom.prototype.showResult = function (pos, value) {
-            var target = this._view['m_result' + pos];
-            target.visible = true;
-            if (value >= 0) {
-                target.m_resultCtl.selectedIndex = 1;
-                target.m_win.text = '+' + bx.GData.formatNumber(value);
-            }
-            else {
-                target.m_resultCtl.selectedIndex = 0;
-                target.m_fail.text = bx.GData.formatNumber(value);
-            }
-        };
-        //倒计时
-        VRoom.prototype.StartClock = function (time) {
-            this.timeVal = time;
-            this._view.m_clock.visible = true;
-            this._view.m_clock.m_numb.text = this.timeVal.toString();
-            Laya.timer.loop(1000, this, this.clock);
-        };
-        VRoom.prototype.clock = function () {
-            this.timeVal--;
-            this._view.m_clock.m_numb.text = this.timeVal.toString();
-            if (!this.isPlayingClockSound && this.timeVal <= 3) {
-                this.isPlayingClockSound = true;
-                SoundManager.instance.playSound(AssetsUtils.getSoundUrl('clock'), 1);
-            }
-            if (this.timeVal <= 0) {
-                this.stopClock();
-            }
-        };
-        //停止 自己的倒计时
-        VRoom.prototype.stopClock = function () {
-            Laya.timer.clear(this, this.clock);
-            this._view.m_clock.visible = false;
-            this.isPlayingClockSound = false;
-            SoundManager.instance.stopSound(AssetsUtils.getSoundUrl('clock'));
-        };
-        //特效手 控制 0:常态 1：下注本位置  2：下注左  3：下注右  4：停牌  5：要牌
-        VRoom.prototype.handAction = function (state) {
-            this._view.m_hand.m_actionCtl.selectedIndex = state;
-            if (state === 0)
-                return;
-            var action;
-            switch (state) {
-                case 0:
-                    break;
-                case 1:
-                    action = this._view.m_hand.m_bet;
-                    break;
-                case 2:
-                    action = this._view.m_hand.m_betLeft;
-                    break;
-                case 3:
-                    action = this._view.m_hand.m_betRight;
-                    break;
-                case 4:
-                    action = this._view.m_hand.m_stopCard;
-                    break;
-                case 5:
-                    action = this._view.m_hand.m_needCard;
-                    break;
-            }
-            action.playing = true;
-            action.setPlaySettings(0, -1, 1, -1, Laya.Handler.create(this, function () {
-                action.playing = false;
-                this.handAction(0);
-            }));
-        };
-        //灯光控制
-        VRoom.prototype.turnOnLightTo = function (pos, id) {
-            var p = point21.MRoom.getSeatId(pos);
-            var index;
-            if (bx.Stage.getStage().isLandscape) {
-                index = p * 3 + id - 2;
-            }
-            else {
-                index = p * 3 + id + 13;
-            }
-            this._view.m_lightCtl.selectedIndex = index;
-        };
-        //关闭灯光
-        VRoom.prototype.turnOffLight = function () {
-            if (!this._view)
-                return;
-            this._view.m_lightCtl.selectedIndex = 0;
-        };
-        //座位所属玩家名称 显示/隐藏
-        VRoom.prototype.seatNameVisible = function (state, pos, name) {
-            if (pos == 3)
-                return;
-            this._view['m_namebg' + pos].visible = state;
-            this._view['m_name' + pos].visible = state;
-            if (state && name) {
-                if (name.length > 8) {
-                    name = name.substr(0) + '...';
-                }
-                this._view['m_name' + pos].text = name;
-            }
-        };
-        return VRoom;
-    }(bx.Layout));
-    point21.VRoom = VRoom;
-})(point21 || (point21 = {}));
-var point21;
-(function (point21) {
-    var VRoomBg = /** @class */ (function (_super) {
-        __extends(VRoomBg, _super);
-        function VRoomBg() {
-            var _this = _super.call(this, 'fui.room.FUI_roomBg') || this;
-            _this._view = _this.ui;
-            return _this;
-        }
-        return VRoomBg;
-    }(bx.Layout));
-    point21.VRoomBg = VRoomBg;
-})(point21 || (point21 = {}));
-var point21;
-(function (point21) {
-    var VStrategy = /** @class */ (function (_super) {
-        __extends(VStrategy, _super);
-        function VStrategy() {
-            var _this = _super.call(this, 'fui.room.FUI_strategy', 'room_dt') || this;
-            _this._view = _this.ui;
-            _this._view && _this._view.m_close.onClick(_this, function () {
-                bx.UIManager.closePopup(this);
-            });
-            return _this;
-        }
-        return VStrategy;
-    }(bx.Layout));
-    point21.VStrategy = VStrategy;
-})(point21 || (point21 = {}));
-var point21;
-(function (point21) {
-    var VStrategyBtn = /** @class */ (function (_super) {
-        __extends(VStrategyBtn, _super);
-        function VStrategyBtn() {
-            var _this = _super.call(this, 'fui.room.FUI_strategyBtn', "room_") || this;
-            _this._view = _this.ui;
-            _this._view && _this._view.m_n0.onClick(_this, function () {
-                bx.Framework.notify(point21.GConst.n_openStrategy);
-            });
-            return _this;
-        }
-        return VStrategyBtn;
-    }(bx.Layout));
-    point21.VStrategyBtn = VStrategyBtn;
-})(point21 || (point21 = {}));
-var point21;
-(function (point21) {
-    /**
-     * 简要显示对象
-     * @author Zane
-     */
-    var VWalletBtn = /** @class */ (function (_super) {
-        __extends(VWalletBtn, _super);
-        function VWalletBtn() {
-            var _this = _super.call(this, "fui.Game.FUI_AddWalletBtn") || this;
-            _this._view = _this.ui;
-            return _this;
-        }
-        return VWalletBtn;
-    }(bx.Layout));
-    point21.VWalletBtn = VWalletBtn;
-})(point21 || (point21 = {}));
 var point21;
 (function (point21) {
     var MBtnPlay = /** @class */ (function () {
@@ -4167,6 +1580,2593 @@ var point21;
     }(bx.Framework));
     point21.MWalletBtn = MWalletBtn;
 })(point21 || (point21 = {}));
+var point21;
+(function (point21) {
+    var VBtnPlay = /** @class */ (function () {
+        function VBtnPlay(v) {
+            this._view = v;
+            var bg = this._view.m_betSlider.m_bg;
+            this.range = bg.height;
+            this.gripY_min = bg.y;
+            this.gripy_max = bg.y + this.range;
+        }
+        //得到最大注 最小注
+        VBtnPlay.prototype.setBaseBet = function (max, min) {
+            this.bet_max = max;
+            this.bet_min = min;
+        };
+        //隐藏
+        VBtnPlay.prototype.hide = function () {
+            this._view.visible = false;
+        };
+        //显示(0:下注块  1：要牌块  2：保险块  3：继续游戏)
+        VBtnPlay.prototype.show = function (index) {
+            this._view.visible = true;
+            this._view.m_btnCtl.selectedIndex = index;
+            for (var i = 0; i < this._view.numChildren; i++) {
+                this._view.getChildAt(i).enabled = true;
+            }
+            if (index === 0) {
+                this._view.m_maxBet.m_value.text = '(' + this.bet_max + ')';
+                this._view.m_minBet.m_value.text = '(' + this.bet_min + ')';
+            }
+        };
+        //某个按钮变灰(下注组和要牌组共8个)
+        VBtnPlay.prototype.btnUnable = function (name) {
+            var target = this._view['m_' + name];
+            if (target) {
+                target.enabled = false;
+            }
+        };
+        //变灰的按钮恢复
+        VBtnPlay.prototype.btnEnable = function (name) {
+            var target = this._view['m_' + name];
+            if (target) {
+                target.enabled = true;
+            }
+        };
+        //是否设置为显示滑动条
+        VBtnPlay.prototype.setSliderVisible = function (state) {
+            this._view.m_betSlider.visible = state;
+            this._view.m_bet.m_contentCtl.selectedIndex = state ? 1 : 0;
+        };
+        //按下时鼠标与滑块的坐标差距
+        VBtnPlay.prototype.getMouseRange = function () {
+            var grip = this._view.m_betSlider.m_grip;
+            var p = grip.parent.globalToLocal(0, Laya.MouseManager.instance.mouseY);
+            var gripY = grip.y;
+            this.mouseRange = p.y - gripY;
+        };
+        //移动时更改下注值
+        VBtnPlay.prototype.setSliderOnBet = function () {
+            var grip = this._view.m_betSlider.m_grip;
+            var p = grip.parent.globalToLocal(0, Laya.MouseManager.instance.mouseY);
+            var currentY = p.y - this.mouseRange;
+            this.setGripY(currentY);
+        };
+        //设置滑块坐标
+        VBtnPlay.prototype.setGripY = function (v) {
+            var grip = this._view.m_betSlider.m_grip;
+            var rate, betNumber;
+            if (v >= this.gripy_max) {
+                grip.y = this.gripy_max;
+                this.setCurrentChip(this.bet_min);
+            }
+            else if (v <= this.gripY_min) {
+                grip.y = this.gripY_min;
+                this.setCurrentChip(this.bet_max);
+            }
+            else {
+                grip.y = v;
+                rate = 1 - (v - this.gripY_min) / this.range;
+                betNumber = Math.round(rate * (this.bet_max - this.bet_min) + this.bet_min);
+                this.setCurrentChip(betNumber);
+                this.betValue = betNumber;
+            }
+        };
+        //设置当前筹码显示值
+        VBtnPlay.prototype.setCurrentChip = function (v) {
+            this._view.m_betSlider.m_title.m_value.text = v.toString();
+        };
+        //点击slider背景时
+        VBtnPlay.prototype.onClickSlider = function () {
+            var mouse = Laya.MouseManager.instance;
+            var point = this._view.m_betSlider.globalToLocal(mouse.mouseX, mouse.mouseY);
+            this.setGripY(point.y);
+        };
+        //设置最大注/最小注 1:最大  0: 最小
+        VBtnPlay.prototype.setMaxOrMin = function (v) {
+            if (v === 1) {
+                this.setGripY(this.gripY_min);
+            }
+            else {
+                this.setGripY(this.gripy_max);
+            }
+        };
+        //设置续压按钮的显示内容 content 0:续压  1 下注完成
+        VBtnPlay.prototype.setContinueBetContent = function (content) {
+            this._view.m_continueBet.m_contentCtl.selectedIndex = content;
+        };
+        return VBtnPlay;
+    }());
+    point21.VBtnPlay = VBtnPlay;
+})(point21 || (point21 = {}));
+var point21;
+(function (point21) {
+    var VChip = /** @class */ (function (_super) {
+        __extends(VChip, _super);
+        function VChip(v) {
+            var _this = _super.call(this, 'fui.room.FUI_chip') || this;
+            _this._view = _this.ui;
+            _this._view.m_img.url = point21.Utils.getChipImg(v);
+            return _this;
+        }
+        return VChip;
+    }(bx.Layout));
+    point21.VChip = VChip;
+})(point21 || (point21 = {}));
+var xys;
+(function (xys) {
+    var VGM = /** @class */ (function (_super) {
+        __extends(VGM, _super);
+        function VGM() {
+            var _this = _super.call(this, 'fui.Game.FUI_gm') || this;
+            _this._view = _this.ui;
+            _this.btn_close = _this._view.m_close;
+            _this.btn_submit = _this._view.m_submit;
+            _this.bindEvent();
+            return _this;
+        }
+        VGM.prototype.reset = function () {
+            this._view.m_keys.visible = false;
+        };
+        VGM.prototype.bindEvent = function () {
+            var list = this._view.m_keys;
+            for (var i = 0; i < list.numChildren; i++) {
+                list.getChildAt(i).onClick(this, this.clickCard, [i]);
+            }
+            for (var j = 0; j < 6; j++) {
+                this._view['m_cards_' + j].m_set.onClick(this, this.clickSet, [j]);
+            }
+        };
+        //点击设置
+        VGM.prototype.clickSet = function (id) {
+            this.activeId = id;
+            this.activeNumb = 1;
+            this._view.m_keys.visible = true;
+        };
+        //点击牌面
+        VGM.prototype.clickCard = function (index) {
+            var key = this._view.m_keys.getChildAt(index);
+            var txt = key.text;
+            var data = key.data;
+            var target = this._view['m_cards_' + this.activeId]['m_card' + this.activeNumb];
+            if (target) {
+                target.text = txt;
+                target.data = data;
+                if ((data > 16 && data < 30) || (data > 48 && data < 62)) {
+                    target.color = '#FF0000';
+                }
+                else {
+                    target.color = '#000000';
+                }
+                this.activeNumb++;
+                if (this.activeNumb > 5) {
+                    this.activeNumb = 1;
+                    this._view.m_keys.visible = false;
+                }
+            }
+        };
+        /**
+         * 获取人数
+        */
+        VGM.prototype.getPlayerNumb = function () {
+            return Number(this._view.m_playerNumb.text);
+        };
+        /**
+         * 获取房间类型
+        */
+        VGM.prototype.getRoomType = function () {
+            return Number(this._view.m_roomType.text);
+        };
+        /**
+         * 获取所有牌
+        */
+        VGM.prototype.getCards = function () {
+            var list = [];
+            for (var i = 0; i < 6; i++) {
+                var cards = this._view['m_cards_' + i];
+                var item = {};
+                item.pos = i;
+                item.cards = [];
+                for (var j = 0; j < cards.numChildren; j++) {
+                    var value = Number(cards.getChildAt(j).data);
+                    if (value > 16 && value < 78) {
+                        item.cards.push(value);
+                    }
+                }
+                list.push(item);
+            }
+            return list;
+        };
+        return VGM;
+    }(bx.Layout));
+    xys.VGM = VGM;
+})(xys || (xys = {}));
+var point21;
+(function (point21) {
+    var VMatch = /** @class */ (function (_super) {
+        __extends(VMatch, _super);
+        function VMatch() {
+            var _this = _super.call(this, 'fui.room.FUI_match', "room_") || this;
+            _this.str = '';
+            _this._view = _this.ui;
+            _this.oldStr = _this._view.m_lang_word.text;
+            return _this;
+        }
+        VMatch.prototype.requestGS = function () {
+            var params = [];
+            for (var _i = 0; _i < arguments.length; _i++) {
+                params[_i] = arguments[_i];
+            }
+            var _a;
+            (_a = bx.Framework).notify.apply(_a, [bx.GConst.n_gs_send].concat(params));
+        };
+        VMatch.prototype.reset = function () {
+            Laya.timer.loop(400, this, this.wordLoop);
+        };
+        //文字循环动态
+        VMatch.prototype.wordLoop = function () {
+            this.str += '.';
+            if (this.str == '....')
+                this.str = '';
+            this._view.m_lang_word.text = this.oldStr + this.str;
+        };
+        //关闭弹窗前
+        VMatch.prototype.beforeClose = function () {
+            Laya.timer.clearAll(this);
+        };
+        return VMatch;
+    }(bx.Layout));
+    point21.VMatch = VMatch;
+})(point21 || (point21 = {}));
+var point21;
+(function (point21) {
+    var VPlayer = /** @class */ (function () {
+        function VPlayer(v, i) {
+            if (i == 2) {
+                this._viewSelf = v;
+                //this._viewSelf.displayObject.cacheAs = "bitmap";
+            }
+            else {
+                this._view = v;
+                //this._view.displayObject.cacheAs = 'bitmap';
+                if (i < 2) {
+                    this._view.m_talkPos.selectedIndex = 1;
+                }
+                else {
+                    this._view.m_talkPos.selectedIndex = 0;
+                }
+            }
+            this.seatId = i + 1;
+        }
+        //显示
+        VPlayer.prototype.show = function () {
+            if (this._view) {
+                this._view.visible = true;
+                this._view.m_timeCircle.m_circle.visible = false;
+                this.setTalkingVisible(false);
+            }
+            else {
+                this._viewSelf.visible = true;
+            }
+        };
+        //隐藏
+        VPlayer.prototype.hide = function () {
+            if (this._view) {
+                this._view.visible = false;
+            }
+            else {
+                this._viewSelf.visible = false;
+            }
+        };
+        //设置玩家信息
+        VPlayer.prototype.setPlayer = function (info) {
+            this.show();
+            this.playerName = info.name;
+            var headUrl = point21.Utils.getHeadUrl(info.avatar);
+            if (this._view) {
+                this._view.m_head.url = headUrl;
+                var name_1 = info.name;
+                if (name_1.length > 8) {
+                    name_1 = name_1.substr(0, 8) + '...';
+                }
+                this._view.m_nick.text = name_1;
+                this.setCoin(info.chips);
+            }
+            else {
+                this._viewSelf.m_headComp.m_head.url = headUrl;
+                this._viewSelf.m_nick.text = info.name;
+                this.setCoin(info.chips);
+            }
+        };
+        //设置金币
+        VPlayer.prototype.setCoin = function (n) {
+            if (this._view) {
+                this._view.m_coin.text = bx.GData.formatNumber(n);
+            }
+            else {
+                bx.Framework.notify(point21.GConst.n_selfMoneyChange, n);
+                this._viewSelf.m_coin.text = bx.GData.formatNumber(n);
+            }
+        };
+        Object.defineProperty(VPlayer.prototype, "maskDeg", {
+            /////////////////以下为其他玩家独有/////////////////////////////
+            get: function () {
+                return this._maskDeg;
+            },
+            set: function (v) {
+                if (v != this._maskDeg)
+                    this._maskDeg = v;
+                var circle = this._view.m_timeCircle.m_circle;
+                var width = circle.width;
+                var height = circle.height;
+                var all = width * 2 + height * 2;
+                var rateWidth = width / all, rateHeight = height / all;
+                var rate1 = 1 - height / 2 / all, rate2 = rate1 - rateWidth, rate3 = rate2 - rateHeight, rate4 = rate3 - rateWidth;
+                var p1 = new Laya.Point(width, height / 2), p2 = new Laya.Point(width, 0), p3 = new Laya.Point(0, 0), p4 = new Laya.Point(0, height), p5 = new Laya.Point(width, height);
+                var arr = [], change;
+                if (v < rate4) {
+                    change = (rate4 - v) * all;
+                    arr = [p1.x - 9, p1.y, p1.x, change];
+                }
+                else if (v < rate3) {
+                    change = width - (v - rate4) * all;
+                    arr = [p1.x - 9, p1.y, p2.x, p2.y, change, p2.y];
+                }
+                else if (v < rate2) {
+                    change = (v - rate3) * all;
+                    arr = [p1.x, p1.y, p2.x, p2.y, p3.x, p3.y, p3.x, change];
+                }
+                else if (v < rate1) {
+                    change = (v - rate2) * all;
+                    arr = [p1.x, p1.y, p2.x, p2.y, p3.x, p3.y, p4.x, p4.y, change, p4.y];
+                }
+                else {
+                    change = height - (v - rate1) * all;
+                    arr = [p1.x, p1.y, p2.x, p2.y, p3.x, p3.y, p4.x, p4.y, p5.x, p5.y, p1.x, change];
+                }
+                this.mask.graphics.clear();
+                this.mask.graphics.drawLines(0, 0, arr, '#ffffff', 13);
+            },
+            enumerable: true,
+            configurable: true
+        });
+        //倒计时光圈启动
+        VPlayer.prototype.timeCircleStart = function (time) {
+            if (!this._view)
+                return;
+            this.clockTime = time;
+            var component = this._view.m_timeCircle;
+            component.m_circle.visible = true;
+            if (!this.mask) {
+                this.mask = new Laya.Sprite();
+            }
+            component.mask = this.mask;
+            this.maskDeg = 1;
+            this.timeTween = Laya.Tween.to(this, { maskDeg: 0 }, time * 1000, Laya.Ease.linearNone, Laya.Handler.create(this, function () {
+                this.timeCircleEnd();
+            }));
+        };
+        //倒计时光圈结束
+        VPlayer.prototype.timeCircleEnd = function () {
+            if (!this._view)
+                return;
+            this._view.m_timeCircle.m_circle.visible = false;
+            this.timeTween && Laya.Tween.clear(this.timeTween);
+        };
+        //说话显示控制 0:分解  1:双倍  2:要牌  3:停牌  4:下注完成
+        VPlayer.prototype.setTalkingVisible = function (state, content) {
+            if (!this._view)
+                return;
+            this._view.m_talk.visible = state;
+            this._view.m_talkBgLeft.visible = state;
+            this._view.m_talkBgRight.visible = state;
+            if (state) {
+                this._view.m_talk.m_word.selectedIndex = content;
+                Laya.timer.once(2000, this, function () {
+                    this.setTalkingVisible(false);
+                });
+            }
+        };
+        return VPlayer;
+    }());
+    point21.VPlayer = VPlayer;
+})(point21 || (point21 = {}));
+var point21;
+(function (point21) {
+    var VPlayerArea = /** @class */ (function () {
+        function VPlayerArea(v, i) {
+            this.recoverDuration = 300; //回收牌动作时间
+            this.skArr1 = [null, null, null]; //牌型骨骼动画保存,0,1,2分别保存 左中右的sk
+            this.skArr2 = [null, null, null]; //牌型骨骼动画保存,0,1,2分别保存 左中右的sk
+            if (i === 0) {
+                this._view_banker = v;
+            }
+            else {
+                this._view = v;
+            }
+            this.seatId = i;
+        }
+        VPlayerArea.prototype.requestGS = function () {
+            var params = [];
+            for (var _i = 0; _i < arguments.length; _i++) {
+                params[_i] = arguments[_i];
+            }
+            var _a;
+            (_a = bx.Framework).notify.apply(_a, [bx.GConst.n_gs_send].concat(params));
+        };
+        VPlayerArea.prototype.init = function (roomView) {
+            this.roomView = roomView;
+            //this.recoverCard_endNode = roomView.m_recoverNode;
+            this.deal_startNode = roomView.m_card1;
+        };
+        VPlayerArea.prototype.reset = function () {
+            if (this._view) {
+                this.setPoint(0, 0);
+                this.setPoint(0, 1);
+                this.setPoint(0, 2);
+                this.removeChildrenFromList(0);
+                this.removeChildrenFromList(1);
+                this.removeChildrenFromList(2);
+                this._view.m_fen.selectedIndex = 0;
+                this.removeChildrenFromChipList(0);
+                this.removeChildrenFromChipList(1);
+                this.removeChildrenFromChipList(2);
+                this.setChip(0, 0);
+                this.setChip(0, 1);
+                this.setChip(0, 2);
+                this.setTipsToBetVisible(false);
+                this.setCardTypeTipVisible(false, 0);
+                this.setCardTypeTipVisible(false, 1);
+                this.setCardTypeTipVisible(false, 2);
+                this.doubleSignVisible(false, 0);
+                this.doubleSignVisible(false, 1);
+                this.doubleSignVisible(false, 2);
+                this.insuranceSignVisible(false);
+            }
+            else {
+                this.setPoint(0);
+                this.removeChildrenFromList();
+                this.setCardTypeTipVisible(false);
+            }
+        };
+        /////////////////以下为两种类型 公共部分///////////////
+        //设置点数(左 中 右 庄)
+        VPlayerArea.prototype.setPoint = function (point, id) {
+            var str = point.toString();
+            if (point > 21)
+                str = bx.GData.getLanguage('201314');
+            if (point === 0) {
+                if (this._view) {
+                    this._view['m_point' + id].visible = false;
+                }
+                else {
+                    this._view_banker.m_cardPoint.visible = false;
+                }
+                return;
+            }
+            else {
+                if (this._view) {
+                    this._view['m_point' + id].visible = true;
+                    this._view['m_point' + id].m_value.text = str;
+                }
+                else {
+                    this._view_banker.m_cardPoint.visible = true;
+                    this._view_banker.m_cardPoint.m_value.text = str;
+                }
+            }
+        };
+        //移除牌列表item(左 中 右  庄)
+        VPlayerArea.prototype.removeChildrenFromList = function (id) {
+            if (this._view) {
+                this._view['m_cardsList' + id].m_list1.removeChildrenToPool();
+                this._view['m_cardsList' + id].m_list2.removeChildrenToPool();
+            }
+            else {
+                this._view_banker.m_cardList.removeChildrenToPool();
+            }
+        };
+        //牌列表添加子元素(闲家需要指定上下列表序号)
+        VPlayerArea.prototype.addChildToList = function (id, index) {
+            var child;
+            var list;
+            if (this._view) {
+                list = this._view['m_cardsList' + id]['m_list' + index];
+            }
+            else {
+                list = this._view_banker.m_cardList;
+            }
+            child = list.addItemFromPool();
+            //立刻重排，以便获取正确位置
+            list.ensureBoundsCorrect();
+            return child;
+        };
+        //发牌
+        VPlayerArea.prototype.dealCard = function (endNode, data, type) {
+            var _this = this;
+            var card = Laya.Pool.getItemByCreateFun('card', function () {
+                return fui.room.FUI_card.createInstance();
+            });
+            card.m_card.url = point21.Utils.getCardImg(0);
+            this.roomView.addChild(card);
+            var deal = Laya.Pool.getItemByClass('move', Tools.Move);
+            deal.target = card;
+            deal.start = this.deal_startNode;
+            deal.end = endNode;
+            deal.duration = 300;
+            deal.props = { scaleX: [deal.start.scaleX, deal.end.scaleX], scaleY: [deal.start.scaleY, deal.end.scaleY] };
+            deal.complete = function () {
+                card.removeFromParent();
+                Laya.Pool.recover('card', this.target);
+                Laya.Pool.recover('move', deal);
+                this.end.visible = true;
+                this.end.m_card.url = point21.Utils.getCardImg(0);
+                _this.dealComplete(this.end, data, type);
+            };
+            deal.move();
+            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('deal'));
+        };
+        //收牌
+        VPlayerArea.prototype.recoverCards = function () {
+            if (this._view) {
+                if (this._view.m_fen.selectedIndex === 0) {
+                    this.recoverCardsList(this._view.m_cardsList0.m_list2, 0);
+                    this.recoverCardsList(this._view.m_cardsList0.m_list1, 0);
+                    //一定要在回收列表执行之后再清空列表
+                    this.removeChildrenFromList(0);
+                }
+                else {
+                    this.recoverCardsList(this._view.m_cardsList1.m_list2, 1);
+                    this.recoverCardsList(this._view.m_cardsList1.m_list1, 1);
+                    this.recoverCardsList(this._view.m_cardsList2.m_list2, 2);
+                    this.recoverCardsList(this._view.m_cardsList2.m_list1, 2);
+                    this.removeChildrenFromList(1);
+                    this.removeChildrenFromList(2);
+                }
+            }
+            else {
+                this.recoverCardsList(this._view_banker.m_cardList);
+                this.removeChildrenFromList();
+            }
+        };
+        //循环某个牌列表 收回列表中所有的牌 动作
+        VPlayerArea.prototype.recoverCardsList = function (list, id) {
+            for (var i = 0; i < list.numChildren; i++) {
+                var card = Laya.Pool.getItemByCreateFun('card', function () {
+                    return fui.room.FUI_card.createInstance();
+                });
+                this.roomView.addChild(card);
+                var recover = Laya.Pool.getItemByClass('move', Tools.Move);
+                recover.target = card;
+                recover.start = list.getChildAt(i);
+                recover.end = this.recoverCard_endNode;
+                recover.duration = 500;
+                //recover.duration = this.recoverDuration;
+                recover.props = { skewX: [this._view.skewX, this.recoverCard_endNode.skewX], skewY: [this._view.skewY, this.recoverCard_endNode.skewY] };
+                recover.complete = function () {
+                    Laya.Pool.recover('card', this.target);
+                    this.target.removeFromParent();
+                    Laya.Pool.recover('recoverMove', this);
+                };
+                recover.move();
+            }
+        };
+        //发牌完成后
+        VPlayerArea.prototype.dealComplete = function (target, data, type) {
+            var cardImg;
+            var cardInfo;
+            if (type == 0) {
+                cardInfo = data.cards[0];
+                this.renderCardType(data, type);
+            }
+            else if (type == 1) {
+                cardInfo = data.cards[0];
+            }
+            else if (type == 2) {
+                cardInfo = data.cards[1];
+                this.renderCardType(data, type);
+            }
+            cardImg = point21.Utils.getCardImg(cardInfo);
+            var cardWidth = target.width;
+            if (cardInfo === 0) {
+                target.m_card.url = cardImg;
+            }
+            else {
+                target.m_trun.setHook('change', Laya.Handler.create(this, function () {
+                    target.m_card.url = cardImg;
+                }));
+                target.m_trun.play();
+                Laya.timer.once(500, this, function () {
+                    target.m_card.url = cardImg;
+                    target.skewY = 0;
+                    target.width = cardWidth;
+                });
+            }
+        };
+        //牌型和点数设置
+        VPlayerArea.prototype.setCardAndPoint = function (type, playSound, whichOne, min, max) {
+            if (type == 3) { //五小龙
+                playSound && SoundManager.instance.playSound(AssetsUtils.getSoundUrl('blackjack'));
+                this.setCardTypeTipVisible(true, whichOne, 1);
+                this.setPoint(0, whichOne);
+            }
+            else if (type == 4) { //黑杰克
+                playSound && SoundManager.instance.playSound(AssetsUtils.getSoundUrl('blackjack'));
+                this.setCardTypeTipVisible(true, whichOne, 2);
+                this.setPoint(0, whichOne);
+            }
+            else if (type == 0) { //爆牌
+                playSound && SoundManager.instance.playSound(AssetsUtils.getSoundUrl('boom'));
+                this.setCardTypeTipVisible(true, whichOne, 0);
+                this.setPoint(22, whichOne);
+            }
+            else if (type == 1 || type == 2) { //其他点数
+                if (min == max) {
+                    this.setPoint(min, whichOne);
+                }
+                else {
+                    this.setPoint(min + '/' + max, whichOne);
+                }
+            }
+        };
+        //庄家暗牌翻牌
+        VPlayerArea.prototype.turnBankerCard = function (card) {
+            var cardImg = point21.Utils.getCardImg(card[0]);
+            var type = card[1];
+            var min = card[2];
+            var max = card[3];
+            this.setCardAndPoint(type, true, 0, min, max);
+            var target = this._view_banker.m_cardList.getChildAt(1);
+            target.m_trun.setHook('change', Laya.Handler.create(this, function () {
+                target.m_card.url = cardImg;
+            }));
+            target.m_trun.play();
+        };
+        //渲染牌型相关
+        VPlayerArea.prototype.renderCardType = function (data, dealType) {
+            var type = data.cardType;
+            this.setCardAndPoint(type, true, data.whichOne, data.minSum, data.maxSum);
+            if (dealType === 0) { //只有在后面渲染牌型时才判断是否需要隐藏操作按钮
+                if (type == 3 || type == 4 || type == 0) {
+                    bx.Framework.notify(point21.GConst.n_hideBtns);
+                }
+            }
+        };
+        //牌型提示 显示/隐藏    type 0:爆牌  1：五小龙 2:黑杰克
+        VPlayerArea.prototype.setCardTypeTipVisible = function (state, id, type) {
+            if (id === void 0) { id = 0; }
+            var target = this._view ? this._view['m_cardType' + id] : this._view_banker.m_cardType;
+            //target.m_typeChoose.selectedIndex = 0;//隐藏静态图
+            if (state) {
+                var sk1_1, sk2 = void 0;
+                if (type == 1) { //五小龙
+                    sk1_1 = this.getSK('sk_dragon1', 'wuxiaolong1.sk');
+                    sk2 = this.getSK('sk_dragon2', 'wuxiaolong2.sk');
+                    this.skArr1[id] = sk1_1;
+                    this.skArr2[id] = sk2;
+                    if (!point21.MPlayerArea.dragonLoaded) {
+                        point21.MPlayerArea.dragonLoaded = true;
+                        sk1_1.loadCompleteShow = this.playSk.bind(this, sk1_1, id);
+                        sk2.loadCompleteShow = this.playSk.bind(this, sk2, id);
+                    }
+                    else {
+                        this.playSk(sk1_1, id);
+                        this.playSk(sk2, id);
+                    }
+                }
+                else if (type == 2) { //黑杰克
+                    sk1_1 = this.getSK('sk_bj1', 'heijieke1.sk');
+                    sk2 = this.getSK('sk_bj2', 'heijieke2.sk');
+                    this.skArr1[id] = sk1_1;
+                    this.skArr2[id] = sk2;
+                    if (!point21.MPlayerArea.bjLoaded) {
+                        point21.MPlayerArea.bjLoaded = true;
+                        sk1_1.loadCompleteShow = this.playSk.bind(this, sk1_1, id);
+                        sk2.loadCompleteShow = this.playSk.bind(this, sk2, id);
+                    }
+                    else {
+                        this.playSk(sk1_1, id);
+                        this.playSk(sk2, id);
+                    }
+                }
+                else if (type == 0) { //爆牌
+                    sk1_1 = this.getSK('boom', 'baopai.sk');
+                    this.skArr1[id] = sk1_1;
+                    if (!point21.MPlayerArea.boomLoaded) {
+                        point21.MPlayerArea.boomLoaded = true;
+                        sk1_1.loadCompleteShow = function () {
+                            target.displayObject.addChild(sk1_1.sk);
+                            sk1_1.sk.x = target.width / 2;
+                            sk1_1.sk.y = target.height / 2;
+                            sk1_1.play('animation', false);
+                        };
+                    }
+                    else {
+                        target.displayObject.addChild(sk1_1.sk);
+                        sk1_1.sk.x = target.width / 2;
+                        sk1_1.sk.y = target.height / 2;
+                        sk1_1.play('animation', false);
+                    }
+                }
+                // Laya.timer.once(300,this,function(){
+                //     target.m_typeChoose.selectedIndex = type;
+                // })
+            }
+            else {
+                var oldSk1 = this.skArr1[id];
+                var oldSk2 = this.skArr2[id];
+                if (oldSk1) {
+                    oldSk1.sk.removeSelf();
+                    Laya.Pool.recover(oldSk1['sign'], oldSk1);
+                    this.skArr1[id] = null;
+                }
+                if (oldSk2) {
+                    oldSk2.sk.removeSelf();
+                    Laya.Pool.recover(oldSk2['sign'], oldSk2);
+                    this.skArr2[id] = null;
+                }
+            }
+        };
+        //由对象池取得牌型的骨骼动画
+        VPlayerArea.prototype.getSK = function (sign, name) {
+            return Laya.Pool.getItemByCreateFun(sign, function () {
+                var sk = new bx.Skeleton(name);
+                sk['sign'] = sign;
+                return sk;
+            });
+        };
+        //播放五小龙，黑杰克牌型动画
+        VPlayerArea.prototype.playSk = function (sk, id) {
+            var target = this._view ? this._view['m_cardType' + id] : this._view_banker.m_cardType;
+            var name;
+            switch (bx.GData.curLanguage) {
+                case 'zh-cn':
+                    name = 'zhongwen';
+                    break;
+                case 'en-us':
+                    name = 'yingwen';
+                    break;
+            }
+            target.displayObject.addChild(sk.sk);
+            sk.sk.x = target.width / 2;
+            sk.sk.y = target.height / 2;
+            sk.play(name, false);
+        };
+        //////////////////////以下为 闲家 特有部分//////////////////////////////////
+        //修改筹码值
+        VPlayerArea.prototype.setChip = function (n, id) {
+            if (id === void 0) { id = 0; }
+            if (!this._view)
+                return;
+            var str = n.toString();
+            if (n == 0) {
+                str = '';
+            }
+            this._view['m_chipCount' + id].m_value.text = str;
+        };
+        //筹码列表移除子元素（左 中 右）
+        VPlayerArea.prototype.removeChildrenFromChipList = function (id) {
+            this._view['m_chipsList' + id].removeChildrenToPool();
+        };
+        //筹码列表添加子元素（左 中 右）
+        VPlayerArea.prototype.addChildToChipList = function (id, value) {
+            var url = point21.Utils.getChipImg(value);
+            var chip;
+            chip = this._view['m_chipsList' + id].addItemFromPool();
+            chip.m_img.url = url;
+            this._view['m_chipsList' + id].ensureBoundsCorrect();
+            return chip;
+        };
+        //设置筹码列表旋转角度（初始化时三个都要设置一次）
+        VPlayerArea.prototype.setChipListRotation = function (rotation) {
+            if (!this._view)
+                return;
+            this._view.m_chipsList0.rotation = rotation;
+            this._view.m_chipsList1.rotation = rotation;
+            this._view.m_chipsList2.rotation = rotation;
+            this._view.m_clickToBet.rotation = rotation;
+        };
+        //设置筹码列表倾斜值
+        // setChipListSkew(x:number,y:number):void{
+        //     if(!this._view) return;
+        //     this._view.m_chipsList0.setSkew(x,y);
+        //     this._view.m_chipsList1.setSkew(x,y);
+        //     this._view.m_chipsList2.setSkew(x,y);
+        //     this._view.m_clickToBet.setSkew(x,y);
+        // }
+        //是否在此区域下注 的显示/隐藏
+        VPlayerArea.prototype.setTipsToBetVisible = function (state) {
+            if (this._view) {
+                this._view.m_clickToBet.visible = state;
+                this._view.m_chipArea.m_selectedCtl.selectedIndex = state ? 1 : 0;
+                this.canClick = state;
+            }
+        };
+        //分牌
+        VPlayerArea.prototype.divideCard = function (card1, card2) {
+            if (!this._view)
+                return;
+            this._view.m_fen.selectedIndex = 1;
+            this.addChildToList(1, 1).visible = false;
+            this.addChildToList(2, 1).visible = false;
+            var cardInfo = [card1, card2];
+            var card;
+            var _loop_1 = function (i) {
+                card = Laya.Pool.getItemByCreateFun('card', function () {
+                    return fui.room.FUI_card.createInstance();
+                });
+                card.m_card.url = point21.Utils.getCardImg(cardInfo[i]);
+                card.setScale(0.8, 0.8);
+                this_1._view.addChild(card);
+                var divideMove = Laya.Pool.getItemByClass('move', Tools.Move);
+                divideMove.target = card;
+                divideMove.start = this_1._view.m_centerCard_hide;
+                divideMove.end = this_1._view['m_cardsList' + (i + 1)].m_list1.getChildAt(0);
+                //divideMove.duration = this.recoverDuration;
+                divideMove.duration = 300;
+                divideMove.complete = function () {
+                    this.target.removeFromParent();
+                    Laya.Pool.recover('card', this.target);
+                    Laya.Pool.recover('move', divideMove);
+                    this.end.visible = true;
+                    var url = point21.Utils.getCardImg(cardInfo[i]);
+                    this.end.m_card.url = url;
+                };
+                divideMove.move();
+            };
+            var this_1 = this;
+            for (var i = 0; i < 2; i++) {
+                _loop_1(i);
+            }
+        };
+        //轮到某玩家的标志控制
+        // ActivedMarkVisible(state:boolean,id:number = 0):void{
+        //     if(!this._view) return;
+        //     this._view.m_activeCtl.selectedIndex = state ? 1 : 0;
+        //     if(state){
+        //         if(id == 0) return;
+        //         if(id == 1){
+        //             this.cardListMaskVisible(false,1);
+        //             this.cardListMaskVisible(true,2);
+        //         }else if(id == 2){
+        //             this.cardListMaskVisible(true,1);
+        //             this.cardListMaskVisible(false,2);
+        //         }
+        //     }
+        // }
+        //显示或隐藏某牌列表遮罩
+        VPlayerArea.prototype.cardListMaskVisible = function (state, id) {
+            var list1 = this._view['m_cardsList' + id].m_list1;
+            var list2 = this._view['m_cardsList' + id].m_list2;
+            if (list1.numItems > 0) {
+                for (var i = 0; i < list1.numItems; i++) {
+                    list1.getChildAt(i).m_maskCtl.selectedIndex = state ? 1 : 0;
+                }
+            }
+            if (list2.numItems > 0) {
+                for (var i = 0; i < list2.numItems; i++) {
+                    list2.getChildAt(i).m_maskCtl.selectedIndex = state ? 1 : 0;
+                }
+            }
+        };
+        //根据筹码值给某个筹码列表添加item,并返回所有子节点  state:子节点是否显示
+        VPlayerArea.prototype.getChipListChildren = function (value, state, id) {
+            if (id === void 0) { id = 0; }
+            var chips = point21.Utils.getChipImgObj(value);
+            var children = [];
+            this.removeChildrenFromChipList(id);
+            for (var item in chips) {
+                for (var i = 0; i < chips[item]; i++) {
+                    var child = this.addChildToChipList(id, Number(item));
+                    child.visible = state;
+                    children.push(child);
+                }
+            }
+            return children;
+        };
+        //下注动画
+        VPlayerArea.prototype.playerBet = function (value, startNodeid, id) {
+            if (id === void 0) { id = 0; }
+            var _this = this;
+            var chips = point21.Utils.getChipImgObj(value);
+            var count = 0;
+            var children = this.getChipListChildren(value, false, id);
+            Laya.timer.once(1, this, function () {
+                for (var item in chips) {
+                    var _loop_2 = function (j) {
+                        var chip = Laya.Pool.getItemByCreateFun('chip', function () {
+                            return fui.room.FUI_chip.createInstance();
+                        });
+                        chip.m_img.url = point21.Utils.getChipImg(Number(item));
+                        chip.visible = false;
+                        this_2.roomView.addChild(chip);
+                        var betMove = Laya.Pool.getItemByClass('move', Tools.Move);
+                        betMove.target = chip;
+                        betMove.start = this_2.roomView['m_chip' + startNodeid];
+                        betMove.end = children[children.length - 1 - count];
+                        betMove.duration = this_2.recoverDuration;
+                        betMove.complete = function () {
+                            this.end.visible = true;
+                            this.target.removeFromParent();
+                            Laya.Pool.recover('chip', this.target);
+                            Laya.Pool.recover('move', this);
+                        };
+                        Laya.timer.once(count * 50, this_2, function () {
+                            betMove.target.visible = true;
+                            betMove.move();
+                            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('bet'));
+                        });
+                        count++;
+                    };
+                    var this_2 = this;
+                    for (var j = 0; j < chips[item]; j++) {
+                        _loop_2(j);
+                    }
+                }
+            });
+        };
+        //双倍标志 显示/隐藏
+        VPlayerArea.prototype.doubleSignVisible = function (state, id) {
+            if (!this._view)
+                return;
+            this._view['m_cardsList' + id].m_lang_double.visible = state;
+        };
+        //保险标志 显示/隐藏
+        VPlayerArea.prototype.insuranceSignVisible = function (state) {
+            if (!this._view)
+                return;
+            this._view.m_careCtl.selectedIndex = state ? 1 : 0;
+        };
+        //收筹码
+        VPlayerArea.prototype.playerBetBack = function (value, endNodeId, id) {
+            var _this = this;
+            var chips = point21.Utils.getChipImgObj(value);
+            var count = 0;
+            var list = this._view['m_chipsList' + id];
+            for (var item in chips) {
+                var _loop_3 = function (i) {
+                    var chip = Laya.Pool.getItemByCreateFun('chip', function () {
+                        return fui.room.FUI_chip.createInstance();
+                    });
+                    chip.m_img.url = point21.Utils.getChipImg(Number(item));
+                    chip.visible = false;
+                    this_3.roomView.addChild(chip);
+                    var action = Laya.Pool.getItemByClass('move', Tools.Move);
+                    action.target = chip;
+                    action.start = list.getChildAt(count);
+                    action.end = this_3.roomView['m_chip' + endNodeId];
+                    action.duration = 500;
+                    action.complete = function () {
+                        this.target.removeFromParent();
+                        Laya.Pool.recover('chip', this.target);
+                        Laya.Pool.recover('move', action);
+                        if (count >= list.numChildren - 1) {
+                            _this.removeChildrenFromChipList(id);
+                        }
+                    };
+                    Laya.timer.once(count * 50, this_3, function () {
+                        action.target.visible = true;
+                        action.start.visible = false;
+                        action.move();
+                        SoundManager.instance.playSound(AssetsUtils.getSoundUrl('bet'));
+                    });
+                    count++;
+                };
+                var this_3 = this;
+                for (var i = 0; i < chips[item]; i++) {
+                    _loop_3(i);
+                }
+            }
+        };
+        //筹码从玩家飞向庄家/从庄家飞向玩家,to~ 0:推向庄家  1：推向自己
+        VPlayerArea.prototype.moveChipList = function (to, id) {
+            var _this = this;
+            var action = Laya.Pool.getItemByClass('move', Tools.Move);
+            action.target = this._view['m_chipsList' + id];
+            action.start = this._view['m_chipsList' + id + '_hide'];
+            action.end = this.roomView.m_chipBank;
+            action.duration = 500;
+            action.complete = function () {
+                Laya.timer.frameOnce(1, this, function () {
+                    if (to === 0) {
+                        action.target.x = action.start.x;
+                        action.target.y = action.start.y;
+                        _this.removeChildrenFromChipList(id);
+                    }
+                });
+                Laya.Pool.recover('move', action);
+            };
+            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('betBack'));
+            (to == 0) ? action.move() : action.moveReverse();
+        };
+        //赢得筹码动画
+        VPlayerArea.prototype.win = function (playerId, value, id) {
+            if (id === void 0) { id = 0; }
+            var _this = this;
+            this.getChipListChildren(value, true, id);
+            this.moveChipList(1, id);
+            Laya.timer.once(500, this, function () {
+                _this.playerBetBack(value, playerId, id);
+            });
+        };
+        return VPlayerArea;
+    }());
+    point21.VPlayerArea = VPlayerArea;
+})(point21 || (point21 = {}));
+var point21;
+(function (point21) {
+    var VRoom = /** @class */ (function (_super) {
+        __extends(VRoom, _super);
+        function VRoom() {
+            var _this_1 = _super.call(this, 'fui.room.FUI_roomView', "room_dt") || this;
+            _this_1.dealDuration = 300; //发牌过程持续时间
+            _this_1.isPlayingClockSound = false; //正在播放倒计时声音
+            _this_1._view = _this_1.ui;
+            _this_1.dispatchView();
+            _this_1.insuranceList = [_this_1._view.m_insurance1, _this_1._view.m_insurance2, _this_1._view.m_insurance3, _this_1._view.m_insurance4, _this_1._view.m_insurance5];
+            _this_1.insuranceList_hide = [_this_1._view.m_insurance1_hide, _this_1._view.m_insurance2_hide, _this_1._view.m_insurance3_hide, _this_1._view.m_insurance4_hide, _this_1._view.m_insurance5_hide];
+            _this_1.chips = [_this_1._view.m_chip1, _this_1._view.m_chip2, _this_1._view.m_chip3, _this_1._view.m_chip4, _this_1._view.m_chip5];
+            _this_1.seatIdArr = [_this_1._view.m_numb1, _this_1._view.m_numb2, _this_1._view.m_numb3, _this_1._view.m_numb4, _this_1._view.m_numb5];
+            _this_1.init();
+            return _this_1;
+        }
+        //初始化
+        VRoom.prototype.init = function () {
+            this._view.m_result1.m_win.pivotX = 0;
+            this._view.m_result1.m_fail.pivotX = 0;
+            this._view.m_result5.m_win.pivotX = 1;
+            this._view.m_result5.m_fail.pivotX = 1;
+        };
+        //将视图分配给其他类管理
+        VRoom.prototype.dispatchView = function () {
+            var areas = [];
+            areas.push(this._view.m_playerArea0, this._view.m_playerArea1, this._view.m_playerArea2, this._view.m_playerArea3, this._view.m_playerArea4, this._view.m_playerArea5);
+            bx.Framework.notify(point21.GConst.n_Vmanager_playerArea, areas, this._view);
+            var btnPlay;
+            bx.Framework.notify(point21.GConst.n_Vmanager_btnPlay, this._view.m_btnPlay);
+            var players = [];
+            players.push(this._view.m_player1, this._view.m_player2, this._view.m_player3, this._view.m_player4, this._view.m_player5);
+            bx.Framework.notify(point21.GConst.n_Vmanager_player, players);
+        };
+        VRoom.prototype.reset = function () {
+            this.isPlayingClockSound = false;
+            this._view.m_clock.visible = false;
+            this._view.m_card1.visible = false;
+            for (var j = 0; j < this.insuranceList.length; j++) {
+                this.removeInsuranceList(j + 1);
+                this.setSeatIdOnDesk(j + 1, 0);
+                this.setChipsVisible(false, j + 1);
+                this.hideResult(j + 1);
+                this.seatNameVisible(false, j + 1);
+            }
+        };
+        //买保险 pos:买家位置   index：要买保险的位置序号
+        VRoom.prototype.betInsurance = function (value, pos, index) {
+            var chips = point21.Utils.getChipImgObj(value);
+            var count = 0;
+            var children = this.addChildToInsuranceList(index, value, false);
+            for (var item in chips) {
+                var _loop_4 = function (i) {
+                    var chip = Laya.Pool.getItemByCreateFun('chip', function () {
+                        return fui.room.FUI_chip.createInstance();
+                    });
+                    chip.m_img.url = point21.Utils.getChipImg(Number(item));
+                    this_4._view.addChild(chip);
+                    chip.visible = false;
+                    var action = Laya.Pool.getItemByClass('move', Tools.Move);
+                    action.target = chip;
+                    action.start = this_4.chips[pos - 1];
+                    action.end = children[children.length - 1 - count];
+                    action.duration = this_4.dealDuration;
+                    action.complete = function () {
+                        this.end.visible = true;
+                        this.target.removeFromParent();
+                        Laya.Pool.recover('chip', this.target);
+                        Laya.Pool.recover('move', action);
+                    };
+                    Laya.timer.once(count * 50, this_4, function () {
+                        action.target.visible = true;
+                        action.move();
+                    });
+                    count++;
+                };
+                var this_4 = this;
+                for (var i = 0; i < chips[item]; i++) {
+                    _loop_4(i);
+                }
+            }
+        };
+        //清空某个保险列表
+        VRoom.prototype.removeInsuranceList = function (index) {
+            this.insuranceList[index - 1].removeChildrenToPool();
+        };
+        //向某个保险列表添加item
+        VRoom.prototype.addChildToInsuranceList = function (index, value, visible) {
+            if (value <= 0)
+                return;
+            var chips = point21.Utils.getChipImgObj(value);
+            var children = [];
+            for (var item in chips) {
+                for (var i = 0; i < chips[item]; i++) {
+                    var url = point21.Utils.getChipImg(Number(item));
+                    var child = this.insuranceList[index - 1].addItemFromPool();
+                    child.m_img.url = url;
+                    child.visible = visible;
+                    children.push(child);
+                }
+            }
+            this.insuranceList[index - 1].ensureBoundsCorrect();
+            return children;
+        };
+        //庄家收保险筹码
+        VRoom.prototype.pushInsuranceToBanker = function (index) {
+            var _this = this;
+            var action = Laya.Pool.getItemByClass('move', Tools.Move);
+            action.target = this.insuranceList[index - 1];
+            action.start = this.insuranceList_hide[index - 1];
+            action.end = this._view.m_chipBank;
+            action.duration = this.dealDuration;
+            action.complete = function () {
+                Laya.timer.frameOnce(1, this, function () {
+                    action.target.x = action.start.x;
+                    action.target.y = action.start.y;
+                    _this.removeInsuranceList(index);
+                    Laya.Pool.recover('move', action);
+                });
+            };
+            // Laya.timer.once(action.duration, this, function(){
+            //     action.target.x = action.start.x;
+            //     action.target.y = action.start.y;
+            //     //_this.removeInsuranceList(index);
+            //     Laya.Pool.recover('move',action);
+            // })
+            action.move();
+        };
+        //设置桌面上座位编号的值(已废除，暂时保留函数，初始化时清空界面上暂存的座位号)
+        VRoom.prototype.setSeatIdOnDesk = function (pos, v) {
+            var str = v.toString();
+            if (v === 0)
+                str = '';
+            this.seatIdArr[pos - 1].text = str;
+        };
+        //设置某个筹码条的显示状态
+        VRoom.prototype.setChipsVisible = function (state, pos) {
+            this._view['m_chip' + pos].visible = state;
+        };
+        //隐藏结果
+        VRoom.prototype.hideResult = function (pos) {
+            this._view['m_result' + pos].visible = false;
+        };
+        //显示结算结果 
+        VRoom.prototype.showResult = function (pos, value) {
+            var target = this._view['m_result' + pos];
+            target.visible = true;
+            if (value >= 0) {
+                target.m_resultCtl.selectedIndex = 1;
+                target.m_win.text = '+' + bx.GData.formatNumber(value);
+            }
+            else {
+                target.m_resultCtl.selectedIndex = 0;
+                target.m_fail.text = bx.GData.formatNumber(value);
+            }
+        };
+        //倒计时
+        VRoom.prototype.StartClock = function (time) {
+            this.timeVal = time;
+            this._view.m_clock.visible = true;
+            this._view.m_clock.m_numb.text = this.timeVal.toString();
+            Laya.timer.loop(1000, this, this.clock);
+        };
+        VRoom.prototype.clock = function () {
+            this.timeVal--;
+            this._view.m_clock.m_numb.text = this.timeVal.toString();
+            if (!this.isPlayingClockSound && this.timeVal <= 3) {
+                this.isPlayingClockSound = true;
+                SoundManager.instance.playSound(AssetsUtils.getSoundUrl('clock'), 1);
+            }
+            if (this.timeVal <= 0) {
+                this.stopClock();
+            }
+        };
+        //停止 自己的倒计时
+        VRoom.prototype.stopClock = function () {
+            Laya.timer.clear(this, this.clock);
+            this._view.m_clock.visible = false;
+            this.isPlayingClockSound = false;
+            SoundManager.instance.stopSound(AssetsUtils.getSoundUrl('clock'));
+        };
+        //特效手 控制 0:常态 1：下注本位置  2：下注左  3：下注右  4：停牌  5：要牌
+        VRoom.prototype.handAction = function (state) {
+            this._view.m_hand.m_actionCtl.selectedIndex = state;
+            if (state === 0)
+                return;
+            var action;
+            switch (state) {
+                case 0:
+                    break;
+                case 1:
+                    action = this._view.m_hand.m_bet;
+                    break;
+                case 2:
+                    action = this._view.m_hand.m_betLeft;
+                    break;
+                case 3:
+                    action = this._view.m_hand.m_betRight;
+                    break;
+                case 4:
+                    action = this._view.m_hand.m_stopCard;
+                    break;
+                case 5:
+                    action = this._view.m_hand.m_needCard;
+                    break;
+            }
+            action.playing = true;
+            action.setPlaySettings(0, -1, 1, -1, Laya.Handler.create(this, function () {
+                action.playing = false;
+                this.handAction(0);
+            }));
+        };
+        //灯光控制
+        VRoom.prototype.turnOnLightTo = function (pos, id) {
+            var p = point21.MRoom.getSeatId(pos);
+            var index;
+            if (bx.Stage.getStage().isLandscape) {
+                index = p * 3 + id - 2;
+            }
+            else {
+                index = p * 3 + id + 13;
+            }
+            this._view.m_lightCtl.selectedIndex = index;
+        };
+        //关闭灯光
+        VRoom.prototype.turnOffLight = function () {
+            if (!this._view)
+                return;
+            this._view.m_lightCtl.selectedIndex = 0;
+        };
+        //座位所属玩家名称 显示/隐藏
+        VRoom.prototype.seatNameVisible = function (state, pos, name) {
+            if (pos == 3)
+                return;
+            this._view['m_namebg' + pos].visible = state;
+            this._view['m_name' + pos].visible = state;
+            if (state && name) {
+                if (name.length > 8) {
+                    name = name.substr(0) + '...';
+                }
+                this._view['m_name' + pos].text = name;
+            }
+        };
+        return VRoom;
+    }(bx.Layout));
+    point21.VRoom = VRoom;
+})(point21 || (point21 = {}));
+var point21;
+(function (point21) {
+    var VRoomBg = /** @class */ (function (_super) {
+        __extends(VRoomBg, _super);
+        function VRoomBg() {
+            var _this = _super.call(this, 'fui.room.FUI_roomBg') || this;
+            _this._view = _this.ui;
+            return _this;
+        }
+        return VRoomBg;
+    }(bx.Layout));
+    point21.VRoomBg = VRoomBg;
+})(point21 || (point21 = {}));
+var point21;
+(function (point21) {
+    var VStrategy = /** @class */ (function (_super) {
+        __extends(VStrategy, _super);
+        function VStrategy() {
+            var _this = _super.call(this, 'fui.room.FUI_strategy', 'room_dt') || this;
+            _this._view = _this.ui;
+            _this._view && _this._view.m_close.onClick(_this, function () {
+                bx.UIManager.closePopup(this);
+            });
+            return _this;
+        }
+        return VStrategy;
+    }(bx.Layout));
+    point21.VStrategy = VStrategy;
+})(point21 || (point21 = {}));
+var point21;
+(function (point21) {
+    var VStrategyBtn = /** @class */ (function (_super) {
+        __extends(VStrategyBtn, _super);
+        function VStrategyBtn() {
+            var _this = _super.call(this, 'fui.room.FUI_strategyBtn', "room_") || this;
+            _this._view = _this.ui;
+            _this._view && _this._view.m_n0.onClick(_this, function () {
+                bx.Framework.notify(point21.GConst.n_openStrategy);
+            });
+            return _this;
+        }
+        return VStrategyBtn;
+    }(bx.Layout));
+    point21.VStrategyBtn = VStrategyBtn;
+})(point21 || (point21 = {}));
+var point21;
+(function (point21) {
+    /**
+     * 简要显示对象
+     * @author Zane
+     */
+    var VWalletBtn = /** @class */ (function (_super) {
+        __extends(VWalletBtn, _super);
+        function VWalletBtn() {
+            var _this = _super.call(this, "fui.Game.FUI_AddWalletBtn") || this;
+            _this._view = _this.ui;
+            return _this;
+        }
+        return VWalletBtn;
+    }(bx.Layout));
+    point21.VWalletBtn = VWalletBtn;
+})(point21 || (point21 = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_AddWalletBtn = /** @class */ (function (_super) {
+            __extends(FUI_AddWalletBtn, _super);
+            function FUI_AddWalletBtn() {
+                return _super.call(this) || this;
+            }
+            FUI_AddWalletBtn.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "AddWalletBtn"));
+            };
+            FUI_AddWalletBtn.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+            };
+            FUI_AddWalletBtn.URL = "ui://8oy4o0mbl3ii3x";
+            return FUI_AddWalletBtn;
+        }(fairygui.GComponent));
+        Game.FUI_AddWalletBtn = FUI_AddWalletBtn;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_brief = /** @class */ (function (_super) {
+            __extends(FUI_brief, _super);
+            function FUI_brief() {
+                return _super.call(this) || this;
+            }
+            FUI_brief.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "brief"));
+            };
+            FUI_brief.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_h_v = this.getControllerAt(0);
+                this.m_avatar = (this.getChildAt(0));
+                this.m_n4 = (this.getChildAt(1));
+                this.m_nickname = (this.getChildAt(2));
+                this.m_n5 = (this.getChildAt(3));
+                this.m_n8 = (this.getChildAt(4));
+                this.m_coin = (this.getChildAt(5));
+            };
+            FUI_brief.URL = "ui://8oy4o0mbd832p";
+            return FUI_brief;
+        }(fairygui.GComponent));
+        Game.FUI_brief = FUI_brief;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_briefPopup = /** @class */ (function (_super) {
+            __extends(FUI_briefPopup, _super);
+            function FUI_briefPopup() {
+                return _super.call(this) || this;
+            }
+            FUI_briefPopup.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "briefPopup"));
+            };
+            FUI_briefPopup.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n10 = (this.getChildAt(0));
+                this.m_lang_head = (this.getChildAt(1));
+                this.m_lang_des = (this.getChildAt(2));
+                this.m_btnSave = (this.getChildAt(3));
+                this.m_headList = (this.getChildAt(4));
+                this.m_close = (this.getChildAt(5));
+                this.m_current = (this.getChildAt(6));
+            };
+            FUI_briefPopup.URL = "ui://8oy4o0mbd832w";
+            return FUI_briefPopup;
+        }(fairygui.GComponent));
+        Game.FUI_briefPopup = FUI_briefPopup;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_btn_reconnect = /** @class */ (function (_super) {
+            __extends(FUI_btn_reconnect, _super);
+            function FUI_btn_reconnect() {
+                return _super.call(this) || this;
+            }
+            FUI_btn_reconnect.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "btn_reconnect"));
+            };
+            FUI_btn_reconnect.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_lang_reconnect = (this.getChildAt(1));
+            };
+            FUI_btn_reconnect.URL = "ui://8oy4o0mbo4403d";
+            return FUI_btn_reconnect;
+        }(fairygui.GButton));
+        Game.FUI_btn_reconnect = FUI_btn_reconnect;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_btn_return = /** @class */ (function (_super) {
+            __extends(FUI_btn_return, _super);
+            function FUI_btn_return() {
+                return _super.call(this) || this;
+            }
+            FUI_btn_return.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "btn_return"));
+            };
+            FUI_btn_return.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_lang_return = (this.getChildAt(1));
+            };
+            FUI_btn_return.URL = "ui://8oy4o0mbo4403f";
+            return FUI_btn_return;
+        }(fairygui.GButton));
+        Game.FUI_btn_return = FUI_btn_return;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_cancle = /** @class */ (function (_super) {
+            __extends(FUI_cancle, _super);
+            function FUI_cancle() {
+                return _super.call(this) || this;
+            }
+            FUI_cancle.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "cancle"));
+            };
+            FUI_cancle.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n5 = (this.getChildAt(0));
+                this.m_lang_cancle = (this.getChildAt(1));
+            };
+            FUI_cancle.URL = "ui://8oy4o0mbo4403r";
+            return FUI_cancle;
+        }(fairygui.GButton));
+        Game.FUI_cancle = FUI_cancle;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_close = /** @class */ (function (_super) {
+            __extends(FUI_close, _super);
+            function FUI_close() {
+                return _super.call(this) || this;
+            }
+            FUI_close.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "close"));
+            };
+            FUI_close.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+            };
+            FUI_close.URL = "ui://8oy4o0mbd83216";
+            return FUI_close;
+        }(fairygui.GButton));
+        Game.FUI_close = FUI_close;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_gm = /** @class */ (function (_super) {
+            __extends(FUI_gm, _super);
+            function FUI_gm() {
+                return _super.call(this) || this;
+            }
+            FUI_gm.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "gm"));
+            };
+            FUI_gm.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n19 = (this.getChildAt(0));
+                this.m_keys = (this.getChildAt(1));
+                this.m_n0 = (this.getChildAt(2));
+                this.m_n1 = (this.getChildAt(3));
+                this.m_roomType = (this.getChildAt(4));
+                this.m_playerNumb = (this.getChildAt(5));
+                this.m_n2 = (this.getChildAt(6));
+                this.m_n3 = (this.getChildAt(7));
+                this.m_n4 = (this.getChildAt(8));
+                this.m_n9 = (this.getChildAt(9));
+                this.m_n10 = (this.getChildAt(10));
+                this.m_n16 = (this.getChildAt(11));
+                this.m_cards_0 = (this.getChildAt(12));
+                this.m_cards_1 = (this.getChildAt(13));
+                this.m_cards_2 = (this.getChildAt(14));
+                this.m_cards_3 = (this.getChildAt(15));
+                this.m_cards_4 = (this.getChildAt(16));
+                this.m_cards_5 = (this.getChildAt(17));
+                this.m_submit = (this.getChildAt(18));
+                this.m_close = (this.getChildAt(19));
+            };
+            FUI_gm.URL = "ui://8oy4o0mbo44037";
+            return FUI_gm;
+        }(fairygui.GComponent));
+        Game.FUI_gm = FUI_gm;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_gmKeys = /** @class */ (function (_super) {
+            __extends(FUI_gmKeys, _super);
+            function FUI_gmKeys() {
+                return _super.call(this) || this;
+            }
+            FUI_gmKeys.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "gmKeys"));
+            };
+            FUI_gmKeys.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n6 = (this.getChildAt(0));
+                this.m_n7 = (this.getChildAt(1));
+                this.m_n8 = (this.getChildAt(2));
+                this.m_n9 = (this.getChildAt(3));
+                this.m_n10 = (this.getChildAt(4));
+                this.m_n11 = (this.getChildAt(5));
+                this.m_n12 = (this.getChildAt(6));
+                this.m_n13 = (this.getChildAt(7));
+                this.m_n14 = (this.getChildAt(8));
+                this.m_n15 = (this.getChildAt(9));
+                this.m_n16 = (this.getChildAt(10));
+                this.m_n17 = (this.getChildAt(11));
+                this.m_n18 = (this.getChildAt(12));
+                this.m_n19 = (this.getChildAt(13));
+                this.m_n20 = (this.getChildAt(14));
+                this.m_n21 = (this.getChildAt(15));
+                this.m_n22 = (this.getChildAt(16));
+                this.m_n23 = (this.getChildAt(17));
+                this.m_n24 = (this.getChildAt(18));
+                this.m_n25 = (this.getChildAt(19));
+                this.m_n26 = (this.getChildAt(20));
+                this.m_n27 = (this.getChildAt(21));
+                this.m_n28 = (this.getChildAt(22));
+                this.m_n29 = (this.getChildAt(23));
+                this.m_n30 = (this.getChildAt(24));
+                this.m_n31 = (this.getChildAt(25));
+                this.m_n32 = (this.getChildAt(26));
+                this.m_n33 = (this.getChildAt(27));
+                this.m_n34 = (this.getChildAt(28));
+                this.m_n35 = (this.getChildAt(29));
+                this.m_n36 = (this.getChildAt(30));
+                this.m_n37 = (this.getChildAt(31));
+                this.m_n38 = (this.getChildAt(32));
+                this.m_n39 = (this.getChildAt(33));
+                this.m_n40 = (this.getChildAt(34));
+                this.m_n41 = (this.getChildAt(35));
+                this.m_n42 = (this.getChildAt(36));
+                this.m_n43 = (this.getChildAt(37));
+                this.m_n44 = (this.getChildAt(38));
+                this.m_n45 = (this.getChildAt(39));
+                this.m_n46 = (this.getChildAt(40));
+                this.m_n47 = (this.getChildAt(41));
+                this.m_n48 = (this.getChildAt(42));
+                this.m_n49 = (this.getChildAt(43));
+                this.m_n50 = (this.getChildAt(44));
+                this.m_n51 = (this.getChildAt(45));
+                this.m_n52 = (this.getChildAt(46));
+                this.m_n53 = (this.getChildAt(47));
+                this.m_n54 = (this.getChildAt(48));
+                this.m_n55 = (this.getChildAt(49));
+                this.m_n56 = (this.getChildAt(50));
+                this.m_n57 = (this.getChildAt(51));
+            };
+            FUI_gmKeys.URL = "ui://8oy4o0mbl3ii3u";
+            return FUI_gmKeys;
+        }(fairygui.GComponent));
+        Game.FUI_gmKeys = FUI_gmKeys;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_gmSubmit = /** @class */ (function (_super) {
+            __extends(FUI_gmSubmit, _super);
+            function FUI_gmSubmit() {
+                return _super.call(this) || this;
+            }
+            FUI_gmSubmit.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "gmSubmit"));
+            };
+            FUI_gmSubmit.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_n4 = (this.getChildAt(1));
+            };
+            FUI_gmSubmit.URL = "ui://8oy4o0mbo4403a";
+            return FUI_gmSubmit;
+        }(fairygui.GButton));
+        Game.FUI_gmSubmit = FUI_gmSubmit;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_hallBg_h = /** @class */ (function (_super) {
+            __extends(FUI_hallBg_h, _super);
+            function FUI_hallBg_h() {
+                return _super.call(this) || this;
+            }
+            FUI_hallBg_h.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "hallBg_h"));
+            };
+            FUI_hallBg_h.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+            };
+            FUI_hallBg_h.URL = "ui://8oy4o0mbd832k";
+            return FUI_hallBg_h;
+        }(fairygui.GComponent));
+        Game.FUI_hallBg_h = FUI_hallBg_h;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_hallBg_v = /** @class */ (function (_super) {
+            __extends(FUI_hallBg_v, _super);
+            function FUI_hallBg_v() {
+                return _super.call(this) || this;
+            }
+            FUI_hallBg_v.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "hallBg_v"));
+            };
+            FUI_hallBg_v.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+            };
+            FUI_hallBg_v.URL = "ui://8oy4o0mbd832m";
+            return FUI_hallBg_v;
+        }(fairygui.GComponent));
+        Game.FUI_hallBg_v = FUI_hallBg_v;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_hall_help = /** @class */ (function (_super) {
+            __extends(FUI_hall_help, _super);
+            function FUI_hall_help() {
+                return _super.call(this) || this;
+            }
+            FUI_hall_help.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "hall_help"));
+            };
+            FUI_hall_help.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n1 = (this.getChildAt(0));
+            };
+            FUI_hall_help.URL = "ui://8oy4o0mbd83226";
+            return FUI_hall_help;
+        }(fairygui.GButton));
+        Game.FUI_hall_help = FUI_hall_help;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_hall_home = /** @class */ (function (_super) {
+            __extends(FUI_hall_home, _super);
+            function FUI_hall_home() {
+                return _super.call(this) || this;
+            }
+            FUI_hall_home.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "hall_home"));
+            };
+            FUI_hall_home.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n4 = (this.getChildAt(0));
+            };
+            FUI_hall_home.URL = "ui://8oy4o0mbd83220";
+            return FUI_hall_home;
+        }(fairygui.GButton));
+        Game.FUI_hall_home = FUI_hall_home;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_hall_rep = /** @class */ (function (_super) {
+            __extends(FUI_hall_rep, _super);
+            function FUI_hall_rep() {
+                return _super.call(this) || this;
+            }
+            FUI_hall_rep.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "hall_rep"));
+            };
+            FUI_hall_rep.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n1 = (this.getChildAt(0));
+            };
+            FUI_hall_rep.URL = "ui://8oy4o0mbd83224";
+            return FUI_hall_rep;
+        }(fairygui.GButton));
+        Game.FUI_hall_rep = FUI_hall_rep;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_hall_sound = /** @class */ (function (_super) {
+            __extends(FUI_hall_sound, _super);
+            function FUI_hall_sound() {
+                return _super.call(this) || this;
+            }
+            FUI_hall_sound.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "hall_sound"));
+            };
+            FUI_hall_sound.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n1 = (this.getChildAt(0));
+            };
+            FUI_hall_sound.URL = "ui://8oy4o0mbd83228";
+            return FUI_hall_sound;
+        }(fairygui.GButton));
+        Game.FUI_hall_sound = FUI_hall_sound;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_headItem = /** @class */ (function (_super) {
+            __extends(FUI_headItem, _super);
+            function FUI_headItem() {
+                return _super.call(this) || this;
+            }
+            FUI_headItem.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "headItem"));
+            };
+            FUI_headItem.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n2 = (this.getChildAt(0));
+                this.m_head = (this.getChildAt(1));
+                this.m_n3 = (this.getChildAt(2));
+            };
+            FUI_headItem.URL = "ui://8oy4o0mbd83213";
+            return FUI_headItem;
+        }(fairygui.GButton));
+        Game.FUI_headItem = FUI_headItem;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_item1 = /** @class */ (function (_super) {
+            __extends(FUI_item1, _super);
+            function FUI_item1() {
+                return _super.call(this) || this;
+            }
+            FUI_item1.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "item1"));
+            };
+            FUI_item1.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n23 = (this.getChildAt(0));
+                this.m_lang_name = (this.getChildAt(1));
+                this.m_n30 = (this.getChildAt(2));
+                this.m_lang_base = (this.getChildAt(3));
+                this.m_antes1 = (this.getChildAt(4));
+                this.m_lang_zhunru = (this.getChildAt(5));
+                this.m_lowest1 = (this.getChildAt(6));
+            };
+            FUI_item1.URL = "ui://8oy4o0mbcsvz5";
+            return FUI_item1;
+        }(fairygui.GButton));
+        Game.FUI_item1 = FUI_item1;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_item2 = /** @class */ (function (_super) {
+            __extends(FUI_item2, _super);
+            function FUI_item2() {
+                return _super.call(this) || this;
+            }
+            FUI_item2.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "item2"));
+            };
+            FUI_item2.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n30 = (this.getChildAt(0));
+                this.m_lang_name = (this.getChildAt(1));
+                this.m_n31 = (this.getChildAt(2));
+                this.m_lang_base = (this.getChildAt(3));
+                this.m_antes2 = (this.getChildAt(4));
+                this.m_lang_zhunru = (this.getChildAt(5));
+                this.m_lowest2 = (this.getChildAt(6));
+            };
+            FUI_item2.URL = "ui://8oy4o0mbmtpmh";
+            return FUI_item2;
+        }(fairygui.GButton));
+        Game.FUI_item2 = FUI_item2;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_item3 = /** @class */ (function (_super) {
+            __extends(FUI_item3, _super);
+            function FUI_item3() {
+                return _super.call(this) || this;
+            }
+            FUI_item3.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "item3"));
+            };
+            FUI_item3.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n30 = (this.getChildAt(0));
+                this.m_lang_name = (this.getChildAt(1));
+                this.m_n31 = (this.getChildAt(2));
+                this.m_lang_base = (this.getChildAt(3));
+                this.m_antes3 = (this.getChildAt(4));
+                this.m_lang_zhunru = (this.getChildAt(5));
+                this.m_lowest3 = (this.getChildAt(6));
+            };
+            FUI_item3.URL = "ui://8oy4o0mbmtpmi";
+            return FUI_item3;
+        }(fairygui.GButton));
+        Game.FUI_item3 = FUI_item3;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_item4 = /** @class */ (function (_super) {
+            __extends(FUI_item4, _super);
+            function FUI_item4() {
+                return _super.call(this) || this;
+            }
+            FUI_item4.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "item4"));
+            };
+            FUI_item4.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n30 = (this.getChildAt(0));
+                this.m_lang_name = (this.getChildAt(1));
+                this.m_n31 = (this.getChildAt(2));
+                this.m_lang_base = (this.getChildAt(3));
+                this.m_antes4 = (this.getChildAt(4));
+                this.m_lang_zhunru = (this.getChildAt(5));
+                this.m_lowest4 = (this.getChildAt(6));
+            };
+            FUI_item4.URL = "ui://8oy4o0mbmtpmj";
+            return FUI_item4;
+        }(fairygui.GButton));
+        Game.FUI_item4 = FUI_item4;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_leaveRoom = /** @class */ (function (_super) {
+            __extends(FUI_leaveRoom, _super);
+            function FUI_leaveRoom() {
+                return _super.call(this) || this;
+            }
+            FUI_leaveRoom.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "leaveRoom"));
+            };
+            FUI_leaveRoom.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n8 = (this.getChildAt(0));
+                this.m_tips = (this.getChildAt(1));
+                this.m_sure = (this.getChildAt(2));
+                this.m_cancle = (this.getChildAt(3));
+            };
+            FUI_leaveRoom.URL = "ui://8oy4o0mbo4403n";
+            return FUI_leaveRoom;
+        }(fairygui.GComponent));
+        Game.FUI_leaveRoom = FUI_leaveRoom;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_logo = /** @class */ (function (_super) {
+            __extends(FUI_logo, _super);
+            function FUI_logo() {
+                return _super.call(this) || this;
+            }
+            FUI_logo.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "logo"));
+            };
+            FUI_logo.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_ctl = this.getControllerAt(0);
+                this.m_logo = (this.getChildAt(0));
+            };
+            FUI_logo.URL = "ui://8oy4o0mbo4403t";
+            return FUI_logo;
+        }(fairygui.GComponent));
+        Game.FUI_logo = FUI_logo;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_menu = /** @class */ (function (_super) {
+            __extends(FUI_menu, _super);
+            function FUI_menu() {
+                return _super.call(this) || this;
+            }
+            FUI_menu.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "menu"));
+            };
+            FUI_menu.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_ctr = this.getControllerAt(0);
+                this.m_n12 = (this.getChildAt(0));
+                this.m_n8 = (this.getChildAt(1));
+                this.m_n10 = (this.getChildAt(2));
+                this.m_n9 = (this.getChildAt(3));
+                this.m_on = (this.getChildAt(4));
+                this.m_off = (this.getChildAt(5));
+                this.m_n18 = (this.getChildAt(6));
+                this.m_n19 = (this.getChildAt(7));
+                this.m_n20 = (this.getChildAt(8));
+                this.m_n21 = (this.getChildAt(9));
+                this.m_n22 = (this.getChildAt(10));
+            };
+            FUI_menu.URL = "ui://8oy4o0mbd8321z";
+            return FUI_menu;
+        }(fairygui.GComponent));
+        Game.FUI_menu = FUI_menu;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_musicBtn = /** @class */ (function (_super) {
+            __extends(FUI_musicBtn, _super);
+            function FUI_musicBtn() {
+                return _super.call(this) || this;
+            }
+            FUI_musicBtn.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "musicBtn"));
+            };
+            FUI_musicBtn.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_n4 = (this.getChildAt(1));
+            };
+            FUI_musicBtn.URL = "ui://8oy4o0mbd83232";
+            return FUI_musicBtn;
+        }(fairygui.GButton));
+        Game.FUI_musicBtn = FUI_musicBtn;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_musicSlider = /** @class */ (function (_super) {
+            __extends(FUI_musicSlider, _super);
+            function FUI_musicSlider() {
+                return _super.call(this) || this;
+            }
+            FUI_musicSlider.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "musicSlider"));
+            };
+            FUI_musicSlider.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+                this.m_bar = (this.getChildAt(1));
+                this.m_grip = (this.getChildAt(2));
+            };
+            FUI_musicSlider.URL = "ui://8oy4o0mbd8322x";
+            return FUI_musicSlider;
+        }(fairygui.GSlider));
+        Game.FUI_musicSlider = FUI_musicSlider;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_musicSlider_grip = /** @class */ (function (_super) {
+            __extends(FUI_musicSlider_grip, _super);
+            function FUI_musicSlider_grip() {
+                return _super.call(this) || this;
+            }
+            FUI_musicSlider_grip.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "musicSlider_grip"));
+            };
+            FUI_musicSlider_grip.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n0 = (this.getChildAt(0));
+            };
+            FUI_musicSlider_grip.URL = "ui://8oy4o0mbd83230";
+            return FUI_musicSlider_grip;
+        }(fairygui.GButton));
+        Game.FUI_musicSlider_grip = FUI_musicSlider_grip;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_player = /** @class */ (function (_super) {
+            __extends(FUI_player, _super);
+            function FUI_player() {
+                return _super.call(this) || this;
+            }
+            FUI_player.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "player"));
+            };
+            FUI_player.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_card1 = (this.getChildAt(0));
+                this.m_card2 = (this.getChildAt(1));
+                this.m_card3 = (this.getChildAt(2));
+                this.m_card4 = (this.getChildAt(3));
+                this.m_card5 = (this.getChildAt(4));
+                this.m_set = (this.getChildAt(5));
+            };
+            FUI_player.URL = "ui://8oy4o0mbo44039";
+            return FUI_player;
+        }(fairygui.GComponent));
+        Game.FUI_player = FUI_player;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_reconnect = /** @class */ (function (_super) {
+            __extends(FUI_reconnect, _super);
+            function FUI_reconnect() {
+                return _super.call(this) || this;
+            }
+            FUI_reconnect.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "reconnect"));
+            };
+            FUI_reconnect.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+                this.m_lang_title = (this.getChildAt(1));
+                this.m_tips = (this.getChildAt(2));
+                this.m_reconnect = (this.getChildAt(3));
+                this.m_return = (this.getChildAt(4));
+            };
+            FUI_reconnect.URL = "ui://8oy4o0mbo4403b";
+            return FUI_reconnect;
+        }(fairygui.GComponent));
+        Game.FUI_reconnect = FUI_reconnect;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_reconnectCircle = /** @class */ (function (_super) {
+            __extends(FUI_reconnectCircle, _super);
+            function FUI_reconnectCircle() {
+                return _super.call(this) || this;
+            }
+            FUI_reconnectCircle.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "reconnectCircle"));
+            };
+            FUI_reconnectCircle.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_lang_1 = (this.getChildAt(0));
+                this.m_circle = (this.getChildAt(1));
+                this.m_t0 = this.getTransitionAt(0);
+            };
+            FUI_reconnectCircle.URL = "ui://8oy4o0mbo4403h";
+            return FUI_reconnectCircle;
+        }(fairygui.GComponent));
+        Game.FUI_reconnectCircle = FUI_reconnectCircle;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_Roomitems = /** @class */ (function (_super) {
+            __extends(FUI_Roomitems, _super);
+            function FUI_Roomitems() {
+                return _super.call(this) || this;
+            }
+            FUI_Roomitems.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "Roomitems"));
+            };
+            FUI_Roomitems.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_h_v = this.getControllerAt(0);
+                this.m_item1 = (this.getChildAt(0));
+                this.m_item2 = (this.getChildAt(1));
+                this.m_item3 = (this.getChildAt(2));
+                this.m_item4 = (this.getChildAt(3));
+            };
+            FUI_Roomitems.URL = "ui://8oy4o0mbcsvz9";
+            return FUI_Roomitems;
+        }(fairygui.GComponent));
+        Game.FUI_Roomitems = FUI_Roomitems;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_room_help = /** @class */ (function (_super) {
+            __extends(FUI_room_help, _super);
+            function FUI_room_help() {
+                return _super.call(this) || this;
+            }
+            FUI_room_help.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "room_help"));
+            };
+            FUI_room_help.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_lang_option = (this.getChildAt(1));
+            };
+            FUI_room_help.URL = "ui://8oy4o0mbd8322p";
+            return FUI_room_help;
+        }(fairygui.GButton));
+        Game.FUI_room_help = FUI_room_help;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_room_home = /** @class */ (function (_super) {
+            __extends(FUI_room_home, _super);
+            function FUI_room_home() {
+                return _super.call(this) || this;
+            }
+            FUI_room_home.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "room_home"));
+            };
+            FUI_room_home.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_lang_option = (this.getChildAt(1));
+            };
+            FUI_room_home.URL = "ui://8oy4o0mbd8322t";
+            return FUI_room_home;
+        }(fairygui.GButton));
+        Game.FUI_room_home = FUI_room_home;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_room_rep = /** @class */ (function (_super) {
+            __extends(FUI_room_rep, _super);
+            function FUI_room_rep() {
+                return _super.call(this) || this;
+            }
+            FUI_room_rep.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "room_rep"));
+            };
+            FUI_room_rep.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_lang_option = (this.getChildAt(1));
+            };
+            FUI_room_rep.URL = "ui://8oy4o0mbd8322s";
+            return FUI_room_rep;
+        }(fairygui.GButton));
+        Game.FUI_room_rep = FUI_room_rep;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_room_sound = /** @class */ (function (_super) {
+            __extends(FUI_room_sound, _super);
+            function FUI_room_sound() {
+                return _super.call(this) || this;
+            }
+            FUI_room_sound.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "room_sound"));
+            };
+            FUI_room_sound.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_lang_option = (this.getChildAt(1));
+            };
+            FUI_room_sound.URL = "ui://8oy4o0mbd8322u";
+            return FUI_room_sound;
+        }(fairygui.GButton));
+        Game.FUI_room_sound = FUI_room_sound;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_saveHead = /** @class */ (function (_super) {
+            __extends(FUI_saveHead, _super);
+            function FUI_saveHead() {
+                return _super.call(this) || this;
+            }
+            FUI_saveHead.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "saveHead"));
+            };
+            FUI_saveHead.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n7 = (this.getChildAt(0));
+                this.m_lang_save = (this.getChildAt(1));
+            };
+            FUI_saveHead.URL = "ui://8oy4o0mbd83211";
+            return FUI_saveHead;
+        }(fairygui.GButton));
+        Game.FUI_saveHead = FUI_saveHead;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_set = /** @class */ (function (_super) {
+            __extends(FUI_set, _super);
+            function FUI_set() {
+                return _super.call(this) || this;
+            }
+            FUI_set.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "set"));
+            };
+            FUI_set.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+                this.m_lang_title = (this.getChildAt(1));
+                this.m_lang_music = (this.getChildAt(2));
+                this.m_slider_music = (this.getChildAt(3));
+                this.m_slider_sound = (this.getChildAt(4));
+                this.m_lang_sound = (this.getChildAt(5));
+                this.m_btn_music = (this.getChildAt(6));
+                this.m_btn_sound = (this.getChildAt(7));
+                this.m_close = (this.getChildAt(8));
+            };
+            FUI_set.URL = "ui://8oy4o0mbd8322v";
+            return FUI_set;
+        }(fairygui.GComponent));
+        Game.FUI_set = FUI_set;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_setGM = /** @class */ (function (_super) {
+            __extends(FUI_setGM, _super);
+            function FUI_setGM() {
+                return _super.call(this) || this;
+            }
+            FUI_setGM.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "setGM"));
+            };
+            FUI_setGM.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_n4 = (this.getChildAt(1));
+            };
+            FUI_setGM.URL = "ui://8oy4o0mbl3ii3w";
+            return FUI_setGM;
+        }(fairygui.GButton));
+        Game.FUI_setGM = FUI_setGM;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_sure = /** @class */ (function (_super) {
+            __extends(FUI_sure, _super);
+            function FUI_sure() {
+                return _super.call(this) || this;
+            }
+            FUI_sure.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "sure"));
+            };
+            FUI_sure.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_lang_sure = (this.getChildAt(1));
+            };
+            FUI_sure.URL = "ui://8oy4o0mbo4403p";
+            return FUI_sure;
+        }(fairygui.GButton));
+        Game.FUI_sure = FUI_sure;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_switch = /** @class */ (function (_super) {
+            __extends(FUI_switch, _super);
+            function FUI_switch() {
+                return _super.call(this) || this;
+            }
+            FUI_switch.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "switch"));
+            };
+            FUI_switch.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n2 = (this.getChildAt(0));
+            };
+            FUI_switch.URL = "ui://8oy4o0mbd8322o";
+            return FUI_switch;
+        }(fairygui.GButton));
+        Game.FUI_switch = FUI_switch;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var GameBinder = /** @class */ (function () {
+            function GameBinder() {
+            }
+            GameBinder.bindAll = function () {
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item1.URL, Game.FUI_item1);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_Roomitems.URL, Game.FUI_Roomitems);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_saveHead.URL, Game.FUI_saveHead);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_headItem.URL, Game.FUI_headItem);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_close.URL, Game.FUI_close);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_menu.URL, Game.FUI_menu);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hall_home.URL, Game.FUI_hall_home);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hall_rep.URL, Game.FUI_hall_rep);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hall_help.URL, Game.FUI_hall_help);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hall_sound.URL, Game.FUI_hall_sound);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_switch.URL, Game.FUI_switch);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_room_help.URL, Game.FUI_room_help);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_room_rep.URL, Game.FUI_room_rep);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_room_home.URL, Game.FUI_room_home);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_room_sound.URL, Game.FUI_room_sound);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_set.URL, Game.FUI_set);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_musicSlider.URL, Game.FUI_musicSlider);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_musicSlider_grip.URL, Game.FUI_musicSlider_grip);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_musicBtn.URL, Game.FUI_musicBtn);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hallBg_h.URL, Game.FUI_hallBg_h);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hallBg_v.URL, Game.FUI_hallBg_v);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_brief.URL, Game.FUI_brief);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_briefPopup.URL, Game.FUI_briefPopup);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_gmKeys.URL, Game.FUI_gmKeys);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_setGM.URL, Game.FUI_setGM);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_AddWalletBtn.URL, Game.FUI_AddWalletBtn);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item2.URL, Game.FUI_item2);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item3.URL, Game.FUI_item3);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item4.URL, Game.FUI_item4);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_gm.URL, Game.FUI_gm);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_player.URL, Game.FUI_player);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_gmSubmit.URL, Game.FUI_gmSubmit);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_reconnect.URL, Game.FUI_reconnect);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_btn_reconnect.URL, Game.FUI_btn_reconnect);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_btn_return.URL, Game.FUI_btn_return);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_reconnectCircle.URL, Game.FUI_reconnectCircle);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_leaveRoom.URL, Game.FUI_leaveRoom);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_sure.URL, Game.FUI_sure);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_cancle.URL, Game.FUI_cancle);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_logo.URL, Game.FUI_logo);
+            };
+            return GameBinder;
+        }());
+        Game.GameBinder = GameBinder;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var help;
+    (function (help) {
+        var FUI_help = /** @class */ (function (_super) {
+            __extends(FUI_help, _super);
+            function FUI_help() {
+                return _super.call(this) || this;
+            }
+            FUI_help.createInstance = function () {
+                return (fairygui.UIPackage.createObject("help", "help"));
+            };
+            FUI_help.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n1 = (this.getChildAt(0));
+                this.m_lang_title = (this.getChildAt(1));
+                this.m_tab = (this.getChildAt(2));
+                this.m_info = (this.getChildAt(3));
+                this.m_close = (this.getChildAt(4));
+            };
+            FUI_help.URL = "ui://txmqgqddujig4";
+            return FUI_help;
+        }(fairygui.GComponent));
+        help.FUI_help = FUI_help;
+    })(help = fui.help || (fui.help = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var help;
+    (function (help) {
+        var FUI_help_info = /** @class */ (function (_super) {
+            __extends(FUI_help_info, _super);
+            function FUI_help_info() {
+                return _super.call(this) || this;
+            }
+            FUI_help_info.createInstance = function () {
+                return (fairygui.UIPackage.createObject("help", "help_info"));
+            };
+            FUI_help_info.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_lang_info = (this.getChildAt(0));
+            };
+            FUI_help_info.URL = "ui://txmqgqddujig6";
+            return FUI_help_info;
+        }(fairygui.GComponent));
+        help.FUI_help_info = FUI_help_info;
+    })(help = fui.help || (fui.help = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var help;
+    (function (help) {
+        var FUI_help_tab = /** @class */ (function (_super) {
+            __extends(FUI_help_tab, _super);
+            function FUI_help_tab() {
+                return _super.call(this) || this;
+            }
+            FUI_help_tab.createInstance = function () {
+                return (fairygui.UIPackage.createObject("help", "help_tab"));
+            };
+            FUI_help_tab.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n6 = (this.getChildAt(0));
+                this.m_n7 = (this.getChildAt(1));
+                this.m_lang_tab = (this.getChildAt(2));
+            };
+            FUI_help_tab.URL = "ui://txmqgqddujig5";
+            return FUI_help_tab;
+        }(fairygui.GButton));
+        help.FUI_help_tab = FUI_help_tab;
+    })(help = fui.help || (fui.help = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var help;
+    (function (help) {
+        var helpBinder = /** @class */ (function () {
+            function helpBinder() {
+            }
+            helpBinder.bindAll = function () {
+                fairygui.UIObjectFactory.setPackageItemExtension(help.FUI_help.URL, help.FUI_help);
+                fairygui.UIObjectFactory.setPackageItemExtension(help.FUI_help_tab.URL, help.FUI_help_tab);
+                fairygui.UIObjectFactory.setPackageItemExtension(help.FUI_help_info.URL, help.FUI_help_info);
+            };
+            return helpBinder;
+        }());
+        help.helpBinder = helpBinder;
+    })(help = fui.help || (fui.help = {}));
+})(fui || (fui = {}));
 /** This is an automatically generated class by FairyGUI. Please do not modify it. **/
 var fui;
 (function (fui) {
@@ -5352,6 +5352,70 @@ var fui;
 var point21;
 (function (point21) {
     /**
+     * 大厅
+     * @author Zane
+     */
+    var FHall = /** @class */ (function (_super) {
+        __extends(FHall, _super);
+        function FHall() {
+            return _super.call(this) || this;
+        }
+        FHall.prototype.onConstruct = function () {
+            _super.prototype.onConstruct.call(this);
+            this.register(bx.GConst.n_room_items_click);
+        };
+        FHall.prototype.onNotice = function (notice, data) {
+            _super.prototype.onNotice.call(this, notice, data);
+            switch (notice) {
+                case bx.GConst.n_room_items_click:
+                    //this.notify(bx.GConst.n_to_room_state);
+                    break;
+            }
+        };
+        FHall.prototype.onDestruct = function () { _super.prototype.onDestruct.call(this); };
+        FHall.prototype.onFocus = function () {
+            _super.prototype.onFocus.call(this);
+        };
+        FHall.prototype.onDefocus = function () {
+            _super.prototype.onDefocus.call(this);
+        };
+        return FHall;
+    }(bx.FHall));
+    point21.FHall = FHall;
+})(point21 || (point21 = {}));
+var point21;
+(function (point21) {
+    /**
+     * 房间
+     * @author Zane
+     */
+    var FRoom = /** @class */ (function (_super) {
+        __extends(FRoom, _super);
+        function FRoom() {
+            return _super.call(this) || this;
+        }
+        FRoom.prototype.onConstruct = function () {
+            _super.prototype.onConstruct.call(this);
+        };
+        FRoom.prototype.onFocus = function () {
+            _super.prototype.onFocus.call(this);
+            //SoundManager.instance.bgmUrls = AssetsUtils.getSoundUrl('roomBgm');            
+            this.notify(point21.GConst.n_addRoom);
+        };
+        FRoom.prototype.onDefocus = function () {
+            _super.prototype.onDefocus.call(this);
+            this.notify(point21.GConst.n_removeRoom);
+        };
+        FRoom.prototype.onNotice = function (notice, data) {
+            _super.prototype.onNotice.call(this, notice, data);
+        };
+        return FRoom;
+    }(bx.FRoom));
+    point21.FRoom = FRoom;
+})(point21 || (point21 = {}));
+var point21;
+(function (point21) {
+    /**
      * 常量类（该文件由工具自动生成，请不要手动修改）
      * @author Zane
      */
@@ -5621,70 +5685,6 @@ var point21;
         return Utils;
     }());
     point21.Utils = Utils;
-})(point21 || (point21 = {}));
-var point21;
-(function (point21) {
-    /**
-     * 大厅
-     * @author Zane
-     */
-    var FHall = /** @class */ (function (_super) {
-        __extends(FHall, _super);
-        function FHall() {
-            return _super.call(this) || this;
-        }
-        FHall.prototype.onConstruct = function () {
-            _super.prototype.onConstruct.call(this);
-            this.register(bx.GConst.n_room_items_click);
-        };
-        FHall.prototype.onNotice = function (notice, data) {
-            _super.prototype.onNotice.call(this, notice, data);
-            switch (notice) {
-                case bx.GConst.n_room_items_click:
-                    //this.notify(bx.GConst.n_to_room_state);
-                    break;
-            }
-        };
-        FHall.prototype.onDestruct = function () { _super.prototype.onDestruct.call(this); };
-        FHall.prototype.onFocus = function () {
-            _super.prototype.onFocus.call(this);
-        };
-        FHall.prototype.onDefocus = function () {
-            _super.prototype.onDefocus.call(this);
-        };
-        return FHall;
-    }(bx.FHall));
-    point21.FHall = FHall;
-})(point21 || (point21 = {}));
-var point21;
-(function (point21) {
-    /**
-     * 房间
-     * @author Zane
-     */
-    var FRoom = /** @class */ (function (_super) {
-        __extends(FRoom, _super);
-        function FRoom() {
-            return _super.call(this) || this;
-        }
-        FRoom.prototype.onConstruct = function () {
-            _super.prototype.onConstruct.call(this);
-        };
-        FRoom.prototype.onFocus = function () {
-            _super.prototype.onFocus.call(this);
-            //SoundManager.instance.bgmUrls = AssetsUtils.getSoundUrl('roomBgm');            
-            this.notify(point21.GConst.n_addRoom);
-        };
-        FRoom.prototype.onDefocus = function () {
-            _super.prototype.onDefocus.call(this);
-            this.notify(point21.GConst.n_removeRoom);
-        };
-        FRoom.prototype.onNotice = function (notice, data) {
-            _super.prototype.onNotice.call(this, notice, data);
-        };
-        return FRoom;
-    }(bx.FRoom));
-    point21.FRoom = FRoom;
 })(point21 || (point21 = {}));
 
 //# sourceMappingURL=6010.js.map

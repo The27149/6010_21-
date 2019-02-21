@@ -8,7 +8,7 @@
         "languages",
         "sound"
     ],
-    "language": "en-us", //当前语言
+    "language": "zh-cn", //当前语言
     "languages": [ //多语言列表
         "zh-cn",
         "en-us"

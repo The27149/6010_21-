@@ -669,6 +669,8 @@ namespace point21 {
             this.popupMatch.y = bx.Align.middle;
             this.strategyBtn.x = bx.Align.right;
             this.strategyBtn.y = bx.Align.top;
+            this.strategyBtn.marginTop = 20;
+            this.strategyBtn.marginRight = 20;
             if (bx.Stage.getStage().isLandscape) {
                 this.view.width = this.viewBg.width = 1920;
                 this.view.height = this.viewBg.height = 1080;
