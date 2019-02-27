@@ -1,15 +1,4 @@
 {
-	"expanded_nodes": [
-		"2mffi74e",
-		"/",
-		"rt3448ma",
-		"/"
-	],
-	"active_doc": [
-		"2mffi74e",
-		"wuvl3a"
-	],
-	"hidden_packages": [],
 	"docs": [
 		"2mffi74e",
 		"wuvl2w",
@@ -50,6 +39,17 @@
 		"2mffi74e",
 		"hyur4c",
 		"2mffi74e",
-		"wuvl36"
-	]
+		"wuvl36",
+		"2mffi74e",
+		"wuvl2u"
+	],
+	"expanded_nodes": [
+		"rt3448ma",
+		"/"
+	],
+	"active_doc": [
+		"2mffi74e",
+		"wuvl2u"
+	],
+	"hidden_packages": []
 }
