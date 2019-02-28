@@ -686,7 +686,9 @@ namespace point21 {
                 this.view._view.m_table.url = 'assets/room_dt/vertical/pzs.png';
                 this.viewBg._view.m_roombg.url = 'assets/room_dt/vertical/bg2.png';
                 let index = this.view._view.m_lightCtl.selectedIndex;
-                if(index < 15 || index == 15) this.view._view.m_lightCtl.selectedIndex = index + 15;
+                if(index > 0){
+                    if(index < 15 || index == 15) this.view._view.m_lightCtl.selectedIndex = index + 15;
+                } 
             }
         }
     }

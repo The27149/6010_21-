@@ -14,2441 +14,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_AddWalletBtn = /** @class */ (function (_super) {
-            __extends(FUI_AddWalletBtn, _super);
-            function FUI_AddWalletBtn() {
-                return _super.call(this) || this;
-            }
-            FUI_AddWalletBtn.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "AddWalletBtn"));
-            };
-            FUI_AddWalletBtn.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-            };
-            FUI_AddWalletBtn.URL = "ui://8oy4o0mbl3ii3x";
-            return FUI_AddWalletBtn;
-        }(fairygui.GComponent));
-        Game.FUI_AddWalletBtn = FUI_AddWalletBtn;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_brief = /** @class */ (function (_super) {
-            __extends(FUI_brief, _super);
-            function FUI_brief() {
-                return _super.call(this) || this;
-            }
-            FUI_brief.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "brief"));
-            };
-            FUI_brief.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_h_v = this.getControllerAt(0);
-                this.m_avatar = (this.getChildAt(0));
-                this.m_n4 = (this.getChildAt(1));
-                this.m_nickname = (this.getChildAt(2));
-                this.m_n5 = (this.getChildAt(3));
-                this.m_n8 = (this.getChildAt(4));
-                this.m_coin = (this.getChildAt(5));
-            };
-            FUI_brief.URL = "ui://8oy4o0mbd832p";
-            return FUI_brief;
-        }(fairygui.GComponent));
-        Game.FUI_brief = FUI_brief;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_briefPopup = /** @class */ (function (_super) {
-            __extends(FUI_briefPopup, _super);
-            function FUI_briefPopup() {
-                return _super.call(this) || this;
-            }
-            FUI_briefPopup.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "briefPopup"));
-            };
-            FUI_briefPopup.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n10 = (this.getChildAt(0));
-                this.m_lang_head = (this.getChildAt(1));
-                this.m_lang_des = (this.getChildAt(2));
-                this.m_btnSave = (this.getChildAt(3));
-                this.m_headList = (this.getChildAt(4));
-                this.m_close = (this.getChildAt(5));
-                this.m_current = (this.getChildAt(6));
-            };
-            FUI_briefPopup.URL = "ui://8oy4o0mbd832w";
-            return FUI_briefPopup;
-        }(fairygui.GComponent));
-        Game.FUI_briefPopup = FUI_briefPopup;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_btn_reconnect = /** @class */ (function (_super) {
-            __extends(FUI_btn_reconnect, _super);
-            function FUI_btn_reconnect() {
-                return _super.call(this) || this;
-            }
-            FUI_btn_reconnect.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "btn_reconnect"));
-            };
-            FUI_btn_reconnect.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_lang_reconnect = (this.getChildAt(1));
-            };
-            FUI_btn_reconnect.URL = "ui://8oy4o0mbo4403d";
-            return FUI_btn_reconnect;
-        }(fairygui.GButton));
-        Game.FUI_btn_reconnect = FUI_btn_reconnect;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_btn_return = /** @class */ (function (_super) {
-            __extends(FUI_btn_return, _super);
-            function FUI_btn_return() {
-                return _super.call(this) || this;
-            }
-            FUI_btn_return.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "btn_return"));
-            };
-            FUI_btn_return.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_lang_return = (this.getChildAt(1));
-            };
-            FUI_btn_return.URL = "ui://8oy4o0mbo4403f";
-            return FUI_btn_return;
-        }(fairygui.GButton));
-        Game.FUI_btn_return = FUI_btn_return;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_cancle = /** @class */ (function (_super) {
-            __extends(FUI_cancle, _super);
-            function FUI_cancle() {
-                return _super.call(this) || this;
-            }
-            FUI_cancle.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "cancle"));
-            };
-            FUI_cancle.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n5 = (this.getChildAt(0));
-                this.m_lang_cancle = (this.getChildAt(1));
-            };
-            FUI_cancle.URL = "ui://8oy4o0mbo4403r";
-            return FUI_cancle;
-        }(fairygui.GButton));
-        Game.FUI_cancle = FUI_cancle;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_close = /** @class */ (function (_super) {
-            __extends(FUI_close, _super);
-            function FUI_close() {
-                return _super.call(this) || this;
-            }
-            FUI_close.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "close"));
-            };
-            FUI_close.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-            };
-            FUI_close.URL = "ui://8oy4o0mbd83216";
-            return FUI_close;
-        }(fairygui.GButton));
-        Game.FUI_close = FUI_close;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_gm = /** @class */ (function (_super) {
-            __extends(FUI_gm, _super);
-            function FUI_gm() {
-                return _super.call(this) || this;
-            }
-            FUI_gm.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "gm"));
-            };
-            FUI_gm.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n19 = (this.getChildAt(0));
-                this.m_keys = (this.getChildAt(1));
-                this.m_n0 = (this.getChildAt(2));
-                this.m_n1 = (this.getChildAt(3));
-                this.m_roomType = (this.getChildAt(4));
-                this.m_playerNumb = (this.getChildAt(5));
-                this.m_n2 = (this.getChildAt(6));
-                this.m_n3 = (this.getChildAt(7));
-                this.m_n4 = (this.getChildAt(8));
-                this.m_n9 = (this.getChildAt(9));
-                this.m_n10 = (this.getChildAt(10));
-                this.m_n16 = (this.getChildAt(11));
-                this.m_cards_0 = (this.getChildAt(12));
-                this.m_cards_1 = (this.getChildAt(13));
-                this.m_cards_2 = (this.getChildAt(14));
-                this.m_cards_3 = (this.getChildAt(15));
-                this.m_cards_4 = (this.getChildAt(16));
-                this.m_cards_5 = (this.getChildAt(17));
-                this.m_submit = (this.getChildAt(18));
-                this.m_close = (this.getChildAt(19));
-            };
-            FUI_gm.URL = "ui://8oy4o0mbo44037";
-            return FUI_gm;
-        }(fairygui.GComponent));
-        Game.FUI_gm = FUI_gm;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_gmKeys = /** @class */ (function (_super) {
-            __extends(FUI_gmKeys, _super);
-            function FUI_gmKeys() {
-                return _super.call(this) || this;
-            }
-            FUI_gmKeys.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "gmKeys"));
-            };
-            FUI_gmKeys.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n6 = (this.getChildAt(0));
-                this.m_n7 = (this.getChildAt(1));
-                this.m_n8 = (this.getChildAt(2));
-                this.m_n9 = (this.getChildAt(3));
-                this.m_n10 = (this.getChildAt(4));
-                this.m_n11 = (this.getChildAt(5));
-                this.m_n12 = (this.getChildAt(6));
-                this.m_n13 = (this.getChildAt(7));
-                this.m_n14 = (this.getChildAt(8));
-                this.m_n15 = (this.getChildAt(9));
-                this.m_n16 = (this.getChildAt(10));
-                this.m_n17 = (this.getChildAt(11));
-                this.m_n18 = (this.getChildAt(12));
-                this.m_n19 = (this.getChildAt(13));
-                this.m_n20 = (this.getChildAt(14));
-                this.m_n21 = (this.getChildAt(15));
-                this.m_n22 = (this.getChildAt(16));
-                this.m_n23 = (this.getChildAt(17));
-                this.m_n24 = (this.getChildAt(18));
-                this.m_n25 = (this.getChildAt(19));
-                this.m_n26 = (this.getChildAt(20));
-                this.m_n27 = (this.getChildAt(21));
-                this.m_n28 = (this.getChildAt(22));
-                this.m_n29 = (this.getChildAt(23));
-                this.m_n30 = (this.getChildAt(24));
-                this.m_n31 = (this.getChildAt(25));
-                this.m_n32 = (this.getChildAt(26));
-                this.m_n33 = (this.getChildAt(27));
-                this.m_n34 = (this.getChildAt(28));
-                this.m_n35 = (this.getChildAt(29));
-                this.m_n36 = (this.getChildAt(30));
-                this.m_n37 = (this.getChildAt(31));
-                this.m_n38 = (this.getChildAt(32));
-                this.m_n39 = (this.getChildAt(33));
-                this.m_n40 = (this.getChildAt(34));
-                this.m_n41 = (this.getChildAt(35));
-                this.m_n42 = (this.getChildAt(36));
-                this.m_n43 = (this.getChildAt(37));
-                this.m_n44 = (this.getChildAt(38));
-                this.m_n45 = (this.getChildAt(39));
-                this.m_n46 = (this.getChildAt(40));
-                this.m_n47 = (this.getChildAt(41));
-                this.m_n48 = (this.getChildAt(42));
-                this.m_n49 = (this.getChildAt(43));
-                this.m_n50 = (this.getChildAt(44));
-                this.m_n51 = (this.getChildAt(45));
-                this.m_n52 = (this.getChildAt(46));
-                this.m_n53 = (this.getChildAt(47));
-                this.m_n54 = (this.getChildAt(48));
-                this.m_n55 = (this.getChildAt(49));
-                this.m_n56 = (this.getChildAt(50));
-                this.m_n57 = (this.getChildAt(51));
-            };
-            FUI_gmKeys.URL = "ui://8oy4o0mbl3ii3u";
-            return FUI_gmKeys;
-        }(fairygui.GComponent));
-        Game.FUI_gmKeys = FUI_gmKeys;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_gmSubmit = /** @class */ (function (_super) {
-            __extends(FUI_gmSubmit, _super);
-            function FUI_gmSubmit() {
-                return _super.call(this) || this;
-            }
-            FUI_gmSubmit.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "gmSubmit"));
-            };
-            FUI_gmSubmit.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_n4 = (this.getChildAt(1));
-            };
-            FUI_gmSubmit.URL = "ui://8oy4o0mbo4403a";
-            return FUI_gmSubmit;
-        }(fairygui.GButton));
-        Game.FUI_gmSubmit = FUI_gmSubmit;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_hallBg_h = /** @class */ (function (_super) {
-            __extends(FUI_hallBg_h, _super);
-            function FUI_hallBg_h() {
-                return _super.call(this) || this;
-            }
-            FUI_hallBg_h.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "hallBg_h"));
-            };
-            FUI_hallBg_h.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-            };
-            FUI_hallBg_h.URL = "ui://8oy4o0mbd832k";
-            return FUI_hallBg_h;
-        }(fairygui.GComponent));
-        Game.FUI_hallBg_h = FUI_hallBg_h;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_hallBg_v = /** @class */ (function (_super) {
-            __extends(FUI_hallBg_v, _super);
-            function FUI_hallBg_v() {
-                return _super.call(this) || this;
-            }
-            FUI_hallBg_v.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "hallBg_v"));
-            };
-            FUI_hallBg_v.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-            };
-            FUI_hallBg_v.URL = "ui://8oy4o0mbd832m";
-            return FUI_hallBg_v;
-        }(fairygui.GComponent));
-        Game.FUI_hallBg_v = FUI_hallBg_v;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_hall_help = /** @class */ (function (_super) {
-            __extends(FUI_hall_help, _super);
-            function FUI_hall_help() {
-                return _super.call(this) || this;
-            }
-            FUI_hall_help.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "hall_help"));
-            };
-            FUI_hall_help.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n1 = (this.getChildAt(0));
-            };
-            FUI_hall_help.URL = "ui://8oy4o0mbd83226";
-            return FUI_hall_help;
-        }(fairygui.GButton));
-        Game.FUI_hall_help = FUI_hall_help;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_hall_home = /** @class */ (function (_super) {
-            __extends(FUI_hall_home, _super);
-            function FUI_hall_home() {
-                return _super.call(this) || this;
-            }
-            FUI_hall_home.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "hall_home"));
-            };
-            FUI_hall_home.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n4 = (this.getChildAt(0));
-            };
-            FUI_hall_home.URL = "ui://8oy4o0mbd83220";
-            return FUI_hall_home;
-        }(fairygui.GButton));
-        Game.FUI_hall_home = FUI_hall_home;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_hall_rep = /** @class */ (function (_super) {
-            __extends(FUI_hall_rep, _super);
-            function FUI_hall_rep() {
-                return _super.call(this) || this;
-            }
-            FUI_hall_rep.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "hall_rep"));
-            };
-            FUI_hall_rep.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n1 = (this.getChildAt(0));
-            };
-            FUI_hall_rep.URL = "ui://8oy4o0mbd83224";
-            return FUI_hall_rep;
-        }(fairygui.GButton));
-        Game.FUI_hall_rep = FUI_hall_rep;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_hall_sound = /** @class */ (function (_super) {
-            __extends(FUI_hall_sound, _super);
-            function FUI_hall_sound() {
-                return _super.call(this) || this;
-            }
-            FUI_hall_sound.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "hall_sound"));
-            };
-            FUI_hall_sound.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n1 = (this.getChildAt(0));
-            };
-            FUI_hall_sound.URL = "ui://8oy4o0mbd83228";
-            return FUI_hall_sound;
-        }(fairygui.GButton));
-        Game.FUI_hall_sound = FUI_hall_sound;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_headItem = /** @class */ (function (_super) {
-            __extends(FUI_headItem, _super);
-            function FUI_headItem() {
-                return _super.call(this) || this;
-            }
-            FUI_headItem.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "headItem"));
-            };
-            FUI_headItem.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n2 = (this.getChildAt(0));
-                this.m_head = (this.getChildAt(1));
-                this.m_n3 = (this.getChildAt(2));
-            };
-            FUI_headItem.URL = "ui://8oy4o0mbd83213";
-            return FUI_headItem;
-        }(fairygui.GButton));
-        Game.FUI_headItem = FUI_headItem;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_item1 = /** @class */ (function (_super) {
-            __extends(FUI_item1, _super);
-            function FUI_item1() {
-                return _super.call(this) || this;
-            }
-            FUI_item1.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "item1"));
-            };
-            FUI_item1.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n23 = (this.getChildAt(0));
-                this.m_lang_name = (this.getChildAt(1));
-                this.m_n30 = (this.getChildAt(2));
-                this.m_lang_base = (this.getChildAt(3));
-                this.m_antes1 = (this.getChildAt(4));
-                this.m_lang_zhunru = (this.getChildAt(5));
-                this.m_lowest1 = (this.getChildAt(6));
-            };
-            FUI_item1.URL = "ui://8oy4o0mbcsvz5";
-            return FUI_item1;
-        }(fairygui.GButton));
-        Game.FUI_item1 = FUI_item1;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_item2 = /** @class */ (function (_super) {
-            __extends(FUI_item2, _super);
-            function FUI_item2() {
-                return _super.call(this) || this;
-            }
-            FUI_item2.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "item2"));
-            };
-            FUI_item2.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n30 = (this.getChildAt(0));
-                this.m_lang_name = (this.getChildAt(1));
-                this.m_n31 = (this.getChildAt(2));
-                this.m_lang_base = (this.getChildAt(3));
-                this.m_antes2 = (this.getChildAt(4));
-                this.m_lang_zhunru = (this.getChildAt(5));
-                this.m_lowest2 = (this.getChildAt(6));
-            };
-            FUI_item2.URL = "ui://8oy4o0mbmtpmh";
-            return FUI_item2;
-        }(fairygui.GButton));
-        Game.FUI_item2 = FUI_item2;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_item3 = /** @class */ (function (_super) {
-            __extends(FUI_item3, _super);
-            function FUI_item3() {
-                return _super.call(this) || this;
-            }
-            FUI_item3.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "item3"));
-            };
-            FUI_item3.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n30 = (this.getChildAt(0));
-                this.m_lang_name = (this.getChildAt(1));
-                this.m_n31 = (this.getChildAt(2));
-                this.m_lang_base = (this.getChildAt(3));
-                this.m_antes3 = (this.getChildAt(4));
-                this.m_lang_zhunru = (this.getChildAt(5));
-                this.m_lowest3 = (this.getChildAt(6));
-            };
-            FUI_item3.URL = "ui://8oy4o0mbmtpmi";
-            return FUI_item3;
-        }(fairygui.GButton));
-        Game.FUI_item3 = FUI_item3;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_item4 = /** @class */ (function (_super) {
-            __extends(FUI_item4, _super);
-            function FUI_item4() {
-                return _super.call(this) || this;
-            }
-            FUI_item4.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "item4"));
-            };
-            FUI_item4.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n30 = (this.getChildAt(0));
-                this.m_lang_name = (this.getChildAt(1));
-                this.m_n31 = (this.getChildAt(2));
-                this.m_lang_base = (this.getChildAt(3));
-                this.m_antes4 = (this.getChildAt(4));
-                this.m_lang_zhunru = (this.getChildAt(5));
-                this.m_lowest4 = (this.getChildAt(6));
-            };
-            FUI_item4.URL = "ui://8oy4o0mbmtpmj";
-            return FUI_item4;
-        }(fairygui.GButton));
-        Game.FUI_item4 = FUI_item4;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_leaveRoom = /** @class */ (function (_super) {
-            __extends(FUI_leaveRoom, _super);
-            function FUI_leaveRoom() {
-                return _super.call(this) || this;
-            }
-            FUI_leaveRoom.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "leaveRoom"));
-            };
-            FUI_leaveRoom.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n8 = (this.getChildAt(0));
-                this.m_tips = (this.getChildAt(1));
-                this.m_sure = (this.getChildAt(2));
-                this.m_cancle = (this.getChildAt(3));
-            };
-            FUI_leaveRoom.URL = "ui://8oy4o0mbo4403n";
-            return FUI_leaveRoom;
-        }(fairygui.GComponent));
-        Game.FUI_leaveRoom = FUI_leaveRoom;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_logo = /** @class */ (function (_super) {
-            __extends(FUI_logo, _super);
-            function FUI_logo() {
-                return _super.call(this) || this;
-            }
-            FUI_logo.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "logo"));
-            };
-            FUI_logo.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_ctl = this.getControllerAt(0);
-                this.m_logo = (this.getChildAt(0));
-            };
-            FUI_logo.URL = "ui://8oy4o0mbo4403t";
-            return FUI_logo;
-        }(fairygui.GComponent));
-        Game.FUI_logo = FUI_logo;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_menu = /** @class */ (function (_super) {
-            __extends(FUI_menu, _super);
-            function FUI_menu() {
-                return _super.call(this) || this;
-            }
-            FUI_menu.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "menu"));
-            };
-            FUI_menu.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_ctr = this.getControllerAt(0);
-                this.m_n12 = (this.getChildAt(0));
-                this.m_n8 = (this.getChildAt(1));
-                this.m_n10 = (this.getChildAt(2));
-                this.m_n9 = (this.getChildAt(3));
-                this.m_on = (this.getChildAt(4));
-                this.m_off = (this.getChildAt(5));
-                this.m_n18 = (this.getChildAt(6));
-                this.m_n19 = (this.getChildAt(7));
-                this.m_n20 = (this.getChildAt(8));
-                this.m_n21 = (this.getChildAt(9));
-                this.m_n22 = (this.getChildAt(10));
-            };
-            FUI_menu.URL = "ui://8oy4o0mbd8321z";
-            return FUI_menu;
-        }(fairygui.GComponent));
-        Game.FUI_menu = FUI_menu;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_musicBtn = /** @class */ (function (_super) {
-            __extends(FUI_musicBtn, _super);
-            function FUI_musicBtn() {
-                return _super.call(this) || this;
-            }
-            FUI_musicBtn.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "musicBtn"));
-            };
-            FUI_musicBtn.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_n4 = (this.getChildAt(1));
-            };
-            FUI_musicBtn.URL = "ui://8oy4o0mbd83232";
-            return FUI_musicBtn;
-        }(fairygui.GButton));
-        Game.FUI_musicBtn = FUI_musicBtn;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_musicSlider = /** @class */ (function (_super) {
-            __extends(FUI_musicSlider, _super);
-            function FUI_musicSlider() {
-                return _super.call(this) || this;
-            }
-            FUI_musicSlider.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "musicSlider"));
-            };
-            FUI_musicSlider.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-                this.m_bar = (this.getChildAt(1));
-                this.m_grip = (this.getChildAt(2));
-            };
-            FUI_musicSlider.URL = "ui://8oy4o0mbd8322x";
-            return FUI_musicSlider;
-        }(fairygui.GSlider));
-        Game.FUI_musicSlider = FUI_musicSlider;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_musicSlider_grip = /** @class */ (function (_super) {
-            __extends(FUI_musicSlider_grip, _super);
-            function FUI_musicSlider_grip() {
-                return _super.call(this) || this;
-            }
-            FUI_musicSlider_grip.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "musicSlider_grip"));
-            };
-            FUI_musicSlider_grip.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n0 = (this.getChildAt(0));
-            };
-            FUI_musicSlider_grip.URL = "ui://8oy4o0mbd83230";
-            return FUI_musicSlider_grip;
-        }(fairygui.GButton));
-        Game.FUI_musicSlider_grip = FUI_musicSlider_grip;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_player = /** @class */ (function (_super) {
-            __extends(FUI_player, _super);
-            function FUI_player() {
-                return _super.call(this) || this;
-            }
-            FUI_player.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "player"));
-            };
-            FUI_player.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_card1 = (this.getChildAt(0));
-                this.m_card2 = (this.getChildAt(1));
-                this.m_card3 = (this.getChildAt(2));
-                this.m_card4 = (this.getChildAt(3));
-                this.m_card5 = (this.getChildAt(4));
-                this.m_set = (this.getChildAt(5));
-            };
-            FUI_player.URL = "ui://8oy4o0mbo44039";
-            return FUI_player;
-        }(fairygui.GComponent));
-        Game.FUI_player = FUI_player;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_reconnect = /** @class */ (function (_super) {
-            __extends(FUI_reconnect, _super);
-            function FUI_reconnect() {
-                return _super.call(this) || this;
-            }
-            FUI_reconnect.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "reconnect"));
-            };
-            FUI_reconnect.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-                this.m_lang_title = (this.getChildAt(1));
-                this.m_tips = (this.getChildAt(2));
-                this.m_reconnect = (this.getChildAt(3));
-                this.m_return = (this.getChildAt(4));
-            };
-            FUI_reconnect.URL = "ui://8oy4o0mbo4403b";
-            return FUI_reconnect;
-        }(fairygui.GComponent));
-        Game.FUI_reconnect = FUI_reconnect;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_reconnectCircle = /** @class */ (function (_super) {
-            __extends(FUI_reconnectCircle, _super);
-            function FUI_reconnectCircle() {
-                return _super.call(this) || this;
-            }
-            FUI_reconnectCircle.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "reconnectCircle"));
-            };
-            FUI_reconnectCircle.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_lang_1 = (this.getChildAt(0));
-                this.m_circle = (this.getChildAt(1));
-                this.m_t0 = this.getTransitionAt(0);
-            };
-            FUI_reconnectCircle.URL = "ui://8oy4o0mbo4403h";
-            return FUI_reconnectCircle;
-        }(fairygui.GComponent));
-        Game.FUI_reconnectCircle = FUI_reconnectCircle;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_Roomitems = /** @class */ (function (_super) {
-            __extends(FUI_Roomitems, _super);
-            function FUI_Roomitems() {
-                return _super.call(this) || this;
-            }
-            FUI_Roomitems.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "Roomitems"));
-            };
-            FUI_Roomitems.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_h_v = this.getControllerAt(0);
-                this.m_item1 = (this.getChildAt(0));
-                this.m_item2 = (this.getChildAt(1));
-                this.m_item3 = (this.getChildAt(2));
-                this.m_item4 = (this.getChildAt(3));
-            };
-            FUI_Roomitems.URL = "ui://8oy4o0mbcsvz9";
-            return FUI_Roomitems;
-        }(fairygui.GComponent));
-        Game.FUI_Roomitems = FUI_Roomitems;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_room_help = /** @class */ (function (_super) {
-            __extends(FUI_room_help, _super);
-            function FUI_room_help() {
-                return _super.call(this) || this;
-            }
-            FUI_room_help.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "room_help"));
-            };
-            FUI_room_help.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_lang_option = (this.getChildAt(1));
-            };
-            FUI_room_help.URL = "ui://8oy4o0mbd8322p";
-            return FUI_room_help;
-        }(fairygui.GButton));
-        Game.FUI_room_help = FUI_room_help;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_room_home = /** @class */ (function (_super) {
-            __extends(FUI_room_home, _super);
-            function FUI_room_home() {
-                return _super.call(this) || this;
-            }
-            FUI_room_home.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "room_home"));
-            };
-            FUI_room_home.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_lang_option = (this.getChildAt(1));
-            };
-            FUI_room_home.URL = "ui://8oy4o0mbd8322t";
-            return FUI_room_home;
-        }(fairygui.GButton));
-        Game.FUI_room_home = FUI_room_home;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_room_rep = /** @class */ (function (_super) {
-            __extends(FUI_room_rep, _super);
-            function FUI_room_rep() {
-                return _super.call(this) || this;
-            }
-            FUI_room_rep.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "room_rep"));
-            };
-            FUI_room_rep.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_lang_option = (this.getChildAt(1));
-            };
-            FUI_room_rep.URL = "ui://8oy4o0mbd8322s";
-            return FUI_room_rep;
-        }(fairygui.GButton));
-        Game.FUI_room_rep = FUI_room_rep;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_room_sound = /** @class */ (function (_super) {
-            __extends(FUI_room_sound, _super);
-            function FUI_room_sound() {
-                return _super.call(this) || this;
-            }
-            FUI_room_sound.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "room_sound"));
-            };
-            FUI_room_sound.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_lang_option = (this.getChildAt(1));
-            };
-            FUI_room_sound.URL = "ui://8oy4o0mbd8322u";
-            return FUI_room_sound;
-        }(fairygui.GButton));
-        Game.FUI_room_sound = FUI_room_sound;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_saveHead = /** @class */ (function (_super) {
-            __extends(FUI_saveHead, _super);
-            function FUI_saveHead() {
-                return _super.call(this) || this;
-            }
-            FUI_saveHead.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "saveHead"));
-            };
-            FUI_saveHead.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n7 = (this.getChildAt(0));
-                this.m_lang_save = (this.getChildAt(1));
-            };
-            FUI_saveHead.URL = "ui://8oy4o0mbd83211";
-            return FUI_saveHead;
-        }(fairygui.GButton));
-        Game.FUI_saveHead = FUI_saveHead;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_set = /** @class */ (function (_super) {
-            __extends(FUI_set, _super);
-            function FUI_set() {
-                return _super.call(this) || this;
-            }
-            FUI_set.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "set"));
-            };
-            FUI_set.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-                this.m_lang_title = (this.getChildAt(1));
-                this.m_lang_music = (this.getChildAt(2));
-                this.m_slider_music = (this.getChildAt(3));
-                this.m_slider_sound = (this.getChildAt(4));
-                this.m_lang_sound = (this.getChildAt(5));
-                this.m_btn_music = (this.getChildAt(6));
-                this.m_btn_sound = (this.getChildAt(7));
-                this.m_close = (this.getChildAt(8));
-            };
-            FUI_set.URL = "ui://8oy4o0mbd8322v";
-            return FUI_set;
-        }(fairygui.GComponent));
-        Game.FUI_set = FUI_set;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_setGM = /** @class */ (function (_super) {
-            __extends(FUI_setGM, _super);
-            function FUI_setGM() {
-                return _super.call(this) || this;
-            }
-            FUI_setGM.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "setGM"));
-            };
-            FUI_setGM.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_n4 = (this.getChildAt(1));
-            };
-            FUI_setGM.URL = "ui://8oy4o0mbl3ii3w";
-            return FUI_setGM;
-        }(fairygui.GButton));
-        Game.FUI_setGM = FUI_setGM;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_sure = /** @class */ (function (_super) {
-            __extends(FUI_sure, _super);
-            function FUI_sure() {
-                return _super.call(this) || this;
-            }
-            FUI_sure.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "sure"));
-            };
-            FUI_sure.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_lang_sure = (this.getChildAt(1));
-            };
-            FUI_sure.URL = "ui://8oy4o0mbo4403p";
-            return FUI_sure;
-        }(fairygui.GButton));
-        Game.FUI_sure = FUI_sure;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_switch = /** @class */ (function (_super) {
-            __extends(FUI_switch, _super);
-            function FUI_switch() {
-                return _super.call(this) || this;
-            }
-            FUI_switch.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "switch"));
-            };
-            FUI_switch.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n2 = (this.getChildAt(0));
-            };
-            FUI_switch.URL = "ui://8oy4o0mbd8322o";
-            return FUI_switch;
-        }(fairygui.GButton));
-        Game.FUI_switch = FUI_switch;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var GameBinder = /** @class */ (function () {
-            function GameBinder() {
-            }
-            GameBinder.bindAll = function () {
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item1.URL, Game.FUI_item1);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_Roomitems.URL, Game.FUI_Roomitems);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_saveHead.URL, Game.FUI_saveHead);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_headItem.URL, Game.FUI_headItem);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_close.URL, Game.FUI_close);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_menu.URL, Game.FUI_menu);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hall_home.URL, Game.FUI_hall_home);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hall_rep.URL, Game.FUI_hall_rep);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hall_help.URL, Game.FUI_hall_help);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hall_sound.URL, Game.FUI_hall_sound);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_switch.URL, Game.FUI_switch);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_room_help.URL, Game.FUI_room_help);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_room_rep.URL, Game.FUI_room_rep);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_room_home.URL, Game.FUI_room_home);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_room_sound.URL, Game.FUI_room_sound);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_set.URL, Game.FUI_set);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_musicSlider.URL, Game.FUI_musicSlider);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_musicSlider_grip.URL, Game.FUI_musicSlider_grip);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_musicBtn.URL, Game.FUI_musicBtn);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hallBg_h.URL, Game.FUI_hallBg_h);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hallBg_v.URL, Game.FUI_hallBg_v);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_brief.URL, Game.FUI_brief);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_briefPopup.URL, Game.FUI_briefPopup);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_gmKeys.URL, Game.FUI_gmKeys);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_setGM.URL, Game.FUI_setGM);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_AddWalletBtn.URL, Game.FUI_AddWalletBtn);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item2.URL, Game.FUI_item2);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item3.URL, Game.FUI_item3);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item4.URL, Game.FUI_item4);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_gm.URL, Game.FUI_gm);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_player.URL, Game.FUI_player);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_gmSubmit.URL, Game.FUI_gmSubmit);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_reconnect.URL, Game.FUI_reconnect);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_btn_reconnect.URL, Game.FUI_btn_reconnect);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_btn_return.URL, Game.FUI_btn_return);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_reconnectCircle.URL, Game.FUI_reconnectCircle);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_leaveRoom.URL, Game.FUI_leaveRoom);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_sure.URL, Game.FUI_sure);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_cancle.URL, Game.FUI_cancle);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_logo.URL, Game.FUI_logo);
-            };
-            return GameBinder;
-        }());
-        Game.GameBinder = GameBinder;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var help;
-    (function (help) {
-        var FUI_help = /** @class */ (function (_super) {
-            __extends(FUI_help, _super);
-            function FUI_help() {
-                return _super.call(this) || this;
-            }
-            FUI_help.createInstance = function () {
-                return (fairygui.UIPackage.createObject("help", "help"));
-            };
-            FUI_help.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n1 = (this.getChildAt(0));
-                this.m_lang_title = (this.getChildAt(1));
-                this.m_tab = (this.getChildAt(2));
-                this.m_info = (this.getChildAt(3));
-                this.m_close = (this.getChildAt(4));
-            };
-            FUI_help.URL = "ui://txmqgqddujig4";
-            return FUI_help;
-        }(fairygui.GComponent));
-        help.FUI_help = FUI_help;
-    })(help = fui.help || (fui.help = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var help;
-    (function (help) {
-        var FUI_help_info = /** @class */ (function (_super) {
-            __extends(FUI_help_info, _super);
-            function FUI_help_info() {
-                return _super.call(this) || this;
-            }
-            FUI_help_info.createInstance = function () {
-                return (fairygui.UIPackage.createObject("help", "help_info"));
-            };
-            FUI_help_info.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_lang_info = (this.getChildAt(0));
-            };
-            FUI_help_info.URL = "ui://txmqgqddujig6";
-            return FUI_help_info;
-        }(fairygui.GComponent));
-        help.FUI_help_info = FUI_help_info;
-    })(help = fui.help || (fui.help = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var help;
-    (function (help) {
-        var FUI_help_tab = /** @class */ (function (_super) {
-            __extends(FUI_help_tab, _super);
-            function FUI_help_tab() {
-                return _super.call(this) || this;
-            }
-            FUI_help_tab.createInstance = function () {
-                return (fairygui.UIPackage.createObject("help", "help_tab"));
-            };
-            FUI_help_tab.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n6 = (this.getChildAt(0));
-                this.m_n7 = (this.getChildAt(1));
-                this.m_lang_tab = (this.getChildAt(2));
-            };
-            FUI_help_tab.URL = "ui://txmqgqddujig5";
-            return FUI_help_tab;
-        }(fairygui.GButton));
-        help.FUI_help_tab = FUI_help_tab;
-    })(help = fui.help || (fui.help = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var help;
-    (function (help) {
-        var helpBinder = /** @class */ (function () {
-            function helpBinder() {
-            }
-            helpBinder.bindAll = function () {
-                fairygui.UIObjectFactory.setPackageItemExtension(help.FUI_help.URL, help.FUI_help);
-                fairygui.UIObjectFactory.setPackageItemExtension(help.FUI_help_tab.URL, help.FUI_help_tab);
-                fairygui.UIObjectFactory.setPackageItemExtension(help.FUI_help_info.URL, help.FUI_help_info);
-            };
-            return helpBinder;
-        }());
-        help.helpBinder = helpBinder;
-    })(help = fui.help || (fui.help = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_bet = /** @class */ (function (_super) {
-            __extends(FUI_bet, _super);
-            function FUI_bet() {
-                return _super.call(this) || this;
-            }
-            FUI_bet.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "bet"));
-            };
-            FUI_bet.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_contentCtl = this.getControllerAt(1);
-                this.m_n6 = (this.getChildAt(0));
-                this.m_lang_xz = (this.getChildAt(1));
-                this.m_lang_sure = (this.getChildAt(2));
-            };
-            FUI_bet.URL = "ui://2mffi74ewuvl3m";
-            return FUI_bet;
-        }(fairygui.GButton));
-        room.FUI_bet = FUI_bet;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_btnPlay = /** @class */ (function (_super) {
-            __extends(FUI_btnPlay, _super);
-            function FUI_btnPlay() {
-                return _super.call(this) || this;
-            }
-            FUI_btnPlay.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "btnPlay"));
-            };
-            FUI_btnPlay.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_btnCtl = this.getControllerAt(0);
-                this.m_h_v = this.getControllerAt(1);
-                this.m_betSlider = (this.getChildAt(0));
-                this.m_minBet = (this.getChildAt(1));
-                this.m_maxBet = (this.getChildAt(2));
-                this.m_bet = (this.getChildAt(3));
-                this.m_continueBet = (this.getChildAt(4));
-                this.m_stopCard = (this.getChildAt(5));
-                this.m_needCard = (this.getChildAt(6));
-                this.m_divideCard = (this.getChildAt(7));
-                this.m_double = (this.getChildAt(8));
-                this.m_continueGame = (this.getChildAt(9));
-                this.m_insuranceNot = (this.getChildAt(10));
-                this.m_insurance = (this.getChildAt(11));
-            };
-            FUI_btnPlay.URL = "ui://2mffi74ewuvl3u";
-            return FUI_btnPlay;
-        }(fairygui.GComponent));
-        room.FUI_btnPlay = FUI_btnPlay;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_card = /** @class */ (function (_super) {
-            __extends(FUI_card, _super);
-            function FUI_card() {
-                return _super.call(this) || this;
-            }
-            FUI_card.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "card"));
-            };
-            FUI_card.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_maskCtl = this.getControllerAt(0);
-                this.m_card = (this.getChildAt(0));
-                this.m_mask = (this.getChildAt(1));
-                this.m_trun = this.getTransitionAt(0);
-            };
-            FUI_card.URL = "ui://2mffi74ewuvl36";
-            return FUI_card;
-        }(fairygui.GComponent));
-        room.FUI_card = FUI_card;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_cardsList = /** @class */ (function (_super) {
-            __extends(FUI_cardsList, _super);
-            function FUI_cardsList() {
-                return _super.call(this) || this;
-            }
-            FUI_cardsList.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "cardsList"));
-            };
-            FUI_cardsList.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_list2 = (this.getChildAt(0));
-                this.m_list1 = (this.getChildAt(1));
-                this.m_lang_double = (this.getChildAt(2));
-            };
-            FUI_cardsList.URL = "ui://2mffi74ewuvl3a";
-            return FUI_cardsList;
-        }(fairygui.GComponent));
-        room.FUI_cardsList = FUI_cardsList;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_cardsPoint1 = /** @class */ (function (_super) {
-            __extends(FUI_cardsPoint1, _super);
-            function FUI_cardsPoint1() {
-                return _super.call(this) || this;
-            }
-            FUI_cardsPoint1.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "cardsPoint1"));
-            };
-            FUI_cardsPoint1.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-                this.m_value = (this.getChildAt(1));
-            };
-            FUI_cardsPoint1.URL = "ui://2mffi74ewuvl3b";
-            return FUI_cardsPoint1;
-        }(fairygui.GComponent));
-        room.FUI_cardsPoint1 = FUI_cardsPoint1;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_cardsPoint2 = /** @class */ (function (_super) {
-            __extends(FUI_cardsPoint2, _super);
-            function FUI_cardsPoint2() {
-                return _super.call(this) || this;
-            }
-            FUI_cardsPoint2.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "cardsPoint2"));
-            };
-            FUI_cardsPoint2.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-                this.m_value = (this.getChildAt(1));
-            };
-            FUI_cardsPoint2.URL = "ui://2mffi74ewuvl3d";
-            return FUI_cardsPoint2;
-        }(fairygui.GComponent));
-        room.FUI_cardsPoint2 = FUI_cardsPoint2;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_cardType = /** @class */ (function (_super) {
-            __extends(FUI_cardType, _super);
-            function FUI_cardType() {
-                return _super.call(this) || this;
-            }
-            FUI_cardType.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "cardType"));
-            };
-            FUI_cardType.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_typeChoose = this.getControllerAt(0);
-                this.m_lang_dragon = (this.getChildAt(0));
-                this.m_lang_blackjack = (this.getChildAt(1));
-            };
-            FUI_cardType.URL = "ui://2mffi74eu1w84i";
-            return FUI_cardType;
-        }(fairygui.GComponent));
-        room.FUI_cardType = FUI_cardType;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_chip = /** @class */ (function (_super) {
-            __extends(FUI_chip, _super);
-            function FUI_chip() {
-                return _super.call(this) || this;
-            }
-            FUI_chip.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "chip"));
-            };
-            FUI_chip.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_img = (this.getChildAt(0));
-            };
-            FUI_chip.URL = "ui://2mffi74ehyur4c";
-            return FUI_chip;
-        }(fairygui.GComponent));
-        room.FUI_chip = FUI_chip;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_chipCount = /** @class */ (function (_super) {
-            __extends(FUI_chipCount, _super);
-            function FUI_chipCount() {
-                return _super.call(this) || this;
-            }
-            FUI_chipCount.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "chipCount"));
-            };
-            FUI_chipCount.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-                this.m_value = (this.getChildAt(1));
-            };
-            FUI_chipCount.URL = "ui://2mffi74ewuvl3y";
-            return FUI_chipCount;
-        }(fairygui.GComponent));
-        room.FUI_chipCount = FUI_chipCount;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_clickToBet = /** @class */ (function (_super) {
-            __extends(FUI_clickToBet, _super);
-            function FUI_clickToBet() {
-                return _super.call(this) || this;
-            }
-            FUI_clickToBet.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "clickToBet"));
-            };
-            FUI_clickToBet.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-                this.m_lang_djxz = (this.getChildAt(1));
-            };
-            FUI_clickToBet.URL = "ui://2mffi74eu1w84h";
-            return FUI_clickToBet;
-        }(fairygui.GComponent));
-        room.FUI_clickToBet = FUI_clickToBet;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_clock = /** @class */ (function (_super) {
-            __extends(FUI_clock, _super);
-            function FUI_clock() {
-                return _super.call(this) || this;
-            }
-            FUI_clock.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "clock"));
-            };
-            FUI_clock.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-                this.m_numb = (this.getChildAt(1));
-            };
-            FUI_clock.URL = "ui://2mffi74ewuvl3v";
-            return FUI_clock;
-        }(fairygui.GComponent));
-        room.FUI_clock = FUI_clock;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_close = /** @class */ (function (_super) {
-            __extends(FUI_close, _super);
-            function FUI_close() {
-                return _super.call(this) || this;
-            }
-            FUI_close.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "close"));
-            };
-            FUI_close.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-            };
-            FUI_close.URL = "ui://2mffi74euz6j5q";
-            return FUI_close;
-        }(fairygui.GButton));
-        room.FUI_close = FUI_close;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_content = /** @class */ (function (_super) {
-            __extends(FUI_content, _super);
-            function FUI_content() {
-                return _super.call(this) || this;
-            }
-            FUI_content.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "content"));
-            };
-            FUI_content.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_lang_content = (this.getChildAt(0));
-            };
-            FUI_content.URL = "ui://2mffi74eujigbc";
-            return FUI_content;
-        }(fairygui.GComponent));
-        room.FUI_content = FUI_content;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_continueBet = /** @class */ (function (_super) {
-            __extends(FUI_continueBet, _super);
-            function FUI_continueBet() {
-                return _super.call(this) || this;
-            }
-            FUI_continueBet.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "continueBet"));
-            };
-            FUI_continueBet.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_contentCtl = this.getControllerAt(1);
-                this.m_n6 = (this.getChildAt(0));
-                this.m_lang_xy = (this.getChildAt(1));
-                this.m_lang_betOver = (this.getChildAt(2));
-            };
-            FUI_continueBet.URL = "ui://2mffi74ewuvl3n";
-            return FUI_continueBet;
-        }(fairygui.GButton));
-        room.FUI_continueBet = FUI_continueBet;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_continueGame = /** @class */ (function (_super) {
-            __extends(FUI_continueGame, _super);
-            function FUI_continueGame() {
-                return _super.call(this) || this;
-            }
-            FUI_continueGame.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "continueGame"));
-            };
-            FUI_continueGame.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n7 = (this.getChildAt(0));
-                this.m_lang_jxyx = (this.getChildAt(1));
-            };
-            FUI_continueGame.URL = "ui://2mffi74ewuvl4b";
-            return FUI_continueGame;
-        }(fairygui.GButton));
-        room.FUI_continueGame = FUI_continueGame;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_divideCard = /** @class */ (function (_super) {
-            __extends(FUI_divideCard, _super);
-            function FUI_divideCard() {
-                return _super.call(this) || this;
-            }
-            FUI_divideCard.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "divideCard"));
-            };
-            FUI_divideCard.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n6 = (this.getChildAt(0));
-                this.m_lang_fp = (this.getChildAt(1));
-            };
-            FUI_divideCard.URL = "ui://2mffi74ewuvl3q";
-            return FUI_divideCard;
-        }(fairygui.GButton));
-        room.FUI_divideCard = FUI_divideCard;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_double = /** @class */ (function (_super) {
-            __extends(FUI_double, _super);
-            function FUI_double() {
-                return _super.call(this) || this;
-            }
-            FUI_double.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "double"));
-            };
-            FUI_double.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n6 = (this.getChildAt(0));
-                this.m_lang_sb = (this.getChildAt(1));
-            };
-            FUI_double.URL = "ui://2mffi74ewuvl3r";
-            return FUI_double;
-        }(fairygui.GButton));
-        room.FUI_double = FUI_double;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_hand = /** @class */ (function (_super) {
-            __extends(FUI_hand, _super);
-            function FUI_hand() {
-                return _super.call(this) || this;
-            }
-            FUI_hand.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "hand"));
-            };
-            FUI_hand.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_actionCtl = this.getControllerAt(0);
-                this.m_n12 = (this.getChildAt(0));
-                this.m_n14 = (this.getChildAt(1));
-                this.m_bet = (this.getChildAt(2));
-                this.m_betLeft = (this.getChildAt(3));
-                this.m_betRight = (this.getChildAt(4));
-                this.m_stopCard = (this.getChildAt(5));
-                this.m_needCard = (this.getChildAt(6));
-            };
-            FUI_hand.URL = "ui://2mffi74eggptci";
-            return FUI_hand;
-        }(fairygui.GComponent));
-        room.FUI_hand = FUI_hand;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_Insurance = /** @class */ (function (_super) {
-            __extends(FUI_Insurance, _super);
-            function FUI_Insurance() {
-                return _super.call(this) || this;
-            }
-            FUI_Insurance.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "Insurance"));
-            };
-            FUI_Insurance.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n6 = (this.getChildAt(0));
-                this.m_lang_mbx = (this.getChildAt(1));
-            };
-            FUI_Insurance.URL = "ui://2mffi74ewuvl3o";
-            return FUI_Insurance;
-        }(fairygui.GButton));
-        room.FUI_Insurance = FUI_Insurance;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_InsuranceNot = /** @class */ (function (_super) {
-            __extends(FUI_InsuranceNot, _super);
-            function FUI_InsuranceNot() {
-                return _super.call(this) || this;
-            }
-            FUI_InsuranceNot.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "InsuranceNot"));
-            };
-            FUI_InsuranceNot.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n6 = (this.getChildAt(0));
-                this.m_lang_bm = (this.getChildAt(1));
-            };
-            FUI_InsuranceNot.URL = "ui://2mffi74ewuvl3p";
-            return FUI_InsuranceNot;
-        }(fairygui.GButton));
-        room.FUI_InsuranceNot = FUI_InsuranceNot;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_match = /** @class */ (function (_super) {
-            __extends(FUI_match, _super);
-            function FUI_match() {
-                return _super.call(this) || this;
-            }
-            FUI_match.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "match"));
-            };
-            FUI_match.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n4 = (this.getChildAt(0));
-                this.m_lang_word = (this.getChildAt(1));
-            };
-            FUI_match.URL = "ui://2mffi74eujigb4";
-            return FUI_match;
-        }(fairygui.GComponent));
-        room.FUI_match = FUI_match;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_maxBet = /** @class */ (function (_super) {
-            __extends(FUI_maxBet, _super);
-            function FUI_maxBet() {
-                return _super.call(this) || this;
-            }
-            FUI_maxBet.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "maxBet"));
-            };
-            FUI_maxBet.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n8 = (this.getChildAt(0));
-                this.m_lang_zdz = (this.getChildAt(1));
-                this.m_value = (this.getChildAt(2));
-            };
-            FUI_maxBet.URL = "ui://2mffi74ewuvl3l";
-            return FUI_maxBet;
-        }(fairygui.GButton));
-        room.FUI_maxBet = FUI_maxBet;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_minBet = /** @class */ (function (_super) {
-            __extends(FUI_minBet, _super);
-            function FUI_minBet() {
-                return _super.call(this) || this;
-            }
-            FUI_minBet.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "minBet"));
-            };
-            FUI_minBet.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n6 = (this.getChildAt(0));
-                this.m_lang_zxz = (this.getChildAt(1));
-                this.m_value = (this.getChildAt(2));
-            };
-            FUI_minBet.URL = "ui://2mffi74ewuvl3k";
-            return FUI_minBet;
-        }(fairygui.GButton));
-        room.FUI_minBet = FUI_minBet;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_needCard = /** @class */ (function (_super) {
-            __extends(FUI_needCard, _super);
-            function FUI_needCard() {
-                return _super.call(this) || this;
-            }
-            FUI_needCard.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "needCard"));
-            };
-            FUI_needCard.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_lang_yp = (this.getChildAt(1));
-            };
-            FUI_needCard.URL = "ui://2mffi74ewuvl3s";
-            return FUI_needCard;
-        }(fairygui.GButton));
-        room.FUI_needCard = FUI_needCard;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_otherPlayer = /** @class */ (function (_super) {
-            __extends(FUI_otherPlayer, _super);
-            function FUI_otherPlayer() {
-                return _super.call(this) || this;
-            }
-            FUI_otherPlayer.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "otherPlayer"));
-            };
-            FUI_otherPlayer.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_talkPos = this.getControllerAt(0);
-                this.m_head = (this.getChildAt(0));
-                this.m_n1 = (this.getChildAt(1));
-                this.m_nick = (this.getChildAt(2));
-                this.m_coin = (this.getChildAt(3));
-                this.m_timeCircle = (this.getChildAt(4));
-                this.m_talkBgRight = (this.getChildAt(5));
-                this.m_talkBgLeft = (this.getChildAt(6));
-                this.m_talk = (this.getChildAt(7));
-            };
-            FUI_otherPlayer.URL = "ui://2mffi74ewuvl31";
-            return FUI_otherPlayer;
-        }(fairygui.GComponent));
-        room.FUI_otherPlayer = FUI_otherPlayer;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_playerArea = /** @class */ (function (_super) {
-            __extends(FUI_playerArea, _super);
-            function FUI_playerArea() {
-                return _super.call(this) || this;
-            }
-            FUI_playerArea.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "playerArea"));
-            };
-            FUI_playerArea.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_fen = this.getControllerAt(0);
-                this.m_activeCtl = this.getControllerAt(1);
-                this.m_careCtl = this.getControllerAt(2);
-                this.m_centerCard_hide = (this.getChildAt(0));
-                this.m_cardsList0 = (this.getChildAt(1));
-                this.m_cardsList1 = (this.getChildAt(2));
-                this.m_cardsList2 = (this.getChildAt(3));
-                this.m_chipsList0_hide = (this.getChildAt(4));
-                this.m_chipsList1_hide = (this.getChildAt(5));
-                this.m_chipsList2_hide = (this.getChildAt(6));
-                this.m_chipArea = (this.getChildAt(7));
-                this.m_activeMark = (this.getChildAt(8));
-                this.m_chipCount0 = (this.getChildAt(9));
-                this.m_chipCount1 = (this.getChildAt(10));
-                this.m_chipCount2 = (this.getChildAt(11));
-                this.m_point1 = (this.getChildAt(12));
-                this.m_point2 = (this.getChildAt(13));
-                this.m_point0 = (this.getChildAt(14));
-                this.m_chipsList1 = (this.getChildAt(15));
-                this.m_chipsList0 = (this.getChildAt(16));
-                this.m_chipsList2 = (this.getChildAt(17));
-                this.m_clickToBet = (this.getChildAt(18));
-                this.m_cardType0 = (this.getChildAt(19));
-                this.m_cardType1 = (this.getChildAt(20));
-                this.m_cardType2 = (this.getChildAt(21));
-                this.m_careSign = (this.getChildAt(22));
-                this.m_beActive = this.getTransitionAt(0);
-            };
-            FUI_playerArea.URL = "ui://2mffi74ewuvl3f";
-            return FUI_playerArea;
-        }(fairygui.GComponent));
-        room.FUI_playerArea = FUI_playerArea;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_playerArea_banker = /** @class */ (function (_super) {
-            __extends(FUI_playerArea_banker, _super);
-            function FUI_playerArea_banker() {
-                return _super.call(this) || this;
-            }
-            FUI_playerArea_banker.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "playerArea_banker"));
-            };
-            FUI_playerArea_banker.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_cardList = (this.getChildAt(0));
-                this.m_cardPoint = (this.getChildAt(1));
-                this.m_cardType = (this.getChildAt(2));
-            };
-            FUI_playerArea_banker.URL = "ui://2mffi74ewuvl3h";
-            return FUI_playerArea_banker;
-        }(fairygui.GComponent));
-        room.FUI_playerArea_banker = FUI_playerArea_banker;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_playerChip = /** @class */ (function (_super) {
-            __extends(FUI_playerChip, _super);
-            function FUI_playerChip() {
-                return _super.call(this) || this;
-            }
-            FUI_playerChip.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "playerChip"));
-            };
-            FUI_playerChip.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_selectedCtl = this.getControllerAt(0);
-                this.m_n5 = (this.getChildAt(0));
-                this.m_n3 = (this.getChildAt(1));
-            };
-            FUI_playerChip.URL = "ui://2mffi74ewuvl3i";
-            return FUI_playerChip;
-        }(fairygui.GComponent));
-        room.FUI_playerChip = FUI_playerChip;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_result = /** @class */ (function (_super) {
-            __extends(FUI_result, _super);
-            function FUI_result() {
-                return _super.call(this) || this;
-            }
-            FUI_result.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "result"));
-            };
-            FUI_result.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_resultCtl = this.getControllerAt(0);
-                this.m_win = (this.getChildAt(0));
-                this.m_fail = (this.getChildAt(1));
-            };
-            FUI_result.URL = "ui://2mffi74e6xefbp";
-            return FUI_result;
-        }(fairygui.GComponent));
-        room.FUI_result = FUI_result;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_roomBg = /** @class */ (function (_super) {
-            __extends(FUI_roomBg, _super);
-            function FUI_roomBg() {
-                return _super.call(this) || this;
-            }
-            FUI_roomBg.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "roomBg"));
-            };
-            FUI_roomBg.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_roombg = (this.getChildAt(0));
-            };
-            FUI_roomBg.URL = "ui://2mffi74ewuvl2u";
-            return FUI_roomBg;
-        }(fairygui.GComponent));
-        room.FUI_roomBg = FUI_roomBg;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_roomView = /** @class */ (function (_super) {
-            __extends(FUI_roomView, _super);
-            function FUI_roomView() {
-                return _super.call(this) || this;
-            }
-            FUI_roomView.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "roomView"));
-            };
-            FUI_roomView.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_h_v = this.getControllerAt(0);
-                this.m_lightCtl = this.getControllerAt(1);
-                this.m_table = (this.getChildAt(0));
-                this.m_cardBox1 = (this.getChildAt(1));
-                this.m_n4 = (this.getChildAt(2));
-                this.m_light = (this.getChildAt(3));
-                this.m_chipBank = (this.getChildAt(4));
-                this.m_cardBox2 = (this.getChildAt(5));
-                this.m_lang_tablez = (this.getChildAt(6));
-                this.m_n7 = (this.getChildAt(7));
-                this.m_card1 = (this.getChildAt(8));
-                this.m_chip1 = (this.getChildAt(9));
-                this.m_chip2 = (this.getChildAt(10));
-                this.m_chip3 = (this.getChildAt(11));
-                this.m_chip4 = (this.getChildAt(12));
-                this.m_chip5 = (this.getChildAt(13));
-                this.m_playerArea0 = (this.getChildAt(14));
-                this.m_playerArea1 = (this.getChildAt(15));
-                this.m_playerArea2 = (this.getChildAt(16));
-                this.m_playerArea3 = (this.getChildAt(17));
-                this.m_playerArea4 = (this.getChildAt(18));
-                this.m_playerArea5 = (this.getChildAt(19));
-                this.m_player3 = (this.getChildAt(20));
-                this.m_player1 = (this.getChildAt(21));
-                this.m_player2 = (this.getChildAt(22));
-                this.m_player4 = (this.getChildAt(23));
-                this.m_player5 = (this.getChildAt(24));
-                this.m_numb1 = (this.getChildAt(25));
-                this.m_numb2 = (this.getChildAt(26));
-                this.m_numb3 = (this.getChildAt(27));
-                this.m_numb4 = (this.getChildAt(28));
-                this.m_numb5 = (this.getChildAt(29));
-                this.m_hand = (this.getChildAt(30));
-                this.m_btnPlay = (this.getChildAt(31));
-                this.m_insurance1 = (this.getChildAt(32));
-                this.m_insurance2 = (this.getChildAt(33));
-                this.m_insurance3 = (this.getChildAt(34));
-                this.m_insurance4 = (this.getChildAt(35));
-                this.m_insurance5 = (this.getChildAt(36));
-                this.m_insurance1_hide = (this.getChildAt(37));
-                this.m_insurance2_hide = (this.getChildAt(38));
-                this.m_insurance3_hide = (this.getChildAt(39));
-                this.m_insurance4_hide = (this.getChildAt(40));
-                this.m_insurance5_hide = (this.getChildAt(41));
-                this.m_clock = (this.getChildAt(42));
-                this.m_result1 = (this.getChildAt(43));
-                this.m_result2 = (this.getChildAt(44));
-                this.m_result3 = (this.getChildAt(45));
-                this.m_result4 = (this.getChildAt(46));
-                this.m_result5 = (this.getChildAt(47));
-                this.m_namebg1 = (this.getChildAt(48));
-                this.m_namebg2 = (this.getChildAt(49));
-                this.m_namebg4 = (this.getChildAt(50));
-                this.m_namebg5 = (this.getChildAt(51));
-                this.m_name1 = (this.getChildAt(52));
-                this.m_name2 = (this.getChildAt(53));
-                this.m_name4 = (this.getChildAt(54));
-                this.m_name5 = (this.getChildAt(55));
-            };
-            FUI_roomView.URL = "ui://2mffi74ewuvl2w";
-            return FUI_roomView;
-        }(fairygui.GComponent));
-        room.FUI_roomView = FUI_roomView;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_selfHead = /** @class */ (function (_super) {
-            __extends(FUI_selfHead, _super);
-            function FUI_selfHead() {
-                return _super.call(this) || this;
-            }
-            FUI_selfHead.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "selfHead"));
-            };
-            FUI_selfHead.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n1 = (this.getChildAt(0));
-                this.m_head = (this.getChildAt(1));
-            };
-            FUI_selfHead.URL = "ui://2mffi74ewuvl34";
-            return FUI_selfHead;
-        }(fairygui.GComponent));
-        room.FUI_selfHead = FUI_selfHead;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_selfPlayer = /** @class */ (function (_super) {
-            __extends(FUI_selfPlayer, _super);
-            function FUI_selfPlayer() {
-                return _super.call(this) || this;
-            }
-            FUI_selfPlayer.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "selfPlayer"));
-            };
-            FUI_selfPlayer.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-                this.m_nick = (this.getChildAt(1));
-                this.m_n3 = (this.getChildAt(2));
-                this.m_n4 = (this.getChildAt(3));
-                this.m_coin = (this.getChildAt(4));
-                this.m_headComp = (this.getChildAt(5));
-            };
-            FUI_selfPlayer.URL = "ui://2mffi74ewuvl32";
-            return FUI_selfPlayer;
-        }(fairygui.GComponent));
-        room.FUI_selfPlayer = FUI_selfPlayer;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_sider_bet = /** @class */ (function (_super) {
-            __extends(FUI_sider_bet, _super);
-            function FUI_sider_bet() {
-                return _super.call(this) || this;
-            }
-            FUI_sider_bet.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "sider_bet"));
-            };
-            FUI_sider_bet.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n7 = (this.getChildAt(0));
-                this.m_bg = (this.getChildAt(1));
-                this.m_active = (this.getChildAt(2));
-                this.m_grip = (this.getChildAt(3));
-                this.m_title = (this.getChildAt(4));
-            };
-            FUI_sider_bet.URL = "ui://2mffi74eu1w84o";
-            return FUI_sider_bet;
-        }(fairygui.GComponent));
-        room.FUI_sider_bet = FUI_sider_bet;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_stopCard = /** @class */ (function (_super) {
-            __extends(FUI_stopCard, _super);
-            function FUI_stopCard() {
-                return _super.call(this) || this;
-            }
-            FUI_stopCard.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "stopCard"));
-            };
-            FUI_stopCard.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n6 = (this.getChildAt(0));
-                this.m_lang_tp = (this.getChildAt(1));
-            };
-            FUI_stopCard.URL = "ui://2mffi74ewuvl3t";
-            return FUI_stopCard;
-        }(fairygui.GButton));
-        room.FUI_stopCard = FUI_stopCard;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_strategy = /** @class */ (function (_super) {
-            __extends(FUI_strategy, _super);
-            function FUI_strategy() {
-                return _super.call(this) || this;
-            }
-            FUI_strategy.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "strategy"));
-            };
-            FUI_strategy.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-                this.m_lang_title = (this.getChildAt(1));
-                this.m_close = (this.getChildAt(2));
-                this.m_n3 = (this.getChildAt(3));
-                this.m_lang_point = (this.getChildAt(4));
-                this.m_lang_self = (this.getChildAt(5));
-                this.m_lang_banker = (this.getChildAt(6));
-                this.m_n8 = (this.getChildAt(7));
-            };
-            FUI_strategy.URL = "ui://2mffi74eujigba";
-            return FUI_strategy;
-        }(fairygui.GComponent));
-        room.FUI_strategy = FUI_strategy;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_strategyBt2 = /** @class */ (function (_super) {
-            __extends(FUI_strategyBt2, _super);
-            function FUI_strategyBt2() {
-                return _super.call(this) || this;
-            }
-            FUI_strategyBt2.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "strategyBt2"));
-            };
-            FUI_strategyBt2.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_lang_bd = (this.getChildAt(0));
-            };
-            FUI_strategyBt2.URL = "ui://2mffi74eo440da";
-            return FUI_strategyBt2;
-        }(fairygui.GButton));
-        room.FUI_strategyBt2 = FUI_strategyBt2;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_strategyBtn = /** @class */ (function (_super) {
-            __extends(FUI_strategyBtn, _super);
-            function FUI_strategyBtn() {
-                return _super.call(this) || this;
-            }
-            FUI_strategyBtn.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "strategyBtn"));
-            };
-            FUI_strategyBtn.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-            };
-            FUI_strategyBtn.URL = "ui://2mffi74eo440db";
-            return FUI_strategyBtn;
-        }(fairygui.GComponent));
-        room.FUI_strategyBtn = FUI_strategyBtn;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_talk = /** @class */ (function (_super) {
-            __extends(FUI_talk, _super);
-            function FUI_talk() {
-                return _super.call(this) || this;
-            }
-            FUI_talk.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "talk"));
-            };
-            FUI_talk.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_word = this.getControllerAt(0);
-                this.m_lang_fj = (this.getChildAt(0));
-                this.m_lang_sb2 = (this.getChildAt(1));
-                this.m_lang_yp = (this.getChildAt(2));
-                this.m_lang_tp = (this.getChildAt(3));
-                this.m_lang_xzwc = (this.getChildAt(4));
-            };
-            FUI_talk.URL = "ui://2mffi74eu1w852";
-            return FUI_talk;
-        }(fairygui.GComponent));
-        room.FUI_talk = FUI_talk;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_timeCircle = /** @class */ (function (_super) {
-            __extends(FUI_timeCircle, _super);
-            function FUI_timeCircle() {
-                return _super.call(this) || this;
-            }
-            FUI_timeCircle.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "timeCircle"));
-            };
-            FUI_timeCircle.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_circle = (this.getChildAt(0));
-            };
-            FUI_timeCircle.URL = "ui://2mffi74eu1w84v";
-            return FUI_timeCircle;
-        }(fairygui.GComponent));
-        room.FUI_timeCircle = FUI_timeCircle;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var FUI_title = /** @class */ (function (_super) {
-            __extends(FUI_title, _super);
-            function FUI_title() {
-                return _super.call(this) || this;
-            }
-            FUI_title.createInstance = function () {
-                return (fairygui.UIPackage.createObject("room", "title"));
-            };
-            FUI_title.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-                this.m_value = (this.getChildAt(1));
-            };
-            FUI_title.URL = "ui://2mffi74eu1w84p";
-            return FUI_title;
-        }(fairygui.GComponent));
-        room.FUI_title = FUI_title;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var room;
-    (function (room) {
-        var roomBinder = /** @class */ (function () {
-            function roomBinder() {
-            }
-            roomBinder.bindAll = function () {
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_result.URL, room.FUI_result);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_hand.URL, room.FUI_hand);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_chip.URL, room.FUI_chip);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_strategyBt2.URL, room.FUI_strategyBt2);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_strategyBtn.URL, room.FUI_strategyBtn);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_clickToBet.URL, room.FUI_clickToBet);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_cardType.URL, room.FUI_cardType);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_sider_bet.URL, room.FUI_sider_bet);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_title.URL, room.FUI_title);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_timeCircle.URL, room.FUI_timeCircle);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_talk.URL, room.FUI_talk);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_match.URL, room.FUI_match);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_strategy.URL, room.FUI_strategy);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_content.URL, room.FUI_content);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_close.URL, room.FUI_close);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_roomBg.URL, room.FUI_roomBg);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_roomView.URL, room.FUI_roomView);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_otherPlayer.URL, room.FUI_otherPlayer);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_selfPlayer.URL, room.FUI_selfPlayer);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_selfHead.URL, room.FUI_selfHead);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_card.URL, room.FUI_card);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_cardsList.URL, room.FUI_cardsList);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_cardsPoint1.URL, room.FUI_cardsPoint1);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_cardsPoint2.URL, room.FUI_cardsPoint2);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_playerArea.URL, room.FUI_playerArea);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_playerArea_banker.URL, room.FUI_playerArea_banker);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_playerChip.URL, room.FUI_playerChip);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_minBet.URL, room.FUI_minBet);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_maxBet.URL, room.FUI_maxBet);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_bet.URL, room.FUI_bet);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_continueBet.URL, room.FUI_continueBet);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_Insurance.URL, room.FUI_Insurance);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_InsuranceNot.URL, room.FUI_InsuranceNot);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_divideCard.URL, room.FUI_divideCard);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_double.URL, room.FUI_double);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_needCard.URL, room.FUI_needCard);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_stopCard.URL, room.FUI_stopCard);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_btnPlay.URL, room.FUI_btnPlay);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_clock.URL, room.FUI_clock);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_chipCount.URL, room.FUI_chipCount);
-                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_continueGame.URL, room.FUI_continueGame);
-            };
-            return roomBinder;
-        }());
-        room.roomBinder = roomBinder;
-    })(room = fui.room || (fui.room = {}));
-})(fui || (fui = {}));
 var point21;
 (function (point21) {
     var MBtnPlay = /** @class */ (function () {
@@ -5351,6 +2916,2441 @@ var point21;
     }(bx.Layout));
     point21.VWalletBtn = VWalletBtn;
 })(point21 || (point21 = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var help;
+    (function (help) {
+        var FUI_help = /** @class */ (function (_super) {
+            __extends(FUI_help, _super);
+            function FUI_help() {
+                return _super.call(this) || this;
+            }
+            FUI_help.createInstance = function () {
+                return (fairygui.UIPackage.createObject("help", "help"));
+            };
+            FUI_help.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n1 = (this.getChildAt(0));
+                this.m_lang_title = (this.getChildAt(1));
+                this.m_tab = (this.getChildAt(2));
+                this.m_info = (this.getChildAt(3));
+                this.m_close = (this.getChildAt(4));
+            };
+            FUI_help.URL = "ui://txmqgqddujig4";
+            return FUI_help;
+        }(fairygui.GComponent));
+        help.FUI_help = FUI_help;
+    })(help = fui.help || (fui.help = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var help;
+    (function (help) {
+        var FUI_help_info = /** @class */ (function (_super) {
+            __extends(FUI_help_info, _super);
+            function FUI_help_info() {
+                return _super.call(this) || this;
+            }
+            FUI_help_info.createInstance = function () {
+                return (fairygui.UIPackage.createObject("help", "help_info"));
+            };
+            FUI_help_info.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_lang_info = (this.getChildAt(0));
+            };
+            FUI_help_info.URL = "ui://txmqgqddujig6";
+            return FUI_help_info;
+        }(fairygui.GComponent));
+        help.FUI_help_info = FUI_help_info;
+    })(help = fui.help || (fui.help = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var help;
+    (function (help) {
+        var FUI_help_tab = /** @class */ (function (_super) {
+            __extends(FUI_help_tab, _super);
+            function FUI_help_tab() {
+                return _super.call(this) || this;
+            }
+            FUI_help_tab.createInstance = function () {
+                return (fairygui.UIPackage.createObject("help", "help_tab"));
+            };
+            FUI_help_tab.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n6 = (this.getChildAt(0));
+                this.m_n7 = (this.getChildAt(1));
+                this.m_lang_tab = (this.getChildAt(2));
+            };
+            FUI_help_tab.URL = "ui://txmqgqddujig5";
+            return FUI_help_tab;
+        }(fairygui.GButton));
+        help.FUI_help_tab = FUI_help_tab;
+    })(help = fui.help || (fui.help = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var help;
+    (function (help) {
+        var helpBinder = /** @class */ (function () {
+            function helpBinder() {
+            }
+            helpBinder.bindAll = function () {
+                fairygui.UIObjectFactory.setPackageItemExtension(help.FUI_help.URL, help.FUI_help);
+                fairygui.UIObjectFactory.setPackageItemExtension(help.FUI_help_tab.URL, help.FUI_help_tab);
+                fairygui.UIObjectFactory.setPackageItemExtension(help.FUI_help_info.URL, help.FUI_help_info);
+            };
+            return helpBinder;
+        }());
+        help.helpBinder = helpBinder;
+    })(help = fui.help || (fui.help = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_AddWalletBtn = /** @class */ (function (_super) {
+            __extends(FUI_AddWalletBtn, _super);
+            function FUI_AddWalletBtn() {
+                return _super.call(this) || this;
+            }
+            FUI_AddWalletBtn.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "AddWalletBtn"));
+            };
+            FUI_AddWalletBtn.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+            };
+            FUI_AddWalletBtn.URL = "ui://8oy4o0mbl3ii3x";
+            return FUI_AddWalletBtn;
+        }(fairygui.GComponent));
+        Game.FUI_AddWalletBtn = FUI_AddWalletBtn;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_brief = /** @class */ (function (_super) {
+            __extends(FUI_brief, _super);
+            function FUI_brief() {
+                return _super.call(this) || this;
+            }
+            FUI_brief.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "brief"));
+            };
+            FUI_brief.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_h_v = this.getControllerAt(0);
+                this.m_avatar = (this.getChildAt(0));
+                this.m_n4 = (this.getChildAt(1));
+                this.m_nickname = (this.getChildAt(2));
+                this.m_n5 = (this.getChildAt(3));
+                this.m_n8 = (this.getChildAt(4));
+                this.m_coin = (this.getChildAt(5));
+            };
+            FUI_brief.URL = "ui://8oy4o0mbd832p";
+            return FUI_brief;
+        }(fairygui.GComponent));
+        Game.FUI_brief = FUI_brief;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_briefPopup = /** @class */ (function (_super) {
+            __extends(FUI_briefPopup, _super);
+            function FUI_briefPopup() {
+                return _super.call(this) || this;
+            }
+            FUI_briefPopup.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "briefPopup"));
+            };
+            FUI_briefPopup.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n10 = (this.getChildAt(0));
+                this.m_lang_head = (this.getChildAt(1));
+                this.m_lang_des = (this.getChildAt(2));
+                this.m_btnSave = (this.getChildAt(3));
+                this.m_headList = (this.getChildAt(4));
+                this.m_close = (this.getChildAt(5));
+                this.m_current = (this.getChildAt(6));
+            };
+            FUI_briefPopup.URL = "ui://8oy4o0mbd832w";
+            return FUI_briefPopup;
+        }(fairygui.GComponent));
+        Game.FUI_briefPopup = FUI_briefPopup;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_btn_reconnect = /** @class */ (function (_super) {
+            __extends(FUI_btn_reconnect, _super);
+            function FUI_btn_reconnect() {
+                return _super.call(this) || this;
+            }
+            FUI_btn_reconnect.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "btn_reconnect"));
+            };
+            FUI_btn_reconnect.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_lang_reconnect = (this.getChildAt(1));
+            };
+            FUI_btn_reconnect.URL = "ui://8oy4o0mbo4403d";
+            return FUI_btn_reconnect;
+        }(fairygui.GButton));
+        Game.FUI_btn_reconnect = FUI_btn_reconnect;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_btn_return = /** @class */ (function (_super) {
+            __extends(FUI_btn_return, _super);
+            function FUI_btn_return() {
+                return _super.call(this) || this;
+            }
+            FUI_btn_return.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "btn_return"));
+            };
+            FUI_btn_return.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_lang_return = (this.getChildAt(1));
+            };
+            FUI_btn_return.URL = "ui://8oy4o0mbo4403f";
+            return FUI_btn_return;
+        }(fairygui.GButton));
+        Game.FUI_btn_return = FUI_btn_return;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_cancle = /** @class */ (function (_super) {
+            __extends(FUI_cancle, _super);
+            function FUI_cancle() {
+                return _super.call(this) || this;
+            }
+            FUI_cancle.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "cancle"));
+            };
+            FUI_cancle.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n5 = (this.getChildAt(0));
+                this.m_lang_cancle = (this.getChildAt(1));
+            };
+            FUI_cancle.URL = "ui://8oy4o0mbo4403r";
+            return FUI_cancle;
+        }(fairygui.GButton));
+        Game.FUI_cancle = FUI_cancle;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_close = /** @class */ (function (_super) {
+            __extends(FUI_close, _super);
+            function FUI_close() {
+                return _super.call(this) || this;
+            }
+            FUI_close.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "close"));
+            };
+            FUI_close.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+            };
+            FUI_close.URL = "ui://8oy4o0mbd83216";
+            return FUI_close;
+        }(fairygui.GButton));
+        Game.FUI_close = FUI_close;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_gm = /** @class */ (function (_super) {
+            __extends(FUI_gm, _super);
+            function FUI_gm() {
+                return _super.call(this) || this;
+            }
+            FUI_gm.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "gm"));
+            };
+            FUI_gm.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n19 = (this.getChildAt(0));
+                this.m_keys = (this.getChildAt(1));
+                this.m_n0 = (this.getChildAt(2));
+                this.m_n1 = (this.getChildAt(3));
+                this.m_roomType = (this.getChildAt(4));
+                this.m_playerNumb = (this.getChildAt(5));
+                this.m_n2 = (this.getChildAt(6));
+                this.m_n3 = (this.getChildAt(7));
+                this.m_n4 = (this.getChildAt(8));
+                this.m_n9 = (this.getChildAt(9));
+                this.m_n10 = (this.getChildAt(10));
+                this.m_n16 = (this.getChildAt(11));
+                this.m_cards_0 = (this.getChildAt(12));
+                this.m_cards_1 = (this.getChildAt(13));
+                this.m_cards_2 = (this.getChildAt(14));
+                this.m_cards_3 = (this.getChildAt(15));
+                this.m_cards_4 = (this.getChildAt(16));
+                this.m_cards_5 = (this.getChildAt(17));
+                this.m_submit = (this.getChildAt(18));
+                this.m_close = (this.getChildAt(19));
+            };
+            FUI_gm.URL = "ui://8oy4o0mbo44037";
+            return FUI_gm;
+        }(fairygui.GComponent));
+        Game.FUI_gm = FUI_gm;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_gmKeys = /** @class */ (function (_super) {
+            __extends(FUI_gmKeys, _super);
+            function FUI_gmKeys() {
+                return _super.call(this) || this;
+            }
+            FUI_gmKeys.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "gmKeys"));
+            };
+            FUI_gmKeys.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n6 = (this.getChildAt(0));
+                this.m_n7 = (this.getChildAt(1));
+                this.m_n8 = (this.getChildAt(2));
+                this.m_n9 = (this.getChildAt(3));
+                this.m_n10 = (this.getChildAt(4));
+                this.m_n11 = (this.getChildAt(5));
+                this.m_n12 = (this.getChildAt(6));
+                this.m_n13 = (this.getChildAt(7));
+                this.m_n14 = (this.getChildAt(8));
+                this.m_n15 = (this.getChildAt(9));
+                this.m_n16 = (this.getChildAt(10));
+                this.m_n17 = (this.getChildAt(11));
+                this.m_n18 = (this.getChildAt(12));
+                this.m_n19 = (this.getChildAt(13));
+                this.m_n20 = (this.getChildAt(14));
+                this.m_n21 = (this.getChildAt(15));
+                this.m_n22 = (this.getChildAt(16));
+                this.m_n23 = (this.getChildAt(17));
+                this.m_n24 = (this.getChildAt(18));
+                this.m_n25 = (this.getChildAt(19));
+                this.m_n26 = (this.getChildAt(20));
+                this.m_n27 = (this.getChildAt(21));
+                this.m_n28 = (this.getChildAt(22));
+                this.m_n29 = (this.getChildAt(23));
+                this.m_n30 = (this.getChildAt(24));
+                this.m_n31 = (this.getChildAt(25));
+                this.m_n32 = (this.getChildAt(26));
+                this.m_n33 = (this.getChildAt(27));
+                this.m_n34 = (this.getChildAt(28));
+                this.m_n35 = (this.getChildAt(29));
+                this.m_n36 = (this.getChildAt(30));
+                this.m_n37 = (this.getChildAt(31));
+                this.m_n38 = (this.getChildAt(32));
+                this.m_n39 = (this.getChildAt(33));
+                this.m_n40 = (this.getChildAt(34));
+                this.m_n41 = (this.getChildAt(35));
+                this.m_n42 = (this.getChildAt(36));
+                this.m_n43 = (this.getChildAt(37));
+                this.m_n44 = (this.getChildAt(38));
+                this.m_n45 = (this.getChildAt(39));
+                this.m_n46 = (this.getChildAt(40));
+                this.m_n47 = (this.getChildAt(41));
+                this.m_n48 = (this.getChildAt(42));
+                this.m_n49 = (this.getChildAt(43));
+                this.m_n50 = (this.getChildAt(44));
+                this.m_n51 = (this.getChildAt(45));
+                this.m_n52 = (this.getChildAt(46));
+                this.m_n53 = (this.getChildAt(47));
+                this.m_n54 = (this.getChildAt(48));
+                this.m_n55 = (this.getChildAt(49));
+                this.m_n56 = (this.getChildAt(50));
+                this.m_n57 = (this.getChildAt(51));
+            };
+            FUI_gmKeys.URL = "ui://8oy4o0mbl3ii3u";
+            return FUI_gmKeys;
+        }(fairygui.GComponent));
+        Game.FUI_gmKeys = FUI_gmKeys;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_gmSubmit = /** @class */ (function (_super) {
+            __extends(FUI_gmSubmit, _super);
+            function FUI_gmSubmit() {
+                return _super.call(this) || this;
+            }
+            FUI_gmSubmit.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "gmSubmit"));
+            };
+            FUI_gmSubmit.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_n4 = (this.getChildAt(1));
+            };
+            FUI_gmSubmit.URL = "ui://8oy4o0mbo4403a";
+            return FUI_gmSubmit;
+        }(fairygui.GButton));
+        Game.FUI_gmSubmit = FUI_gmSubmit;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_hallBg_h = /** @class */ (function (_super) {
+            __extends(FUI_hallBg_h, _super);
+            function FUI_hallBg_h() {
+                return _super.call(this) || this;
+            }
+            FUI_hallBg_h.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "hallBg_h"));
+            };
+            FUI_hallBg_h.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+            };
+            FUI_hallBg_h.URL = "ui://8oy4o0mbd832k";
+            return FUI_hallBg_h;
+        }(fairygui.GComponent));
+        Game.FUI_hallBg_h = FUI_hallBg_h;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_hallBg_v = /** @class */ (function (_super) {
+            __extends(FUI_hallBg_v, _super);
+            function FUI_hallBg_v() {
+                return _super.call(this) || this;
+            }
+            FUI_hallBg_v.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "hallBg_v"));
+            };
+            FUI_hallBg_v.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+            };
+            FUI_hallBg_v.URL = "ui://8oy4o0mbd832m";
+            return FUI_hallBg_v;
+        }(fairygui.GComponent));
+        Game.FUI_hallBg_v = FUI_hallBg_v;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_hall_help = /** @class */ (function (_super) {
+            __extends(FUI_hall_help, _super);
+            function FUI_hall_help() {
+                return _super.call(this) || this;
+            }
+            FUI_hall_help.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "hall_help"));
+            };
+            FUI_hall_help.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n1 = (this.getChildAt(0));
+            };
+            FUI_hall_help.URL = "ui://8oy4o0mbd83226";
+            return FUI_hall_help;
+        }(fairygui.GButton));
+        Game.FUI_hall_help = FUI_hall_help;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_hall_home = /** @class */ (function (_super) {
+            __extends(FUI_hall_home, _super);
+            function FUI_hall_home() {
+                return _super.call(this) || this;
+            }
+            FUI_hall_home.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "hall_home"));
+            };
+            FUI_hall_home.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n4 = (this.getChildAt(0));
+            };
+            FUI_hall_home.URL = "ui://8oy4o0mbd83220";
+            return FUI_hall_home;
+        }(fairygui.GButton));
+        Game.FUI_hall_home = FUI_hall_home;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_hall_rep = /** @class */ (function (_super) {
+            __extends(FUI_hall_rep, _super);
+            function FUI_hall_rep() {
+                return _super.call(this) || this;
+            }
+            FUI_hall_rep.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "hall_rep"));
+            };
+            FUI_hall_rep.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n1 = (this.getChildAt(0));
+            };
+            FUI_hall_rep.URL = "ui://8oy4o0mbd83224";
+            return FUI_hall_rep;
+        }(fairygui.GButton));
+        Game.FUI_hall_rep = FUI_hall_rep;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_hall_sound = /** @class */ (function (_super) {
+            __extends(FUI_hall_sound, _super);
+            function FUI_hall_sound() {
+                return _super.call(this) || this;
+            }
+            FUI_hall_sound.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "hall_sound"));
+            };
+            FUI_hall_sound.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n1 = (this.getChildAt(0));
+            };
+            FUI_hall_sound.URL = "ui://8oy4o0mbd83228";
+            return FUI_hall_sound;
+        }(fairygui.GButton));
+        Game.FUI_hall_sound = FUI_hall_sound;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_headItem = /** @class */ (function (_super) {
+            __extends(FUI_headItem, _super);
+            function FUI_headItem() {
+                return _super.call(this) || this;
+            }
+            FUI_headItem.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "headItem"));
+            };
+            FUI_headItem.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n2 = (this.getChildAt(0));
+                this.m_head = (this.getChildAt(1));
+                this.m_n3 = (this.getChildAt(2));
+            };
+            FUI_headItem.URL = "ui://8oy4o0mbd83213";
+            return FUI_headItem;
+        }(fairygui.GButton));
+        Game.FUI_headItem = FUI_headItem;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_item1 = /** @class */ (function (_super) {
+            __extends(FUI_item1, _super);
+            function FUI_item1() {
+                return _super.call(this) || this;
+            }
+            FUI_item1.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "item1"));
+            };
+            FUI_item1.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n23 = (this.getChildAt(0));
+                this.m_lang_name = (this.getChildAt(1));
+                this.m_n30 = (this.getChildAt(2));
+                this.m_lang_base = (this.getChildAt(3));
+                this.m_antes1 = (this.getChildAt(4));
+                this.m_lang_zhunru = (this.getChildAt(5));
+                this.m_lowest1 = (this.getChildAt(6));
+            };
+            FUI_item1.URL = "ui://8oy4o0mbcsvz5";
+            return FUI_item1;
+        }(fairygui.GButton));
+        Game.FUI_item1 = FUI_item1;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_item2 = /** @class */ (function (_super) {
+            __extends(FUI_item2, _super);
+            function FUI_item2() {
+                return _super.call(this) || this;
+            }
+            FUI_item2.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "item2"));
+            };
+            FUI_item2.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n30 = (this.getChildAt(0));
+                this.m_lang_name = (this.getChildAt(1));
+                this.m_n31 = (this.getChildAt(2));
+                this.m_lang_base = (this.getChildAt(3));
+                this.m_antes2 = (this.getChildAt(4));
+                this.m_lang_zhunru = (this.getChildAt(5));
+                this.m_lowest2 = (this.getChildAt(6));
+            };
+            FUI_item2.URL = "ui://8oy4o0mbmtpmh";
+            return FUI_item2;
+        }(fairygui.GButton));
+        Game.FUI_item2 = FUI_item2;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_item3 = /** @class */ (function (_super) {
+            __extends(FUI_item3, _super);
+            function FUI_item3() {
+                return _super.call(this) || this;
+            }
+            FUI_item3.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "item3"));
+            };
+            FUI_item3.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n30 = (this.getChildAt(0));
+                this.m_lang_name = (this.getChildAt(1));
+                this.m_n31 = (this.getChildAt(2));
+                this.m_lang_base = (this.getChildAt(3));
+                this.m_antes3 = (this.getChildAt(4));
+                this.m_lang_zhunru = (this.getChildAt(5));
+                this.m_lowest3 = (this.getChildAt(6));
+            };
+            FUI_item3.URL = "ui://8oy4o0mbmtpmi";
+            return FUI_item3;
+        }(fairygui.GButton));
+        Game.FUI_item3 = FUI_item3;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_item4 = /** @class */ (function (_super) {
+            __extends(FUI_item4, _super);
+            function FUI_item4() {
+                return _super.call(this) || this;
+            }
+            FUI_item4.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "item4"));
+            };
+            FUI_item4.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n30 = (this.getChildAt(0));
+                this.m_lang_name = (this.getChildAt(1));
+                this.m_n31 = (this.getChildAt(2));
+                this.m_lang_base = (this.getChildAt(3));
+                this.m_antes4 = (this.getChildAt(4));
+                this.m_lang_zhunru = (this.getChildAt(5));
+                this.m_lowest4 = (this.getChildAt(6));
+            };
+            FUI_item4.URL = "ui://8oy4o0mbmtpmj";
+            return FUI_item4;
+        }(fairygui.GButton));
+        Game.FUI_item4 = FUI_item4;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_leaveRoom = /** @class */ (function (_super) {
+            __extends(FUI_leaveRoom, _super);
+            function FUI_leaveRoom() {
+                return _super.call(this) || this;
+            }
+            FUI_leaveRoom.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "leaveRoom"));
+            };
+            FUI_leaveRoom.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n8 = (this.getChildAt(0));
+                this.m_tips = (this.getChildAt(1));
+                this.m_sure = (this.getChildAt(2));
+                this.m_cancle = (this.getChildAt(3));
+            };
+            FUI_leaveRoom.URL = "ui://8oy4o0mbo4403n";
+            return FUI_leaveRoom;
+        }(fairygui.GComponent));
+        Game.FUI_leaveRoom = FUI_leaveRoom;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_logo = /** @class */ (function (_super) {
+            __extends(FUI_logo, _super);
+            function FUI_logo() {
+                return _super.call(this) || this;
+            }
+            FUI_logo.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "logo"));
+            };
+            FUI_logo.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_ctl = this.getControllerAt(0);
+                this.m_logo = (this.getChildAt(0));
+            };
+            FUI_logo.URL = "ui://8oy4o0mbo4403t";
+            return FUI_logo;
+        }(fairygui.GComponent));
+        Game.FUI_logo = FUI_logo;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_menu = /** @class */ (function (_super) {
+            __extends(FUI_menu, _super);
+            function FUI_menu() {
+                return _super.call(this) || this;
+            }
+            FUI_menu.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "menu"));
+            };
+            FUI_menu.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_ctr = this.getControllerAt(0);
+                this.m_n12 = (this.getChildAt(0));
+                this.m_n8 = (this.getChildAt(1));
+                this.m_n10 = (this.getChildAt(2));
+                this.m_n9 = (this.getChildAt(3));
+                this.m_on = (this.getChildAt(4));
+                this.m_off = (this.getChildAt(5));
+                this.m_n18 = (this.getChildAt(6));
+                this.m_n19 = (this.getChildAt(7));
+                this.m_n20 = (this.getChildAt(8));
+                this.m_n21 = (this.getChildAt(9));
+                this.m_n22 = (this.getChildAt(10));
+            };
+            FUI_menu.URL = "ui://8oy4o0mbd8321z";
+            return FUI_menu;
+        }(fairygui.GComponent));
+        Game.FUI_menu = FUI_menu;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_musicBtn = /** @class */ (function (_super) {
+            __extends(FUI_musicBtn, _super);
+            function FUI_musicBtn() {
+                return _super.call(this) || this;
+            }
+            FUI_musicBtn.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "musicBtn"));
+            };
+            FUI_musicBtn.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_n4 = (this.getChildAt(1));
+            };
+            FUI_musicBtn.URL = "ui://8oy4o0mbd83232";
+            return FUI_musicBtn;
+        }(fairygui.GButton));
+        Game.FUI_musicBtn = FUI_musicBtn;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_musicSlider = /** @class */ (function (_super) {
+            __extends(FUI_musicSlider, _super);
+            function FUI_musicSlider() {
+                return _super.call(this) || this;
+            }
+            FUI_musicSlider.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "musicSlider"));
+            };
+            FUI_musicSlider.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+                this.m_bar = (this.getChildAt(1));
+                this.m_grip = (this.getChildAt(2));
+            };
+            FUI_musicSlider.URL = "ui://8oy4o0mbd8322x";
+            return FUI_musicSlider;
+        }(fairygui.GSlider));
+        Game.FUI_musicSlider = FUI_musicSlider;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_musicSlider_grip = /** @class */ (function (_super) {
+            __extends(FUI_musicSlider_grip, _super);
+            function FUI_musicSlider_grip() {
+                return _super.call(this) || this;
+            }
+            FUI_musicSlider_grip.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "musicSlider_grip"));
+            };
+            FUI_musicSlider_grip.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n0 = (this.getChildAt(0));
+            };
+            FUI_musicSlider_grip.URL = "ui://8oy4o0mbd83230";
+            return FUI_musicSlider_grip;
+        }(fairygui.GButton));
+        Game.FUI_musicSlider_grip = FUI_musicSlider_grip;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_player = /** @class */ (function (_super) {
+            __extends(FUI_player, _super);
+            function FUI_player() {
+                return _super.call(this) || this;
+            }
+            FUI_player.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "player"));
+            };
+            FUI_player.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_card1 = (this.getChildAt(0));
+                this.m_card2 = (this.getChildAt(1));
+                this.m_card3 = (this.getChildAt(2));
+                this.m_card4 = (this.getChildAt(3));
+                this.m_card5 = (this.getChildAt(4));
+                this.m_set = (this.getChildAt(5));
+            };
+            FUI_player.URL = "ui://8oy4o0mbo44039";
+            return FUI_player;
+        }(fairygui.GComponent));
+        Game.FUI_player = FUI_player;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_reconnect = /** @class */ (function (_super) {
+            __extends(FUI_reconnect, _super);
+            function FUI_reconnect() {
+                return _super.call(this) || this;
+            }
+            FUI_reconnect.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "reconnect"));
+            };
+            FUI_reconnect.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+                this.m_lang_title = (this.getChildAt(1));
+                this.m_tips = (this.getChildAt(2));
+                this.m_reconnect = (this.getChildAt(3));
+                this.m_return = (this.getChildAt(4));
+            };
+            FUI_reconnect.URL = "ui://8oy4o0mbo4403b";
+            return FUI_reconnect;
+        }(fairygui.GComponent));
+        Game.FUI_reconnect = FUI_reconnect;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_reconnectCircle = /** @class */ (function (_super) {
+            __extends(FUI_reconnectCircle, _super);
+            function FUI_reconnectCircle() {
+                return _super.call(this) || this;
+            }
+            FUI_reconnectCircle.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "reconnectCircle"));
+            };
+            FUI_reconnectCircle.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_lang_1 = (this.getChildAt(0));
+                this.m_circle = (this.getChildAt(1));
+                this.m_t0 = this.getTransitionAt(0);
+            };
+            FUI_reconnectCircle.URL = "ui://8oy4o0mbo4403h";
+            return FUI_reconnectCircle;
+        }(fairygui.GComponent));
+        Game.FUI_reconnectCircle = FUI_reconnectCircle;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_Roomitems = /** @class */ (function (_super) {
+            __extends(FUI_Roomitems, _super);
+            function FUI_Roomitems() {
+                return _super.call(this) || this;
+            }
+            FUI_Roomitems.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "Roomitems"));
+            };
+            FUI_Roomitems.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_h_v = this.getControllerAt(0);
+                this.m_item1 = (this.getChildAt(0));
+                this.m_item2 = (this.getChildAt(1));
+                this.m_item3 = (this.getChildAt(2));
+                this.m_item4 = (this.getChildAt(3));
+            };
+            FUI_Roomitems.URL = "ui://8oy4o0mbcsvz9";
+            return FUI_Roomitems;
+        }(fairygui.GComponent));
+        Game.FUI_Roomitems = FUI_Roomitems;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_room_help = /** @class */ (function (_super) {
+            __extends(FUI_room_help, _super);
+            function FUI_room_help() {
+                return _super.call(this) || this;
+            }
+            FUI_room_help.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "room_help"));
+            };
+            FUI_room_help.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_lang_option = (this.getChildAt(1));
+            };
+            FUI_room_help.URL = "ui://8oy4o0mbd8322p";
+            return FUI_room_help;
+        }(fairygui.GButton));
+        Game.FUI_room_help = FUI_room_help;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_room_home = /** @class */ (function (_super) {
+            __extends(FUI_room_home, _super);
+            function FUI_room_home() {
+                return _super.call(this) || this;
+            }
+            FUI_room_home.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "room_home"));
+            };
+            FUI_room_home.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_lang_option = (this.getChildAt(1));
+            };
+            FUI_room_home.URL = "ui://8oy4o0mbd8322t";
+            return FUI_room_home;
+        }(fairygui.GButton));
+        Game.FUI_room_home = FUI_room_home;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_room_rep = /** @class */ (function (_super) {
+            __extends(FUI_room_rep, _super);
+            function FUI_room_rep() {
+                return _super.call(this) || this;
+            }
+            FUI_room_rep.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "room_rep"));
+            };
+            FUI_room_rep.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_lang_option = (this.getChildAt(1));
+            };
+            FUI_room_rep.URL = "ui://8oy4o0mbd8322s";
+            return FUI_room_rep;
+        }(fairygui.GButton));
+        Game.FUI_room_rep = FUI_room_rep;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_room_sound = /** @class */ (function (_super) {
+            __extends(FUI_room_sound, _super);
+            function FUI_room_sound() {
+                return _super.call(this) || this;
+            }
+            FUI_room_sound.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "room_sound"));
+            };
+            FUI_room_sound.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_lang_option = (this.getChildAt(1));
+            };
+            FUI_room_sound.URL = "ui://8oy4o0mbd8322u";
+            return FUI_room_sound;
+        }(fairygui.GButton));
+        Game.FUI_room_sound = FUI_room_sound;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_saveHead = /** @class */ (function (_super) {
+            __extends(FUI_saveHead, _super);
+            function FUI_saveHead() {
+                return _super.call(this) || this;
+            }
+            FUI_saveHead.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "saveHead"));
+            };
+            FUI_saveHead.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n7 = (this.getChildAt(0));
+                this.m_lang_save = (this.getChildAt(1));
+            };
+            FUI_saveHead.URL = "ui://8oy4o0mbd83211";
+            return FUI_saveHead;
+        }(fairygui.GButton));
+        Game.FUI_saveHead = FUI_saveHead;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_set = /** @class */ (function (_super) {
+            __extends(FUI_set, _super);
+            function FUI_set() {
+                return _super.call(this) || this;
+            }
+            FUI_set.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "set"));
+            };
+            FUI_set.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+                this.m_lang_title = (this.getChildAt(1));
+                this.m_lang_music = (this.getChildAt(2));
+                this.m_slider_music = (this.getChildAt(3));
+                this.m_slider_sound = (this.getChildAt(4));
+                this.m_lang_sound = (this.getChildAt(5));
+                this.m_btn_music = (this.getChildAt(6));
+                this.m_btn_sound = (this.getChildAt(7));
+                this.m_close = (this.getChildAt(8));
+            };
+            FUI_set.URL = "ui://8oy4o0mbd8322v";
+            return FUI_set;
+        }(fairygui.GComponent));
+        Game.FUI_set = FUI_set;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_setGM = /** @class */ (function (_super) {
+            __extends(FUI_setGM, _super);
+            function FUI_setGM() {
+                return _super.call(this) || this;
+            }
+            FUI_setGM.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "setGM"));
+            };
+            FUI_setGM.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_n4 = (this.getChildAt(1));
+            };
+            FUI_setGM.URL = "ui://8oy4o0mbl3ii3w";
+            return FUI_setGM;
+        }(fairygui.GButton));
+        Game.FUI_setGM = FUI_setGM;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_sure = /** @class */ (function (_super) {
+            __extends(FUI_sure, _super);
+            function FUI_sure() {
+                return _super.call(this) || this;
+            }
+            FUI_sure.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "sure"));
+            };
+            FUI_sure.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_lang_sure = (this.getChildAt(1));
+            };
+            FUI_sure.URL = "ui://8oy4o0mbo4403p";
+            return FUI_sure;
+        }(fairygui.GButton));
+        Game.FUI_sure = FUI_sure;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_switch = /** @class */ (function (_super) {
+            __extends(FUI_switch, _super);
+            function FUI_switch() {
+                return _super.call(this) || this;
+            }
+            FUI_switch.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "switch"));
+            };
+            FUI_switch.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n2 = (this.getChildAt(0));
+            };
+            FUI_switch.URL = "ui://8oy4o0mbd8322o";
+            return FUI_switch;
+        }(fairygui.GButton));
+        Game.FUI_switch = FUI_switch;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var GameBinder = /** @class */ (function () {
+            function GameBinder() {
+            }
+            GameBinder.bindAll = function () {
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item1.URL, Game.FUI_item1);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_Roomitems.URL, Game.FUI_Roomitems);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_saveHead.URL, Game.FUI_saveHead);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_headItem.URL, Game.FUI_headItem);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_close.URL, Game.FUI_close);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_menu.URL, Game.FUI_menu);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hall_home.URL, Game.FUI_hall_home);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hall_rep.URL, Game.FUI_hall_rep);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hall_help.URL, Game.FUI_hall_help);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hall_sound.URL, Game.FUI_hall_sound);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_switch.URL, Game.FUI_switch);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_room_help.URL, Game.FUI_room_help);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_room_rep.URL, Game.FUI_room_rep);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_room_home.URL, Game.FUI_room_home);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_room_sound.URL, Game.FUI_room_sound);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_set.URL, Game.FUI_set);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_musicSlider.URL, Game.FUI_musicSlider);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_musicSlider_grip.URL, Game.FUI_musicSlider_grip);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_musicBtn.URL, Game.FUI_musicBtn);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hallBg_h.URL, Game.FUI_hallBg_h);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hallBg_v.URL, Game.FUI_hallBg_v);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_brief.URL, Game.FUI_brief);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_briefPopup.URL, Game.FUI_briefPopup);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_gmKeys.URL, Game.FUI_gmKeys);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_setGM.URL, Game.FUI_setGM);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_AddWalletBtn.URL, Game.FUI_AddWalletBtn);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item2.URL, Game.FUI_item2);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item3.URL, Game.FUI_item3);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item4.URL, Game.FUI_item4);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_gm.URL, Game.FUI_gm);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_player.URL, Game.FUI_player);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_gmSubmit.URL, Game.FUI_gmSubmit);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_reconnect.URL, Game.FUI_reconnect);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_btn_reconnect.URL, Game.FUI_btn_reconnect);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_btn_return.URL, Game.FUI_btn_return);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_reconnectCircle.URL, Game.FUI_reconnectCircle);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_leaveRoom.URL, Game.FUI_leaveRoom);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_sure.URL, Game.FUI_sure);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_cancle.URL, Game.FUI_cancle);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_logo.URL, Game.FUI_logo);
+            };
+            return GameBinder;
+        }());
+        Game.GameBinder = GameBinder;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_bet = /** @class */ (function (_super) {
+            __extends(FUI_bet, _super);
+            function FUI_bet() {
+                return _super.call(this) || this;
+            }
+            FUI_bet.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "bet"));
+            };
+            FUI_bet.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_contentCtl = this.getControllerAt(1);
+                this.m_n6 = (this.getChildAt(0));
+                this.m_lang_xz = (this.getChildAt(1));
+                this.m_lang_sure = (this.getChildAt(2));
+            };
+            FUI_bet.URL = "ui://2mffi74ewuvl3m";
+            return FUI_bet;
+        }(fairygui.GButton));
+        room.FUI_bet = FUI_bet;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_btnPlay = /** @class */ (function (_super) {
+            __extends(FUI_btnPlay, _super);
+            function FUI_btnPlay() {
+                return _super.call(this) || this;
+            }
+            FUI_btnPlay.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "btnPlay"));
+            };
+            FUI_btnPlay.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_btnCtl = this.getControllerAt(0);
+                this.m_h_v = this.getControllerAt(1);
+                this.m_betSlider = (this.getChildAt(0));
+                this.m_minBet = (this.getChildAt(1));
+                this.m_maxBet = (this.getChildAt(2));
+                this.m_bet = (this.getChildAt(3));
+                this.m_continueBet = (this.getChildAt(4));
+                this.m_stopCard = (this.getChildAt(5));
+                this.m_needCard = (this.getChildAt(6));
+                this.m_divideCard = (this.getChildAt(7));
+                this.m_double = (this.getChildAt(8));
+                this.m_continueGame = (this.getChildAt(9));
+                this.m_insuranceNot = (this.getChildAt(10));
+                this.m_insurance = (this.getChildAt(11));
+            };
+            FUI_btnPlay.URL = "ui://2mffi74ewuvl3u";
+            return FUI_btnPlay;
+        }(fairygui.GComponent));
+        room.FUI_btnPlay = FUI_btnPlay;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_card = /** @class */ (function (_super) {
+            __extends(FUI_card, _super);
+            function FUI_card() {
+                return _super.call(this) || this;
+            }
+            FUI_card.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "card"));
+            };
+            FUI_card.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_maskCtl = this.getControllerAt(0);
+                this.m_card = (this.getChildAt(0));
+                this.m_mask = (this.getChildAt(1));
+                this.m_trun = this.getTransitionAt(0);
+            };
+            FUI_card.URL = "ui://2mffi74ewuvl36";
+            return FUI_card;
+        }(fairygui.GComponent));
+        room.FUI_card = FUI_card;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_cardsList = /** @class */ (function (_super) {
+            __extends(FUI_cardsList, _super);
+            function FUI_cardsList() {
+                return _super.call(this) || this;
+            }
+            FUI_cardsList.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "cardsList"));
+            };
+            FUI_cardsList.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_list2 = (this.getChildAt(0));
+                this.m_list1 = (this.getChildAt(1));
+                this.m_lang_double = (this.getChildAt(2));
+            };
+            FUI_cardsList.URL = "ui://2mffi74ewuvl3a";
+            return FUI_cardsList;
+        }(fairygui.GComponent));
+        room.FUI_cardsList = FUI_cardsList;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_cardsPoint1 = /** @class */ (function (_super) {
+            __extends(FUI_cardsPoint1, _super);
+            function FUI_cardsPoint1() {
+                return _super.call(this) || this;
+            }
+            FUI_cardsPoint1.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "cardsPoint1"));
+            };
+            FUI_cardsPoint1.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+                this.m_value = (this.getChildAt(1));
+            };
+            FUI_cardsPoint1.URL = "ui://2mffi74ewuvl3b";
+            return FUI_cardsPoint1;
+        }(fairygui.GComponent));
+        room.FUI_cardsPoint1 = FUI_cardsPoint1;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_cardsPoint2 = /** @class */ (function (_super) {
+            __extends(FUI_cardsPoint2, _super);
+            function FUI_cardsPoint2() {
+                return _super.call(this) || this;
+            }
+            FUI_cardsPoint2.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "cardsPoint2"));
+            };
+            FUI_cardsPoint2.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+                this.m_value = (this.getChildAt(1));
+            };
+            FUI_cardsPoint2.URL = "ui://2mffi74ewuvl3d";
+            return FUI_cardsPoint2;
+        }(fairygui.GComponent));
+        room.FUI_cardsPoint2 = FUI_cardsPoint2;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_cardType = /** @class */ (function (_super) {
+            __extends(FUI_cardType, _super);
+            function FUI_cardType() {
+                return _super.call(this) || this;
+            }
+            FUI_cardType.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "cardType"));
+            };
+            FUI_cardType.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_typeChoose = this.getControllerAt(0);
+                this.m_lang_dragon = (this.getChildAt(0));
+                this.m_lang_blackjack = (this.getChildAt(1));
+            };
+            FUI_cardType.URL = "ui://2mffi74eu1w84i";
+            return FUI_cardType;
+        }(fairygui.GComponent));
+        room.FUI_cardType = FUI_cardType;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_chip = /** @class */ (function (_super) {
+            __extends(FUI_chip, _super);
+            function FUI_chip() {
+                return _super.call(this) || this;
+            }
+            FUI_chip.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "chip"));
+            };
+            FUI_chip.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_img = (this.getChildAt(0));
+            };
+            FUI_chip.URL = "ui://2mffi74ehyur4c";
+            return FUI_chip;
+        }(fairygui.GComponent));
+        room.FUI_chip = FUI_chip;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_chipCount = /** @class */ (function (_super) {
+            __extends(FUI_chipCount, _super);
+            function FUI_chipCount() {
+                return _super.call(this) || this;
+            }
+            FUI_chipCount.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "chipCount"));
+            };
+            FUI_chipCount.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+                this.m_value = (this.getChildAt(1));
+            };
+            FUI_chipCount.URL = "ui://2mffi74ewuvl3y";
+            return FUI_chipCount;
+        }(fairygui.GComponent));
+        room.FUI_chipCount = FUI_chipCount;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_clickToBet = /** @class */ (function (_super) {
+            __extends(FUI_clickToBet, _super);
+            function FUI_clickToBet() {
+                return _super.call(this) || this;
+            }
+            FUI_clickToBet.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "clickToBet"));
+            };
+            FUI_clickToBet.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+                this.m_lang_djxz = (this.getChildAt(1));
+            };
+            FUI_clickToBet.URL = "ui://2mffi74eu1w84h";
+            return FUI_clickToBet;
+        }(fairygui.GComponent));
+        room.FUI_clickToBet = FUI_clickToBet;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_clock = /** @class */ (function (_super) {
+            __extends(FUI_clock, _super);
+            function FUI_clock() {
+                return _super.call(this) || this;
+            }
+            FUI_clock.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "clock"));
+            };
+            FUI_clock.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+                this.m_numb = (this.getChildAt(1));
+            };
+            FUI_clock.URL = "ui://2mffi74ewuvl3v";
+            return FUI_clock;
+        }(fairygui.GComponent));
+        room.FUI_clock = FUI_clock;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_close = /** @class */ (function (_super) {
+            __extends(FUI_close, _super);
+            function FUI_close() {
+                return _super.call(this) || this;
+            }
+            FUI_close.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "close"));
+            };
+            FUI_close.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+            };
+            FUI_close.URL = "ui://2mffi74euz6j5q";
+            return FUI_close;
+        }(fairygui.GButton));
+        room.FUI_close = FUI_close;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_content = /** @class */ (function (_super) {
+            __extends(FUI_content, _super);
+            function FUI_content() {
+                return _super.call(this) || this;
+            }
+            FUI_content.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "content"));
+            };
+            FUI_content.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_lang_content = (this.getChildAt(0));
+            };
+            FUI_content.URL = "ui://2mffi74eujigbc";
+            return FUI_content;
+        }(fairygui.GComponent));
+        room.FUI_content = FUI_content;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_continueBet = /** @class */ (function (_super) {
+            __extends(FUI_continueBet, _super);
+            function FUI_continueBet() {
+                return _super.call(this) || this;
+            }
+            FUI_continueBet.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "continueBet"));
+            };
+            FUI_continueBet.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_contentCtl = this.getControllerAt(1);
+                this.m_n6 = (this.getChildAt(0));
+                this.m_lang_xy = (this.getChildAt(1));
+                this.m_lang_betOver = (this.getChildAt(2));
+            };
+            FUI_continueBet.URL = "ui://2mffi74ewuvl3n";
+            return FUI_continueBet;
+        }(fairygui.GButton));
+        room.FUI_continueBet = FUI_continueBet;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_continueGame = /** @class */ (function (_super) {
+            __extends(FUI_continueGame, _super);
+            function FUI_continueGame() {
+                return _super.call(this) || this;
+            }
+            FUI_continueGame.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "continueGame"));
+            };
+            FUI_continueGame.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n7 = (this.getChildAt(0));
+                this.m_lang_jxyx = (this.getChildAt(1));
+            };
+            FUI_continueGame.URL = "ui://2mffi74ewuvl4b";
+            return FUI_continueGame;
+        }(fairygui.GButton));
+        room.FUI_continueGame = FUI_continueGame;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_divideCard = /** @class */ (function (_super) {
+            __extends(FUI_divideCard, _super);
+            function FUI_divideCard() {
+                return _super.call(this) || this;
+            }
+            FUI_divideCard.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "divideCard"));
+            };
+            FUI_divideCard.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n6 = (this.getChildAt(0));
+                this.m_lang_fp = (this.getChildAt(1));
+            };
+            FUI_divideCard.URL = "ui://2mffi74ewuvl3q";
+            return FUI_divideCard;
+        }(fairygui.GButton));
+        room.FUI_divideCard = FUI_divideCard;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_double = /** @class */ (function (_super) {
+            __extends(FUI_double, _super);
+            function FUI_double() {
+                return _super.call(this) || this;
+            }
+            FUI_double.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "double"));
+            };
+            FUI_double.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n6 = (this.getChildAt(0));
+                this.m_lang_sb = (this.getChildAt(1));
+            };
+            FUI_double.URL = "ui://2mffi74ewuvl3r";
+            return FUI_double;
+        }(fairygui.GButton));
+        room.FUI_double = FUI_double;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_hand = /** @class */ (function (_super) {
+            __extends(FUI_hand, _super);
+            function FUI_hand() {
+                return _super.call(this) || this;
+            }
+            FUI_hand.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "hand"));
+            };
+            FUI_hand.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_actionCtl = this.getControllerAt(0);
+                this.m_n12 = (this.getChildAt(0));
+                this.m_n14 = (this.getChildAt(1));
+                this.m_bet = (this.getChildAt(2));
+                this.m_betLeft = (this.getChildAt(3));
+                this.m_betRight = (this.getChildAt(4));
+                this.m_stopCard = (this.getChildAt(5));
+                this.m_needCard = (this.getChildAt(6));
+            };
+            FUI_hand.URL = "ui://2mffi74eggptci";
+            return FUI_hand;
+        }(fairygui.GComponent));
+        room.FUI_hand = FUI_hand;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_Insurance = /** @class */ (function (_super) {
+            __extends(FUI_Insurance, _super);
+            function FUI_Insurance() {
+                return _super.call(this) || this;
+            }
+            FUI_Insurance.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "Insurance"));
+            };
+            FUI_Insurance.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n6 = (this.getChildAt(0));
+                this.m_lang_mbx = (this.getChildAt(1));
+            };
+            FUI_Insurance.URL = "ui://2mffi74ewuvl3o";
+            return FUI_Insurance;
+        }(fairygui.GButton));
+        room.FUI_Insurance = FUI_Insurance;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_InsuranceNot = /** @class */ (function (_super) {
+            __extends(FUI_InsuranceNot, _super);
+            function FUI_InsuranceNot() {
+                return _super.call(this) || this;
+            }
+            FUI_InsuranceNot.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "InsuranceNot"));
+            };
+            FUI_InsuranceNot.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n6 = (this.getChildAt(0));
+                this.m_lang_bm = (this.getChildAt(1));
+            };
+            FUI_InsuranceNot.URL = "ui://2mffi74ewuvl3p";
+            return FUI_InsuranceNot;
+        }(fairygui.GButton));
+        room.FUI_InsuranceNot = FUI_InsuranceNot;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_match = /** @class */ (function (_super) {
+            __extends(FUI_match, _super);
+            function FUI_match() {
+                return _super.call(this) || this;
+            }
+            FUI_match.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "match"));
+            };
+            FUI_match.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n4 = (this.getChildAt(0));
+                this.m_lang_word = (this.getChildAt(1));
+            };
+            FUI_match.URL = "ui://2mffi74eujigb4";
+            return FUI_match;
+        }(fairygui.GComponent));
+        room.FUI_match = FUI_match;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_maxBet = /** @class */ (function (_super) {
+            __extends(FUI_maxBet, _super);
+            function FUI_maxBet() {
+                return _super.call(this) || this;
+            }
+            FUI_maxBet.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "maxBet"));
+            };
+            FUI_maxBet.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n8 = (this.getChildAt(0));
+                this.m_lang_zdz = (this.getChildAt(1));
+                this.m_value = (this.getChildAt(2));
+            };
+            FUI_maxBet.URL = "ui://2mffi74ewuvl3l";
+            return FUI_maxBet;
+        }(fairygui.GButton));
+        room.FUI_maxBet = FUI_maxBet;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_minBet = /** @class */ (function (_super) {
+            __extends(FUI_minBet, _super);
+            function FUI_minBet() {
+                return _super.call(this) || this;
+            }
+            FUI_minBet.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "minBet"));
+            };
+            FUI_minBet.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n6 = (this.getChildAt(0));
+                this.m_lang_zxz = (this.getChildAt(1));
+                this.m_value = (this.getChildAt(2));
+            };
+            FUI_minBet.URL = "ui://2mffi74ewuvl3k";
+            return FUI_minBet;
+        }(fairygui.GButton));
+        room.FUI_minBet = FUI_minBet;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_needCard = /** @class */ (function (_super) {
+            __extends(FUI_needCard, _super);
+            function FUI_needCard() {
+                return _super.call(this) || this;
+            }
+            FUI_needCard.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "needCard"));
+            };
+            FUI_needCard.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_lang_yp = (this.getChildAt(1));
+            };
+            FUI_needCard.URL = "ui://2mffi74ewuvl3s";
+            return FUI_needCard;
+        }(fairygui.GButton));
+        room.FUI_needCard = FUI_needCard;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_otherPlayer = /** @class */ (function (_super) {
+            __extends(FUI_otherPlayer, _super);
+            function FUI_otherPlayer() {
+                return _super.call(this) || this;
+            }
+            FUI_otherPlayer.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "otherPlayer"));
+            };
+            FUI_otherPlayer.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_talkPos = this.getControllerAt(0);
+                this.m_head = (this.getChildAt(0));
+                this.m_n1 = (this.getChildAt(1));
+                this.m_nick = (this.getChildAt(2));
+                this.m_coin = (this.getChildAt(3));
+                this.m_timeCircle = (this.getChildAt(4));
+                this.m_talkBgRight = (this.getChildAt(5));
+                this.m_talkBgLeft = (this.getChildAt(6));
+                this.m_talk = (this.getChildAt(7));
+            };
+            FUI_otherPlayer.URL = "ui://2mffi74ewuvl31";
+            return FUI_otherPlayer;
+        }(fairygui.GComponent));
+        room.FUI_otherPlayer = FUI_otherPlayer;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_playerArea = /** @class */ (function (_super) {
+            __extends(FUI_playerArea, _super);
+            function FUI_playerArea() {
+                return _super.call(this) || this;
+            }
+            FUI_playerArea.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "playerArea"));
+            };
+            FUI_playerArea.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_fen = this.getControllerAt(0);
+                this.m_activeCtl = this.getControllerAt(1);
+                this.m_careCtl = this.getControllerAt(2);
+                this.m_centerCard_hide = (this.getChildAt(0));
+                this.m_cardsList0 = (this.getChildAt(1));
+                this.m_cardsList1 = (this.getChildAt(2));
+                this.m_cardsList2 = (this.getChildAt(3));
+                this.m_chipsList0_hide = (this.getChildAt(4));
+                this.m_chipsList1_hide = (this.getChildAt(5));
+                this.m_chipsList2_hide = (this.getChildAt(6));
+                this.m_chipArea = (this.getChildAt(7));
+                this.m_activeMark = (this.getChildAt(8));
+                this.m_chipCount0 = (this.getChildAt(9));
+                this.m_chipCount1 = (this.getChildAt(10));
+                this.m_chipCount2 = (this.getChildAt(11));
+                this.m_point1 = (this.getChildAt(12));
+                this.m_point2 = (this.getChildAt(13));
+                this.m_point0 = (this.getChildAt(14));
+                this.m_chipsList1 = (this.getChildAt(15));
+                this.m_chipsList0 = (this.getChildAt(16));
+                this.m_chipsList2 = (this.getChildAt(17));
+                this.m_clickToBet = (this.getChildAt(18));
+                this.m_cardType0 = (this.getChildAt(19));
+                this.m_cardType1 = (this.getChildAt(20));
+                this.m_cardType2 = (this.getChildAt(21));
+                this.m_careSign = (this.getChildAt(22));
+                this.m_beActive = this.getTransitionAt(0);
+            };
+            FUI_playerArea.URL = "ui://2mffi74ewuvl3f";
+            return FUI_playerArea;
+        }(fairygui.GComponent));
+        room.FUI_playerArea = FUI_playerArea;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_playerArea_banker = /** @class */ (function (_super) {
+            __extends(FUI_playerArea_banker, _super);
+            function FUI_playerArea_banker() {
+                return _super.call(this) || this;
+            }
+            FUI_playerArea_banker.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "playerArea_banker"));
+            };
+            FUI_playerArea_banker.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_cardList = (this.getChildAt(0));
+                this.m_cardPoint = (this.getChildAt(1));
+                this.m_cardType = (this.getChildAt(2));
+            };
+            FUI_playerArea_banker.URL = "ui://2mffi74ewuvl3h";
+            return FUI_playerArea_banker;
+        }(fairygui.GComponent));
+        room.FUI_playerArea_banker = FUI_playerArea_banker;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_playerChip = /** @class */ (function (_super) {
+            __extends(FUI_playerChip, _super);
+            function FUI_playerChip() {
+                return _super.call(this) || this;
+            }
+            FUI_playerChip.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "playerChip"));
+            };
+            FUI_playerChip.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_selectedCtl = this.getControllerAt(0);
+                this.m_n5 = (this.getChildAt(0));
+                this.m_n3 = (this.getChildAt(1));
+            };
+            FUI_playerChip.URL = "ui://2mffi74ewuvl3i";
+            return FUI_playerChip;
+        }(fairygui.GComponent));
+        room.FUI_playerChip = FUI_playerChip;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_result = /** @class */ (function (_super) {
+            __extends(FUI_result, _super);
+            function FUI_result() {
+                return _super.call(this) || this;
+            }
+            FUI_result.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "result"));
+            };
+            FUI_result.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_resultCtl = this.getControllerAt(0);
+                this.m_win = (this.getChildAt(0));
+                this.m_fail = (this.getChildAt(1));
+            };
+            FUI_result.URL = "ui://2mffi74e6xefbp";
+            return FUI_result;
+        }(fairygui.GComponent));
+        room.FUI_result = FUI_result;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_roomBg = /** @class */ (function (_super) {
+            __extends(FUI_roomBg, _super);
+            function FUI_roomBg() {
+                return _super.call(this) || this;
+            }
+            FUI_roomBg.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "roomBg"));
+            };
+            FUI_roomBg.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_roombg = (this.getChildAt(0));
+            };
+            FUI_roomBg.URL = "ui://2mffi74ewuvl2u";
+            return FUI_roomBg;
+        }(fairygui.GComponent));
+        room.FUI_roomBg = FUI_roomBg;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_roomView = /** @class */ (function (_super) {
+            __extends(FUI_roomView, _super);
+            function FUI_roomView() {
+                return _super.call(this) || this;
+            }
+            FUI_roomView.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "roomView"));
+            };
+            FUI_roomView.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_h_v = this.getControllerAt(0);
+                this.m_lightCtl = this.getControllerAt(1);
+                this.m_table = (this.getChildAt(0));
+                this.m_cardBox1 = (this.getChildAt(1));
+                this.m_n4 = (this.getChildAt(2));
+                this.m_light = (this.getChildAt(3));
+                this.m_chipBank = (this.getChildAt(4));
+                this.m_cardBox2 = (this.getChildAt(5));
+                this.m_lang_tablez = (this.getChildAt(6));
+                this.m_n7 = (this.getChildAt(7));
+                this.m_card1 = (this.getChildAt(8));
+                this.m_chip1 = (this.getChildAt(9));
+                this.m_chip2 = (this.getChildAt(10));
+                this.m_chip3 = (this.getChildAt(11));
+                this.m_chip4 = (this.getChildAt(12));
+                this.m_chip5 = (this.getChildAt(13));
+                this.m_playerArea0 = (this.getChildAt(14));
+                this.m_playerArea1 = (this.getChildAt(15));
+                this.m_playerArea2 = (this.getChildAt(16));
+                this.m_playerArea3 = (this.getChildAt(17));
+                this.m_playerArea4 = (this.getChildAt(18));
+                this.m_playerArea5 = (this.getChildAt(19));
+                this.m_player3 = (this.getChildAt(20));
+                this.m_player1 = (this.getChildAt(21));
+                this.m_player2 = (this.getChildAt(22));
+                this.m_player4 = (this.getChildAt(23));
+                this.m_player5 = (this.getChildAt(24));
+                this.m_numb1 = (this.getChildAt(25));
+                this.m_numb2 = (this.getChildAt(26));
+                this.m_numb3 = (this.getChildAt(27));
+                this.m_numb4 = (this.getChildAt(28));
+                this.m_numb5 = (this.getChildAt(29));
+                this.m_hand = (this.getChildAt(30));
+                this.m_btnPlay = (this.getChildAt(31));
+                this.m_insurance1 = (this.getChildAt(32));
+                this.m_insurance2 = (this.getChildAt(33));
+                this.m_insurance3 = (this.getChildAt(34));
+                this.m_insurance4 = (this.getChildAt(35));
+                this.m_insurance5 = (this.getChildAt(36));
+                this.m_insurance1_hide = (this.getChildAt(37));
+                this.m_insurance2_hide = (this.getChildAt(38));
+                this.m_insurance3_hide = (this.getChildAt(39));
+                this.m_insurance4_hide = (this.getChildAt(40));
+                this.m_insurance5_hide = (this.getChildAt(41));
+                this.m_clock = (this.getChildAt(42));
+                this.m_result1 = (this.getChildAt(43));
+                this.m_result2 = (this.getChildAt(44));
+                this.m_result3 = (this.getChildAt(45));
+                this.m_result4 = (this.getChildAt(46));
+                this.m_result5 = (this.getChildAt(47));
+                this.m_namebg1 = (this.getChildAt(48));
+                this.m_namebg2 = (this.getChildAt(49));
+                this.m_namebg4 = (this.getChildAt(50));
+                this.m_namebg5 = (this.getChildAt(51));
+                this.m_name1 = (this.getChildAt(52));
+                this.m_name2 = (this.getChildAt(53));
+                this.m_name4 = (this.getChildAt(54));
+                this.m_name5 = (this.getChildAt(55));
+            };
+            FUI_roomView.URL = "ui://2mffi74ewuvl2w";
+            return FUI_roomView;
+        }(fairygui.GComponent));
+        room.FUI_roomView = FUI_roomView;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_selfHead = /** @class */ (function (_super) {
+            __extends(FUI_selfHead, _super);
+            function FUI_selfHead() {
+                return _super.call(this) || this;
+            }
+            FUI_selfHead.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "selfHead"));
+            };
+            FUI_selfHead.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n1 = (this.getChildAt(0));
+                this.m_head = (this.getChildAt(1));
+            };
+            FUI_selfHead.URL = "ui://2mffi74ewuvl34";
+            return FUI_selfHead;
+        }(fairygui.GComponent));
+        room.FUI_selfHead = FUI_selfHead;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_selfPlayer = /** @class */ (function (_super) {
+            __extends(FUI_selfPlayer, _super);
+            function FUI_selfPlayer() {
+                return _super.call(this) || this;
+            }
+            FUI_selfPlayer.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "selfPlayer"));
+            };
+            FUI_selfPlayer.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+                this.m_nick = (this.getChildAt(1));
+                this.m_n3 = (this.getChildAt(2));
+                this.m_n4 = (this.getChildAt(3));
+                this.m_coin = (this.getChildAt(4));
+                this.m_headComp = (this.getChildAt(5));
+            };
+            FUI_selfPlayer.URL = "ui://2mffi74ewuvl32";
+            return FUI_selfPlayer;
+        }(fairygui.GComponent));
+        room.FUI_selfPlayer = FUI_selfPlayer;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_sider_bet = /** @class */ (function (_super) {
+            __extends(FUI_sider_bet, _super);
+            function FUI_sider_bet() {
+                return _super.call(this) || this;
+            }
+            FUI_sider_bet.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "sider_bet"));
+            };
+            FUI_sider_bet.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n7 = (this.getChildAt(0));
+                this.m_bg = (this.getChildAt(1));
+                this.m_active = (this.getChildAt(2));
+                this.m_grip = (this.getChildAt(3));
+                this.m_title = (this.getChildAt(4));
+            };
+            FUI_sider_bet.URL = "ui://2mffi74eu1w84o";
+            return FUI_sider_bet;
+        }(fairygui.GComponent));
+        room.FUI_sider_bet = FUI_sider_bet;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_stopCard = /** @class */ (function (_super) {
+            __extends(FUI_stopCard, _super);
+            function FUI_stopCard() {
+                return _super.call(this) || this;
+            }
+            FUI_stopCard.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "stopCard"));
+            };
+            FUI_stopCard.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n6 = (this.getChildAt(0));
+                this.m_lang_tp = (this.getChildAt(1));
+            };
+            FUI_stopCard.URL = "ui://2mffi74ewuvl3t";
+            return FUI_stopCard;
+        }(fairygui.GButton));
+        room.FUI_stopCard = FUI_stopCard;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_strategy = /** @class */ (function (_super) {
+            __extends(FUI_strategy, _super);
+            function FUI_strategy() {
+                return _super.call(this) || this;
+            }
+            FUI_strategy.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "strategy"));
+            };
+            FUI_strategy.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+                this.m_lang_title = (this.getChildAt(1));
+                this.m_close = (this.getChildAt(2));
+                this.m_n3 = (this.getChildAt(3));
+                this.m_lang_point = (this.getChildAt(4));
+                this.m_lang_self = (this.getChildAt(5));
+                this.m_lang_banker = (this.getChildAt(6));
+                this.m_n8 = (this.getChildAt(7));
+            };
+            FUI_strategy.URL = "ui://2mffi74eujigba";
+            return FUI_strategy;
+        }(fairygui.GComponent));
+        room.FUI_strategy = FUI_strategy;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_strategyBt2 = /** @class */ (function (_super) {
+            __extends(FUI_strategyBt2, _super);
+            function FUI_strategyBt2() {
+                return _super.call(this) || this;
+            }
+            FUI_strategyBt2.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "strategyBt2"));
+            };
+            FUI_strategyBt2.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_lang_bd = (this.getChildAt(0));
+            };
+            FUI_strategyBt2.URL = "ui://2mffi74eo440da";
+            return FUI_strategyBt2;
+        }(fairygui.GButton));
+        room.FUI_strategyBt2 = FUI_strategyBt2;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_strategyBtn = /** @class */ (function (_super) {
+            __extends(FUI_strategyBtn, _super);
+            function FUI_strategyBtn() {
+                return _super.call(this) || this;
+            }
+            FUI_strategyBtn.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "strategyBtn"));
+            };
+            FUI_strategyBtn.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+            };
+            FUI_strategyBtn.URL = "ui://2mffi74eo440db";
+            return FUI_strategyBtn;
+        }(fairygui.GComponent));
+        room.FUI_strategyBtn = FUI_strategyBtn;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_talk = /** @class */ (function (_super) {
+            __extends(FUI_talk, _super);
+            function FUI_talk() {
+                return _super.call(this) || this;
+            }
+            FUI_talk.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "talk"));
+            };
+            FUI_talk.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_word = this.getControllerAt(0);
+                this.m_lang_fj = (this.getChildAt(0));
+                this.m_lang_sb2 = (this.getChildAt(1));
+                this.m_lang_yp = (this.getChildAt(2));
+                this.m_lang_tp = (this.getChildAt(3));
+                this.m_lang_xzwc = (this.getChildAt(4));
+            };
+            FUI_talk.URL = "ui://2mffi74eu1w852";
+            return FUI_talk;
+        }(fairygui.GComponent));
+        room.FUI_talk = FUI_talk;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_timeCircle = /** @class */ (function (_super) {
+            __extends(FUI_timeCircle, _super);
+            function FUI_timeCircle() {
+                return _super.call(this) || this;
+            }
+            FUI_timeCircle.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "timeCircle"));
+            };
+            FUI_timeCircle.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_circle = (this.getChildAt(0));
+            };
+            FUI_timeCircle.URL = "ui://2mffi74eu1w84v";
+            return FUI_timeCircle;
+        }(fairygui.GComponent));
+        room.FUI_timeCircle = FUI_timeCircle;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var FUI_title = /** @class */ (function (_super) {
+            __extends(FUI_title, _super);
+            function FUI_title() {
+                return _super.call(this) || this;
+            }
+            FUI_title.createInstance = function () {
+                return (fairygui.UIPackage.createObject("room", "title"));
+            };
+            FUI_title.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+                this.m_value = (this.getChildAt(1));
+            };
+            FUI_title.URL = "ui://2mffi74eu1w84p";
+            return FUI_title;
+        }(fairygui.GComponent));
+        room.FUI_title = FUI_title;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var room;
+    (function (room) {
+        var roomBinder = /** @class */ (function () {
+            function roomBinder() {
+            }
+            roomBinder.bindAll = function () {
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_result.URL, room.FUI_result);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_hand.URL, room.FUI_hand);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_chip.URL, room.FUI_chip);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_strategyBt2.URL, room.FUI_strategyBt2);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_strategyBtn.URL, room.FUI_strategyBtn);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_clickToBet.URL, room.FUI_clickToBet);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_cardType.URL, room.FUI_cardType);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_sider_bet.URL, room.FUI_sider_bet);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_title.URL, room.FUI_title);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_timeCircle.URL, room.FUI_timeCircle);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_talk.URL, room.FUI_talk);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_match.URL, room.FUI_match);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_strategy.URL, room.FUI_strategy);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_content.URL, room.FUI_content);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_close.URL, room.FUI_close);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_roomBg.URL, room.FUI_roomBg);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_roomView.URL, room.FUI_roomView);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_otherPlayer.URL, room.FUI_otherPlayer);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_selfPlayer.URL, room.FUI_selfPlayer);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_selfHead.URL, room.FUI_selfHead);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_card.URL, room.FUI_card);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_cardsList.URL, room.FUI_cardsList);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_cardsPoint1.URL, room.FUI_cardsPoint1);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_cardsPoint2.URL, room.FUI_cardsPoint2);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_playerArea.URL, room.FUI_playerArea);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_playerArea_banker.URL, room.FUI_playerArea_banker);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_playerChip.URL, room.FUI_playerChip);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_minBet.URL, room.FUI_minBet);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_maxBet.URL, room.FUI_maxBet);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_bet.URL, room.FUI_bet);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_continueBet.URL, room.FUI_continueBet);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_Insurance.URL, room.FUI_Insurance);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_InsuranceNot.URL, room.FUI_InsuranceNot);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_divideCard.URL, room.FUI_divideCard);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_double.URL, room.FUI_double);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_needCard.URL, room.FUI_needCard);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_stopCard.URL, room.FUI_stopCard);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_btnPlay.URL, room.FUI_btnPlay);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_clock.URL, room.FUI_clock);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_chipCount.URL, room.FUI_chipCount);
+                fairygui.UIObjectFactory.setPackageItemExtension(room.FUI_continueGame.URL, room.FUI_continueGame);
+            };
+            return roomBinder;
+        }());
+        room.roomBinder = roomBinder;
+    })(room = fui.room || (fui.room = {}));
+})(fui || (fui = {}));
 var point21;
 (function (point21) {
     /**
