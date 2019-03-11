@@ -14,1574 +14,995 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var point21;
-(function (point21) {
-    var MBtnPlay = /** @class */ (function () {
-        function MBtnPlay() {
-            this.isMouseDown = false;
-            this.sliderHidden = true; //滑动条是否是隐藏状态
-            this.currentBetPos = 3; //当前下注位置,默认在中间位置
-            this.bet_max = 300; //最大注
-            this.bet_min = 3; //最小注
-            this.activyId = 0; //当前正在操作的牌（左中右）
-        }
-        MBtnPlay.prototype.requestGS = function () {
-            var params = [];
-            for (var _i = 0; _i < arguments.length; _i++) {
-                params[_i] = arguments[_i];
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_AddWalletBtn = /** @class */ (function (_super) {
+            __extends(FUI_AddWalletBtn, _super);
+            function FUI_AddWalletBtn() {
+                return _super.call(this) || this;
             }
-            var _a;
-            (_a = bx.Framework).notify.apply(_a, [bx.GConst.n_gs_send].concat(params));
-        };
-        MBtnPlay.prototype.instanceView = function (v) {
-            this.view = new point21.VBtnPlay(v);
-            this.bindEvent();
-        };
-        //重置
-        MBtnPlay.prototype.reset = function () {
-            this.view.hide();
-        };
-        //设置底注 最大注 最小注
-        MBtnPlay.prototype.setBaseBet = function (arr) {
-            this.bet_max = arr[1] / 100;
-            this.bet_min = arr[0] / 100;
-            //if(MRoom.selfMoney < this.bet_max) this.bet_max = Math.floor(MRoom.selfMoney);
-            this.view.setBaseBet(this.bet_max, this.bet_min);
-        };
-        //绑定事件
-        MBtnPlay.prototype.bindEvent = function () {
-            var _view = this.view._view;
-            _view.m_minBet.onClick(this, this.onClick_minBet);
-            _view.m_maxBet.onClick(this, this.onClick_maxBet);
-            _view.m_bet.onClick(this, this.onClick_bet);
-            _view.m_continueBet.onClick(this, this.onClick_continueBet);
-            _view.m_insurance.onClick(this, this.onClick_insurance);
-            _view.m_insuranceNot.onClick(this, this.onClick_insuranceNot);
-            _view.m_stopCard.onClick(this, this.onClick_stopCard);
-            _view.m_needCard.onClick(this, this.onClick_needCard);
-            _view.m_divideCard.onClick(this, this.onClick_divideCard);
-            _view.m_double.onClick(this, this.onClick_double);
-            _view.m_continueGame.onClick(this, this.onClick_continueGame);
-            var slider = this.view._view.m_betSlider;
-            slider.m_grip.on(Laya.Event.MOUSE_DOWN, this, this.mouseDown);
-            slider.m_title.on(Laya.Event.MOUSE_DOWN, this, this.mouseDown);
-            slider.on(Laya.Event.MOUSE_MOVE, this, this.mouseMove);
-            slider.on(Laya.Event.MOUSE_UP, this, this.mouseUp);
-            slider.on(Laya.Event.MOUSE_OUT, this, this.mouseOut);
-            slider.m_bg.onClick(this, this.mouseClick);
-        };
-        //进入某个行为集(0:下注类，1:要牌类，2：保险类，3：继续游戏)
-        MBtnPlay.prototype.inStage = function (stage) {
-            this.view.show(stage);
-            if (stage === 0) {
-                this.view.setSliderVisible(false);
-                this.sliderHidden = true;
-                this.currentBetPos = 3;
-                this.showAsBetComplete = false;
-                if (!this.view.betValue || !this.isEnoughMoney)
-                    this.view.btnUnable('continueBet');
-                this.view.setContinueBetContent(0);
-                if (point21.MRoom.selfMoney < this.bet_min) {
-                    this.view.btnUnable('minBet');
-                    this.view.btnUnable('maxBet');
-                    this.view.btnUnable('bet');
-                    this.view.btnUnable('continueBet');
-                }
-                else if (this.view.betValue && point21.MRoom.selfMoney < this.view.betValue) {
-                    this.view.btnUnable('continueBet');
-                }
-            }
-            else if (stage == 1) {
-                if (this.card1 && (this.card1 % 16 == this.card2 % 16) && (this.activyId == 0)) {
-                    this.view.btnEnable('divideCard');
-                }
-                else {
-                    this.view.btnUnable('divideCard');
-                }
-                if (!this.isEnoughMoney) {
-                    this.view.btnUnable('divideCard');
-                    this.view.btnUnable('double');
-                }
-            }
-            else if (stage == 2) {
-                var insuranceMoney = this.view.betValue / 2;
-                if (point21.MRoom.selfMoney < insuranceMoney) {
-                    this.view.btnUnable('insurance');
-                }
-            }
-        };
-        /**
-         * 判断当前余额是否大于当前下注金额
-         */
-        MBtnPlay.prototype.isEnoughMoney = function () {
-            return point21.MRoom.selfMoney > this.view.betValue;
-        };
-        //设置cards
-        MBtnPlay.prototype.setCards = function (pos) {
-            for (var _i = 0, _a = point21.MRoom.cards; _i < _a.length; _i++) {
-                var item = _a[_i];
-                if (item.pos == pos) {
-                    this.card1 = item.value[0];
-                    this.card2 = item.value[1];
-                }
-            }
-        };
-        //按下
-        MBtnPlay.prototype.mouseDown = function () {
-            Laya.Mouse.cursor = 'pointer';
-            this.isMouseDown = true;
-            this.view.getMouseRange();
-        };
-        //移动
-        MBtnPlay.prototype.mouseMove = function (e) {
-            if (this.isMouseDown) {
-                this.view.setSliderOnBet();
-            }
-        };
-        //抬起
-        MBtnPlay.prototype.mouseUp = function () {
-            Laya.Mouse.cursor = 'default';
-            this.isMouseDown = false;
-        };
-        //移出
-        MBtnPlay.prototype.mouseOut = function () {
-            Laya.Mouse.cursor = 'default';
-            this.isMouseDown = false;
-        };
-        //点击
-        MBtnPlay.prototype.mouseClick = function () {
-            this.view.onClickSlider();
-        };
-        //点击下注按钮
-        MBtnPlay.prototype.onClick_bet = function () {
-            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('btn'));
-            if (this.sliderHidden) {
-                this.view.setSliderVisible(true);
-                this.sliderHidden = false;
-                this.view.betValue = this.bet_min;
-                this.view.setMaxOrMin(0);
-            }
-            else {
-                this.bet_req();
-            }
-        };
-        //发起下注请求
-        MBtnPlay.prototype.bet_req = function () {
-            var req = {};
-            req.op = (this.currentBetPos === 3) ? 1 : 2;
-            req.value = [this.view.betValue * 100];
-            if (this.currentBetPos != 3)
-                req.value.unshift(point21.MRoom.getIdOnSever(this.currentBetPos));
-            this.requestGS(protos.CCMD.userOperationReq, req);
-        };
-        //确定下注 响应
-        MBtnPlay.prototype.resp_bet = function () {
-            this.view.setSliderVisible(false);
-            this.sliderHidden = true;
-            this.view.btnEnable('continueBet');
-            this.showAsBetComplete = true;
-            this.view.setContinueBetContent(1);
-            this.afterBet();
-        };
-        //点击最小注按钮
-        MBtnPlay.prototype.onClick_minBet = function () {
-            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('btn'));
-            this.view.betValue = this.bet_min;
-            this.view.setMaxOrMin(0);
-            this.bet_req();
-        };
-        //点击最大注按钮
-        MBtnPlay.prototype.onClick_maxBet = function () {
-            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('btn'));
-            this.view.betValue = this.bet_max;
-            this.view.setMaxOrMin(1);
-            this.bet_req();
-        };
-        //点击续压
-        MBtnPlay.prototype.onClick_continueBet = function () {
-            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('btn'));
-            if (!this.showAsBetComplete) {
-                this.bet_req();
-            }
-            else {
-                this.req_betComplete();
-            }
-        };
-        //发送下注完成
-        MBtnPlay.prototype.req_betComplete = function () {
-            var req = {};
-            req.op = 3;
-            this.requestGS(protos.CCMD.userOperationReq, req);
-        };
-        //下注后状态改变 前三个变灰
-        MBtnPlay.prototype.afterBet = function () {
-            this.view.btnUnable('minBet');
-            this.view.btnUnable('maxBet');
-            this.view.btnUnable('bet');
-        };
-        //下注前 状态恢复
-        MBtnPlay.prototype.beforeBet = function () {
-            this.view.btnEnable('minBet');
-            this.view.btnEnable('maxBet');
-            this.view.btnEnable('bet');
-        };
-        //点击买保险按钮
-        MBtnPlay.prototype.onClick_insurance = function () {
-            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('btn'));
-            var req = {};
-            req.op = 4;
-            req.value = [this.activyPos];
-            this.requestGS(protos.CCMD.userOperationReq, req);
-        };
-        //点击不买保险按钮
-        MBtnPlay.prototype.onClick_insuranceNot = function () {
-            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('btn'));
-            var req = {};
-            req.op = 5;
-            req.value = [this.activyPos];
-            this.requestGS(protos.CCMD.userOperationReq, req);
-        };
-        //点击停牌
-        MBtnPlay.prototype.onClick_stopCard = function () {
-            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('btn'));
-            var req = {};
-            req.op = 9;
-            req.value = [this.activyPos, this.activyId];
-            this.requestGS(protos.CCMD.userOperationReq, req);
-        };
-        //点击要牌
-        MBtnPlay.prototype.onClick_needCard = function () {
-            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('btn'));
-            var req = {};
-            req.op = 8;
-            req.value = [this.activyPos, this.activyId];
-            this.requestGS(protos.CCMD.userOperationReq, req);
-        };
-        //要牌响应
-        MBtnPlay.prototype.resp_needCard = function () {
-            this.view.btnUnable('divideCard');
-            this.view.btnUnable('double');
-        };
-        //点击分牌
-        MBtnPlay.prototype.onClick_divideCard = function () {
-            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('btn'));
-            var req = {};
-            req.op = 7;
-            req.value = [this.activyPos, this.activyId];
-            this.requestGS(protos.CCMD.userOperationReq, req);
-        };
-        //点击双倍
-        MBtnPlay.prototype.onClick_double = function () {
-            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('btn'));
-            var req = {};
-            req.op = 6;
-            req.value = [this.activyPos, this.activyId];
-            this.requestGS(protos.CCMD.userOperationReq, req);
-        };
-        //点击继续游戏
-        MBtnPlay.prototype.onClick_continueGame = function () {
-            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('btn'));
-            bx.Framework.notify(bx.GConst.n_set_room_type, this.roomType);
-            bx.Framework.notify(bx.GConst.n_click_continue_game_btn);
-        };
-        //隐藏视图
-        MBtnPlay.prototype.hideView = function () {
-            this.view.hide();
-        };
-        MBtnPlay.prototype.layout = function () {
-            if (bx.Stage.getStage().isLandscape) {
-                this.view._view.m_h_v.selectedIndex = 0;
-            }
-            else {
-                this.view._view.m_h_v.selectedIndex = 1;
-            }
-        };
-        return MBtnPlay;
-    }());
-    point21.MBtnPlay = MBtnPlay;
-})(point21 || (point21 = {}));
-var xys;
-(function (xys) {
-    var MGM = /** @class */ (function (_super) {
-        __extends(MGM, _super);
-        function MGM() {
-            var _this = _super.call(this) || this;
-            _this.view = null;
-            _this.roomType = 0;
-            _this.view = new xys.VGM();
-            _this.bindEvent();
-            return _this;
-        }
-        MGM.prototype.onRegister = function () {
-            _super.prototype.onRegister.call(this);
-            this.addNotices(bx.GConst.n_screen_layout, bx.GConst.n_click_gm_btn, protos.CCMD.gmResp);
-        };
-        MGM.prototype.onUnregister = function () {
-            _super.prototype.onUnregister.call(this);
-        };
-        MGM.prototype.onNotice = function (notice, data) {
-            _super.prototype.onNotice.call(this, notice, data);
-            switch (notice) {
-                case bx.GConst.n_screen_layout:
-                    this.layout();
-                    break;
-                case bx.GConst.n_click_gm_btn:
-                    this.show();
-                    break;
-                case protos.CCMD.gmResp:
-                    this.submit_resp(data[0]);
-                    break;
-            }
-        };
-        /**
-         * 显示
-        */
-        MGM.prototype.show = function () {
-            if (!bx.MSubLoad.hasLoaded(bx.FRoom.RES_NAME)) {
-                this.notify(bx.GConst.n_to_room_state);
-            }
-            this.view.reset();
-            this.stage.layerAddChild(this.view, bx.GLayer.popup);
-            this.layout();
-        };
-        /**
-         * 隐藏
-        */
-        MGM.prototype.hide = function () {
-            this.stage.layerRemoveChild(this.view);
-        };
-        /**
-         * 事件绑定
-        */
-        MGM.prototype.bindEvent = function () {
-            this.view.btn_close.onClick(this, this.hide);
-            this.view.btn_submit.onClick(this, this.submit_req);
-        };
-        /**
-         * 提交_请求
-        */
-        MGM.prototype.submit_req = function () {
-            var roomType = this.view.getRoomType(), playerNumb = this.view.getPlayerNumb(), cards = this.view.getCards();
-            var req = {};
-            req.roomType = roomType;
-            req.playerNum = playerNumb;
-            req.cardsList = cards;
-            this.requestGS(protos.CCMD.gmReq, req);
-            this.roomType = roomType;
-        };
-        /**
-         * 提交_响应
-        */
-        MGM.prototype.submit_resp = function (res) {
-            if (res.result == 1) {
-                this.hide();
-                this.notify(bx.GConst.n_to_room_state);
-                this.notify(bx.GConst.n_room_items_click, this.roomType);
-            }
-            else {
-                alert('提交失败！');
-            }
-        };
-        MGM.prototype.layout = function () {
-            this.view.x = bx.Align.center;
-            this.view.y = bx.Align.middle;
-            this.view.marginTop = "15%";
-            this.view.marginBottom = "15%";
-            this.view.marginLeft = "10%";
-            this.view.marginRight = "10%";
-            this.view.scaleMode = bx.ScaleMode.show_all;
-        };
-        __decorate([
-            bx.$singleton("bx.Stage")
-        ], MGM.prototype, "stage", void 0);
-        return MGM;
-    }(bx.Framework));
-    xys.MGM = MGM;
-})(xys || (xys = {}));
-var point21;
-(function (point21) {
-    var MMarquee = /** @class */ (function (_super) {
-        __extends(MMarquee, _super);
-        function MMarquee() {
-            return _super.call(this) || this;
-        }
-        MMarquee.prototype.onRegister = function () {
-            _super.prototype.onRegister.call(this);
-            this.addNotices(protos.CMD.bcast_msg_resp);
-        };
-        MMarquee.prototype.onUnregister = function () { _super.prototype.onUnregister.call(this); };
-        MMarquee.prototype.onNotice = function (notice, data) {
-            _super.prototype.onNotice.call(this, notice, data);
-            switch (notice) {
-                case protos.CMD.bcast_msg_resp:
-                    this.showMarquee(data[0]);
-                    break;
-            }
-        };
-        MMarquee.prototype.showMarquee = function (res) {
-            var data = res.msg;
-            var word;
-            var name = data.content[0].chars, room = data.content[1].number, value = data.content[2].number;
-            switch (room) {
-                case 1:
-                    room = bx.GData.getLanguage('201322');
-                    break;
-                case 2:
-                    room = bx.GData.getLanguage('201323');
-                    break;
-                case 3:
-                    room = bx.GData.getLanguage('201324');
-                    break;
-                case 4:
-                    room = bx.GData.getLanguage('201325');
-                    break;
-            }
-            if (data.id == 1) { //牌型跑马灯
-                switch (value) {
-                    case 3:
-                        value = bx.GData.getLanguage('201320');
-                        break;
-                    case 4:
-                        value = bx.GData.getLanguage('201321');
-                        break;
-                }
-                word = bx.GData.getLanguage('201318').replace('${name}', name).replace('${room}', room).replace('${value}', value);
-            }
-            else if (data.id == 2) { //金币跑马灯
-                value = bx.GData.formatNumber(value) + bx.GData.getLanguage('201319');
-                word = bx.GData.getLanguage('201326').replace('${name}', name).replace('${room}', room).replace('${value}', value);
-            }
-            bx.Framework.notify(bx.GConst.n_broadcast_show, word);
-        };
-        return MMarquee;
-    }(bx.Framework));
-    point21.MMarquee = MMarquee;
-})(point21 || (point21 = {}));
-var point21;
-(function (point21) {
-    var MPlayer = /** @class */ (function () {
-        function MPlayer() {
-            this.views = [];
-        }
-        MPlayer.prototype.instanceView = function (v) {
-            var item;
-            for (var i = 0; i < v.length; i++) {
-                item = new point21.VPlayer(v[i], i);
-                this.views.push(item);
-            }
-        };
-        //重置
-        MPlayer.prototype.reset = function () {
-            for (var i = 0; i < this.views.length; i++) {
-                this.views[i].hide();
-            }
-        };
-        //重连 房间信息
-        MPlayer.prototype.recRoomInfo = function (res) {
-            var index;
-            for (var i = 0; i < res.length; i++) {
-                index = point21.MRoom.getSeatId(res[i].pos);
-                this.views[index - 1].setPlayer(res[i]);
-            }
-        };
-        //设置玩家信息并显示
-        MPlayer.prototype.setPlayerInfo = function (data) {
-            var index;
-            for (var i = 0; i < data.length; i++) {
-                index = point21.MRoom.getSeatId(data[i].pos);
-                this.views[index - 1].setPlayer(data[i]);
-            }
-        };
-        //进入阶段,开始倒计时
-        MPlayer.prototype.startAllClock = function (time) {
-            for (var _i = 0, _a = this.views; _i < _a.length; _i++) {
-                var item = _a[_i];
-                item.timeCircleStart(time);
-            }
-        };
-        //轮到玩家操作
-        MPlayer.prototype.startClock = function (id, time) {
-            this.views[id - 1].timeCircleStart(time);
-        };
-        //结束玩家操作计时
-        MPlayer.prototype.stopClock = function (id) {
-            this.views[id - 1].timeCircleEnd();
-        };
-        //说话
-        MPlayer.prototype.talk = function (pos, content) {
-            this.views[pos - 1].setTalkingVisible(true, content);
-        };
-        //设置金币余额
-        MPlayer.prototype.setCoin = function (pos, value) {
-            this.views[pos - 1].setCoin(value);
-        };
-        return MPlayer;
-    }());
-    point21.MPlayer = MPlayer;
-})(point21 || (point21 = {}));
-var point21;
-(function (point21) {
-    var MPlayerArea = /** @class */ (function () {
-        function MPlayerArea() {
-            this.views = []; //玩家区域的视图，从左到右，依次push,最开始一个是庄家
-            this.optionSeat = []; //除了自己外还可以选择的位置
-            this.selecting = -1; //除了自己 正选中的座位
-        }
-        MPlayerArea.prototype.instanceView = function (v, roomView) {
-            var item;
-            for (var i = 0; i < v.length; i++) {
-                item = new point21.VPlayerArea(v[i], i);
-                this.views.push(item);
-                item.init(roomView);
-                if (i != 0) {
-                    item._view.m_chipArea.onClick(this, function (item, i) {
-                        if (item.canClick) {
-                            for (var j = 0; j < this.optionSeat.length; j++) {
-                                var n = point21.MRoom.getSeatId(this.optionSeat[j]);
-                                this.views[n].setTipsToBetVisible(true);
-                            }
-                            this.views[i].setTipsToBetVisible(false);
-                            this.selecting = i;
-                            bx.Framework.notify(point21.GConst.n_newPosToBet, i);
-                        }
-                    }, [item, i]);
-                }
-            }
-            var player5 = this.views[5]._view;
-            var index5 = player5.getChildIndex(player5.m_chipsList2);
-            player5.setChildIndex(player5.m_chipsList1, index5 + 1);
-            this.layout();
-        };
-        //重置
-        MPlayerArea.prototype.reset = function () {
-            this.selecting = -1;
-            for (var i = 0; i < this.views.length; i++) {
-                this.views[i].reset();
-            }
-        };
-        //重连时恢复牌信息
-        MPlayerArea.prototype.recCardsList = function (data) {
-            var pos, cards, cardType, anteChips, maxSum, minSum, whichOne, isDouble;
-            for (var i = 0; i < data.length; i++) {
-                pos = point21.MRoom.getSeatId(data[i].pos);
-                cards = data[i].cards;
-                cardType = data[i].cardType;
-                anteChips = data[i].anteChips;
-                maxSum = data[i].maxSum;
-                minSum = data[i].minSum;
-                whichOne = data[i].whichOne;
-                isDouble = data[i].isDoubleAnted;
-                //保存头两张牌
-                var obj = { pos: pos, value: [cards[0], cards[1]] };
-                point21.MRoom.cards.push(obj);
-                if (pos !== 0 && whichOne !== 0)
-                    this.views[pos]._view.m_fen.selectedIndex = 1;
-                for (var j = 0; j < cards.length; j++) {
-                    var card = this.getNewCard(pos, whichOne);
-                    card.m_card.url = point21.Utils.getCardImg(cards[j]);
-                }
-                this.views[pos].setCardAndPoint(cardType, false, whichOne, minSum, maxSum);
-                this.views[pos].doubleSignVisible(isDouble, whichOne);
-                anteChips && this.views[pos].getChipListChildren(point21.Utils.formatChips(anteChips), true, whichOne);
-                anteChips && this.views[pos].setChip(point21.Utils.formatChips(anteChips), whichOne);
-            }
-        };
-        //重连时恢复保险标志
-        MPlayerArea.prototype.recInsuranceSign = function (data) {
-            for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
-                var player = data_1[_i];
-                for (var _a = 0, _b = player.insPos; _a < _b.length; _a++) {
-                    var seat = _b[_a];
-                    if (seat.insAnteChips > 0) {
-                        var pos = point21.MRoom.getSeatId(seat.pos);
-                        this.views[pos].insuranceSignVisible(true);
-                    }
-                }
-            }
-        };
-        //获得该位置一号列表牌的状态（是否满了三张）
-        MPlayerArea.prototype.firstListIsFull = function (pos, id) {
-            if (pos === 0)
-                return false;
-            return this.views[pos]._view['m_cardsList' + id].m_list1.numChildren >= 3 ? true : false;
-        };
-        //获得新发的牌 pos：1~5   id：0/1/2
-        MPlayerArea.prototype.getNewCard = function (pos, id) {
-            if (id === void 0) { id = 0; }
-            var index = this.firstListIsFull(pos, id) ? 2 : 1;
-            return this.views[pos].addChildToList(id, index);
-        };
-        //发牌
-        MPlayerArea.prototype.dealCard = function (seatId, data, type) {
-            var card = this.getNewCard(seatId, data.whichOne);
-            card.visible = false;
-            this.views[seatId].dealCard(card, data, type);
-        };
-        //庄家暗牌翻牌
-        MPlayerArea.prototype.turnBankerCard = function (card) {
-            this.views[0].turnBankerCard(card);
-        };
-        //收牌
-        MPlayerArea.prototype.recoverCards = function () {
-            for (var i = 0; i < this.views.length; i++) {
-                this.views[i].recoverCards();
-            }
-        };
-        //分牌
-        MPlayerArea.prototype.divideCard = function (data) {
-            var card1, card2;
-            var id = point21.MRoom.getSeatId(data[0]);
-            for (var i = 0; i < point21.MRoom.cards.length; i++) {
-                if (point21.MRoom.cards[i].pos == id) {
-                    card1 = point21.MRoom.cards[i].value[0];
-                    card2 = point21.MRoom.cards[i].value[1];
-                }
-            }
-            var allBet = data[2] / 100;
-            this.views[id].divideCard(card1, card2);
-            this.views[id].setChip(allBet, 1);
-            this.views[id].setChip(allBet, 2);
-            this.views[id].getChipListChildren(allBet, true, 1);
-            this.views[id].getChipListChildren(allBet, true, 2);
-        };
-        //轮到某位玩家 pos为0时 即隐藏所有位置的选中特效
-        // turnOnePlayer(pos:number,id:number = 0):void{
-        //     for(let item of this.views){
-        //         item.ActivedMarkVisible(false);
-        //     }
-        //     if(pos === 0) return;
-        //     this.views[pos].ActivedMarkVisible(true,id);
-        // }
-        //解除某个座位的激活状态
-        // unActiveOnePlyaer(pos:number):void{
-        //     this.views[pos].ActivedMarkVisible(false);
-        // }
-        //下注在自己位置
-        MPlayerArea.prototype.bet = function (pos, data) {
-            var valBet = data[0] / 100, allBet = data[1] / 100;
-            this.views[pos].playerBet(valBet, pos, 0);
-            this.views[pos].setChip(allBet);
-        };
-        //下注在其他位置
-        MPlayerArea.prototype.betToOther = function (pos, data) {
-            var toPos = point21.MRoom.getSeatId(data[0]), valBet = data[1] / 100, allBet = data[2] / 100;
-            this.views[toPos].playerBet(valBet, pos, 0);
-            this.views[toPos].setChip(allBet);
-        };
-        //加倍下注
-        MPlayerArea.prototype.betDouble = function (pos, data) {
-            var toPos = point21.MRoom.getSeatId(data[0]), id = data[1], valBet = data[2] / 100, allBet = data[3] / 100;
-            this.views[toPos].playerBet(allBet, pos, id);
-            this.views[toPos].setChip(allBet, id);
-            Laya.timer.once(1200, this, function () {
-                this.views[toPos].doubleSignVisible(true, id);
-            });
-        };
-        //玩家买保险了
-        MPlayerArea.prototype.buyInsurance = function (pos) {
-            this.views[pos].insuranceSignVisible(true);
-        };
-        //筹码列表推向庄家
-        MPlayerArea.prototype.chipListToBanker = function (pos, id) {
-            this.views[pos].moveChipList(0, id);
-        };
-        //结算
-        MPlayerArea.prototype.settlement = function (data) {
-            var item, id, seat;
-            for (var i = 0; i < data.length; i++) {
-                item = data[i];
-                for (var j = 0; j < item.result.length; j++) {
-                    seat = item.result[j];
-                    if (seat.balance < 0) {
-                        id = point21.MRoom.getSeatId(seat.pos);
-                        if (id == 3) {
-                            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('win'));
-                        }
-                        this.views[id].moveChipList(0, seat.whichOne);
-                    }
-                }
-            }
-            Laya.timer.once(1000, this, function () {
-                var item, id, seat, playerId;
-                for (var i = 0; i < data.length; i++) {
-                    item = data[i];
-                    playerId = point21.MRoom.getSeatId(item.pos);
-                    for (var j = 0; j < item.result.length; j++) {
-                        seat = item.result[j];
-                        if (seat.balance >= 0) {
-                            id = point21.MRoom.getSeatId(seat.pos);
-                            if (id == 3) {
-                                SoundManager.instance.playSound(AssetsUtils.getSoundUrl('win'));
-                            }
-                            this.views[id].win(playerId, seat.balance, seat.whichOne);
-                        }
-                    }
-                }
-            });
-        };
-        //更新可下注的区域显示
-        MPlayerArea.prototype.showCanBetTips = function (data) {
-            var lostSelecting = true;
-            var seatId;
-            this.hideCanBetTips();
-            for (var i = 0; i < data.length; i++) {
-                seatId = point21.MRoom.getSeatId(data[i]);
-                this.views[seatId].setTipsToBetVisible(true);
-                if (seatId == this.selecting) {
-                    this.views[seatId].setTipsToBetVisible(false);
-                    lostSelecting = false;
-                }
-            }
-            //如果选中的位置真的失去了 发送通知
-            if (lostSelecting) {
-                bx.Framework.notify(point21.GConst.n_lostSeat);
-            }
-        };
-        //隐藏可下注区域 提示
-        MPlayerArea.prototype.hideCanBetTips = function () {
-            for (var i = 0; i < this.views.length; i++) {
-                this.views[i].setTipsToBetVisible(false);
-            }
-        };
-        MPlayerArea.prototype.layout = function () {
-            if (this.views.length === 0)
-                return;
-            var skewX = [8, 0, 0, -18, 0], skewY = [0, -18, 0, 0, 12], rotate_view = [67, 44, 0, -28, -73];
-            var rotate_chip = [-77, -30, 0, 35, 70];
-            var target;
-            for (var i = 1; i < this.views.length; i++) {
-                target = this.views[i];
-                if (bx.Stage.getStage().isLandscape) {
-                    target._view.rotation = rotate_view[i - 1];
-                    target._view.setSkew(skewX[i - 1], skewY[i - 1]);
-                    target.setChipListRotation(rotate_chip[i - 1]);
-                }
-                else {
-                    target.setChipListRotation(0);
-                    target._view.setSkew(0, 0);
-                    target._view.rotation = 0;
-                }
-            }
-        };
-        MPlayerArea.dragonLoaded = false; //五小龙资源已下载
-        MPlayerArea.bjLoaded = false; //黑杰克动画资源已下载
-        MPlayerArea.boomLoaded = false; //爆牌资源已下载
-        return MPlayerArea;
-    }());
-    point21.MPlayerArea = MPlayerArea;
-})(point21 || (point21 = {}));
-var point21;
-(function (point21) {
-    var MRoom = /** @class */ (function (_super) {
-        __extends(MRoom, _super);
-        function MRoom() {
-            var _this = _super.call(this) || this;
-            _this.dealDelay = 200; //发牌间隔时间
-            _this.betCompleted = false; //下注完成标志
-            _this.isInsuranceActionOver = false; //回收保险列表的动作已完成 一次
-            return _this;
-        }
-        Object.defineProperty(MRoom.prototype, "viewBg", {
-            get: function () {
-                if (this._viewBg == null) {
-                    this.mPlayerArea = new point21.MPlayerArea();
-                    this.mBtnPlay = new point21.MBtnPlay();
-                    this.mPlayer = new point21.MPlayer();
-                    this._viewBg = new point21.VRoomBg();
-                    this.view = new point21.VRoom();
-                    this.popupMatch = new point21.VMatch();
-                    this.strategyBtn = new point21.VStrategyBtn();
-                }
-                return this._viewBg;
-            },
-            enumerable: true,
-            configurable: true
-        });
-        //由pos计算本地真实座位号
-        MRoom.getSeatId = function (pos) {
-            if (pos === 0)
-                return 0;
-            var id = pos - MRoom.gap;
-            if (id < 1)
-                id += 5;
-            if (id > 5)
-                id -= 5;
-            return id;
-        };
-        //由真实座位号 倒推 在服务器上的座位号
-        MRoom.getIdOnSever = function (seatId) {
-            if (seatId != 0) {
-                var id = seatId + this.gap;
-                if (id < 1)
-                    id += 5;
-                if (id > 5)
-                    id -= 5;
-                return id;
-            }
-        };
-        MRoom.prototype.onRegister = function () {
-            _super.prototype.onRegister.call(this);
-            this.addNotices(point21.GConst.n_Vmanager_playerArea, point21.GConst.n_Vmanager_btnPlay, point21.GConst.n_Vmanager_player, bx.GConst.n_screen_layout, point21.GConst.n_addRoom, point21.GConst.n_removeRoom, bx.GConst.n_room_items_click, bx.GConst.n_room_continue_game, point21.GConst.n_newPosToBet, point21.GConst.n_hideBtns, point21.GConst.n_lostSeat, point21.GConst.n_selfMoneyChange, protos.CCMD.gamePush, protos.CCMD.playerInfoPush, protos.CCMD.userOperationResp, protos.CCMD.dealCardsInfo, protos.CCMD.gameSettlementPush, protos.CCMD.recRoomInfo, protos.CCMD.recAnteState, protos.CMD.cancel_match_resp, protos.CMD.chips_push, protos.CCMD.recDealCardsState, protos.CCMD.recBuyInsState, protos.CCMD.recRoleOpState, protos.CCMD.recBankerOpState);
-        };
-        MRoom.prototype.onUnregister = function () { _super.prototype.onUnregister.call(this); };
-        MRoom.prototype.onNotice = function (notice, data) {
-            _super.prototype.onNotice.call(this, notice, data);
-            switch (notice) {
-                //分配玩家区域的视图
-                case point21.GConst.n_Vmanager_playerArea:
-                    this.mPlayerArea.instanceView(data[0], data[1]);
-                    break;
-                //分配操作按钮的视图
-                case point21.GConst.n_Vmanager_btnPlay:
-                    this.mBtnPlay.instanceView(data[0]);
-                    break;
-                //分配玩家头像的视图
-                case point21.GConst.n_Vmanager_player:
-                    this.mPlayer.instanceView(data[0]);
-                    break;
-                //屏幕适配
-                case bx.GConst.n_screen_layout:
-                    this.layout();
-                    break;
-                //添加房间视图
-                case point21.GConst.n_addRoom:
-                    this.addView();
-                    break;
-                //移除房间视图
-                case point21.GConst.n_removeRoom:
-                    this.removeView();
-                    break;
-                //点击大厅房间选项按钮
-                case bx.GConst.n_room_items_click:
-                    this.mBtnPlay.roomType = data[0];
-                    this.reset();
-                    this.popupMatchVisible(true);
-                    break;
-                //继续游戏
-                case bx.GConst.n_room_continue_game:
-                    this.reset();
-                    this.popupMatchVisible(true);
-                    break;
-                //通知本人要下注的其他位置
-                case point21.GConst.n_newPosToBet:
-                    this.mBtnPlay.inStage(0);
-                    this.mBtnPlay.currentBetPos = data[0];
-                    break;
-                case point21.GConst.n_hideBtns:
-                    this.mBtnPlay.hideView();
-                    break;
-                //失去想下注的其他位置
-                case point21.GConst.n_lostSeat:
-                    this.mBtnPlay.hideView();
-                    break;
-                //自己的余额改变了
-                case point21.GConst.n_selfMoneyChange:
-                    var coins = Math.floor(data[0] / 100);
-                    MRoom.selfMoney = data[0] / 100;
-                    if (coins < this.mBtnPlay.bet_max) {
-                        this.mBtnPlay.bet_max = coins;
-                        this.mBtnPlay.view.setBaseBet(coins, this.mBtnPlay.bet_min);
-                    }
-                    break;
-                //游戏推送
-                case protos.CCMD.gamePush:
-                    this.gamePush(data[0]);
-                    break;
-                //玩家信息推送
-                case protos.CCMD.playerInfoPush:
-                    SoundManager.instance.playSound(AssetsUtils.getSoundUrl('start'));
-                    this.popupMatchVisible(false);
-                    this.getPlayerInfo(data[0]);
-                    break;
-                //按钮事件响应
-                case protos.CCMD.userOperationResp:
-                    this.userOperationResp(data[0]);
-                    break;
-                //发牌
-                case protos.CCMD.dealCardsInfo:
-                    this.dealCards(data[0]);
-                    break;
-                //结算
-                case protos.CCMD.gameSettlementPush:
-                    this.pushInsuranceToBanker();
-                    this.mBtnPlay.hideView();
-                    this.view.turnOffLight();
-                    this.onGetResult(data[0]);
-                    break;
-                //断线重连，房间信息
-                case protos.CCMD.recRoomInfo:
-                    this.recRoomInfo(data[0]);
-                    break;
-                //断线重连 下注阶段
-                case protos.CCMD.recAnteState:
-                    this.recAnteState(data[0]);
-                    break;
-                //取消匹配
-                case protos.CMD.cancel_match_resp:
-                    this.popupMatchVisible(false);
-                    this.mBtnPlay.inStage(3);
-                    break;
-                //更新玩家金币
-                case protos.CMD.chips_push:
-                    this.mPlayer && this.mPlayer.setCoin(3, data[0].chips);
-                    break;
-                //断线重连，发牌阶段
-                case protos.CCMD.recDealCardsState:
-                    this.recDealCardsState(data[0]);
-                    break;
-                //断线重连，保险阶段
-                case protos.CCMD.recBuyInsState:
-                    this.recBuyInsState(data[0]);
-                    break;
-                //断线重连，玩家操作阶段
-                case protos.CCMD.recRoleOpState:
-                    this.recRoleOpState(data[0]);
-                    break;
-                //断线重连，庄家操作阶段
-                case protos.CCMD.recBankerOpState:
-                    this.recBankerOpState(data[0]);
-                    break;
-            }
-        };
-        //游戏信息推送
-        MRoom.prototype.gamePush = function (data) {
-            var type = data.type, pos = MRoom.getSeatId(data.pos), value = data.value;
-            switch (type) {
-                case 1: //设置底注
-                    this.mBtnPlay.setBaseBet(value);
-                    break;
-                case 2: //进入下注阶段
-                    this.mPlayer.startAllClock(value[0]);
-                    this.view.StartClock(value[0]);
-                    break;
-                case 3: //玩家可在原位置下注
-                    this.mBtnPlay.inStage(0);
-                    break;
-                case 4: //玩家可下注的其他位置
-                    if (value) {
-                        if (!this.betCompleted) {
-                            this.mPlayerArea.optionSeat = value;
-                            this.mPlayerArea.showCanBetTips(value);
-                        }
-                    }
-                    else {
-                        this.mPlayerArea.hideCanBetTips();
-                    }
-                    break;
-                case 5: //玩家在原位置下注了
-                    this.mPlayerArea.bet(pos, value);
-                    this.mPlayer.setCoin(pos, value[2]);
-                    if (pos == 3) {
-                        this.view.handAction(1);
-                        this.mBtnPlay.view.betValue = value[0] / 100;
-                    }
-                    break;
-                case 6: //玩家在其他位置下注了
-                    var id = MRoom.getSeatId(value[0]);
-                    this.mPlayerArea.betToOther(pos, value);
-                    this.mPlayer.setCoin(pos, value[3]);
-                    this.view.seatNameVisible(true, id, this.mPlayer.views[pos - 1].playerName);
-                    if (pos == 3) {
-                        this.mBtnPlay.view.betValue = value[1] / 100;
-                        this.mPlayerArea.selecting = -1;
-                        id < 3 ? this.view.handAction(2) : this.view.handAction(3);
-                    }
-                    break;
-                case 7: //玩家完成下注
-                    this.mPlayer.talk(pos, 4);
-                    this.stopClock(pos);
-                    if (pos == 3) {
-                        this.betCompleted = true;
-                        this.mBtnPlay.hideView();
-                        this.mPlayerArea.hideCanBetTips();
-                    }
-                    break;
-                case 8: //进入发牌阶段
-                    this.mBtnPlay.hideView();
-                    this.mPlayerArea.hideCanBetTips();
-                    break;
-                case 9: //进入买保险阶段
-                    this.mPlayer.startAllClock(value[0]);
-                    this.view.StartClock(value[0]);
-                    break;
-                case 10: //某个座位可以买保险了
-                    if (value) {
-                        if (pos == 3) {
-                            this.mBtnPlay.inStage(2);
-                            this.mBtnPlay.activyPos = value[0];
-                            this.view.turnOnLightTo(value[0], 0);
-                        }
-                    }
-                    else {
-                        this.stopClock(pos);
-                    }
-                    break;
-                case 11: //某座位买保险了
-                    var seat = MRoom.getSeatId(value[0]);
-                    this.view.betInsurance(value[1], pos, seat);
-                    this.mPlayer.setCoin(pos, value[2]);
-                    this.mPlayerArea.buyInsurance(seat);
-                    if (pos == 3)
-                        this.view.turnOffLight();
-                    break;
-                case 12: //某座位不买保险
-                    if (pos == 3)
-                        this.view.turnOffLight();
-                    break;
-                case 13: //轮到某个座位操作
-                    this.view.turnOnLightTo(value[0], value[1]);
-                    if (pos == 3) {
-                        SoundManager.instance.playSound(AssetsUtils.getSoundUrl('turnSelf'));
-                        this.view.StartClock(value[2]);
-                        this.mBtnPlay.activyPos = value[0];
-                        this.mBtnPlay.activyId = value[1];
-                        this.mBtnPlay.setCards(MRoom.getSeatId(value[0]));
-                        this.mBtnPlay.inStage(1);
-                    }
-                    else {
-                        SoundManager.instance.playSound(AssetsUtils.getSoundUrl('turnOther'));
-                        this.mBtnPlay.hideView();
-                        this.mPlayer.startClock(pos, value[2]);
-                    }
-                    break;
-                case 14: //双倍
-                    this.stopClock(pos);
-                    this.mPlayer.talk(pos, 1);
-                    this.mPlayerArea.betDouble(pos, value);
-                    this.mPlayer.setCoin(pos, value[4]);
-                    if (pos == 3) {
-                        var id_1 = MRoom.getSeatId(value[0]);
-                        if (id_1 < 3) {
-                            this.view.handAction(2);
-                        }
-                        else if (id_1 > 3) {
-                            this.view.handAction(3);
-                        }
-                        else {
-                            this.view.handAction(1);
-                        }
-                    }
-                    break;
-                case 15: //暗牌不组成bj
-                    this.pushInsuranceToBanker();
-                    break;
-                case 16: //庄家操作
-                    this.mBtnPlay.hideView();
-                    this.view.turnOffLight();
-                    break;
-                case 17: //分牌
-                    this.mPlayerArea.divideCard(value);
-                    this.mPlayer.talk(pos, 0);
-                    this.mPlayer.setCoin(pos, value[3]);
-                    if (pos == 3) {
-                        var id_2 = MRoom.getSeatId(value[0]);
-                        if (id_2 < 3) {
-                            this.view.handAction(2);
-                        }
-                        else if (id_2 > 3) {
-                            this.view.handAction(3);
-                        }
-                        else {
-                            this.view.handAction(1);
-                        }
-                    }
-                    break;
-                case 18: //要牌
-                    this.mPlayer.talk(pos, 2);
-                    break;
-                case 19: //停牌
-                    this.stopClock(pos);
-                    if (pos == 3)
-                        this.mBtnPlay.hideView();
-                    this.mPlayer.talk(pos, 3);
-                    break;
-                case 20: //庄家暗牌
-                    this.mPlayerArea.turnBankerCard(value);
-                    break;
-            }
-        };
-        //断线重连 房间信息
-        MRoom.prototype.recRoomInfo = function (res) {
-            this.reset();
-            this.mBtnPlay.roomType = res.roomType;
-            MRoom.gap = res.curPos - 3;
-            this.mBtnPlay.setBaseBet(res.roomInfo);
-            for (var i = 0; i < res.players.length; i++) {
-                var player = res.players[i];
-                var pos = MRoom.getSeatId(player.pos);
-                this.view.setChipsVisible(true, pos);
-                if (pos == 3) {
-                    if (player.chips < res.roomInfo[1]) {
-                        this.mBtnPlay.bet_max = Math.floor(player.chips / 100);
-                    }
-                }
-                if (player.othersPos) {
-                    for (var _i = 0, _a = player.othersPos; _i < _a.length; _i++) {
-                        var seat = _a[_i];
-                        this.view.seatNameVisible(true, MRoom.getSeatId(seat), player.name);
-                    }
-                }
-            }
-            this.mPlayer.recRoomInfo(res.players);
-        };
-        //断线重连 下注
-        MRoom.prototype.recAnteState = function (res) {
-            for (var _i = 0, _a = res.anteStatePosList; _i < _a.length; _i++) {
-                var player = _a[_i];
-                var pos = MRoom.getSeatId(player.originPos);
-                if (player.state === 0) { //未完成下注状态
-                    if (pos == 3) {
-                        this.view.StartClock(res.timeLeft);
-                        if (player.antePosList) { //自己原位置已经下注
-                            this.mBtnPlay.inStage(0);
-                            this.mPlayerArea.showCanBetTips(res.emptyPosList);
-                        }
-                        else { //原位置未下注
-                            this.mBtnPlay.inStage(0);
-                        }
-                    }
-                    else {
-                        this.mPlayer.startClock(pos, res.timeLeft);
-                    }
-                }
-                if (player.antePosList) {
-                    for (var _b = 0, _c = player.antePosList; _b < _c.length; _b++) {
-                        var seat = _c[_b];
-                        var id = MRoom.getSeatId(seat.pos);
-                        this.mPlayerArea.views[id].getChipListChildren(seat.ante, true, 0);
-                        this.mPlayerArea.views[id].setChip(point21.Utils.formatChips(seat.ante), 0);
-                    }
-                }
-            }
-        };
-        //重连 发牌阶段
-        MRoom.prototype.recDealCardsState = function (res) {
-            this.mPlayerArea.recCardsList(res.cardsList);
-        };
-        //重连 保险阶段
-        MRoom.prototype.recBuyInsState = function (res) {
-            this.mPlayerArea.recCardsList(res.cardsList);
-            var players = res.insPosList;
-            for (var i = 0; i < players.length; i++) {
-                if (players[i].active > 0) {
-                    var pos = MRoom.getSeatId(players[i].pos);
-                    if (pos == 3) {
-                        this.view.StartClock(res.timeLeft);
-                        this.mBtnPlay.inStage(2);
-                        this.mBtnPlay.activyPos = players[i].active;
-                        this.view.turnOnLightTo(players[i].active, 0);
-                    }
-                    else {
-                        this.mPlayer.startClock(pos, res.timeLeft);
-                    }
-                }
-                var seats = players[i].insPos;
-                for (var j = 0; j < seats.length; j++) {
-                    var seatid = MRoom.getSeatId(seats[j].pos);
-                    this.view.addChildToInsuranceList(seatid, seats[j].insAnteChips, true);
-                    if (seats[j].insAnteChips > 0) {
-                        this.mPlayerArea.views[seatid].insuranceSignVisible(true);
-                    }
-                }
-            }
-        };
-        //重连 玩家操作阶段
-        MRoom.prototype.recRoleOpState = function (res) {
-            this.mPlayerArea.recCardsList(res.cardsList);
-            this.mPlayerArea.recInsuranceSign(res.insPosList);
-            var pos = MRoom.getSeatId(res.opOriginPos);
-            //本人
-            if (pos == 3) {
-                this.view.StartClock(res.timeLeft);
-                this.mBtnPlay.activyPos = res.opPos;
-                this.mBtnPlay.activyId = res.opWhichOne;
-                this.mBtnPlay.setCards(MRoom.getSeatId(res.opPos));
-                this.mBtnPlay.inStage(1);
-            }
-            else {
-                this.mPlayer.startClock(pos, res.timeLeft);
-            }
-            if (res.timeLeft > 0) {
-                this.view.turnOnLightTo(res.opPos, res.opWhichOne);
-            }
-        };
-        //重连 庄家阶段
-        MRoom.prototype.recBankerOpState = function (res) {
-            this.mPlayerArea.recCardsList(res.cardsList);
-            this.mPlayerArea.recInsuranceSign(res.insPosList);
-        };
-        //获取到玩家信息
-        MRoom.prototype.getPlayerInfo = function (res) {
-            MRoom.gap = res.curPos - 3;
-            for (var i = 0; i < res.playersInfo.length; i++) {
-                var player = res.playersInfo[i];
-                var pos = MRoom.getSeatId(player.pos);
-                this.view.setChipsVisible(true, pos);
-                if (pos == 3) {
-                    if (player.chips < this.mBtnPlay.bet_max) {
-                        this.mBtnPlay.bet_max = Math.floor(player.chips / 100);
-                    }
-                }
-            }
-            this.mPlayer.setPlayerInfo(res.playersInfo);
-        };
-        //按钮操作响应
-        MRoom.prototype.userOperationResp = function (res) {
-            if (res.result === 2) {
-                console.log('操作失败！！！！！！');
-                return;
-            }
-            ;
-            switch (res.op) {
-                case 1:
-                    this.mBtnPlay.resp_bet();
-                    break;
-                case 2:
-                    this.mBtnPlay.resp_bet();
-                    break;
-                case 3:
-                    this.mBtnPlay.hideView();
-                    break;
-                case 4:
-                    this.mBtnPlay.hideView();
-                    break;
-                case 5:
-                    this.mBtnPlay.hideView();
-                    break;
-                case 6:
-                    this.mBtnPlay.hideView();
-                    break;
-                case 7:
-                    this.mBtnPlay.hideView();
-                    break;
-                case 8:
-                    this.mBtnPlay.resp_needCard();
-                    this.view.handAction(5);
-                    break;
-                case 9:
-                    this.mBtnPlay.hideView();
-                    this.view.handAction(4);
-                    break;
-            }
-        };
-        //添加视图到舞台
-        MRoom.prototype.addView = function () {
-            bx.Stage.getStage().layerAddChild(this.viewBg, bx.GLayer.scene);
-            bx.Stage.getStage().layerAddChild(this.view, bx.GLayer.scene);
-            bx.Stage.getStage().layerAddChild(this.strategyBtn, bx.GLayer.scene);
-            SoundManager.instance.bgmUrls = AssetsUtils.getSoundUrl('bgm');
-            this.layout();
-        };
-        //移除视图
-        MRoom.prototype.removeView = function () {
-            bx.Stage.getStage().layerRemoveChild(this.viewBg);
-            bx.Stage.getStage().layerRemoveChild(this.view);
-            bx.Stage.getStage().layerRemoveChild(this.strategyBtn);
-        };
-        //匹配框 状态
-        MRoom.prototype.popupMatchVisible = function (state) {
-            if (state) {
-                bx.UIManager.popup(this.popupMatch, true);
-                this.popupMatch.reset();
-            }
-            else {
-                this.popupMatch.beforeClose();
-                bx.UIManager.closePopup(this.popupMatch);
-            }
-        };
-        //重置
-        MRoom.prototype.reset = function () {
-            this.betCompleted = false;
-            this.view.reset();
-            this.mPlayerArea.reset();
-            this.mBtnPlay.reset();
-            this.mPlayer.reset();
-            this.isInsuranceActionOver = false;
-        };
-        //处理发牌
-        MRoom.prototype.dealCards = function (data) {
-            var arr = data.cardsList;
-            var sortfunc = function (a, b) {
-                var v1 = MRoom.getSeatId(a['pos']);
-                var v2 = MRoom.getSeatId(b['pos']);
-                return v1 - v2;
+            FUI_AddWalletBtn.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "AddWalletBtn"));
             };
-            arr.sort(sortfunc);
-            var len = arr.length;
-            if (arr[0].cards.length == 2) { //如果是开始的一次发两张牌,就发两轮
-                for (var _i = 0, arr_1 = arr; _i < arr_1.length; _i++) {
-                    var item = arr_1[_i];
-                    var pos = MRoom.getSeatId(item.pos);
-                    var obj = {
-                        pos: pos,
-                        value: [item.cards[0], item.cards[1]]
-                    };
-                    MRoom.cards.push(obj);
-                }
-                this.dealType = 1;
-                this.dealOnce(arr);
-                Laya.timer.once(len * this.dealDelay, this, function () {
-                    this.dealType = 2;
-                    this.dealOnce(arr);
-                });
+            FUI_AddWalletBtn.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+            };
+            FUI_AddWalletBtn.URL = "ui://8oy4o0mbl3ii3x";
+            return FUI_AddWalletBtn;
+        }(fairygui.GComponent));
+        Game.FUI_AddWalletBtn = FUI_AddWalletBtn;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_brief = /** @class */ (function (_super) {
+            __extends(FUI_brief, _super);
+            function FUI_brief() {
+                return _super.call(this) || this;
             }
-            else {
-                this.dealType = 0;
-                this.dealOnce(arr);
+            FUI_brief.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "brief"));
+            };
+            FUI_brief.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_h_v = this.getControllerAt(0);
+                this.m_avatar = (this.getChildAt(0));
+                this.m_n4 = (this.getChildAt(1));
+                this.m_nickname = (this.getChildAt(2));
+                this.m_n5 = (this.getChildAt(3));
+                this.m_n8 = (this.getChildAt(4));
+                this.m_coin = (this.getChildAt(5));
+            };
+            FUI_brief.URL = "ui://8oy4o0mbd832p";
+            return FUI_brief;
+        }(fairygui.GComponent));
+        Game.FUI_brief = FUI_brief;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_briefPopup = /** @class */ (function (_super) {
+            __extends(FUI_briefPopup, _super);
+            function FUI_briefPopup() {
+                return _super.call(this) || this;
             }
-        };
-        //发一轮牌 
-        MRoom.prototype.dealOnce = function (list) {
-            for (var i = 0; i < list.length; i++) {
-                Laya.timer.once(this.dealDelay * i, this, this.deal, [list[i]], false);
+            FUI_briefPopup.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "briefPopup"));
+            };
+            FUI_briefPopup.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n10 = (this.getChildAt(0));
+                this.m_lang_head = (this.getChildAt(1));
+                this.m_lang_des = (this.getChildAt(2));
+                this.m_btnSave = (this.getChildAt(3));
+                this.m_headList = (this.getChildAt(4));
+                this.m_close = (this.getChildAt(5));
+                this.m_current = (this.getChildAt(6));
+            };
+            FUI_briefPopup.URL = "ui://8oy4o0mbd832w";
+            return FUI_briefPopup;
+        }(fairygui.GComponent));
+        Game.FUI_briefPopup = FUI_briefPopup;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_btn_reconnect = /** @class */ (function (_super) {
+            __extends(FUI_btn_reconnect, _super);
+            function FUI_btn_reconnect() {
+                return _super.call(this) || this;
             }
-        };
-        //发牌逻辑
-        MRoom.prototype.deal = function (data) {
-            var id = data.whichOne;
-            var seatId = MRoom.getSeatId(data.pos);
-            this.mPlayerArea.dealCard(seatId, data, this.dealType);
-        };
-        //收牌
-        MRoom.prototype.recoverCards = function () {
-            this.mPlayerArea.recoverCards();
-        };
-        //关闭定时器
-        MRoom.prototype.stopClock = function (pos) {
-            if (pos === 3) {
-                this.view.stopClock();
+            FUI_btn_reconnect.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "btn_reconnect"));
+            };
+            FUI_btn_reconnect.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_lang_reconnect = (this.getChildAt(1));
+            };
+            FUI_btn_reconnect.URL = "ui://8oy4o0mbo4403d";
+            return FUI_btn_reconnect;
+        }(fairygui.GButton));
+        Game.FUI_btn_reconnect = FUI_btn_reconnect;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_btn_return = /** @class */ (function (_super) {
+            __extends(FUI_btn_return, _super);
+            function FUI_btn_return() {
+                return _super.call(this) || this;
             }
-            else {
-                this.mPlayer.stopClock(pos);
+            FUI_btn_return.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "btn_return"));
+            };
+            FUI_btn_return.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_lang_return = (this.getChildAt(1));
+            };
+            FUI_btn_return.URL = "ui://8oy4o0mbo4403f";
+            return FUI_btn_return;
+        }(fairygui.GButton));
+        Game.FUI_btn_return = FUI_btn_return;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_cancle = /** @class */ (function (_super) {
+            __extends(FUI_cancle, _super);
+            function FUI_cancle() {
+                return _super.call(this) || this;
             }
-        };
-        //庄家收保险
-        MRoom.prototype.pushInsuranceToBanker = function () {
-            if (!this.isInsuranceActionOver) {
-                this.isInsuranceActionOver = true;
-                for (var i = 1; i < 6; i++) {
-                    this.view.pushInsuranceToBanker(i);
-                }
+            FUI_cancle.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "cancle"));
+            };
+            FUI_cancle.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n5 = (this.getChildAt(0));
+                this.m_lang_cancle = (this.getChildAt(1));
+            };
+            FUI_cancle.URL = "ui://8oy4o0mbo4403r";
+            return FUI_cancle;
+        }(fairygui.GButton));
+        Game.FUI_cancle = FUI_cancle;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_close = /** @class */ (function (_super) {
+            __extends(FUI_close, _super);
+            function FUI_close() {
+                return _super.call(this) || this;
             }
-        };
-        //推送筹码到庄家
-        MRoom.prototype.pushBetToBanker = function () {
-            this.mPlayerArea.chipListToBanker(3, 0);
-            //this.mPlayerArea.chipListToBanker(pos,id);
-        };
-        //收到结算消息
-        MRoom.prototype.onGetResult = function (res) {
-            var data = res.result;
-            this.mPlayerArea.settlement(data);
-            Laya.timer.once(2000, this, function () {
-                for (var i = 0; i < data.length; i++) {
-                    var pos = MRoom.getSeatId(data[i].pos);
-                    this.view.showResult(pos, data[i].balance);
-                    this.mPlayer.setCoin(pos, data[i].chips);
-                    this.mBtnPlay.inStage(3);
-                }
-            });
-        };
-        //布局
-        MRoom.prototype.layout = function () {
-            if (this.view == null)
-                return;
-            this.mBtnPlay.layout();
-            this.mPlayerArea.layout();
-            this.viewBg.scaleMode = bx.ScaleMode.full;
-            this.viewBg.x = bx.Align.center;
-            this.viewBg.y = bx.Align.middle;
-            this.view.scaleMode = bx.ScaleMode.show_all;
-            this.view.x = bx.Align.center;
-            this.view.y = bx.Align.middle;
-            this.popupMatch.scaleMode = bx.ScaleMode.none;
-            this.popupMatch.x = bx.Align.center;
-            this.popupMatch.y = bx.Align.middle;
-            this.strategyBtn.x = bx.Align.right;
-            this.strategyBtn.y = bx.Align.top;
-            this.strategyBtn.marginTop = 20;
-            this.strategyBtn.marginRight = 20;
-            if (bx.Stage.getStage().isLandscape) {
-                this.view.width = this.viewBg.width = 1920;
-                this.view.height = this.viewBg.height = 1080;
-                this.view._view.m_h_v.selectedIndex = 0;
-                this.view._view.m_table.url = 'assets/room_dt/horizon/pz.png';
-                this.viewBg._view.m_roombg.url = 'assets/room_dt/horizon/bg.png';
-                var index = this.view._view.m_lightCtl.selectedIndex;
-                if (index > 15)
-                    this.view._view.m_lightCtl.selectedIndex = index - 15;
+            FUI_close.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "close"));
+            };
+            FUI_close.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+            };
+            FUI_close.URL = "ui://8oy4o0mbd83216";
+            return FUI_close;
+        }(fairygui.GButton));
+        Game.FUI_close = FUI_close;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_gm = /** @class */ (function (_super) {
+            __extends(FUI_gm, _super);
+            function FUI_gm() {
+                return _super.call(this) || this;
             }
-            else {
-                this.view.width = this.viewBg.width = 1080;
-                this.view.height = this.viewBg.height = 1920;
-                this.view._view.m_h_v.selectedIndex = 1;
-                this.view._view.m_table.url = 'assets/room_dt/vertical/pzs.png';
-                this.viewBg._view.m_roombg.url = 'assets/room_dt/vertical/bg2.png';
-                var index = this.view._view.m_lightCtl.selectedIndex;
-                if (index < 15 || index == 15)
-                    this.view._view.m_lightCtl.selectedIndex = index + 15;
+            FUI_gm.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "gm"));
+            };
+            FUI_gm.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n19 = (this.getChildAt(0));
+                this.m_keys = (this.getChildAt(1));
+                this.m_n0 = (this.getChildAt(2));
+                this.m_n1 = (this.getChildAt(3));
+                this.m_roomType = (this.getChildAt(4));
+                this.m_playerNumb = (this.getChildAt(5));
+                this.m_n2 = (this.getChildAt(6));
+                this.m_n3 = (this.getChildAt(7));
+                this.m_n4 = (this.getChildAt(8));
+                this.m_n9 = (this.getChildAt(9));
+                this.m_n10 = (this.getChildAt(10));
+                this.m_n16 = (this.getChildAt(11));
+                this.m_cards_0 = (this.getChildAt(12));
+                this.m_cards_1 = (this.getChildAt(13));
+                this.m_cards_2 = (this.getChildAt(14));
+                this.m_cards_3 = (this.getChildAt(15));
+                this.m_cards_4 = (this.getChildAt(16));
+                this.m_cards_5 = (this.getChildAt(17));
+                this.m_submit = (this.getChildAt(18));
+                this.m_close = (this.getChildAt(19));
+            };
+            FUI_gm.URL = "ui://8oy4o0mbo44037";
+            return FUI_gm;
+        }(fairygui.GComponent));
+        Game.FUI_gm = FUI_gm;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_gmKeys = /** @class */ (function (_super) {
+            __extends(FUI_gmKeys, _super);
+            function FUI_gmKeys() {
+                return _super.call(this) || this;
             }
-        };
-        MRoom.gap = 0; //服务器的pos 与本地实际座位号(自己的永远是3)之差 即gap = 自己的pos - 3
-        MRoom.cards = []; //保存本地座位的头两张牌
-        return MRoom;
-    }(bx.Framework));
-    point21.MRoom = MRoom;
-})(point21 || (point21 = {}));
-var point21;
-(function (point21) {
-    var MStrategy = /** @class */ (function (_super) {
-        __extends(MStrategy, _super);
-        function MStrategy() {
-            return _super.call(this) || this;
-        }
-        MStrategy.prototype.onRegister = function () {
-            _super.prototype.onRegister.call(this);
-            this.addNotices(point21.GConst.n_openStrategy, bx.GConst.n_screen_layout);
-        };
-        MStrategy.prototype.onUnregister = function () { _super.prototype.onUnregister.call(this); };
-        MStrategy.prototype.onNotice = function (notice, data) {
-            _super.prototype.onNotice.call(this, notice, data);
-            switch (notice) {
-                case point21.GConst.n_openStrategy:
-                    this.onShow();
-                    break;
-                case bx.GConst.n_screen_layout:
-                    this.layout();
-                    break;
+            FUI_gmKeys.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "gmKeys"));
+            };
+            FUI_gmKeys.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n6 = (this.getChildAt(0));
+                this.m_n7 = (this.getChildAt(1));
+                this.m_n8 = (this.getChildAt(2));
+                this.m_n9 = (this.getChildAt(3));
+                this.m_n10 = (this.getChildAt(4));
+                this.m_n11 = (this.getChildAt(5));
+                this.m_n12 = (this.getChildAt(6));
+                this.m_n13 = (this.getChildAt(7));
+                this.m_n14 = (this.getChildAt(8));
+                this.m_n15 = (this.getChildAt(9));
+                this.m_n16 = (this.getChildAt(10));
+                this.m_n17 = (this.getChildAt(11));
+                this.m_n18 = (this.getChildAt(12));
+                this.m_n19 = (this.getChildAt(13));
+                this.m_n20 = (this.getChildAt(14));
+                this.m_n21 = (this.getChildAt(15));
+                this.m_n22 = (this.getChildAt(16));
+                this.m_n23 = (this.getChildAt(17));
+                this.m_n24 = (this.getChildAt(18));
+                this.m_n25 = (this.getChildAt(19));
+                this.m_n26 = (this.getChildAt(20));
+                this.m_n27 = (this.getChildAt(21));
+                this.m_n28 = (this.getChildAt(22));
+                this.m_n29 = (this.getChildAt(23));
+                this.m_n30 = (this.getChildAt(24));
+                this.m_n31 = (this.getChildAt(25));
+                this.m_n32 = (this.getChildAt(26));
+                this.m_n33 = (this.getChildAt(27));
+                this.m_n34 = (this.getChildAt(28));
+                this.m_n35 = (this.getChildAt(29));
+                this.m_n36 = (this.getChildAt(30));
+                this.m_n37 = (this.getChildAt(31));
+                this.m_n38 = (this.getChildAt(32));
+                this.m_n39 = (this.getChildAt(33));
+                this.m_n40 = (this.getChildAt(34));
+                this.m_n41 = (this.getChildAt(35));
+                this.m_n42 = (this.getChildAt(36));
+                this.m_n43 = (this.getChildAt(37));
+                this.m_n44 = (this.getChildAt(38));
+                this.m_n45 = (this.getChildAt(39));
+                this.m_n46 = (this.getChildAt(40));
+                this.m_n47 = (this.getChildAt(41));
+                this.m_n48 = (this.getChildAt(42));
+                this.m_n49 = (this.getChildAt(43));
+                this.m_n50 = (this.getChildAt(44));
+                this.m_n51 = (this.getChildAt(45));
+                this.m_n52 = (this.getChildAt(46));
+                this.m_n53 = (this.getChildAt(47));
+                this.m_n54 = (this.getChildAt(48));
+                this.m_n55 = (this.getChildAt(49));
+                this.m_n56 = (this.getChildAt(50));
+                this.m_n57 = (this.getChildAt(51));
+            };
+            FUI_gmKeys.URL = "ui://8oy4o0mbl3ii3u";
+            return FUI_gmKeys;
+        }(fairygui.GComponent));
+        Game.FUI_gmKeys = FUI_gmKeys;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_gmSubmit = /** @class */ (function (_super) {
+            __extends(FUI_gmSubmit, _super);
+            function FUI_gmSubmit() {
+                return _super.call(this) || this;
             }
-        };
-        MStrategy.prototype.onShow = function () {
-            bx.UIManager.popup(this.strategyView, true, true);
-            this.layout();
-        };
-        MStrategy.prototype.onHide = function () {
-            bx.UIManager.closePopup(this.strategyView);
-        };
-        MStrategy.prototype.onClickClose = function () {
-            this.onHide();
-        };
-        MStrategy.prototype.layout = function () {
-            if (!this.strategyView)
-                return;
-            this.strategyView.scaleMode = bx.ScaleMode.show_all;
-            this.strategyView.x = bx.Align.center;
-            this.strategyView.y = bx.Align.middle;
-        };
-        __decorate([
-            bx.$singleton("bx.Stage")
-        ], MStrategy.prototype, "stage", void 0);
-        __decorate([
-            bx.$singleton("point21.VStrategy")
-        ], MStrategy.prototype, "strategyView", void 0);
-        return MStrategy;
-    }(bx.Framework));
-    point21.MStrategy = MStrategy;
-})(point21 || (point21 = {}));
-var point21;
-(function (point21) {
-    /*
-    *免转按钮模块
-    */
-    var MWalletBtn = /** @class */ (function (_super) {
-        __extends(MWalletBtn, _super);
-        function MWalletBtn() {
-            return _super.call(this) || this;
-        }
-        MWalletBtn.prototype.onRegister = function () {
-            _super.prototype.onRegister.call(this);
-            this.addNotices(point21.GConst.show_wallet_btn, point21.GConst.hide_wallet_btn, point21.GConst.set_wallet_btn, bx.GConst.n_login_success, bx.GConst.n_to_room_state, bx.GConst.n_to_hall_state, bx.GConst.n_screen_layout);
-        };
-        MWalletBtn.prototype.onUnregister = function () { _super.prototype.onUnregister.call(this); };
-        MWalletBtn.prototype.onNotice = function (notice, data) {
-            _super.prototype.onNotice.call(this, notice, data);
-            switch (notice) {
-                case point21.GConst.show_wallet_btn:
-                    this.showWalletBtn();
-                    break;
-                case point21.GConst.hide_wallet_btn:
-                    this.hideWalletBtn();
-                    break;
-                case point21.GConst.set_wallet_btn:
-                    this.setWalletBtnPos(data[0]);
-                    break;
-                case bx.GConst.n_login_success:
-                    this.showWalletBtn();
-                    break;
-                case bx.GConst.n_to_room_state:
-                    this.hideWalletBtn();
-                    break;
-                case bx.GConst.n_to_hall_state:
-                    this.showWalletBtn();
-                    break;
-                case bx.GConst.n_screen_layout:
-                    this.layout();
-                    break;
+            FUI_gmSubmit.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "gmSubmit"));
+            };
+            FUI_gmSubmit.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_n4 = (this.getChildAt(1));
+            };
+            FUI_gmSubmit.URL = "ui://8oy4o0mbo4403a";
+            return FUI_gmSubmit;
+        }(fairygui.GButton));
+        Game.FUI_gmSubmit = FUI_gmSubmit;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_hallBg_h = /** @class */ (function (_super) {
+            __extends(FUI_hallBg_h, _super);
+            function FUI_hallBg_h() {
+                return _super.call(this) || this;
             }
-        };
-        MWalletBtn.prototype.setWalletBtnPos = function (type) {
-        };
-        MWalletBtn.prototype.hideWalletBtn = function () {
-            if (this.view) {
-                this.view._view.offClick(this, this.onClickBtn);
-                bx.Stage.getStage().layerRemoveChild(this.view);
+            FUI_hallBg_h.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "hallBg_h"));
+            };
+            FUI_hallBg_h.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+            };
+            FUI_hallBg_h.URL = "ui://8oy4o0mbd832k";
+            return FUI_hallBg_h;
+        }(fairygui.GComponent));
+        Game.FUI_hallBg_h = FUI_hallBg_h;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_hallBg_v = /** @class */ (function (_super) {
+            __extends(FUI_hallBg_v, _super);
+            function FUI_hallBg_v() {
+                return _super.call(this) || this;
             }
-        };
-        MWalletBtn.prototype.showWalletBtn = function () {
-            if (bx.GData.playerInfo.isMainWallet) {
-                if (!this.view)
-                    this.view = new point21.VWalletBtn();
-                bx.Stage.getStage().layerAddChild(this.view, bx.GLayer.popup - 10);
-                this.layout();
-                this.view._view.onClick(this, this.onClickBtn);
+            FUI_hallBg_v.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "hallBg_v"));
+            };
+            FUI_hallBg_v.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+            };
+            FUI_hallBg_v.URL = "ui://8oy4o0mbd832m";
+            return FUI_hallBg_v;
+        }(fairygui.GComponent));
+        Game.FUI_hallBg_v = FUI_hallBg_v;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_headItem = /** @class */ (function (_super) {
+            __extends(FUI_headItem, _super);
+            function FUI_headItem() {
+                return _super.call(this) || this;
             }
-        };
-        MWalletBtn.prototype.onClickBtn = function () {
-            this.notify(bx.GConst.n_wallet_view_open_req);
-        };
-        MWalletBtn.prototype.layout = function () {
-            if (this.view == null)
-                return;
-            // let userAgent: string = navigator.userAgent.toLowerCase();
-            // let isApp: boolean = userAgent.indexOf("browser_type/android_app") != -1;//判断是否app内
-            // let isIphoneX: boolean = userAgent.indexOf("devcice_type/iphonex") != -1;//判断是否是iphoneX
-            // this.view.width = this.view.ui.width = 58;
-            // this.view.height = this.view.ui.height = 58;
-            if (bx.Stage.getStage().isLandscape) { //横屏
-                // if (isIphoneX) {
-                //     this.view.marginLeft = "2%";
-                //     this.view.marginTop = "20%";
-                // } else {
-                //     this.view.marginLeft = "2%";
-                //     this.view.marginTop = "14";
-                // }
-                this.view.marginLeft = "2%";
-                this.view.marginTop = "20%";
-                // this.view.marginBottom = "90%";
+            FUI_headItem.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "headItem"));
+            };
+            FUI_headItem.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n2 = (this.getChildAt(0));
+                this.m_head = (this.getChildAt(1));
+                this.m_n3 = (this.getChildAt(2));
+            };
+            FUI_headItem.URL = "ui://8oy4o0mbd83213";
+            return FUI_headItem;
+        }(fairygui.GButton));
+        Game.FUI_headItem = FUI_headItem;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_item1 = /** @class */ (function (_super) {
+            __extends(FUI_item1, _super);
+            function FUI_item1() {
+                return _super.call(this) || this;
             }
-            else {
-                // if (isIphoneX) {
-                //     this.view.marginLeft = "2%";
-                //     this.view.marginTop = "10%";
-                // } else {
-                this.view.marginLeft = "2%";
-                this.view.marginTop = "17%";
-                // }
-                // this.view.marginRight = "60%";
-                // this.view.marginBottom = "90%";
+            FUI_item1.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "item1"));
+            };
+            FUI_item1.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n23 = (this.getChildAt(0));
+                this.m_lang_name = (this.getChildAt(1));
+                this.m_n30 = (this.getChildAt(2));
+                this.m_lang_base = (this.getChildAt(3));
+                this.m_antes1 = (this.getChildAt(4));
+                this.m_lang_zhunru = (this.getChildAt(5));
+                this.m_lowest1 = (this.getChildAt(6));
+            };
+            FUI_item1.URL = "ui://8oy4o0mbcsvz5";
+            return FUI_item1;
+        }(fairygui.GButton));
+        Game.FUI_item1 = FUI_item1;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_item2 = /** @class */ (function (_super) {
+            __extends(FUI_item2, _super);
+            function FUI_item2() {
+                return _super.call(this) || this;
             }
-            // this.view.x =Number(bx.Align.left)+50;
-            // this.view.y =Number(bx.Align.top)-120;
-            // this.view.x ="left:+50";
-            // this.view.y ="top:-120";
-            this.view.x = bx.Align.left;
-            this.view.y = bx.Align.top;
-            this.view.scaleMode = bx.ScaleMode.none;
-        };
-        return MWalletBtn;
-    }(bx.Framework));
-    point21.MWalletBtn = MWalletBtn;
-})(point21 || (point21 = {}));
+            FUI_item2.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "item2"));
+            };
+            FUI_item2.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n30 = (this.getChildAt(0));
+                this.m_lang_name = (this.getChildAt(1));
+                this.m_n31 = (this.getChildAt(2));
+                this.m_lang_base = (this.getChildAt(3));
+                this.m_antes2 = (this.getChildAt(4));
+                this.m_lang_zhunru = (this.getChildAt(5));
+                this.m_lowest2 = (this.getChildAt(6));
+            };
+            FUI_item2.URL = "ui://8oy4o0mbmtpmh";
+            return FUI_item2;
+        }(fairygui.GButton));
+        Game.FUI_item2 = FUI_item2;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_item3 = /** @class */ (function (_super) {
+            __extends(FUI_item3, _super);
+            function FUI_item3() {
+                return _super.call(this) || this;
+            }
+            FUI_item3.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "item3"));
+            };
+            FUI_item3.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n30 = (this.getChildAt(0));
+                this.m_lang_name = (this.getChildAt(1));
+                this.m_n31 = (this.getChildAt(2));
+                this.m_lang_base = (this.getChildAt(3));
+                this.m_antes3 = (this.getChildAt(4));
+                this.m_lang_zhunru = (this.getChildAt(5));
+                this.m_lowest3 = (this.getChildAt(6));
+            };
+            FUI_item3.URL = "ui://8oy4o0mbmtpmi";
+            return FUI_item3;
+        }(fairygui.GButton));
+        Game.FUI_item3 = FUI_item3;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_item4 = /** @class */ (function (_super) {
+            __extends(FUI_item4, _super);
+            function FUI_item4() {
+                return _super.call(this) || this;
+            }
+            FUI_item4.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "item4"));
+            };
+            FUI_item4.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n30 = (this.getChildAt(0));
+                this.m_lang_name = (this.getChildAt(1));
+                this.m_n31 = (this.getChildAt(2));
+                this.m_lang_base = (this.getChildAt(3));
+                this.m_antes4 = (this.getChildAt(4));
+                this.m_lang_zhunru = (this.getChildAt(5));
+                this.m_lowest4 = (this.getChildAt(6));
+            };
+            FUI_item4.URL = "ui://8oy4o0mbmtpmj";
+            return FUI_item4;
+        }(fairygui.GButton));
+        Game.FUI_item4 = FUI_item4;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_leaveRoom = /** @class */ (function (_super) {
+            __extends(FUI_leaveRoom, _super);
+            function FUI_leaveRoom() {
+                return _super.call(this) || this;
+            }
+            FUI_leaveRoom.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "leaveRoom"));
+            };
+            FUI_leaveRoom.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n8 = (this.getChildAt(0));
+                this.m_tips = (this.getChildAt(1));
+                this.m_sure = (this.getChildAt(2));
+                this.m_cancle = (this.getChildAt(3));
+            };
+            FUI_leaveRoom.URL = "ui://8oy4o0mbo4403n";
+            return FUI_leaveRoom;
+        }(fairygui.GComponent));
+        Game.FUI_leaveRoom = FUI_leaveRoom;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_logo = /** @class */ (function (_super) {
+            __extends(FUI_logo, _super);
+            function FUI_logo() {
+                return _super.call(this) || this;
+            }
+            FUI_logo.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "logo"));
+            };
+            FUI_logo.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_ctl = this.getControllerAt(0);
+                this.m_logo = (this.getChildAt(0));
+            };
+            FUI_logo.URL = "ui://8oy4o0mbo4403t";
+            return FUI_logo;
+        }(fairygui.GComponent));
+        Game.FUI_logo = FUI_logo;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_musicBtn = /** @class */ (function (_super) {
+            __extends(FUI_musicBtn, _super);
+            function FUI_musicBtn() {
+                return _super.call(this) || this;
+            }
+            FUI_musicBtn.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "musicBtn"));
+            };
+            FUI_musicBtn.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_n4 = (this.getChildAt(1));
+            };
+            FUI_musicBtn.URL = "ui://8oy4o0mbd83232";
+            return FUI_musicBtn;
+        }(fairygui.GButton));
+        Game.FUI_musicBtn = FUI_musicBtn;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_musicSlider = /** @class */ (function (_super) {
+            __extends(FUI_musicSlider, _super);
+            function FUI_musicSlider() {
+                return _super.call(this) || this;
+            }
+            FUI_musicSlider.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "musicSlider"));
+            };
+            FUI_musicSlider.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+                this.m_bar = (this.getChildAt(1));
+                this.m_grip = (this.getChildAt(2));
+            };
+            FUI_musicSlider.URL = "ui://8oy4o0mbd8322x";
+            return FUI_musicSlider;
+        }(fairygui.GSlider));
+        Game.FUI_musicSlider = FUI_musicSlider;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_musicSlider_grip = /** @class */ (function (_super) {
+            __extends(FUI_musicSlider_grip, _super);
+            function FUI_musicSlider_grip() {
+                return _super.call(this) || this;
+            }
+            FUI_musicSlider_grip.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "musicSlider_grip"));
+            };
+            FUI_musicSlider_grip.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n0 = (this.getChildAt(0));
+            };
+            FUI_musicSlider_grip.URL = "ui://8oy4o0mbd83230";
+            return FUI_musicSlider_grip;
+        }(fairygui.GButton));
+        Game.FUI_musicSlider_grip = FUI_musicSlider_grip;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_player = /** @class */ (function (_super) {
+            __extends(FUI_player, _super);
+            function FUI_player() {
+                return _super.call(this) || this;
+            }
+            FUI_player.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "player"));
+            };
+            FUI_player.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_card1 = (this.getChildAt(0));
+                this.m_card2 = (this.getChildAt(1));
+                this.m_card3 = (this.getChildAt(2));
+                this.m_card4 = (this.getChildAt(3));
+                this.m_card5 = (this.getChildAt(4));
+                this.m_set = (this.getChildAt(5));
+            };
+            FUI_player.URL = "ui://8oy4o0mbo44039";
+            return FUI_player;
+        }(fairygui.GComponent));
+        Game.FUI_player = FUI_player;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_reconnect = /** @class */ (function (_super) {
+            __extends(FUI_reconnect, _super);
+            function FUI_reconnect() {
+                return _super.call(this) || this;
+            }
+            FUI_reconnect.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "reconnect"));
+            };
+            FUI_reconnect.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+                this.m_lang_title = (this.getChildAt(1));
+                this.m_tips = (this.getChildAt(2));
+                this.m_reconnect = (this.getChildAt(3));
+                this.m_return = (this.getChildAt(4));
+            };
+            FUI_reconnect.URL = "ui://8oy4o0mbo4403b";
+            return FUI_reconnect;
+        }(fairygui.GComponent));
+        Game.FUI_reconnect = FUI_reconnect;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_reconnectCircle = /** @class */ (function (_super) {
+            __extends(FUI_reconnectCircle, _super);
+            function FUI_reconnectCircle() {
+                return _super.call(this) || this;
+            }
+            FUI_reconnectCircle.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "reconnectCircle"));
+            };
+            FUI_reconnectCircle.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_lang_1 = (this.getChildAt(0));
+                this.m_circle = (this.getChildAt(1));
+                this.m_t0 = this.getTransitionAt(0);
+            };
+            FUI_reconnectCircle.URL = "ui://8oy4o0mbo4403h";
+            return FUI_reconnectCircle;
+        }(fairygui.GComponent));
+        Game.FUI_reconnectCircle = FUI_reconnectCircle;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_Roomitems = /** @class */ (function (_super) {
+            __extends(FUI_Roomitems, _super);
+            function FUI_Roomitems() {
+                return _super.call(this) || this;
+            }
+            FUI_Roomitems.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "Roomitems"));
+            };
+            FUI_Roomitems.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_h_v = this.getControllerAt(0);
+                this.m_item1 = (this.getChildAt(0));
+                this.m_item2 = (this.getChildAt(1));
+                this.m_item3 = (this.getChildAt(2));
+                this.m_item4 = (this.getChildAt(3));
+            };
+            FUI_Roomitems.URL = "ui://8oy4o0mbcsvz9";
+            return FUI_Roomitems;
+        }(fairygui.GComponent));
+        Game.FUI_Roomitems = FUI_Roomitems;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_saveHead = /** @class */ (function (_super) {
+            __extends(FUI_saveHead, _super);
+            function FUI_saveHead() {
+                return _super.call(this) || this;
+            }
+            FUI_saveHead.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "saveHead"));
+            };
+            FUI_saveHead.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n7 = (this.getChildAt(0));
+                this.m_lang_save = (this.getChildAt(1));
+            };
+            FUI_saveHead.URL = "ui://8oy4o0mbd83211";
+            return FUI_saveHead;
+        }(fairygui.GButton));
+        Game.FUI_saveHead = FUI_saveHead;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_set = /** @class */ (function (_super) {
+            __extends(FUI_set, _super);
+            function FUI_set() {
+                return _super.call(this) || this;
+            }
+            FUI_set.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "set"));
+            };
+            FUI_set.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n0 = (this.getChildAt(0));
+                this.m_lang_title = (this.getChildAt(1));
+                this.m_lang_music = (this.getChildAt(2));
+                this.m_slider_music = (this.getChildAt(3));
+                this.m_slider_sound = (this.getChildAt(4));
+                this.m_lang_sound = (this.getChildAt(5));
+                this.m_btn_music = (this.getChildAt(6));
+                this.m_btn_sound = (this.getChildAt(7));
+                this.m_close = (this.getChildAt(8));
+            };
+            FUI_set.URL = "ui://8oy4o0mbd8322v";
+            return FUI_set;
+        }(fairygui.GComponent));
+        Game.FUI_set = FUI_set;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_setGM = /** @class */ (function (_super) {
+            __extends(FUI_setGM, _super);
+            function FUI_setGM() {
+                return _super.call(this) || this;
+            }
+            FUI_setGM.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "setGM"));
+            };
+            FUI_setGM.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_n4 = (this.getChildAt(1));
+            };
+            FUI_setGM.URL = "ui://8oy4o0mbl3ii3w";
+            return FUI_setGM;
+        }(fairygui.GButton));
+        Game.FUI_setGM = FUI_setGM;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var FUI_sure = /** @class */ (function (_super) {
+            __extends(FUI_sure, _super);
+            function FUI_sure() {
+                return _super.call(this) || this;
+            }
+            FUI_sure.createInstance = function () {
+                return (fairygui.UIPackage.createObject("Game", "sure"));
+            };
+            FUI_sure.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n3 = (this.getChildAt(0));
+                this.m_lang_sure = (this.getChildAt(1));
+            };
+            FUI_sure.URL = "ui://8oy4o0mbo4403p";
+            return FUI_sure;
+        }(fairygui.GButton));
+        Game.FUI_sure = FUI_sure;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var Game;
+    (function (Game) {
+        var GameBinder = /** @class */ (function () {
+            function GameBinder() {
+            }
+            GameBinder.bindAll = function () {
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item1.URL, Game.FUI_item1);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_Roomitems.URL, Game.FUI_Roomitems);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_saveHead.URL, Game.FUI_saveHead);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_headItem.URL, Game.FUI_headItem);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_close.URL, Game.FUI_close);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_set.URL, Game.FUI_set);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_musicSlider.URL, Game.FUI_musicSlider);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_musicSlider_grip.URL, Game.FUI_musicSlider_grip);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_musicBtn.URL, Game.FUI_musicBtn);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hallBg_h.URL, Game.FUI_hallBg_h);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hallBg_v.URL, Game.FUI_hallBg_v);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_brief.URL, Game.FUI_brief);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_briefPopup.URL, Game.FUI_briefPopup);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_gmKeys.URL, Game.FUI_gmKeys);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_setGM.URL, Game.FUI_setGM);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_AddWalletBtn.URL, Game.FUI_AddWalletBtn);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item2.URL, Game.FUI_item2);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item3.URL, Game.FUI_item3);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item4.URL, Game.FUI_item4);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_gm.URL, Game.FUI_gm);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_player.URL, Game.FUI_player);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_gmSubmit.URL, Game.FUI_gmSubmit);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_reconnect.URL, Game.FUI_reconnect);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_btn_reconnect.URL, Game.FUI_btn_reconnect);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_btn_return.URL, Game.FUI_btn_return);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_reconnectCircle.URL, Game.FUI_reconnectCircle);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_leaveRoom.URL, Game.FUI_leaveRoom);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_sure.URL, Game.FUI_sure);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_cancle.URL, Game.FUI_cancle);
+                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_logo.URL, Game.FUI_logo);
+            };
+            return GameBinder;
+        }());
+        Game.GameBinder = GameBinder;
+    })(Game = fui.Game || (fui.Game = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var help;
+    (function (help) {
+        var FUI_help = /** @class */ (function (_super) {
+            __extends(FUI_help, _super);
+            function FUI_help() {
+                return _super.call(this) || this;
+            }
+            FUI_help.createInstance = function () {
+                return (fairygui.UIPackage.createObject("help", "help"));
+            };
+            FUI_help.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_n1 = (this.getChildAt(0));
+                this.m_lang_title = (this.getChildAt(1));
+                this.m_tab = (this.getChildAt(2));
+                this.m_info = (this.getChildAt(3));
+                this.m_close = (this.getChildAt(4));
+            };
+            FUI_help.URL = "ui://txmqgqddujig4";
+            return FUI_help;
+        }(fairygui.GComponent));
+        help.FUI_help = FUI_help;
+    })(help = fui.help || (fui.help = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var help;
+    (function (help) {
+        var FUI_help_info = /** @class */ (function (_super) {
+            __extends(FUI_help_info, _super);
+            function FUI_help_info() {
+                return _super.call(this) || this;
+            }
+            FUI_help_info.createInstance = function () {
+                return (fairygui.UIPackage.createObject("help", "help_info"));
+            };
+            FUI_help_info.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_lang_info = (this.getChildAt(0));
+            };
+            FUI_help_info.URL = "ui://txmqgqddujig6";
+            return FUI_help_info;
+        }(fairygui.GComponent));
+        help.FUI_help_info = FUI_help_info;
+    })(help = fui.help || (fui.help = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var help;
+    (function (help) {
+        var FUI_help_tab = /** @class */ (function (_super) {
+            __extends(FUI_help_tab, _super);
+            function FUI_help_tab() {
+                return _super.call(this) || this;
+            }
+            FUI_help_tab.createInstance = function () {
+                return (fairygui.UIPackage.createObject("help", "help_tab"));
+            };
+            FUI_help_tab.prototype.constructFromXML = function (xml) {
+                _super.prototype.constructFromXML.call(this, xml);
+                this.m_button = this.getControllerAt(0);
+                this.m_n6 = (this.getChildAt(0));
+                this.m_n7 = (this.getChildAt(1));
+                this.m_lang_tab = (this.getChildAt(2));
+            };
+            FUI_help_tab.URL = "ui://txmqgqddujig5";
+            return FUI_help_tab;
+        }(fairygui.GButton));
+        help.FUI_help_tab = FUI_help_tab;
+    })(help = fui.help || (fui.help = {}));
+})(fui || (fui = {}));
+/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
+var fui;
+(function (fui) {
+    var help;
+    (function (help) {
+        var helpBinder = /** @class */ (function () {
+            function helpBinder() {
+            }
+            helpBinder.bindAll = function () {
+                fairygui.UIObjectFactory.setPackageItemExtension(help.FUI_help.URL, help.FUI_help);
+                fairygui.UIObjectFactory.setPackageItemExtension(help.FUI_help_tab.URL, help.FUI_help_tab);
+                fairygui.UIObjectFactory.setPackageItemExtension(help.FUI_help_info.URL, help.FUI_help_info);
+            };
+            return helpBinder;
+        }());
+        help.helpBinder = helpBinder;
+    })(help = fui.help || (fui.help = {}));
+})(fui || (fui = {}));
 var point21;
 (function (point21) {
     var VBtnPlay = /** @class */ (function () {
@@ -1800,7 +1221,7 @@ var point21;
     var VMatch = /** @class */ (function (_super) {
         __extends(VMatch, _super);
         function VMatch() {
-            var _this = _super.call(this, 'fui.room.FUI_match', "room_") || this;
+            var _this = _super.call(this, 'fui.room.FUI_match', "room_dt") || this;
             _this.str = '';
             _this._view = _this.ui;
             _this.oldStr = _this._view.m_lang_word.text;
@@ -1875,20 +1296,20 @@ var point21;
         //设置玩家信息
         VPlayer.prototype.setPlayer = function (info) {
             this.show();
-            this.playerName = info.name;
+            var name = info.name;
+            if (name.length > 8) {
+                name = name.substr(0, 8) + '...';
+            }
+            this.playerName = name;
             var headUrl = point21.Utils.getHeadUrl(info.avatar);
             if (this._view) {
                 this._view.m_head.url = headUrl;
-                var name_1 = info.name;
-                if (name_1.length > 8) {
-                    name_1 = name_1.substr(0, 8) + '...';
-                }
-                this._view.m_nick.text = name_1;
+                this._view.m_nick.text = name;
                 this.setCoin(info.chips);
             }
             else {
                 this._viewSelf.m_headComp.m_head.url = headUrl;
-                this._viewSelf.m_nick.text = info.name;
+                this._viewSelf.m_nick.text = name;
                 this.setCoin(info.chips);
             }
         };
@@ -2036,12 +1457,20 @@ var point21;
                 this.doubleSignVisible(false, 1);
                 this.doubleSignVisible(false, 2);
                 this.insuranceSignVisible(false);
+                this.locationChiplists();
             }
             else {
                 this.setPoint(0);
                 this.removeChildrenFromList();
                 this.setCardTypeTipVisible(false);
             }
+        };
+        //强制使筹码列表恢复原位
+        VPlayerArea.prototype.locationChiplists = function () {
+            var l0 = this._view.m_chipsList0_hide, l1 = this._view.m_chipsList1_hide, l2 = this._view.m_chipsList2_hide;
+            this._view.m_chipsList0.setXY(l0.x, l0.y);
+            this._view.m_chipsList1.setXY(l1.x, l1.y);
+            this._view.m_chipsList2.setXY(l2.x, l2.y);
         };
         /////////////////以下为两种类型 公共部分///////////////
         //设置点数(左 中 右 庄)
@@ -2198,22 +1627,22 @@ var point21;
         };
         //牌型和点数设置
         VPlayerArea.prototype.setCardAndPoint = function (type, playSound, whichOne, min, max) {
-            if (type == 3) { //五小龙
+            if (type == 25) { //五小龙
                 playSound && SoundManager.instance.playSound(AssetsUtils.getSoundUrl('blackjack'));
                 this.setCardTypeTipVisible(true, whichOne, 1);
                 this.setPoint(0, whichOne);
             }
-            else if (type == 4) { //黑杰克
+            else if (type == 26) { //黑杰克
                 playSound && SoundManager.instance.playSound(AssetsUtils.getSoundUrl('blackjack'));
                 this.setCardTypeTipVisible(true, whichOne, 2);
                 this.setPoint(0, whichOne);
             }
-            else if (type == 0) { //爆牌
+            else if (type == 22) { //爆牌
                 playSound && SoundManager.instance.playSound(AssetsUtils.getSoundUrl('boom'));
                 this.setCardTypeTipVisible(true, whichOne, 0);
                 this.setPoint(22, whichOne);
             }
-            else if (type == 1 || type == 2) { //其他点数
+            else { //其他点数
                 if (min == max) {
                     this.setPoint(min, whichOne);
                 }
@@ -2756,11 +2185,19 @@ var point21;
             target.visible = true;
             if (value >= 0) {
                 target.m_resultCtl.selectedIndex = 1;
-                target.m_win.text = '+' + bx.GData.formatNumber(value);
+                //target.m_win.text = '+' + bx.GData.formatNumber(value);
+                if (!target.m_win['runRoll']) {
+                    new Tools.NumberEffect(target.m_win).addRollEffect();
+                }
+                target.m_win['runRoll'](bx.GData.formatNumber(value));
             }
             else {
                 target.m_resultCtl.selectedIndex = 0;
-                target.m_fail.text = bx.GData.formatNumber(value);
+                //target.m_fail.text = bx.GData.formatNumber(value);
+                if (!target.m_fail['runRoll']) {
+                    new Tools.NumberEffect(target.m_fail).addRollEffect();
+                }
+                target.m_fail['runRoll'](bx.GData.formatNumber(value));
             }
         };
         //倒计时
@@ -2844,9 +2281,6 @@ var point21;
             this._view['m_namebg' + pos].visible = state;
             this._view['m_name' + pos].visible = state;
             if (state && name) {
-                if (name.length > 8) {
-                    name = name.substr(0) + '...';
-                }
                 this._view['m_name' + pos].text = name;
             }
         };
@@ -2916,1259 +2350,1581 @@ var point21;
     }(bx.Layout));
     point21.VWalletBtn = VWalletBtn;
 })(point21 || (point21 = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var help;
-    (function (help) {
-        var FUI_help = /** @class */ (function (_super) {
-            __extends(FUI_help, _super);
-            function FUI_help() {
-                return _super.call(this) || this;
+var point21;
+(function (point21) {
+    var MBtnPlay = /** @class */ (function () {
+        function MBtnPlay() {
+            this.isMouseDown = false;
+            this.sliderHidden = true; //滑动条是否是隐藏状态
+            this.currentBetPos = 3; //当前下注位置,默认在中间位置
+            this.bet_max = 300; //最大注
+            this.bet_min = 3; //最小注
+            this.activyId = 0; //当前正在操作的牌（左中右）
+        }
+        MBtnPlay.prototype.requestGS = function () {
+            var params = [];
+            for (var _i = 0; _i < arguments.length; _i++) {
+                params[_i] = arguments[_i];
             }
-            FUI_help.createInstance = function () {
-                return (fairygui.UIPackage.createObject("help", "help"));
-            };
-            FUI_help.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n1 = (this.getChildAt(0));
-                this.m_lang_title = (this.getChildAt(1));
-                this.m_tab = (this.getChildAt(2));
-                this.m_info = (this.getChildAt(3));
-                this.m_close = (this.getChildAt(4));
-            };
-            FUI_help.URL = "ui://txmqgqddujig4";
-            return FUI_help;
-        }(fairygui.GComponent));
-        help.FUI_help = FUI_help;
-    })(help = fui.help || (fui.help = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var help;
-    (function (help) {
-        var FUI_help_info = /** @class */ (function (_super) {
-            __extends(FUI_help_info, _super);
-            function FUI_help_info() {
-                return _super.call(this) || this;
+            var _a;
+            (_a = bx.Framework).notify.apply(_a, [bx.GConst.n_gs_send].concat(params));
+        };
+        MBtnPlay.prototype.instanceView = function (v) {
+            this.view = new point21.VBtnPlay(v);
+            this.bindEvent();
+        };
+        //重置
+        MBtnPlay.prototype.reset = function () {
+            this.view.hide();
+        };
+        //设置底注 最大注 最小注
+        MBtnPlay.prototype.setBaseBet = function (arr) {
+            this.bet_max = arr[1] / 100;
+            this.bet_min = arr[0] / 100;
+            //if(MRoom.selfMoney < this.bet_max) this.bet_max = Math.floor(MRoom.selfMoney);
+            this.view.setBaseBet(this.bet_max, this.bet_min);
+        };
+        //绑定事件
+        MBtnPlay.prototype.bindEvent = function () {
+            var _view = this.view._view;
+            _view.m_minBet.onClick(this, this.onClick_minBet);
+            _view.m_maxBet.onClick(this, this.onClick_maxBet);
+            _view.m_bet.onClick(this, this.onClick_bet);
+            _view.m_continueBet.onClick(this, this.onClick_continueBet);
+            _view.m_insurance.onClick(this, this.onClick_insurance);
+            _view.m_insuranceNot.onClick(this, this.onClick_insuranceNot);
+            _view.m_stopCard.onClick(this, this.onClick_stopCard);
+            _view.m_needCard.onClick(this, this.onClick_needCard);
+            _view.m_divideCard.onClick(this, this.onClick_divideCard);
+            _view.m_double.onClick(this, this.onClick_double);
+            _view.m_continueGame.onClick(this, this.onClick_continueGame);
+            var slider = this.view._view.m_betSlider;
+            slider.m_grip.on(Laya.Event.MOUSE_DOWN, this, this.mouseDown);
+            slider.m_title.on(Laya.Event.MOUSE_DOWN, this, this.mouseDown);
+            slider.on(Laya.Event.MOUSE_MOVE, this, this.mouseMove);
+            slider.on(Laya.Event.MOUSE_UP, this, this.mouseUp);
+            slider.on(Laya.Event.MOUSE_OUT, this, this.mouseOut);
+            slider.m_bg.onClick(this, this.mouseClick);
+        };
+        //进入某个行为集(0:下注类，1:要牌类，2：保险类，3：继续游戏)
+        MBtnPlay.prototype.inStage = function (stage) {
+            this.view.show(stage);
+            if (stage === 0) {
+                this.view.setSliderVisible(false);
+                this.sliderHidden = true;
+                this.currentBetPos = 3;
+                this.showAsBetComplete = false;
+                if (!this.view.betValue || !this.isEnoughMoney)
+                    this.view.btnUnable('continueBet');
+                this.view.setContinueBetContent(0);
+                if (point21.MRoom.selfMoney < this.bet_min) {
+                    this.view.btnUnable('minBet');
+                    this.view.btnUnable('maxBet');
+                    this.view.btnUnable('bet');
+                    this.view.btnUnable('continueBet');
+                }
+                else if (this.view.betValue && point21.MRoom.selfMoney < this.view.betValue) {
+                    this.view.btnUnable('continueBet');
+                }
             }
-            FUI_help_info.createInstance = function () {
-                return (fairygui.UIPackage.createObject("help", "help_info"));
-            };
-            FUI_help_info.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_lang_info = (this.getChildAt(0));
-            };
-            FUI_help_info.URL = "ui://txmqgqddujig6";
-            return FUI_help_info;
-        }(fairygui.GComponent));
-        help.FUI_help_info = FUI_help_info;
-    })(help = fui.help || (fui.help = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var help;
-    (function (help) {
-        var FUI_help_tab = /** @class */ (function (_super) {
-            __extends(FUI_help_tab, _super);
-            function FUI_help_tab() {
-                return _super.call(this) || this;
+            else if (stage == 1) {
+                if (this.card1 && (this.card1 % 16 == this.card2 % 16) && (this.activyId == 0)) {
+                    this.view.btnEnable('divideCard');
+                }
+                else {
+                    this.view.btnUnable('divideCard');
+                }
+                if (!this.isEnoughMoney) {
+                    this.view.btnUnable('divideCard');
+                    this.view.btnUnable('double');
+                }
             }
-            FUI_help_tab.createInstance = function () {
-                return (fairygui.UIPackage.createObject("help", "help_tab"));
-            };
-            FUI_help_tab.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n6 = (this.getChildAt(0));
-                this.m_n7 = (this.getChildAt(1));
-                this.m_lang_tab = (this.getChildAt(2));
-            };
-            FUI_help_tab.URL = "ui://txmqgqddujig5";
-            return FUI_help_tab;
-        }(fairygui.GButton));
-        help.FUI_help_tab = FUI_help_tab;
-    })(help = fui.help || (fui.help = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var help;
-    (function (help) {
-        var helpBinder = /** @class */ (function () {
-            function helpBinder() {
+            else if (stage == 2) {
+                var insuranceMoney = this.view.betValue / 2;
+                if (point21.MRoom.selfMoney < insuranceMoney) {
+                    this.view.btnUnable('insurance');
+                }
             }
-            helpBinder.bindAll = function () {
-                fairygui.UIObjectFactory.setPackageItemExtension(help.FUI_help.URL, help.FUI_help);
-                fairygui.UIObjectFactory.setPackageItemExtension(help.FUI_help_tab.URL, help.FUI_help_tab);
-                fairygui.UIObjectFactory.setPackageItemExtension(help.FUI_help_info.URL, help.FUI_help_info);
-            };
-            return helpBinder;
-        }());
-        help.helpBinder = helpBinder;
-    })(help = fui.help || (fui.help = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_AddWalletBtn = /** @class */ (function (_super) {
-            __extends(FUI_AddWalletBtn, _super);
-            function FUI_AddWalletBtn() {
-                return _super.call(this) || this;
+        };
+        /**
+         * 判断当前余额是否大于当前下注金额
+         */
+        MBtnPlay.prototype.isEnoughMoney = function () {
+            return point21.MRoom.selfMoney > this.view.betValue;
+        };
+        //设置cards
+        MBtnPlay.prototype.setCards = function (pos) {
+            for (var _i = 0, _a = point21.MRoom.cards; _i < _a.length; _i++) {
+                var item = _a[_i];
+                if (item.pos == pos) {
+                    this.card1 = item.value[0];
+                    this.card2 = item.value[1];
+                }
             }
-            FUI_AddWalletBtn.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "AddWalletBtn"));
-            };
-            FUI_AddWalletBtn.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-            };
-            FUI_AddWalletBtn.URL = "ui://8oy4o0mbl3ii3x";
-            return FUI_AddWalletBtn;
-        }(fairygui.GComponent));
-        Game.FUI_AddWalletBtn = FUI_AddWalletBtn;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_brief = /** @class */ (function (_super) {
-            __extends(FUI_brief, _super);
-            function FUI_brief() {
-                return _super.call(this) || this;
+        };
+        //按下
+        MBtnPlay.prototype.mouseDown = function () {
+            Laya.Mouse.cursor = 'pointer';
+            this.isMouseDown = true;
+            this.view.getMouseRange();
+        };
+        //移动
+        MBtnPlay.prototype.mouseMove = function (e) {
+            if (this.isMouseDown) {
+                this.view.setSliderOnBet();
             }
-            FUI_brief.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "brief"));
-            };
-            FUI_brief.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_h_v = this.getControllerAt(0);
-                this.m_avatar = (this.getChildAt(0));
-                this.m_n4 = (this.getChildAt(1));
-                this.m_nickname = (this.getChildAt(2));
-                this.m_n5 = (this.getChildAt(3));
-                this.m_n8 = (this.getChildAt(4));
-                this.m_coin = (this.getChildAt(5));
-            };
-            FUI_brief.URL = "ui://8oy4o0mbd832p";
-            return FUI_brief;
-        }(fairygui.GComponent));
-        Game.FUI_brief = FUI_brief;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_briefPopup = /** @class */ (function (_super) {
-            __extends(FUI_briefPopup, _super);
-            function FUI_briefPopup() {
-                return _super.call(this) || this;
+        };
+        //抬起
+        MBtnPlay.prototype.mouseUp = function () {
+            Laya.Mouse.cursor = 'default';
+            this.isMouseDown = false;
+        };
+        //移出
+        MBtnPlay.prototype.mouseOut = function () {
+            Laya.Mouse.cursor = 'default';
+            this.isMouseDown = false;
+        };
+        //点击
+        MBtnPlay.prototype.mouseClick = function () {
+            this.view.onClickSlider();
+        };
+        //点击下注按钮
+        MBtnPlay.prototype.onClick_bet = function () {
+            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('btn'));
+            if (this.sliderHidden) {
+                this.view.setSliderVisible(true);
+                this.sliderHidden = false;
+                this.view.betValue = this.bet_min;
+                this.view.setMaxOrMin(0);
             }
-            FUI_briefPopup.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "briefPopup"));
-            };
-            FUI_briefPopup.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n10 = (this.getChildAt(0));
-                this.m_lang_head = (this.getChildAt(1));
-                this.m_lang_des = (this.getChildAt(2));
-                this.m_btnSave = (this.getChildAt(3));
-                this.m_headList = (this.getChildAt(4));
-                this.m_close = (this.getChildAt(5));
-                this.m_current = (this.getChildAt(6));
-            };
-            FUI_briefPopup.URL = "ui://8oy4o0mbd832w";
-            return FUI_briefPopup;
-        }(fairygui.GComponent));
-        Game.FUI_briefPopup = FUI_briefPopup;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_btn_reconnect = /** @class */ (function (_super) {
-            __extends(FUI_btn_reconnect, _super);
-            function FUI_btn_reconnect() {
-                return _super.call(this) || this;
+            else {
+                this.bet_req();
             }
-            FUI_btn_reconnect.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "btn_reconnect"));
-            };
-            FUI_btn_reconnect.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_lang_reconnect = (this.getChildAt(1));
-            };
-            FUI_btn_reconnect.URL = "ui://8oy4o0mbo4403d";
-            return FUI_btn_reconnect;
-        }(fairygui.GButton));
-        Game.FUI_btn_reconnect = FUI_btn_reconnect;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_btn_return = /** @class */ (function (_super) {
-            __extends(FUI_btn_return, _super);
-            function FUI_btn_return() {
-                return _super.call(this) || this;
+        };
+        //发起下注请求
+        MBtnPlay.prototype.bet_req = function () {
+            var req = {};
+            req.op = (this.currentBetPos === 3) ? 1 : 2;
+            req.value = [this.view.betValue * 100];
+            if (this.currentBetPos != 3)
+                req.value.unshift(point21.MRoom.getIdOnSever(this.currentBetPos));
+            this.requestGS(protos.CCMD.userOperationReq, req);
+        };
+        //确定下注 响应
+        MBtnPlay.prototype.resp_bet = function () {
+            this.view.setSliderVisible(false);
+            this.sliderHidden = true;
+            this.view.btnEnable('continueBet');
+            this.showAsBetComplete = true;
+            this.view.setContinueBetContent(1);
+            this.afterBet();
+        };
+        //点击最小注按钮
+        MBtnPlay.prototype.onClick_minBet = function () {
+            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('btn'));
+            this.view.betValue = this.bet_min;
+            this.view.setMaxOrMin(0);
+            this.bet_req();
+        };
+        //点击最大注按钮
+        MBtnPlay.prototype.onClick_maxBet = function () {
+            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('btn'));
+            this.view.betValue = this.bet_max;
+            this.view.setMaxOrMin(1);
+            this.bet_req();
+        };
+        //点击续压
+        MBtnPlay.prototype.onClick_continueBet = function () {
+            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('btn'));
+            if (!this.showAsBetComplete) {
+                this.bet_req();
             }
-            FUI_btn_return.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "btn_return"));
-            };
-            FUI_btn_return.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_lang_return = (this.getChildAt(1));
-            };
-            FUI_btn_return.URL = "ui://8oy4o0mbo4403f";
-            return FUI_btn_return;
-        }(fairygui.GButton));
-        Game.FUI_btn_return = FUI_btn_return;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_cancle = /** @class */ (function (_super) {
-            __extends(FUI_cancle, _super);
-            function FUI_cancle() {
-                return _super.call(this) || this;
+            else {
+                this.req_betComplete();
             }
-            FUI_cancle.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "cancle"));
-            };
-            FUI_cancle.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n5 = (this.getChildAt(0));
-                this.m_lang_cancle = (this.getChildAt(1));
-            };
-            FUI_cancle.URL = "ui://8oy4o0mbo4403r";
-            return FUI_cancle;
-        }(fairygui.GButton));
-        Game.FUI_cancle = FUI_cancle;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_close = /** @class */ (function (_super) {
-            __extends(FUI_close, _super);
-            function FUI_close() {
-                return _super.call(this) || this;
+        };
+        //发送下注完成
+        MBtnPlay.prototype.req_betComplete = function () {
+            var req = {};
+            req.op = 3;
+            this.requestGS(protos.CCMD.userOperationReq, req);
+        };
+        //下注后状态改变 前三个变灰
+        MBtnPlay.prototype.afterBet = function () {
+            this.view.btnUnable('minBet');
+            this.view.btnUnable('maxBet');
+            this.view.btnUnable('bet');
+        };
+        //下注前 状态恢复
+        MBtnPlay.prototype.beforeBet = function () {
+            this.view.btnEnable('minBet');
+            this.view.btnEnable('maxBet');
+            this.view.btnEnable('bet');
+        };
+        //点击买保险按钮
+        MBtnPlay.prototype.onClick_insurance = function () {
+            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('btn'));
+            var req = {};
+            req.op = 4;
+            req.value = [this.activyPos];
+            this.requestGS(protos.CCMD.userOperationReq, req);
+        };
+        //点击不买保险按钮
+        MBtnPlay.prototype.onClick_insuranceNot = function () {
+            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('btn'));
+            var req = {};
+            req.op = 5;
+            req.value = [this.activyPos];
+            this.requestGS(protos.CCMD.userOperationReq, req);
+        };
+        //点击停牌
+        MBtnPlay.prototype.onClick_stopCard = function () {
+            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('btn'));
+            var req = {};
+            req.op = 9;
+            req.value = [this.activyPos, this.activyId];
+            this.requestGS(protos.CCMD.userOperationReq, req);
+        };
+        //点击要牌
+        MBtnPlay.prototype.onClick_needCard = function () {
+            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('btn'));
+            var req = {};
+            req.op = 8;
+            req.value = [this.activyPos, this.activyId];
+            this.requestGS(protos.CCMD.userOperationReq, req);
+        };
+        //要牌响应
+        MBtnPlay.prototype.resp_needCard = function () {
+            this.view.btnUnable('divideCard');
+            this.view.btnUnable('double');
+        };
+        //点击分牌
+        MBtnPlay.prototype.onClick_divideCard = function () {
+            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('btn'));
+            var req = {};
+            req.op = 7;
+            req.value = [this.activyPos, this.activyId];
+            this.requestGS(protos.CCMD.userOperationReq, req);
+        };
+        //点击双倍
+        MBtnPlay.prototype.onClick_double = function () {
+            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('btn'));
+            var req = {};
+            req.op = 6;
+            req.value = [this.activyPos, this.activyId];
+            this.requestGS(protos.CCMD.userOperationReq, req);
+        };
+        //点击继续游戏
+        MBtnPlay.prototype.onClick_continueGame = function () {
+            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('btn'));
+            bx.Framework.notify(bx.GConst.n_set_room_type, this.roomType);
+            bx.Framework.notify(bx.GConst.n_click_continue_game_btn);
+        };
+        //隐藏视图
+        MBtnPlay.prototype.hideView = function () {
+            this.view.hide();
+        };
+        MBtnPlay.prototype.layout = function () {
+            if (bx.Stage.getStage().isLandscape) {
+                this.view._view.m_h_v.selectedIndex = 0;
             }
-            FUI_close.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "close"));
-            };
-            FUI_close.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-            };
-            FUI_close.URL = "ui://8oy4o0mbd83216";
-            return FUI_close;
-        }(fairygui.GButton));
-        Game.FUI_close = FUI_close;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_gm = /** @class */ (function (_super) {
-            __extends(FUI_gm, _super);
-            function FUI_gm() {
-                return _super.call(this) || this;
+            else {
+                this.view._view.m_h_v.selectedIndex = 1;
             }
-            FUI_gm.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "gm"));
-            };
-            FUI_gm.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n19 = (this.getChildAt(0));
-                this.m_keys = (this.getChildAt(1));
-                this.m_n0 = (this.getChildAt(2));
-                this.m_n1 = (this.getChildAt(3));
-                this.m_roomType = (this.getChildAt(4));
-                this.m_playerNumb = (this.getChildAt(5));
-                this.m_n2 = (this.getChildAt(6));
-                this.m_n3 = (this.getChildAt(7));
-                this.m_n4 = (this.getChildAt(8));
-                this.m_n9 = (this.getChildAt(9));
-                this.m_n10 = (this.getChildAt(10));
-                this.m_n16 = (this.getChildAt(11));
-                this.m_cards_0 = (this.getChildAt(12));
-                this.m_cards_1 = (this.getChildAt(13));
-                this.m_cards_2 = (this.getChildAt(14));
-                this.m_cards_3 = (this.getChildAt(15));
-                this.m_cards_4 = (this.getChildAt(16));
-                this.m_cards_5 = (this.getChildAt(17));
-                this.m_submit = (this.getChildAt(18));
-                this.m_close = (this.getChildAt(19));
-            };
-            FUI_gm.URL = "ui://8oy4o0mbo44037";
-            return FUI_gm;
-        }(fairygui.GComponent));
-        Game.FUI_gm = FUI_gm;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_gmKeys = /** @class */ (function (_super) {
-            __extends(FUI_gmKeys, _super);
-            function FUI_gmKeys() {
-                return _super.call(this) || this;
+        };
+        return MBtnPlay;
+    }());
+    point21.MBtnPlay = MBtnPlay;
+})(point21 || (point21 = {}));
+var xys;
+(function (xys) {
+    var MGM = /** @class */ (function (_super) {
+        __extends(MGM, _super);
+        function MGM() {
+            var _this = _super.call(this) || this;
+            _this.view = null;
+            _this.roomType = 0;
+            _this.view = new xys.VGM();
+            _this.bindEvent();
+            return _this;
+        }
+        MGM.prototype.onRegister = function () {
+            _super.prototype.onRegister.call(this);
+            this.addNotices(bx.GConst.n_screen_layout, bx.GConst.n_click_gm_btn, protos.CCMD.gmResp);
+        };
+        MGM.prototype.onUnregister = function () {
+            _super.prototype.onUnregister.call(this);
+        };
+        MGM.prototype.onNotice = function (notice, data) {
+            _super.prototype.onNotice.call(this, notice, data);
+            switch (notice) {
+                case bx.GConst.n_screen_layout:
+                    this.layout();
+                    break;
+                case bx.GConst.n_click_gm_btn:
+                    this.show();
+                    break;
+                case protos.CCMD.gmResp:
+                    this.submit_resp(data[0]);
+                    break;
             }
-            FUI_gmKeys.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "gmKeys"));
-            };
-            FUI_gmKeys.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n6 = (this.getChildAt(0));
-                this.m_n7 = (this.getChildAt(1));
-                this.m_n8 = (this.getChildAt(2));
-                this.m_n9 = (this.getChildAt(3));
-                this.m_n10 = (this.getChildAt(4));
-                this.m_n11 = (this.getChildAt(5));
-                this.m_n12 = (this.getChildAt(6));
-                this.m_n13 = (this.getChildAt(7));
-                this.m_n14 = (this.getChildAt(8));
-                this.m_n15 = (this.getChildAt(9));
-                this.m_n16 = (this.getChildAt(10));
-                this.m_n17 = (this.getChildAt(11));
-                this.m_n18 = (this.getChildAt(12));
-                this.m_n19 = (this.getChildAt(13));
-                this.m_n20 = (this.getChildAt(14));
-                this.m_n21 = (this.getChildAt(15));
-                this.m_n22 = (this.getChildAt(16));
-                this.m_n23 = (this.getChildAt(17));
-                this.m_n24 = (this.getChildAt(18));
-                this.m_n25 = (this.getChildAt(19));
-                this.m_n26 = (this.getChildAt(20));
-                this.m_n27 = (this.getChildAt(21));
-                this.m_n28 = (this.getChildAt(22));
-                this.m_n29 = (this.getChildAt(23));
-                this.m_n30 = (this.getChildAt(24));
-                this.m_n31 = (this.getChildAt(25));
-                this.m_n32 = (this.getChildAt(26));
-                this.m_n33 = (this.getChildAt(27));
-                this.m_n34 = (this.getChildAt(28));
-                this.m_n35 = (this.getChildAt(29));
-                this.m_n36 = (this.getChildAt(30));
-                this.m_n37 = (this.getChildAt(31));
-                this.m_n38 = (this.getChildAt(32));
-                this.m_n39 = (this.getChildAt(33));
-                this.m_n40 = (this.getChildAt(34));
-                this.m_n41 = (this.getChildAt(35));
-                this.m_n42 = (this.getChildAt(36));
-                this.m_n43 = (this.getChildAt(37));
-                this.m_n44 = (this.getChildAt(38));
-                this.m_n45 = (this.getChildAt(39));
-                this.m_n46 = (this.getChildAt(40));
-                this.m_n47 = (this.getChildAt(41));
-                this.m_n48 = (this.getChildAt(42));
-                this.m_n49 = (this.getChildAt(43));
-                this.m_n50 = (this.getChildAt(44));
-                this.m_n51 = (this.getChildAt(45));
-                this.m_n52 = (this.getChildAt(46));
-                this.m_n53 = (this.getChildAt(47));
-                this.m_n54 = (this.getChildAt(48));
-                this.m_n55 = (this.getChildAt(49));
-                this.m_n56 = (this.getChildAt(50));
-                this.m_n57 = (this.getChildAt(51));
-            };
-            FUI_gmKeys.URL = "ui://8oy4o0mbl3ii3u";
-            return FUI_gmKeys;
-        }(fairygui.GComponent));
-        Game.FUI_gmKeys = FUI_gmKeys;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_gmSubmit = /** @class */ (function (_super) {
-            __extends(FUI_gmSubmit, _super);
-            function FUI_gmSubmit() {
-                return _super.call(this) || this;
+        };
+        /**
+         * 显示
+        */
+        MGM.prototype.show = function () {
+            if (!bx.MSubLoad.hasLoaded(bx.FRoom.RES_NAME)) {
+                this.notify(bx.GConst.n_to_room_state);
             }
-            FUI_gmSubmit.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "gmSubmit"));
-            };
-            FUI_gmSubmit.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_n4 = (this.getChildAt(1));
-            };
-            FUI_gmSubmit.URL = "ui://8oy4o0mbo4403a";
-            return FUI_gmSubmit;
-        }(fairygui.GButton));
-        Game.FUI_gmSubmit = FUI_gmSubmit;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_hallBg_h = /** @class */ (function (_super) {
-            __extends(FUI_hallBg_h, _super);
-            function FUI_hallBg_h() {
-                return _super.call(this) || this;
+            this.view.reset();
+            this.stage.layerAddChild(this.view, bx.GLayer.popup);
+            this.layout();
+        };
+        /**
+         * 隐藏
+        */
+        MGM.prototype.hide = function () {
+            this.stage.layerRemoveChild(this.view);
+        };
+        /**
+         * 事件绑定
+        */
+        MGM.prototype.bindEvent = function () {
+            this.view.btn_close.onClick(this, this.hide);
+            this.view.btn_submit.onClick(this, this.submit_req);
+        };
+        /**
+         * 提交_请求
+        */
+        MGM.prototype.submit_req = function () {
+            var roomType = this.view.getRoomType(), playerNumb = this.view.getPlayerNumb(), cards = this.view.getCards();
+            var req = {};
+            req.roomType = roomType;
+            req.playerNum = playerNumb;
+            req.cardsList = cards;
+            this.requestGS(protos.CCMD.gmReq, req);
+            this.roomType = roomType;
+        };
+        /**
+         * 提交_响应
+        */
+        MGM.prototype.submit_resp = function (res) {
+            if (res.result == 1) {
+                this.hide();
+                this.notify(bx.GConst.n_to_room_state);
+                this.notify(bx.GConst.n_room_items_click, this.roomType);
             }
-            FUI_hallBg_h.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "hallBg_h"));
-            };
-            FUI_hallBg_h.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-            };
-            FUI_hallBg_h.URL = "ui://8oy4o0mbd832k";
-            return FUI_hallBg_h;
-        }(fairygui.GComponent));
-        Game.FUI_hallBg_h = FUI_hallBg_h;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_hallBg_v = /** @class */ (function (_super) {
-            __extends(FUI_hallBg_v, _super);
-            function FUI_hallBg_v() {
-                return _super.call(this) || this;
+            else {
+                alert('提交失败！');
             }
-            FUI_hallBg_v.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "hallBg_v"));
-            };
-            FUI_hallBg_v.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-            };
-            FUI_hallBg_v.URL = "ui://8oy4o0mbd832m";
-            return FUI_hallBg_v;
-        }(fairygui.GComponent));
-        Game.FUI_hallBg_v = FUI_hallBg_v;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_hall_help = /** @class */ (function (_super) {
-            __extends(FUI_hall_help, _super);
-            function FUI_hall_help() {
-                return _super.call(this) || this;
+        };
+        MGM.prototype.layout = function () {
+            this.view.x = bx.Align.center;
+            this.view.y = bx.Align.middle;
+            this.view.marginTop = "15%";
+            this.view.marginBottom = "15%";
+            this.view.marginLeft = "10%";
+            this.view.marginRight = "10%";
+            this.view.scaleMode = bx.ScaleMode.show_all;
+        };
+        __decorate([
+            bx.$singleton("bx.Stage")
+        ], MGM.prototype, "stage", void 0);
+        return MGM;
+    }(bx.Framework));
+    xys.MGM = MGM;
+})(xys || (xys = {}));
+var point21;
+(function (point21) {
+    var MMarquee = /** @class */ (function (_super) {
+        __extends(MMarquee, _super);
+        function MMarquee() {
+            return _super.call(this) || this;
+        }
+        MMarquee.prototype.onRegister = function () {
+            _super.prototype.onRegister.call(this);
+            this.addNotices(protos.CMD.bcast_msg_resp);
+        };
+        MMarquee.prototype.onUnregister = function () { _super.prototype.onUnregister.call(this); };
+        MMarquee.prototype.onNotice = function (notice, data) {
+            _super.prototype.onNotice.call(this, notice, data);
+            switch (notice) {
+                case protos.CMD.bcast_msg_resp:
+                    this.showMarquee(data[0]);
+                    break;
             }
-            FUI_hall_help.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "hall_help"));
-            };
-            FUI_hall_help.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n1 = (this.getChildAt(0));
-            };
-            FUI_hall_help.URL = "ui://8oy4o0mbd83226";
-            return FUI_hall_help;
-        }(fairygui.GButton));
-        Game.FUI_hall_help = FUI_hall_help;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_hall_home = /** @class */ (function (_super) {
-            __extends(FUI_hall_home, _super);
-            function FUI_hall_home() {
-                return _super.call(this) || this;
+        };
+        MMarquee.prototype.showMarquee = function (res) {
+            var data = res.msg;
+            var word;
+            var name = data.content[0].chars, room = data.content[1].number, value = data.content[2].number;
+            switch (room) {
+                case 1:
+                    room = bx.GData.getLanguage('201322');
+                    break;
+                case 2:
+                    room = bx.GData.getLanguage('201323');
+                    break;
+                case 3:
+                    room = bx.GData.getLanguage('201324');
+                    break;
+                case 4:
+                    room = bx.GData.getLanguage('201325');
+                    break;
             }
-            FUI_hall_home.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "hall_home"));
-            };
-            FUI_hall_home.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n4 = (this.getChildAt(0));
-            };
-            FUI_hall_home.URL = "ui://8oy4o0mbd83220";
-            return FUI_hall_home;
-        }(fairygui.GButton));
-        Game.FUI_hall_home = FUI_hall_home;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_hall_rep = /** @class */ (function (_super) {
-            __extends(FUI_hall_rep, _super);
-            function FUI_hall_rep() {
-                return _super.call(this) || this;
+            if (data.id == 1) { //牌型跑马灯
+                switch (value) {
+                    case 25:
+                        value = bx.GData.getLanguage('201320');
+                        break;
+                    case 26:
+                        value = bx.GData.getLanguage('201321');
+                        break;
+                }
+                word = bx.GData.getLanguage('201318').replace('${name}', name).replace('${room}', room).replace('${value}', value);
             }
-            FUI_hall_rep.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "hall_rep"));
-            };
-            FUI_hall_rep.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n1 = (this.getChildAt(0));
-            };
-            FUI_hall_rep.URL = "ui://8oy4o0mbd83224";
-            return FUI_hall_rep;
-        }(fairygui.GButton));
-        Game.FUI_hall_rep = FUI_hall_rep;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_hall_sound = /** @class */ (function (_super) {
-            __extends(FUI_hall_sound, _super);
-            function FUI_hall_sound() {
-                return _super.call(this) || this;
+            else if (data.id == 2) { //金币跑马灯
+                value = bx.GData.formatNumber(value) + bx.GData.getLanguage('201319');
+                word = bx.GData.getLanguage('201326').replace('${name}', name).replace('${room}', room).replace('${value}', value);
             }
-            FUI_hall_sound.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "hall_sound"));
-            };
-            FUI_hall_sound.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n1 = (this.getChildAt(0));
-            };
-            FUI_hall_sound.URL = "ui://8oy4o0mbd83228";
-            return FUI_hall_sound;
-        }(fairygui.GButton));
-        Game.FUI_hall_sound = FUI_hall_sound;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_headItem = /** @class */ (function (_super) {
-            __extends(FUI_headItem, _super);
-            function FUI_headItem() {
-                return _super.call(this) || this;
+            bx.Framework.notify(bx.GConst.n_broadcast_show, word);
+        };
+        return MMarquee;
+    }(bx.Framework));
+    point21.MMarquee = MMarquee;
+})(point21 || (point21 = {}));
+var point21;
+(function (point21) {
+    var MPlayer = /** @class */ (function () {
+        function MPlayer() {
+            this.views = [];
+        }
+        MPlayer.prototype.instanceView = function (v) {
+            var item;
+            for (var i = 0; i < v.length; i++) {
+                item = new point21.VPlayer(v[i], i);
+                this.views.push(item);
             }
-            FUI_headItem.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "headItem"));
-            };
-            FUI_headItem.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n2 = (this.getChildAt(0));
-                this.m_head = (this.getChildAt(1));
-                this.m_n3 = (this.getChildAt(2));
-            };
-            FUI_headItem.URL = "ui://8oy4o0mbd83213";
-            return FUI_headItem;
-        }(fairygui.GButton));
-        Game.FUI_headItem = FUI_headItem;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_item1 = /** @class */ (function (_super) {
-            __extends(FUI_item1, _super);
-            function FUI_item1() {
-                return _super.call(this) || this;
+        };
+        //重置
+        MPlayer.prototype.reset = function () {
+            for (var i = 0; i < this.views.length; i++) {
+                this.views[i].hide();
             }
-            FUI_item1.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "item1"));
-            };
-            FUI_item1.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n23 = (this.getChildAt(0));
-                this.m_lang_name = (this.getChildAt(1));
-                this.m_n30 = (this.getChildAt(2));
-                this.m_lang_base = (this.getChildAt(3));
-                this.m_antes1 = (this.getChildAt(4));
-                this.m_lang_zhunru = (this.getChildAt(5));
-                this.m_lowest1 = (this.getChildAt(6));
-            };
-            FUI_item1.URL = "ui://8oy4o0mbcsvz5";
-            return FUI_item1;
-        }(fairygui.GButton));
-        Game.FUI_item1 = FUI_item1;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_item2 = /** @class */ (function (_super) {
-            __extends(FUI_item2, _super);
-            function FUI_item2() {
-                return _super.call(this) || this;
+        };
+        //重连 房间信息
+        MPlayer.prototype.recRoomInfo = function (res) {
+            var index;
+            for (var i = 0; i < res.length; i++) {
+                index = point21.MRoom.getSeatId(res[i].pos);
+                this.views[index - 1].setPlayer(res[i]);
             }
-            FUI_item2.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "item2"));
-            };
-            FUI_item2.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n30 = (this.getChildAt(0));
-                this.m_lang_name = (this.getChildAt(1));
-                this.m_n31 = (this.getChildAt(2));
-                this.m_lang_base = (this.getChildAt(3));
-                this.m_antes2 = (this.getChildAt(4));
-                this.m_lang_zhunru = (this.getChildAt(5));
-                this.m_lowest2 = (this.getChildAt(6));
-            };
-            FUI_item2.URL = "ui://8oy4o0mbmtpmh";
-            return FUI_item2;
-        }(fairygui.GButton));
-        Game.FUI_item2 = FUI_item2;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_item3 = /** @class */ (function (_super) {
-            __extends(FUI_item3, _super);
-            function FUI_item3() {
-                return _super.call(this) || this;
+        };
+        //设置玩家信息并显示
+        MPlayer.prototype.setPlayerInfo = function (data) {
+            var index;
+            for (var i = 0; i < data.length; i++) {
+                index = point21.MRoom.getSeatId(data[i].pos);
+                this.views[index - 1].setPlayer(data[i]);
             }
-            FUI_item3.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "item3"));
-            };
-            FUI_item3.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n30 = (this.getChildAt(0));
-                this.m_lang_name = (this.getChildAt(1));
-                this.m_n31 = (this.getChildAt(2));
-                this.m_lang_base = (this.getChildAt(3));
-                this.m_antes3 = (this.getChildAt(4));
-                this.m_lang_zhunru = (this.getChildAt(5));
-                this.m_lowest3 = (this.getChildAt(6));
-            };
-            FUI_item3.URL = "ui://8oy4o0mbmtpmi";
-            return FUI_item3;
-        }(fairygui.GButton));
-        Game.FUI_item3 = FUI_item3;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_item4 = /** @class */ (function (_super) {
-            __extends(FUI_item4, _super);
-            function FUI_item4() {
-                return _super.call(this) || this;
+        };
+        //进入阶段,开始倒计时
+        MPlayer.prototype.startAllClock = function (time) {
+            for (var _i = 0, _a = this.views; _i < _a.length; _i++) {
+                var item = _a[_i];
+                item.timeCircleStart(time);
             }
-            FUI_item4.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "item4"));
-            };
-            FUI_item4.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n30 = (this.getChildAt(0));
-                this.m_lang_name = (this.getChildAt(1));
-                this.m_n31 = (this.getChildAt(2));
-                this.m_lang_base = (this.getChildAt(3));
-                this.m_antes4 = (this.getChildAt(4));
-                this.m_lang_zhunru = (this.getChildAt(5));
-                this.m_lowest4 = (this.getChildAt(6));
-            };
-            FUI_item4.URL = "ui://8oy4o0mbmtpmj";
-            return FUI_item4;
-        }(fairygui.GButton));
-        Game.FUI_item4 = FUI_item4;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_leaveRoom = /** @class */ (function (_super) {
-            __extends(FUI_leaveRoom, _super);
-            function FUI_leaveRoom() {
-                return _super.call(this) || this;
+        };
+        //轮到玩家操作
+        MPlayer.prototype.startClock = function (id, time) {
+            this.views[id - 1].timeCircleStart(time);
+        };
+        //结束玩家操作计时
+        MPlayer.prototype.stopClock = function (id) {
+            this.views[id - 1].timeCircleEnd();
+        };
+        //说话
+        MPlayer.prototype.talk = function (pos, content) {
+            this.views[pos - 1].setTalkingVisible(true, content);
+        };
+        //设置金币余额
+        MPlayer.prototype.setCoin = function (pos, value) {
+            this.views[pos - 1].setCoin(value);
+        };
+        return MPlayer;
+    }());
+    point21.MPlayer = MPlayer;
+})(point21 || (point21 = {}));
+var point21;
+(function (point21) {
+    var MPlayerArea = /** @class */ (function () {
+        function MPlayerArea() {
+            this.views = []; //玩家区域的视图，从左到右，依次push,最开始一个是庄家
+            this.optionSeat = []; //除了自己外还可以选择的位置
+        }
+        MPlayerArea.prototype.instanceView = function (v, roomView) {
+            var item;
+            for (var i = 0; i < v.length; i++) {
+                item = new point21.VPlayerArea(v[i], i);
+                this.views.push(item);
+                item.init(roomView);
+                if (i != 0) {
+                    item._view.m_chipArea.onClick(this, function (item, i) {
+                        if (item.canClick) {
+                            for (var j = 0; j < this.optionSeat.length; j++) {
+                                var n = point21.MRoom.getSeatId(this.optionSeat[j]);
+                                this.views[n].setTipsToBetVisible(true);
+                            }
+                            this.views[i].setTipsToBetVisible(false);
+                            MPlayerArea.selecting = i;
+                            bx.Framework.notify(point21.GConst.n_newPosToBet, i);
+                        }
+                    }, [item, i]);
+                }
             }
-            FUI_leaveRoom.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "leaveRoom"));
-            };
-            FUI_leaveRoom.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n8 = (this.getChildAt(0));
-                this.m_tips = (this.getChildAt(1));
-                this.m_sure = (this.getChildAt(2));
-                this.m_cancle = (this.getChildAt(3));
-            };
-            FUI_leaveRoom.URL = "ui://8oy4o0mbo4403n";
-            return FUI_leaveRoom;
-        }(fairygui.GComponent));
-        Game.FUI_leaveRoom = FUI_leaveRoom;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_logo = /** @class */ (function (_super) {
-            __extends(FUI_logo, _super);
-            function FUI_logo() {
-                return _super.call(this) || this;
+            var player5 = this.views[5]._view;
+            var index5 = player5.getChildIndex(player5.m_chipsList2);
+            player5.setChildIndex(player5.m_chipsList1, index5 + 1);
+            this.layout();
+        };
+        //重置
+        MPlayerArea.prototype.reset = function () {
+            MPlayerArea.selecting = -1;
+            for (var i = 0; i < this.views.length; i++) {
+                this.views[i].reset();
             }
-            FUI_logo.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "logo"));
-            };
-            FUI_logo.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_ctl = this.getControllerAt(0);
-                this.m_logo = (this.getChildAt(0));
-            };
-            FUI_logo.URL = "ui://8oy4o0mbo4403t";
-            return FUI_logo;
-        }(fairygui.GComponent));
-        Game.FUI_logo = FUI_logo;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_menu = /** @class */ (function (_super) {
-            __extends(FUI_menu, _super);
-            function FUI_menu() {
-                return _super.call(this) || this;
+        };
+        //重连时恢复牌信息
+        MPlayerArea.prototype.recCardsList = function (data) {
+            var pos, cards, cardType, anteChips, maxSum, minSum, whichOne, isDouble;
+            for (var i = 0; i < data.length; i++) {
+                pos = point21.MRoom.getSeatId(data[i].pos);
+                cards = data[i].cards;
+                cardType = data[i].cardType;
+                anteChips = data[i].anteChips;
+                maxSum = data[i].maxSum;
+                minSum = data[i].minSum;
+                whichOne = data[i].whichOne;
+                isDouble = data[i].isDoubleAnted;
+                //保存头两张牌
+                var obj = { pos: pos, value: [cards[0], cards[1]] };
+                point21.MRoom.cards.push(obj);
+                if (pos !== 0 && whichOne !== 0)
+                    this.views[pos]._view.m_fen.selectedIndex = 1;
+                for (var j = 0; j < cards.length; j++) {
+                    var card = this.getNewCard(pos, whichOne);
+                    card.m_card.url = point21.Utils.getCardImg(cards[j]);
+                }
+                this.views[pos].setCardAndPoint(cardType, false, whichOne, minSum, maxSum);
+                this.views[pos].doubleSignVisible(isDouble, whichOne);
+                anteChips && this.views[pos].getChipListChildren(point21.Utils.formatChips(anteChips), true, whichOne);
+                anteChips && this.views[pos].setChip(point21.Utils.formatChips(anteChips), whichOne);
             }
-            FUI_menu.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "menu"));
-            };
-            FUI_menu.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_ctr = this.getControllerAt(0);
-                this.m_n12 = (this.getChildAt(0));
-                this.m_n8 = (this.getChildAt(1));
-                this.m_n10 = (this.getChildAt(2));
-                this.m_n9 = (this.getChildAt(3));
-                this.m_on = (this.getChildAt(4));
-                this.m_off = (this.getChildAt(5));
-                this.m_n18 = (this.getChildAt(6));
-                this.m_n19 = (this.getChildAt(7));
-                this.m_n20 = (this.getChildAt(8));
-                this.m_n21 = (this.getChildAt(9));
-                this.m_n22 = (this.getChildAt(10));
-            };
-            FUI_menu.URL = "ui://8oy4o0mbd8321z";
-            return FUI_menu;
-        }(fairygui.GComponent));
-        Game.FUI_menu = FUI_menu;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_musicBtn = /** @class */ (function (_super) {
-            __extends(FUI_musicBtn, _super);
-            function FUI_musicBtn() {
-                return _super.call(this) || this;
+        };
+        //重连时恢复保险标志
+        MPlayerArea.prototype.recInsuranceSign = function (data) {
+            for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
+                var player = data_1[_i];
+                for (var _a = 0, _b = player.insPos; _a < _b.length; _a++) {
+                    var seat = _b[_a];
+                    if (seat.insAnteChips > 0) {
+                        var pos = point21.MRoom.getSeatId(seat.pos);
+                        this.views[pos].insuranceSignVisible(true);
+                    }
+                }
             }
-            FUI_musicBtn.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "musicBtn"));
-            };
-            FUI_musicBtn.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_n4 = (this.getChildAt(1));
-            };
-            FUI_musicBtn.URL = "ui://8oy4o0mbd83232";
-            return FUI_musicBtn;
-        }(fairygui.GButton));
-        Game.FUI_musicBtn = FUI_musicBtn;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_musicSlider = /** @class */ (function (_super) {
-            __extends(FUI_musicSlider, _super);
-            function FUI_musicSlider() {
-                return _super.call(this) || this;
+        };
+        //获得该位置一号列表牌的状态（是否满了三张）
+        MPlayerArea.prototype.firstListIsFull = function (pos, id) {
+            if (pos === 0)
+                return false;
+            return this.views[pos]._view['m_cardsList' + id].m_list1.numChildren >= 3 ? true : false;
+        };
+        //获得新发的牌 pos：1~5   id：0/1/2
+        MPlayerArea.prototype.getNewCard = function (pos, id) {
+            if (id === void 0) { id = 0; }
+            var index = this.firstListIsFull(pos, id) ? 2 : 1;
+            return this.views[pos].addChildToList(id, index);
+        };
+        //发牌
+        MPlayerArea.prototype.dealCard = function (seatId, data, type) {
+            var card = this.getNewCard(seatId, data.whichOne);
+            card.visible = false;
+            this.views[seatId].dealCard(card, data, type);
+        };
+        //庄家暗牌翻牌
+        MPlayerArea.prototype.turnBankerCard = function (card) {
+            this.views[0].turnBankerCard(card);
+        };
+        //收牌
+        MPlayerArea.prototype.recoverCards = function () {
+            for (var i = 0; i < this.views.length; i++) {
+                this.views[i].recoverCards();
             }
-            FUI_musicSlider.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "musicSlider"));
-            };
-            FUI_musicSlider.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-                this.m_bar = (this.getChildAt(1));
-                this.m_grip = (this.getChildAt(2));
-            };
-            FUI_musicSlider.URL = "ui://8oy4o0mbd8322x";
-            return FUI_musicSlider;
-        }(fairygui.GSlider));
-        Game.FUI_musicSlider = FUI_musicSlider;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_musicSlider_grip = /** @class */ (function (_super) {
-            __extends(FUI_musicSlider_grip, _super);
-            function FUI_musicSlider_grip() {
-                return _super.call(this) || this;
+        };
+        //分牌
+        MPlayerArea.prototype.divideCard = function (data) {
+            var card1, card2;
+            var id = point21.MRoom.getSeatId(data[0]);
+            for (var i = 0; i < point21.MRoom.cards.length; i++) {
+                if (point21.MRoom.cards[i].pos == id) {
+                    card1 = point21.MRoom.cards[i].value[0];
+                    card2 = point21.MRoom.cards[i].value[1];
+                }
             }
-            FUI_musicSlider_grip.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "musicSlider_grip"));
-            };
-            FUI_musicSlider_grip.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n0 = (this.getChildAt(0));
-            };
-            FUI_musicSlider_grip.URL = "ui://8oy4o0mbd83230";
-            return FUI_musicSlider_grip;
-        }(fairygui.GButton));
-        Game.FUI_musicSlider_grip = FUI_musicSlider_grip;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_player = /** @class */ (function (_super) {
-            __extends(FUI_player, _super);
-            function FUI_player() {
-                return _super.call(this) || this;
+            var allBet = data[2] / 100;
+            this.views[id].divideCard(card1, card2);
+            this.views[id].setChip(allBet, 1);
+            this.views[id].setChip(allBet, 2);
+            this.views[id].getChipListChildren(allBet, true, 1);
+            this.views[id].getChipListChildren(allBet, true, 2);
+        };
+        //轮到某位玩家 pos为0时 即隐藏所有位置的选中特效
+        // turnOnePlayer(pos:number,id:number = 0):void{
+        //     for(let item of this.views){
+        //         item.ActivedMarkVisible(false);
+        //     }
+        //     if(pos === 0) return;
+        //     this.views[pos].ActivedMarkVisible(true,id);
+        // }
+        //解除某个座位的激活状态
+        // unActiveOnePlyaer(pos:number):void{
+        //     this.views[pos].ActivedMarkVisible(false);
+        // }
+        //下注在自己位置
+        MPlayerArea.prototype.bet = function (pos, data) {
+            var valBet = data[0] / 100, allBet = data[1] / 100;
+            this.views[pos].playerBet(valBet, pos, 0);
+            this.views[pos].setChip(allBet);
+        };
+        //下注在其他位置
+        MPlayerArea.prototype.betToOther = function (pos, data) {
+            var toPos = point21.MRoom.getSeatId(data[0]), valBet = data[1] / 100, allBet = data[2] / 100;
+            this.views[toPos].playerBet(valBet, pos, 0);
+            this.views[toPos].setChip(allBet);
+        };
+        //加倍下注
+        MPlayerArea.prototype.betDouble = function (pos, data) {
+            var toPos = point21.MRoom.getSeatId(data[0]), id = data[1], valBet = data[2] / 100, allBet = data[3] / 100;
+            this.views[toPos].playerBet(allBet, pos, id);
+            this.views[toPos].setChip(allBet, id);
+            Laya.timer.once(1200, this, function () {
+                this.views[toPos].doubleSignVisible(true, id);
+            });
+        };
+        //玩家买保险了
+        MPlayerArea.prototype.buyInsurance = function (pos) {
+            this.views[pos].insuranceSignVisible(true);
+        };
+        //筹码列表推向庄家
+        MPlayerArea.prototype.chipListToBanker = function (pos, id) {
+            this.views[pos].moveChipList(0, id);
+        };
+        //结算
+        MPlayerArea.prototype.settlement = function (data) {
+            var item, id, seat;
+            for (var i = 0; i < data.length; i++) {
+                item = data[i];
+                for (var j = 0; j < item.result.length; j++) {
+                    seat = item.result[j];
+                    if (seat.balance < 0) {
+                        id = point21.MRoom.getSeatId(seat.pos);
+                        if (id == 3) {
+                            SoundManager.instance.playSound(AssetsUtils.getSoundUrl('win'));
+                        }
+                        this.views[id].moveChipList(0, seat.whichOne);
+                    }
+                }
             }
-            FUI_player.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "player"));
-            };
-            FUI_player.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_card1 = (this.getChildAt(0));
-                this.m_card2 = (this.getChildAt(1));
-                this.m_card3 = (this.getChildAt(2));
-                this.m_card4 = (this.getChildAt(3));
-                this.m_card5 = (this.getChildAt(4));
-                this.m_set = (this.getChildAt(5));
-            };
-            FUI_player.URL = "ui://8oy4o0mbo44039";
-            return FUI_player;
-        }(fairygui.GComponent));
-        Game.FUI_player = FUI_player;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_reconnect = /** @class */ (function (_super) {
-            __extends(FUI_reconnect, _super);
-            function FUI_reconnect() {
-                return _super.call(this) || this;
+            Laya.timer.once(1000, this, function () {
+                var item, id, seat, playerId;
+                for (var i = 0; i < data.length; i++) {
+                    item = data[i];
+                    playerId = point21.MRoom.getSeatId(item.pos);
+                    for (var j = 0; j < item.result.length; j++) {
+                        seat = item.result[j];
+                        if (seat.balance >= 0) {
+                            id = point21.MRoom.getSeatId(seat.pos);
+                            if (id == 3) {
+                                SoundManager.instance.playSound(AssetsUtils.getSoundUrl('win'));
+                            }
+                            this.views[id].win(playerId, point21.Utils.formatChips(seat.balance), seat.whichOne);
+                        }
+                    }
+                }
+            });
+        };
+        //更新可下注的区域显示
+        MPlayerArea.prototype.showCanBetTips = function (data) {
+            console.log('传过来的数据：', data);
+            var lostSelecting = true;
+            var seatId;
+            console.log('自己正在选的位置：', MPlayerArea.selecting);
+            for (var i = 0; i < data.length; i++) {
+                seatId = point21.MRoom.getSeatId(data[i]);
+                console.log('该座位空着：', seatId);
+                this.views[seatId].setTipsToBetVisible(true);
+                if (seatId == MPlayerArea.selecting) {
+                    this.views[seatId].setTipsToBetVisible(false);
+                    lostSelecting = false;
+                }
             }
-            FUI_reconnect.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "reconnect"));
-            };
-            FUI_reconnect.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-                this.m_lang_title = (this.getChildAt(1));
-                this.m_tips = (this.getChildAt(2));
-                this.m_reconnect = (this.getChildAt(3));
-                this.m_return = (this.getChildAt(4));
-            };
-            FUI_reconnect.URL = "ui://8oy4o0mbo4403b";
-            return FUI_reconnect;
-        }(fairygui.GComponent));
-        Game.FUI_reconnect = FUI_reconnect;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_reconnectCircle = /** @class */ (function (_super) {
-            __extends(FUI_reconnectCircle, _super);
-            function FUI_reconnectCircle() {
-                return _super.call(this) || this;
+            //如果选中的位置真的失去了 发送通知
+            if (lostSelecting) {
+                bx.Framework.notify(point21.GConst.n_lostSeat);
             }
-            FUI_reconnectCircle.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "reconnectCircle"));
-            };
-            FUI_reconnectCircle.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_lang_1 = (this.getChildAt(0));
-                this.m_circle = (this.getChildAt(1));
-                this.m_t0 = this.getTransitionAt(0);
-            };
-            FUI_reconnectCircle.URL = "ui://8oy4o0mbo4403h";
-            return FUI_reconnectCircle;
-        }(fairygui.GComponent));
-        Game.FUI_reconnectCircle = FUI_reconnectCircle;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_Roomitems = /** @class */ (function (_super) {
-            __extends(FUI_Roomitems, _super);
-            function FUI_Roomitems() {
-                return _super.call(this) || this;
+        };
+        //隐藏可下注区域 提示
+        MPlayerArea.prototype.hideCanBetTips = function () {
+            for (var i = 0; i < this.views.length; i++) {
+                this.views[i].setTipsToBetVisible(false);
             }
-            FUI_Roomitems.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "Roomitems"));
-            };
-            FUI_Roomitems.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_h_v = this.getControllerAt(0);
-                this.m_item1 = (this.getChildAt(0));
-                this.m_item2 = (this.getChildAt(1));
-                this.m_item3 = (this.getChildAt(2));
-                this.m_item4 = (this.getChildAt(3));
-            };
-            FUI_Roomitems.URL = "ui://8oy4o0mbcsvz9";
-            return FUI_Roomitems;
-        }(fairygui.GComponent));
-        Game.FUI_Roomitems = FUI_Roomitems;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_room_help = /** @class */ (function (_super) {
-            __extends(FUI_room_help, _super);
-            function FUI_room_help() {
-                return _super.call(this) || this;
+        };
+        MPlayerArea.prototype.layout = function () {
+            if (this.views.length === 0)
+                return;
+            var skewX = [8, 0, 0, -18, 0], skewY = [0, -18, 0, 0, 12], rotate_view = [67, 44, 0, -28, -73];
+            var rotate_chip = [-77, -30, 0, 35, 70];
+            var target;
+            for (var i = 1; i < this.views.length; i++) {
+                target = this.views[i];
+                if (bx.Stage.getStage().isLandscape) {
+                    target._view.rotation = rotate_view[i - 1];
+                    target._view.setSkew(skewX[i - 1], skewY[i - 1]);
+                    target.setChipListRotation(rotate_chip[i - 1]);
+                }
+                else {
+                    target.setChipListRotation(0);
+                    target._view.setSkew(0, 0);
+                    target._view.rotation = 0;
+                }
             }
-            FUI_room_help.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "room_help"));
-            };
-            FUI_room_help.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_lang_option = (this.getChildAt(1));
-            };
-            FUI_room_help.URL = "ui://8oy4o0mbd8322p";
-            return FUI_room_help;
-        }(fairygui.GButton));
-        Game.FUI_room_help = FUI_room_help;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_room_home = /** @class */ (function (_super) {
-            __extends(FUI_room_home, _super);
-            function FUI_room_home() {
-                return _super.call(this) || this;
+        };
+        MPlayerArea.selecting = -1; //除了自己 正选中的座位
+        MPlayerArea.dragonLoaded = false; //五小龙资源已下载
+        MPlayerArea.bjLoaded = false; //黑杰克动画资源已下载
+        MPlayerArea.boomLoaded = false; //爆牌资源已下载
+        return MPlayerArea;
+    }());
+    point21.MPlayerArea = MPlayerArea;
+})(point21 || (point21 = {}));
+var point21;
+(function (point21) {
+    var MRoom = /** @class */ (function (_super) {
+        __extends(MRoom, _super);
+        function MRoom() {
+            var _this = _super.call(this) || this;
+            _this.dealDelay = 200; //发牌间隔时间
+            _this.betCompleted = false; //下注完成标志
+            _this.isInsuranceActionOver = false; //回收保险列表的动作已完成 一次
+            return _this;
+        }
+        Object.defineProperty(MRoom.prototype, "viewBg", {
+            get: function () {
+                if (this._viewBg == null) {
+                    this.mPlayerArea = new point21.MPlayerArea();
+                    this.mBtnPlay = new point21.MBtnPlay();
+                    this.mPlayer = new point21.MPlayer();
+                    this._viewBg = new point21.VRoomBg();
+                    this.view = new point21.VRoom();
+                    this.popupMatch = new point21.VMatch();
+                    this.strategyBtn = new point21.VStrategyBtn();
+                }
+                return this._viewBg;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        //由pos计算本地真实座位号
+        MRoom.getSeatId = function (pos) {
+            if (pos === 0)
+                return 0;
+            var id = pos - MRoom.gap;
+            if (id < 1)
+                id += 5;
+            if (id > 5)
+                id -= 5;
+            return id;
+        };
+        //由真实座位号 倒推 在服务器上的座位号
+        MRoom.getIdOnSever = function (seatId) {
+            if (seatId != 0) {
+                var id = seatId + this.gap;
+                if (id < 1)
+                    id += 5;
+                if (id > 5)
+                    id -= 5;
+                return id;
             }
-            FUI_room_home.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "room_home"));
-            };
-            FUI_room_home.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_lang_option = (this.getChildAt(1));
-            };
-            FUI_room_home.URL = "ui://8oy4o0mbd8322t";
-            return FUI_room_home;
-        }(fairygui.GButton));
-        Game.FUI_room_home = FUI_room_home;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_room_rep = /** @class */ (function (_super) {
-            __extends(FUI_room_rep, _super);
-            function FUI_room_rep() {
-                return _super.call(this) || this;
+        };
+        MRoom.prototype.onRegister = function () {
+            _super.prototype.onRegister.call(this);
+            this.addNotices(point21.GConst.n_Vmanager_playerArea, point21.GConst.n_Vmanager_btnPlay, point21.GConst.n_Vmanager_player, bx.GConst.n_screen_layout, point21.GConst.n_addRoom, point21.GConst.n_removeRoom, bx.GConst.n_room_items_click, bx.GConst.n_room_continue_game, point21.GConst.n_newPosToBet, point21.GConst.n_hideBtns, point21.GConst.n_lostSeat, point21.GConst.n_selfMoneyChange, protos.CCMD.gamePush, protos.CCMD.playerInfoPush, protos.CCMD.userOperationResp, protos.CCMD.dealCardsInfo, protos.CCMD.gameSettlementPush, protos.CCMD.recRoomInfo, protos.CCMD.recAnteState, protos.CMD.cancel_match_resp, protos.CMD.chips_push, protos.CCMD.recDealCardsState, protos.CCMD.recBuyInsState, protos.CCMD.recRoleOpState, protos.CCMD.recBankerOpState);
+        };
+        MRoom.prototype.onUnregister = function () { _super.prototype.onUnregister.call(this); };
+        MRoom.prototype.onNotice = function (notice, data) {
+            _super.prototype.onNotice.call(this, notice, data);
+            switch (notice) {
+                //分配玩家区域的视图
+                case point21.GConst.n_Vmanager_playerArea:
+                    this.mPlayerArea.instanceView(data[0], data[1]);
+                    break;
+                //分配操作按钮的视图
+                case point21.GConst.n_Vmanager_btnPlay:
+                    this.mBtnPlay.instanceView(data[0]);
+                    break;
+                //分配玩家头像的视图
+                case point21.GConst.n_Vmanager_player:
+                    this.mPlayer.instanceView(data[0]);
+                    break;
+                //屏幕适配
+                case bx.GConst.n_screen_layout:
+                    this.layout();
+                    break;
+                //添加房间视图
+                case point21.GConst.n_addRoom:
+                    this.addView();
+                    break;
+                //移除房间视图
+                case point21.GConst.n_removeRoom:
+                    this.removeView();
+                    break;
+                //点击大厅房间选项按钮
+                case bx.GConst.n_room_items_click:
+                    this.mBtnPlay.roomType = data[0];
+                    this.reset();
+                    this.popupMatchVisible(true);
+                    break;
+                //继续游戏
+                case bx.GConst.n_room_continue_game:
+                    this.reset();
+                    this.popupMatchVisible(true);
+                    break;
+                //通知本人要下注的其他位置
+                case point21.GConst.n_newPosToBet:
+                    this.mBtnPlay.inStage(0);
+                    this.mBtnPlay.currentBetPos = data[0];
+                    break;
+                case point21.GConst.n_hideBtns:
+                    this.mBtnPlay.hideView();
+                    break;
+                //失去想下注的其他位置
+                case point21.GConst.n_lostSeat:
+                    this.mBtnPlay.hideView();
+                    break;
+                //自己的余额改变了
+                case point21.GConst.n_selfMoneyChange:
+                    var coins = Math.floor(data[0] / 100);
+                    MRoom.selfMoney = data[0] / 100;
+                    if (coins < this.mBtnPlay.bet_max) {
+                        this.mBtnPlay.bet_max = coins;
+                        this.mBtnPlay.view.setBaseBet(coins, this.mBtnPlay.bet_min);
+                    }
+                    break;
+                //游戏推送
+                case protos.CCMD.gamePush:
+                    this.gamePush(data[0]);
+                    break;
+                //玩家信息推送
+                case protos.CCMD.playerInfoPush:
+                    SoundManager.instance.playSound(AssetsUtils.getSoundUrl('start'));
+                    this.popupMatchVisible(false);
+                    this.getPlayerInfo(data[0]);
+                    break;
+                //按钮事件响应
+                case protos.CCMD.userOperationResp:
+                    this.userOperationResp(data[0]);
+                    break;
+                //发牌
+                case protos.CCMD.dealCardsInfo:
+                    this.dealCards(data[0]);
+                    break;
+                //结算
+                case protos.CCMD.gameSettlementPush:
+                    this.pushInsuranceToBanker();
+                    this.mBtnPlay.hideView();
+                    this.view.turnOffLight();
+                    this.onGetResult(data[0]);
+                    break;
+                //断线重连，房间信息
+                case protos.CCMD.recRoomInfo:
+                    this.recRoomInfo(data[0]);
+                    break;
+                //断线重连 下注阶段
+                case protos.CCMD.recAnteState:
+                    this.recAnteState(data[0]);
+                    break;
+                //取消匹配
+                case protos.CMD.cancel_match_resp:
+                    this.popupMatchVisible(false);
+                    this.mBtnPlay.inStage(3);
+                    break;
+                //更新玩家金币
+                case protos.CMD.chips_push:
+                    this.mPlayer && this.mPlayer.setCoin(3, data[0].chips);
+                    break;
+                //断线重连，发牌阶段
+                case protos.CCMD.recDealCardsState:
+                    this.recDealCardsState(data[0]);
+                    break;
+                //断线重连，保险阶段
+                case protos.CCMD.recBuyInsState:
+                    this.recBuyInsState(data[0]);
+                    break;
+                //断线重连，玩家操作阶段
+                case protos.CCMD.recRoleOpState:
+                    this.recRoleOpState(data[0]);
+                    break;
+                //断线重连，庄家操作阶段
+                case protos.CCMD.recBankerOpState:
+                    this.recBankerOpState(data[0]);
+                    break;
             }
-            FUI_room_rep.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "room_rep"));
-            };
-            FUI_room_rep.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_lang_option = (this.getChildAt(1));
-            };
-            FUI_room_rep.URL = "ui://8oy4o0mbd8322s";
-            return FUI_room_rep;
-        }(fairygui.GButton));
-        Game.FUI_room_rep = FUI_room_rep;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_room_sound = /** @class */ (function (_super) {
-            __extends(FUI_room_sound, _super);
-            function FUI_room_sound() {
-                return _super.call(this) || this;
+        };
+        //游戏信息推送
+        MRoom.prototype.gamePush = function (data) {
+            var type = data.type, pos = MRoom.getSeatId(data.pos), value = data.value;
+            switch (type) {
+                case 1: //设置底注
+                    this.mBtnPlay.setBaseBet(value);
+                    break;
+                case 2: //进入下注阶段
+                    this.mPlayer.startAllClock(value[0]);
+                    this.view.StartClock(value[0]);
+                    //test
+                    // let a = MRoom.getIdOnSever(1);
+                    // let b = MRoom.getIdOnSever(5);
+                    // let arr = [a, b];
+                    // Laya.timer.once(3000, this.mPlayerArea, this.mPlayerArea.showCanBetTips,[arr]);
+                    break;
+                case 3: //玩家可在原位置下注
+                    this.mBtnPlay.inStage(0);
+                    break;
+                case 4: //玩家可下注的其他位置
+                    this.mPlayerArea.hideCanBetTips();
+                    if (!this.betCompleted) {
+                        this.mPlayerArea.optionSeat = value;
+                        this.mPlayerArea.showCanBetTips(value);
+                    }
+                    break;
+                case 5: //玩家在原位置下注了
+                    this.mPlayerArea.bet(pos, value);
+                    this.mPlayer.setCoin(pos, value[2]);
+                    if (pos == 3) {
+                        this.view.handAction(1);
+                        this.mBtnPlay.view.betValue = value[0] / 100;
+                    }
+                    break;
+                case 6: //玩家在其他位置下注了
+                    var id = MRoom.getSeatId(value[0]);
+                    this.mPlayerArea.betToOther(pos, value);
+                    this.mPlayer.setCoin(pos, value[3]);
+                    this.view.seatNameVisible(true, id, this.mPlayer.views[pos - 1].playerName);
+                    if (pos == 3) {
+                        this.mBtnPlay.view.betValue = value[1] / 100;
+                        point21.MPlayerArea.selecting = -1;
+                        id < 3 ? this.view.handAction(2) : this.view.handAction(3);
+                    }
+                    break;
+                case 7: //玩家完成下注
+                    this.mPlayer.talk(pos, 4);
+                    this.stopClock(pos);
+                    if (pos == 3) {
+                        this.betCompleted = true;
+                        this.mBtnPlay.hideView();
+                        this.mPlayerArea.hideCanBetTips();
+                    }
+                    break;
+                case 8: //进入发牌阶段
+                    this.mBtnPlay.hideView();
+                    this.mPlayerArea.hideCanBetTips();
+                    break;
+                case 9: //进入买保险阶段
+                    this.mPlayer.startAllClock(value[0]);
+                    this.view.StartClock(value[0]);
+                    break;
+                case 10: //某个座位可以买保险了
+                    if (value) {
+                        if (pos == 3) {
+                            this.mBtnPlay.inStage(2);
+                            this.mBtnPlay.activyPos = value[0];
+                            this.view.turnOnLightTo(value[0], 0);
+                        }
+                    }
+                    else {
+                        this.stopClock(pos);
+                    }
+                    break;
+                case 11: //某座位买保险了
+                    var seat = MRoom.getSeatId(value[0]);
+                    this.view.betInsurance(value[1], pos, seat);
+                    this.mPlayer.setCoin(pos, value[2]);
+                    this.mPlayerArea.buyInsurance(seat);
+                    if (pos == 3)
+                        this.view.turnOffLight();
+                    break;
+                case 12: //某座位不买保险
+                    if (pos == 3)
+                        this.view.turnOffLight();
+                    break;
+                case 13: //轮到某个座位操作
+                    this.view.turnOnLightTo(value[0], value[1]);
+                    if (pos == 3) {
+                        SoundManager.instance.playSound(AssetsUtils.getSoundUrl('turnSelf'));
+                        this.view.StartClock(value[2]);
+                        this.mBtnPlay.activyPos = value[0];
+                        this.mBtnPlay.activyId = value[1];
+                        this.mBtnPlay.setCards(MRoom.getSeatId(value[0]));
+                        this.mBtnPlay.inStage(1);
+                    }
+                    else {
+                        SoundManager.instance.playSound(AssetsUtils.getSoundUrl('turnOther'));
+                        this.mBtnPlay.hideView();
+                        this.mPlayer.startClock(pos, value[2]);
+                    }
+                    break;
+                case 14: //双倍
+                    this.stopClock(pos);
+                    this.mPlayer.talk(pos, 1);
+                    this.mPlayerArea.betDouble(pos, value);
+                    this.mPlayer.setCoin(pos, value[4]);
+                    if (pos == 3) {
+                        var id_1 = MRoom.getSeatId(value[0]);
+                        if (id_1 < 3) {
+                            this.view.handAction(2);
+                        }
+                        else if (id_1 > 3) {
+                            this.view.handAction(3);
+                        }
+                        else {
+                            this.view.handAction(1);
+                        }
+                    }
+                    break;
+                case 15: //暗牌不组成bj
+                    this.pushInsuranceToBanker();
+                    break;
+                case 16: //庄家操作
+                    this.mBtnPlay.hideView();
+                    this.view.turnOffLight();
+                    break;
+                case 17: //分牌
+                    this.mPlayerArea.divideCard(value);
+                    this.mPlayer.talk(pos, 0);
+                    this.mPlayer.setCoin(pos, value[3]);
+                    if (pos == 3) {
+                        var id_2 = MRoom.getSeatId(value[0]);
+                        if (id_2 < 3) {
+                            this.view.handAction(2);
+                        }
+                        else if (id_2 > 3) {
+                            this.view.handAction(3);
+                        }
+                        else {
+                            this.view.handAction(1);
+                        }
+                    }
+                    break;
+                case 18: //要牌
+                    this.mPlayer.talk(pos, 2);
+                    break;
+                case 19: //停牌
+                    this.stopClock(pos);
+                    if (pos == 3)
+                        this.mBtnPlay.hideView();
+                    this.mPlayer.talk(pos, 3);
+                    break;
+                case 20: //庄家暗牌
+                    this.mPlayerArea.turnBankerCard(value);
+                    break;
             }
-            FUI_room_sound.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "room_sound"));
-            };
-            FUI_room_sound.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_lang_option = (this.getChildAt(1));
-            };
-            FUI_room_sound.URL = "ui://8oy4o0mbd8322u";
-            return FUI_room_sound;
-        }(fairygui.GButton));
-        Game.FUI_room_sound = FUI_room_sound;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_saveHead = /** @class */ (function (_super) {
-            __extends(FUI_saveHead, _super);
-            function FUI_saveHead() {
-                return _super.call(this) || this;
+        };
+        //断线重连 房间信息
+        MRoom.prototype.recRoomInfo = function (res) {
+            this.reset();
+            this.mBtnPlay.roomType = res.roomType;
+            MRoom.gap = res.curPos - 3;
+            this.mBtnPlay.setBaseBet(res.roomInfo);
+            for (var i = 0; i < res.players.length; i++) {
+                var player = res.players[i];
+                var pos = MRoom.getSeatId(player.pos);
+                this.view.setChipsVisible(true, pos);
+                if (pos == 3) {
+                    if (player.chips < res.roomInfo[1]) {
+                        this.mBtnPlay.bet_max = Math.floor(player.chips / 100);
+                    }
+                }
+                if (player.othersPos) {
+                    for (var _i = 0, _a = player.othersPos; _i < _a.length; _i++) {
+                        var seat = _a[_i];
+                        this.view.seatNameVisible(true, MRoom.getSeatId(seat), player.name);
+                    }
+                }
             }
-            FUI_saveHead.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "saveHead"));
-            };
-            FUI_saveHead.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n7 = (this.getChildAt(0));
-                this.m_lang_save = (this.getChildAt(1));
-            };
-            FUI_saveHead.URL = "ui://8oy4o0mbd83211";
-            return FUI_saveHead;
-        }(fairygui.GButton));
-        Game.FUI_saveHead = FUI_saveHead;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_set = /** @class */ (function (_super) {
-            __extends(FUI_set, _super);
-            function FUI_set() {
-                return _super.call(this) || this;
+            this.mPlayer.recRoomInfo(res.players);
+        };
+        //断线重连 下注
+        MRoom.prototype.recAnteState = function (res) {
+            for (var _i = 0, _a = res.anteStatePosList; _i < _a.length; _i++) {
+                var player = _a[_i];
+                var pos = MRoom.getSeatId(player.originPos);
+                if (player.state === 0) { //未完成下注状态
+                    if (pos == 3) {
+                        this.view.StartClock(res.timeLeft);
+                        if (player.antePosList) { //自己原位置已经下注
+                            this.mBtnPlay.inStage(0);
+                            this.mPlayerArea.showCanBetTips(res.emptyPosList);
+                        }
+                        else { //原位置未下注
+                            this.mBtnPlay.inStage(0);
+                        }
+                    }
+                    else {
+                        this.mPlayer.startClock(pos, res.timeLeft);
+                    }
+                }
+                if (player.antePosList) {
+                    for (var _b = 0, _c = player.antePosList; _b < _c.length; _b++) {
+                        var seat = _c[_b];
+                        var id = MRoom.getSeatId(seat.pos);
+                        this.mPlayerArea.views[id].getChipListChildren(point21.Utils.formatChips(seat.ante), true, 0);
+                        this.mPlayerArea.views[id].setChip(point21.Utils.formatChips(seat.ante), 0);
+                    }
+                }
             }
-            FUI_set.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "set"));
-            };
-            FUI_set.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_n0 = (this.getChildAt(0));
-                this.m_lang_title = (this.getChildAt(1));
-                this.m_lang_music = (this.getChildAt(2));
-                this.m_slider_music = (this.getChildAt(3));
-                this.m_slider_sound = (this.getChildAt(4));
-                this.m_lang_sound = (this.getChildAt(5));
-                this.m_btn_music = (this.getChildAt(6));
-                this.m_btn_sound = (this.getChildAt(7));
-                this.m_close = (this.getChildAt(8));
-            };
-            FUI_set.URL = "ui://8oy4o0mbd8322v";
-            return FUI_set;
-        }(fairygui.GComponent));
-        Game.FUI_set = FUI_set;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_setGM = /** @class */ (function (_super) {
-            __extends(FUI_setGM, _super);
-            function FUI_setGM() {
-                return _super.call(this) || this;
+        };
+        //重连 发牌阶段
+        MRoom.prototype.recDealCardsState = function (res) {
+            this.mPlayerArea.recCardsList(res.cardsList);
+        };
+        //重连 保险阶段
+        MRoom.prototype.recBuyInsState = function (res) {
+            this.mPlayerArea.recCardsList(res.cardsList);
+            var players = res.insPosList;
+            for (var i = 0; i < players.length; i++) {
+                if (players[i].active > 0) {
+                    var pos = MRoom.getSeatId(players[i].pos);
+                    if (pos == 3) {
+                        this.view.StartClock(res.timeLeft);
+                        this.mBtnPlay.inStage(2);
+                        this.mBtnPlay.activyPos = players[i].active;
+                        this.view.turnOnLightTo(players[i].active, 0);
+                    }
+                    else {
+                        this.mPlayer.startClock(pos, res.timeLeft);
+                    }
+                }
+                var seats = players[i].insPos;
+                for (var j = 0; j < seats.length; j++) {
+                    var seatid = MRoom.getSeatId(seats[j].pos);
+                    this.view.addChildToInsuranceList(seatid, seats[j].insAnteChips, true);
+                    if (seats[j].insAnteChips > 0) {
+                        this.mPlayerArea.views[seatid].insuranceSignVisible(true);
+                    }
+                }
             }
-            FUI_setGM.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "setGM"));
-            };
-            FUI_setGM.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_n4 = (this.getChildAt(1));
-            };
-            FUI_setGM.URL = "ui://8oy4o0mbl3ii3w";
-            return FUI_setGM;
-        }(fairygui.GButton));
-        Game.FUI_setGM = FUI_setGM;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_sure = /** @class */ (function (_super) {
-            __extends(FUI_sure, _super);
-            function FUI_sure() {
-                return _super.call(this) || this;
+        };
+        //重连 玩家操作阶段
+        MRoom.prototype.recRoleOpState = function (res) {
+            this.mPlayerArea.recCardsList(res.cardsList);
+            this.mPlayerArea.recInsuranceSign(res.insPosList);
+            var pos = MRoom.getSeatId(res.opOriginPos);
+            //本人
+            if (pos == 3) {
+                this.view.StartClock(res.timeLeft);
+                this.mBtnPlay.activyPos = res.opPos;
+                this.mBtnPlay.activyId = res.opWhichOne;
+                this.mBtnPlay.setCards(MRoom.getSeatId(res.opPos));
+                this.mBtnPlay.inStage(1);
             }
-            FUI_sure.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "sure"));
-            };
-            FUI_sure.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n3 = (this.getChildAt(0));
-                this.m_lang_sure = (this.getChildAt(1));
-            };
-            FUI_sure.URL = "ui://8oy4o0mbo4403p";
-            return FUI_sure;
-        }(fairygui.GButton));
-        Game.FUI_sure = FUI_sure;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var FUI_switch = /** @class */ (function (_super) {
-            __extends(FUI_switch, _super);
-            function FUI_switch() {
-                return _super.call(this) || this;
+            else {
+                this.mPlayer.startClock(pos, res.timeLeft);
             }
-            FUI_switch.createInstance = function () {
-                return (fairygui.UIPackage.createObject("Game", "switch"));
-            };
-            FUI_switch.prototype.constructFromXML = function (xml) {
-                _super.prototype.constructFromXML.call(this, xml);
-                this.m_button = this.getControllerAt(0);
-                this.m_n2 = (this.getChildAt(0));
-            };
-            FUI_switch.URL = "ui://8oy4o0mbd8322o";
-            return FUI_switch;
-        }(fairygui.GButton));
-        Game.FUI_switch = FUI_switch;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
-/** This is an automatically generated class by FairyGUI. Please do not modify it. **/
-var fui;
-(function (fui) {
-    var Game;
-    (function (Game) {
-        var GameBinder = /** @class */ (function () {
-            function GameBinder() {
+            if (res.timeLeft > 0) {
+                this.view.turnOnLightTo(res.opPos, res.opWhichOne);
             }
-            GameBinder.bindAll = function () {
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item1.URL, Game.FUI_item1);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_Roomitems.URL, Game.FUI_Roomitems);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_saveHead.URL, Game.FUI_saveHead);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_headItem.URL, Game.FUI_headItem);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_close.URL, Game.FUI_close);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_menu.URL, Game.FUI_menu);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hall_home.URL, Game.FUI_hall_home);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hall_rep.URL, Game.FUI_hall_rep);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hall_help.URL, Game.FUI_hall_help);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hall_sound.URL, Game.FUI_hall_sound);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_switch.URL, Game.FUI_switch);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_room_help.URL, Game.FUI_room_help);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_room_rep.URL, Game.FUI_room_rep);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_room_home.URL, Game.FUI_room_home);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_room_sound.URL, Game.FUI_room_sound);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_set.URL, Game.FUI_set);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_musicSlider.URL, Game.FUI_musicSlider);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_musicSlider_grip.URL, Game.FUI_musicSlider_grip);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_musicBtn.URL, Game.FUI_musicBtn);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hallBg_h.URL, Game.FUI_hallBg_h);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_hallBg_v.URL, Game.FUI_hallBg_v);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_brief.URL, Game.FUI_brief);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_briefPopup.URL, Game.FUI_briefPopup);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_gmKeys.URL, Game.FUI_gmKeys);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_setGM.URL, Game.FUI_setGM);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_AddWalletBtn.URL, Game.FUI_AddWalletBtn);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item2.URL, Game.FUI_item2);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item3.URL, Game.FUI_item3);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_item4.URL, Game.FUI_item4);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_gm.URL, Game.FUI_gm);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_player.URL, Game.FUI_player);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_gmSubmit.URL, Game.FUI_gmSubmit);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_reconnect.URL, Game.FUI_reconnect);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_btn_reconnect.URL, Game.FUI_btn_reconnect);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_btn_return.URL, Game.FUI_btn_return);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_reconnectCircle.URL, Game.FUI_reconnectCircle);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_leaveRoom.URL, Game.FUI_leaveRoom);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_sure.URL, Game.FUI_sure);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_cancle.URL, Game.FUI_cancle);
-                fairygui.UIObjectFactory.setPackageItemExtension(Game.FUI_logo.URL, Game.FUI_logo);
+        };
+        //重连 庄家阶段
+        MRoom.prototype.recBankerOpState = function (res) {
+            this.mPlayerArea.recCardsList(res.cardsList);
+            this.mPlayerArea.recInsuranceSign(res.insPosList);
+        };
+        //获取到玩家信息
+        MRoom.prototype.getPlayerInfo = function (res) {
+            MRoom.gap = res.curPos - 3;
+            for (var i = 0; i < res.playersInfo.length; i++) {
+                var player = res.playersInfo[i];
+                var pos = MRoom.getSeatId(player.pos);
+                this.view.setChipsVisible(true, pos);
+                if (pos == 3) {
+                    if (player.chips < this.mBtnPlay.bet_max) {
+                        this.mBtnPlay.bet_max = Math.floor(player.chips / 100);
+                    }
+                }
+            }
+            this.mPlayer.setPlayerInfo(res.playersInfo);
+        };
+        //按钮操作响应
+        MRoom.prototype.userOperationResp = function (res) {
+            if (res.result === 2) {
+                console.log('操作失败！！！！！！');
+                return;
+            }
+            ;
+            switch (res.op) {
+                case 1:
+                    this.mBtnPlay.resp_bet();
+                    break;
+                case 2:
+                    this.mBtnPlay.resp_bet();
+                    break;
+                case 3:
+                    this.mBtnPlay.hideView();
+                    break;
+                case 4:
+                    this.mBtnPlay.hideView();
+                    break;
+                case 5:
+                    this.mBtnPlay.hideView();
+                    break;
+                case 6:
+                    this.mBtnPlay.hideView();
+                    break;
+                case 7:
+                    this.mBtnPlay.hideView();
+                    break;
+                case 8:
+                    this.mBtnPlay.resp_needCard();
+                    this.view.handAction(5);
+                    break;
+                case 9:
+                    this.mBtnPlay.hideView();
+                    this.view.handAction(4);
+                    break;
+            }
+        };
+        //添加视图到舞台
+        MRoom.prototype.addView = function () {
+            bx.Stage.getStage().layerAddChild(this.viewBg, bx.GLayer.scene);
+            bx.Stage.getStage().layerAddChild(this.view, bx.GLayer.scene);
+            bx.Stage.getStage().layerAddChild(this.strategyBtn, bx.GLayer.scene);
+            SoundManager.instance.bgmUrls = AssetsUtils.getSoundUrl('bgm');
+            this.layout();
+        };
+        //移除视图
+        MRoom.prototype.removeView = function () {
+            bx.Stage.getStage().layerRemoveChild(this.viewBg);
+            bx.Stage.getStage().layerRemoveChild(this.view);
+            bx.Stage.getStage().layerRemoveChild(this.strategyBtn);
+        };
+        //匹配框 状态
+        MRoom.prototype.popupMatchVisible = function (state) {
+            if (state) {
+                bx.UIManager.popup(this.popupMatch, true);
+                this.popupMatch.reset();
+            }
+            else {
+                this.popupMatch.beforeClose();
+                bx.UIManager.closePopup(this.popupMatch);
+            }
+        };
+        //重置
+        MRoom.prototype.reset = function () {
+            this.betCompleted = false;
+            this.view.reset();
+            this.mPlayerArea.reset();
+            this.mBtnPlay.reset();
+            this.mPlayer.reset();
+            this.isInsuranceActionOver = false;
+        };
+        //处理发牌
+        MRoom.prototype.dealCards = function (data) {
+            var arr = data.cardsList;
+            var sortfunc = function (a, b) {
+                var v1 = MRoom.getSeatId(a['pos']);
+                var v2 = MRoom.getSeatId(b['pos']);
+                return v1 - v2;
             };
-            return GameBinder;
-        }());
-        Game.GameBinder = GameBinder;
-    })(Game = fui.Game || (fui.Game = {}));
-})(fui || (fui = {}));
+            arr.sort(sortfunc);
+            var len = arr.length;
+            if (arr[0].cards.length == 2) { //如果是开始的一次发两张牌,就发两轮
+                for (var _i = 0, arr_1 = arr; _i < arr_1.length; _i++) {
+                    var item = arr_1[_i];
+                    var pos = MRoom.getSeatId(item.pos);
+                    var obj = {
+                        pos: pos,
+                        value: [item.cards[0], item.cards[1]]
+                    };
+                    MRoom.cards.push(obj);
+                }
+                this.dealType = 1;
+                this.dealOnce(arr);
+                Laya.timer.once(len * this.dealDelay, this, function () {
+                    this.dealType = 2;
+                    this.dealOnce(arr);
+                });
+            }
+            else {
+                this.dealType = 0;
+                this.dealOnce(arr);
+            }
+        };
+        //发一轮牌 
+        MRoom.prototype.dealOnce = function (list) {
+            for (var i = 0; i < list.length; i++) {
+                Laya.timer.once(this.dealDelay * i, this, this.deal, [list[i]], false);
+            }
+        };
+        //发牌逻辑
+        MRoom.prototype.deal = function (data) {
+            var id = data.whichOne;
+            var seatId = MRoom.getSeatId(data.pos);
+            this.mPlayerArea.dealCard(seatId, data, this.dealType);
+        };
+        //收牌
+        MRoom.prototype.recoverCards = function () {
+            this.mPlayerArea.recoverCards();
+        };
+        //关闭定时器
+        MRoom.prototype.stopClock = function (pos) {
+            if (pos === 3) {
+                this.view.stopClock();
+            }
+            else {
+                this.mPlayer.stopClock(pos);
+            }
+        };
+        //庄家收保险
+        MRoom.prototype.pushInsuranceToBanker = function () {
+            if (!this.isInsuranceActionOver) {
+                this.isInsuranceActionOver = true;
+                for (var i = 1; i < 6; i++) {
+                    this.view.pushInsuranceToBanker(i);
+                }
+            }
+        };
+        //推送筹码到庄家
+        MRoom.prototype.pushBetToBanker = function () {
+            this.mPlayerArea.chipListToBanker(3, 0);
+            //this.mPlayerArea.chipListToBanker(pos,id);
+        };
+        //收到结算消息
+        MRoom.prototype.onGetResult = function (res) {
+            var data = res.result;
+            this.mPlayerArea.settlement(data);
+            Laya.timer.once(2000, this, function () {
+                for (var i = 0; i < data.length; i++) {
+                    var pos = MRoom.getSeatId(data[i].pos);
+                    this.view.showResult(pos, data[i].balance);
+                    this.mPlayer.setCoin(pos, data[i].chips);
+                    this.mBtnPlay.inStage(3);
+                }
+            });
+        };
+        //布局
+        MRoom.prototype.layout = function () {
+            if (this.view == null)
+                return;
+            this.mBtnPlay.layout();
+            this.mPlayerArea.layout();
+            this.viewBg.scaleMode = bx.ScaleMode.full;
+            this.viewBg.x = bx.Align.center;
+            this.viewBg.y = bx.Align.middle;
+            this.view.scaleMode = bx.ScaleMode.show_all;
+            this.view.x = bx.Align.center;
+            this.view.y = bx.Align.middle;
+            this.popupMatch.scaleMode = bx.ScaleMode.none;
+            this.popupMatch.x = bx.Align.center;
+            this.popupMatch.y = bx.Align.middle;
+            this.strategyBtn.x = bx.Align.right;
+            this.strategyBtn.y = bx.Align.top;
+            this.strategyBtn.marginTop = 20;
+            this.strategyBtn.marginRight = 20;
+            if (bx.Stage.getStage().isLandscape) {
+                this.view.width = this.viewBg.width = 1920;
+                this.view.height = this.viewBg.height = 1080;
+                this.view._view.m_h_v.selectedIndex = 0;
+                this.view._view.m_table.url = 'assets/room_dt/horizon/pz.png';
+                this.view._view.m_chipBank.url = 'assets/room_dt/horizon/cmg.png';
+                this.viewBg._view.m_roombg.url = 'assets/room_dt/horizon/bg.png';
+                var index = this.view._view.m_lightCtl.selectedIndex;
+                if (index > 15)
+                    this.view._view.m_lightCtl.selectedIndex = index - 15;
+            }
+            else {
+                this.view.width = this.viewBg.width = 1080;
+                this.view.height = this.viewBg.height = 1920;
+                this.view._view.m_h_v.selectedIndex = 1;
+                this.view._view.m_table.url = 'assets/room_dt/vertical/pzs.png';
+                this.view._view.m_chipBank.url = 'assets/room_dt/vertical/cmgs.png';
+                this.viewBg._view.m_roombg.url = 'assets/room_dt/vertical/bg2.png';
+                var index = this.view._view.m_lightCtl.selectedIndex;
+                if (index > 0) {
+                    if (index < 15 || index == 15)
+                        this.view._view.m_lightCtl.selectedIndex = index + 15;
+                }
+            }
+        };
+        MRoom.gap = 0; //服务器的pos 与本地实际座位号(自己的永远是3)之差 即gap = 自己的pos - 3
+        MRoom.cards = []; //保存本地座位的头两张牌
+        return MRoom;
+    }(bx.Framework));
+    point21.MRoom = MRoom;
+})(point21 || (point21 = {}));
+var point21;
+(function (point21) {
+    var MStrategy = /** @class */ (function (_super) {
+        __extends(MStrategy, _super);
+        function MStrategy() {
+            return _super.call(this) || this;
+        }
+        MStrategy.prototype.onRegister = function () {
+            _super.prototype.onRegister.call(this);
+            this.addNotices(point21.GConst.n_openStrategy, bx.GConst.n_screen_layout);
+        };
+        MStrategy.prototype.onUnregister = function () { _super.prototype.onUnregister.call(this); };
+        MStrategy.prototype.onNotice = function (notice, data) {
+            _super.prototype.onNotice.call(this, notice, data);
+            switch (notice) {
+                case point21.GConst.n_openStrategy:
+                    this.onShow();
+                    break;
+                case bx.GConst.n_screen_layout:
+                    this.layout();
+                    break;
+            }
+        };
+        MStrategy.prototype.onShow = function () {
+            bx.UIManager.popup(this.strategyView, true, false);
+            this.layout();
+        };
+        MStrategy.prototype.onHide = function () {
+            bx.UIManager.closePopup(this.strategyView);
+        };
+        MStrategy.prototype.onClickClose = function () {
+            this.onHide();
+        };
+        MStrategy.prototype.layout = function () {
+            if (!this.strategyView)
+                return;
+            this.strategyView.scaleMode = bx.ScaleMode.show_all;
+            this.strategyView.x = bx.Align.center;
+            this.strategyView.y = bx.Align.middle;
+        };
+        __decorate([
+            bx.$singleton("bx.Stage")
+        ], MStrategy.prototype, "stage", void 0);
+        __decorate([
+            bx.$singleton("point21.VStrategy")
+        ], MStrategy.prototype, "strategyView", void 0);
+        return MStrategy;
+    }(bx.Framework));
+    point21.MStrategy = MStrategy;
+})(point21 || (point21 = {}));
+var point21;
+(function (point21) {
+    /*
+    *免转按钮模块
+    */
+    var MWalletBtn = /** @class */ (function (_super) {
+        __extends(MWalletBtn, _super);
+        function MWalletBtn() {
+            return _super.call(this) || this;
+        }
+        MWalletBtn.prototype.onRegister = function () {
+            _super.prototype.onRegister.call(this);
+            this.addNotices(point21.GConst.show_wallet_btn, point21.GConst.hide_wallet_btn, point21.GConst.set_wallet_btn, bx.GConst.n_login_success, bx.GConst.n_to_room_state, bx.GConst.n_to_hall_state, bx.GConst.n_screen_layout);
+        };
+        MWalletBtn.prototype.onUnregister = function () { _super.prototype.onUnregister.call(this); };
+        MWalletBtn.prototype.onNotice = function (notice, data) {
+            _super.prototype.onNotice.call(this, notice, data);
+            switch (notice) {
+                case point21.GConst.show_wallet_btn:
+                    this.showWalletBtn();
+                    break;
+                case point21.GConst.hide_wallet_btn:
+                    this.hideWalletBtn();
+                    break;
+                case point21.GConst.set_wallet_btn:
+                    this.setWalletBtnPos(data[0]);
+                    break;
+                case bx.GConst.n_login_success:
+                    this.showWalletBtn();
+                    break;
+                case bx.GConst.n_to_room_state:
+                    this.hideWalletBtn();
+                    break;
+                case bx.GConst.n_to_hall_state:
+                    this.showWalletBtn();
+                    break;
+                case bx.GConst.n_screen_layout:
+                    this.layout();
+                    break;
+            }
+        };
+        MWalletBtn.prototype.setWalletBtnPos = function (type) {
+        };
+        MWalletBtn.prototype.hideWalletBtn = function () {
+            if (this.view) {
+                this.view._view.offClick(this, this.onClickBtn);
+                bx.Stage.getStage().layerRemoveChild(this.view);
+            }
+        };
+        MWalletBtn.prototype.showWalletBtn = function () {
+            if (bx.GData.playerInfo.isMainWallet) {
+                if (!this.view)
+                    this.view = new point21.VWalletBtn();
+                bx.Stage.getStage().layerAddChild(this.view, bx.GLayer.popup - 10);
+                this.layout();
+                this.view._view.onClick(this, this.onClickBtn);
+            }
+        };
+        MWalletBtn.prototype.onClickBtn = function () {
+            this.notify(bx.GConst.n_wallet_view_open_req);
+        };
+        MWalletBtn.prototype.layout = function () {
+            if (this.view == null)
+                return;
+            // let userAgent: string = navigator.userAgent.toLowerCase();
+            // let isApp: boolean = userAgent.indexOf("browser_type/android_app") != -1;//判断是否app内
+            // let isIphoneX: boolean = userAgent.indexOf("devcice_type/iphonex") != -1;//判断是否是iphoneX
+            // this.view.width = this.view.ui.width = 58;
+            // this.view.height = this.view.ui.height = 58;
+            if (bx.Stage.getStage().isLandscape) { //横屏
+                // if (isIphoneX) {
+                //     this.view.marginLeft = "2%";
+                //     this.view.marginTop = "20%";
+                // } else {
+                //     this.view.marginLeft = "2%";
+                //     this.view.marginTop = "14";
+                // }
+                this.view.marginLeft = "2%";
+                this.view.marginTop = "20%";
+                // this.view.marginBottom = "90%";
+            }
+            else {
+                // if (isIphoneX) {
+                //     this.view.marginLeft = "2%";
+                //     this.view.marginTop = "10%";
+                // } else {
+                this.view.marginLeft = "2%";
+                this.view.marginTop = "17%";
+                // }
+                // this.view.marginRight = "60%";
+                // this.view.marginBottom = "90%";
+            }
+            // this.view.x =Number(bx.Align.left)+50;
+            // this.view.y =Number(bx.Align.top)-120;
+            // this.view.x ="left:+50";
+            // this.view.y ="top:-120";
+            this.view.x = bx.Align.left;
+            this.view.y = bx.Align.top;
+            this.view.scaleMode = bx.ScaleMode.none;
+        };
+        return MWalletBtn;
+    }(bx.Framework));
+    point21.MWalletBtn = MWalletBtn;
+})(point21 || (point21 = {}));
 /** This is an automatically generated class by FairyGUI. Please do not modify it. **/
 var fui;
 (function (fui) {
@@ -4990,48 +4746,49 @@ var fui;
                 this.m_chip3 = (this.getChildAt(11));
                 this.m_chip4 = (this.getChildAt(12));
                 this.m_chip5 = (this.getChildAt(13));
-                this.m_playerArea0 = (this.getChildAt(14));
-                this.m_playerArea1 = (this.getChildAt(15));
-                this.m_playerArea2 = (this.getChildAt(16));
-                this.m_playerArea3 = (this.getChildAt(17));
-                this.m_playerArea4 = (this.getChildAt(18));
-                this.m_playerArea5 = (this.getChildAt(19));
-                this.m_player3 = (this.getChildAt(20));
-                this.m_player1 = (this.getChildAt(21));
-                this.m_player2 = (this.getChildAt(22));
-                this.m_player4 = (this.getChildAt(23));
-                this.m_player5 = (this.getChildAt(24));
-                this.m_numb1 = (this.getChildAt(25));
-                this.m_numb2 = (this.getChildAt(26));
-                this.m_numb3 = (this.getChildAt(27));
-                this.m_numb4 = (this.getChildAt(28));
-                this.m_numb5 = (this.getChildAt(29));
-                this.m_hand = (this.getChildAt(30));
-                this.m_btnPlay = (this.getChildAt(31));
-                this.m_insurance1 = (this.getChildAt(32));
-                this.m_insurance2 = (this.getChildAt(33));
-                this.m_insurance3 = (this.getChildAt(34));
-                this.m_insurance4 = (this.getChildAt(35));
-                this.m_insurance5 = (this.getChildAt(36));
-                this.m_insurance1_hide = (this.getChildAt(37));
-                this.m_insurance2_hide = (this.getChildAt(38));
-                this.m_insurance3_hide = (this.getChildAt(39));
-                this.m_insurance4_hide = (this.getChildAt(40));
-                this.m_insurance5_hide = (this.getChildAt(41));
-                this.m_clock = (this.getChildAt(42));
-                this.m_result1 = (this.getChildAt(43));
-                this.m_result2 = (this.getChildAt(44));
-                this.m_result3 = (this.getChildAt(45));
-                this.m_result4 = (this.getChildAt(46));
-                this.m_result5 = (this.getChildAt(47));
-                this.m_namebg1 = (this.getChildAt(48));
-                this.m_namebg2 = (this.getChildAt(49));
-                this.m_namebg4 = (this.getChildAt(50));
-                this.m_namebg5 = (this.getChildAt(51));
-                this.m_name1 = (this.getChildAt(52));
-                this.m_name2 = (this.getChildAt(53));
-                this.m_name4 = (this.getChildAt(54));
-                this.m_name5 = (this.getChildAt(55));
+                this.m_namebg1 = (this.getChildAt(14));
+                this.m_namebg2 = (this.getChildAt(15));
+                this.m_namebg4 = (this.getChildAt(16));
+                this.m_namebg5 = (this.getChildAt(17));
+                this.m_name1 = (this.getChildAt(18));
+                this.m_name2 = (this.getChildAt(19));
+                this.m_name4 = (this.getChildAt(20));
+                this.m_name5 = (this.getChildAt(21));
+                this.m_playerArea0 = (this.getChildAt(22));
+                this.m_playerArea1 = (this.getChildAt(23));
+                this.m_playerArea2 = (this.getChildAt(24));
+                this.m_playerArea3 = (this.getChildAt(25));
+                this.m_playerArea4 = (this.getChildAt(26));
+                this.m_playerArea5 = (this.getChildAt(27));
+                this.m_player3 = (this.getChildAt(28));
+                this.m_player1 = (this.getChildAt(29));
+                this.m_player2 = (this.getChildAt(30));
+                this.m_player4 = (this.getChildAt(31));
+                this.m_player5 = (this.getChildAt(32));
+                this.m_numb1 = (this.getChildAt(33));
+                this.m_numb2 = (this.getChildAt(34));
+                this.m_numb3 = (this.getChildAt(35));
+                this.m_numb4 = (this.getChildAt(36));
+                this.m_numb5 = (this.getChildAt(37));
+                this.m_hand = (this.getChildAt(38));
+                this.m_btnPlay = (this.getChildAt(39));
+                this.m_insurance1 = (this.getChildAt(40));
+                this.m_insurance2 = (this.getChildAt(41));
+                this.m_insurance3 = (this.getChildAt(42));
+                this.m_insurance4 = (this.getChildAt(43));
+                this.m_insurance5 = (this.getChildAt(44));
+                this.m_insurance1_hide = (this.getChildAt(45));
+                this.m_insurance2_hide = (this.getChildAt(46));
+                this.m_insurance3_hide = (this.getChildAt(47));
+                this.m_insurance4_hide = (this.getChildAt(48));
+                this.m_insurance5_hide = (this.getChildAt(49));
+                this.m_clock = (this.getChildAt(50));
+                this.m_result1 = (this.getChildAt(51));
+                this.m_result2 = (this.getChildAt(52));
+                this.m_result3 = (this.getChildAt(53));
+                this.m_result4 = (this.getChildAt(54));
+                this.m_result5 = (this.getChildAt(55));
+                this.m_n113 = (this.getChildAt(56));
             };
             FUI_roomView.URL = "ui://2mffi74ewuvl2w";
             return FUI_roomView;
@@ -5434,17 +5191,17 @@ var Tools;
                 if (v != this._tween) {
                     this._tween = v;
                     var start = void 0, end = void 0;
-                    for (var name_2 in this.props) {
-                        start = this.props[name_2][0];
-                        end = this.props[name_2][1];
-                        if (name_2 == 'skewX') {
-                            this.target.displayObject[name_2] = -(start + v * (end - start));
+                    for (var name_1 in this.props) {
+                        start = this.props[name_1][0];
+                        end = this.props[name_1][1];
+                        if (name_1 == 'skewX') {
+                            this.target.displayObject[name_1] = -(start + v * (end - start));
                         }
-                        else if (name_2 == 'skewY') {
-                            this.target.displayObject[name_2] = start + v * (end - start);
+                        else if (name_1 == 'skewY') {
+                            this.target.displayObject[name_1] = start + v * (end - start);
                         }
                         else {
-                            this.target[name_2] = start + v * (end - start);
+                            this.target[name_1] = start + v * (end - start);
                         }
                     }
                     if (this.actionType == 'bezier2') {
@@ -5521,6 +5278,51 @@ var Tools;
         return Move;
     }());
     Tools.Move = Move;
+    /** 一般用于结算时 数字的向上飘字 滚动特效
+    */
+    var NumberEffect = /** @class */ (function () {
+        function NumberEffect(view) {
+            this.time = 1000; //滚动时间 ms
+            this.clock = 0;
+            this.view = view;
+        }
+        //为GObject添加滚动特效
+        NumberEffect.prototype.addRollEffect = function (time) {
+            if (time === void 0) { time = 800; }
+            this.time = time;
+            this.view['runRoll'] = this.runRoll.bind(this);
+            return this;
+        };
+        //执行滚动特效
+        NumberEffect.prototype.runRoll = function (value) {
+            this.clock = 0;
+            var unit = (value / (this.time / 50)).toFixed(2);
+            Laya.timer.loop(50, this, this.changeNumb, [unit, value]);
+            return this.view;
+        };
+        //改变数值
+        NumberEffect.prototype.changeNumb = function (unit, value) {
+            this.clock += 50;
+            var result = ((this.clock / 50) * unit).toFixed(2);
+            if (unit > 0) {
+                this.view.text = '+' + result;
+            }
+            else {
+                this.view.text = result;
+            }
+            if (this.clock == this.time) {
+                if (unit > 0) {
+                    this.view.text = '+' + value.toString();
+                }
+                else {
+                    this.view.text = value.toString();
+                }
+                Laya.timer.clear(this, this.changeNumb);
+            }
+        };
+        return NumberEffect;
+    }());
+    Tools.NumberEffect = NumberEffect;
 })(Tools || (Tools = {}));
 //脚本自动输出，请不要手动修改
 var protos;
@@ -5584,38 +5386,21 @@ var point21;
         };
         //由筹码值得到对应筹码对象
         Utils.getChipImgObj = function (value) {
-            var obj = {};
-            var len = value.toString().length;
-            var numb;
-            var n1, n2;
-            var name;
-            for (var i = 0; i < len; i++) {
-                numb = this.getValueAt(value, len - i);
-                n1 = Math.floor(numb / 5);
-                n2 = numb % 5;
-                if (n1 > 0) {
-                    name = 5 * Math.pow(10, i);
-                    obj[name] = n1;
+            var chips = [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 5, 2, 1];
+            var result = {};
+            var quotient, remainder;
+            for (var _i = 0, chips_1 = chips; _i < chips_1.length; _i++) {
+                var item = chips_1[_i];
+                quotient = Math.floor(value / item);
+                remainder = value % item;
+                if (quotient > 0) {
+                    result[item] = quotient;
+                    value = remainder;
                 }
-                if (n2 > 0) {
-                    n1 = Math.floor(n2 / 2);
-                    n2 = n2 % 2;
-                    if (n1 > 0) {
-                        name = 2 * Math.pow(10, i);
-                        obj[name] = n1;
-                    }
-                    if (n2 > 0) {
-                        name = Math.pow(10, i);
-                        obj[name] = n2;
-                    }
-                }
+                if (remainder === 0)
+                    break;
             }
-            return obj;
-        };
-        //获取某个数某位的数值
-        Utils.getValueAt = function (numb, index) {
-            var v = numb.toString()[index - 1];
-            return Number(v);
+            return result;
         };
         Utils.formatChips = function (v) {
             return v / 100;

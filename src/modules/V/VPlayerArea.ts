@@ -54,11 +54,22 @@ namespace point21 {
                 this.doubleSignVisible(false,2);
                 this.insuranceSignVisible(false);
 
+                this.locationChiplists();
             } else {
                 this.setPoint(0);
                 this.removeChildrenFromList();
                 this.setCardTypeTipVisible(false);
             }
+        }
+
+        //强制使筹码列表恢复原位
+        locationChiplists():void{
+            let l0 = this._view.m_chipsList0_hide,
+                l1 = this._view.m_chipsList1_hide,
+                l2 = this._view.m_chipsList2_hide;
+            this._view.m_chipsList0.setXY(l0.x, l0.y);
+            this._view.m_chipsList1.setXY(l1.x, l1.y);
+            this._view.m_chipsList2.setXY(l2.x, l2.y);
         }
 
         /////////////////以下为两种类型 公共部分///////////////
@@ -213,19 +224,19 @@ namespace point21 {
 
         //牌型和点数设置
         setCardAndPoint(type,playSound:boolean,whichOne,min,max):void{
-            if(type == 3){//五小龙
+            if(type == 25){//五小龙
                 playSound && SoundManager.instance.playSound(AssetsUtils.getSoundUrl('blackjack'));
                 this.setCardTypeTipVisible(true,whichOne,1);
                 this.setPoint(0,whichOne);
-            }else if(type == 4){//黑杰克
+            }else if(type == 26){//黑杰克
                 playSound && SoundManager.instance.playSound(AssetsUtils.getSoundUrl('blackjack'));
                 this.setCardTypeTipVisible(true,whichOne,2);
                 this.setPoint(0,whichOne);
-            }else if(type == 0){//爆牌
+            }else if(type == 22){//爆牌
                 playSound && SoundManager.instance.playSound(AssetsUtils.getSoundUrl('boom'));
                 this.setCardTypeTipVisible(true,whichOne,0);
                 this.setPoint(22,whichOne);
-            }else if(type == 1 || type == 2){//其他点数
+            }else{//其他点数
                 if(min == max){
                     this.setPoint(min,whichOne);
                 }else{

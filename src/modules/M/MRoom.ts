@@ -220,18 +220,22 @@ namespace point21 {
                 case 2://进入下注阶段
                     this.mPlayer.startAllClock(value[0]);
                     this.view.StartClock(value[0]);
+
+                    //test
+                    // let a = MRoom.getIdOnSever(1);
+                    // let b = MRoom.getIdOnSever(5);
+                    // let arr = [a, b];
+                    // Laya.timer.once(3000, this.mPlayerArea, this.mPlayerArea.showCanBetTips,[arr]);
+
                     break;
                 case 3://玩家可在原位置下注
                     this.mBtnPlay.inStage(0);
                     break;
                 case 4://玩家可下注的其他位置
-                    if (value) {
-                        if (!this.betCompleted) {
-                            this.mPlayerArea.optionSeat = value;
-                            this.mPlayerArea.showCanBetTips(value);
-                        }
-                    }else{
-                        this.mPlayerArea.hideCanBetTips();
+                    this.mPlayerArea.hideCanBetTips();
+                    if (!this.betCompleted) {
+                        this.mPlayerArea.optionSeat = value;
+                        this.mPlayerArea.showCanBetTips(value);
                     }
                     break;
                 case 5://玩家在原位置下注了
@@ -249,7 +253,7 @@ namespace point21 {
                     this.view.seatNameVisible(true,id,this.mPlayer.views[pos - 1].playerName);
                     if (pos == 3) {
                         this.mBtnPlay.view.betValue = value[1] / 100;
-                        this.mPlayerArea.selecting = -1;
+                        MPlayerArea.selecting = -1;
                         id < 3 ? this.view.handAction(2) : this.view.handAction(3);
                     }
                     break;
@@ -403,7 +407,7 @@ namespace point21 {
                 if (player.antePosList) {
                     for (let seat of player.antePosList) {
                         let id = MRoom.getSeatId(seat.pos);
-                        this.mPlayerArea.views[id].getChipListChildren(seat.ante, true, 0);
+                        this.mPlayerArea.views[id].getChipListChildren(Utils.formatChips(seat.ante), true, 0);
                         this.mPlayerArea.views[id].setChip(Utils.formatChips(seat.ante),0);
                     }
                 }
@@ -676,6 +680,7 @@ namespace point21 {
                 this.view.height = this.viewBg.height = 1080;
                 this.view._view.m_h_v.selectedIndex = 0;
                 this.view._view.m_table.url = 'assets/room_dt/horizon/pz.png';
+                this.view._view.m_chipBank.url= 'assets/room_dt/horizon/cmg.png'
                 this.viewBg._view.m_roombg.url = 'assets/room_dt/horizon/bg.png';
                 let index = this.view._view.m_lightCtl.selectedIndex;
                 if(index > 15) this.view._view.m_lightCtl.selectedIndex = index - 15;
@@ -684,6 +689,7 @@ namespace point21 {
                 this.view.height = this.viewBg.height = 1920;
                 this.view._view.m_h_v.selectedIndex = 1;
                 this.view._view.m_table.url = 'assets/room_dt/vertical/pzs.png';
+                this.view._view.m_chipBank.url= 'assets/room_dt/vertical/cmgs.png'
                 this.viewBg._view.m_roombg.url = 'assets/room_dt/vertical/bg2.png';
                 let index = this.view._view.m_lightCtl.selectedIndex;
                 if(index > 0){

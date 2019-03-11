@@ -2,7 +2,7 @@ namespace point21{
     export class MPlayerArea{
         public views:Array<VPlayerArea> = [];              //玩家区域的视图，从左到右，依次push,最开始一个是庄家
         public optionSeat = [];                            //除了自己外还可以选择的位置
-        public selecting:number = -1;                            //除了自己 正选中的座位
+        public static selecting:number = -1;                            //除了自己 正选中的座位
 
         
         static dragonLoaded: boolean = false;                                 //五小龙资源已下载
@@ -23,7 +23,7 @@ namespace point21{
                                 this.views[n].setTipsToBetVisible(true);
                             }
                             this.views[i].setTipsToBetVisible(false);
-                            this.selecting = i;
+                            MPlayerArea.selecting = i;
                             bx.Framework.notify(point21.GConst.n_newPosToBet,i);
                         }
                     },[item,i])
@@ -37,7 +37,7 @@ namespace point21{
 
         //重置
         reset():void{
-            this.selecting = -1;
+            MPlayerArea.selecting = -1;
             for(let i = 0;i < this.views.length;i++){
                 this.views[i].reset();
             }
@@ -217,7 +217,7 @@ namespace point21{
                             if(id == 3){
                                 SoundManager.instance.playSound(AssetsUtils.getSoundUrl('win'));
                             }
-                            this.views[id].win(playerId,seat.balance,seat.whichOne);
+                            this.views[id].win(playerId,Utils.formatChips(seat.balance),seat.whichOne);
                         }
                     }
                 }
@@ -226,13 +226,15 @@ namespace point21{
 
         //更新可下注的区域显示
         showCanBetTips(data:Array<number>):void{
+            console.log('传过来的数据：', data)
             let lostSelecting:boolean = true;
-            let seatId ;
-            this.hideCanBetTips();
+            let seatId;
+            console.log('自己正在选的位置：', MPlayerArea.selecting);
             for(let　i = 0;i < data.length; i++){
                 seatId = MRoom.getSeatId(data[i]);
+                console.log('该座位空着：',seatId);
                 this.views[seatId].setTipsToBetVisible(true);
-                if(seatId == this.selecting) {
+                if(seatId == MPlayerArea.selecting) {
                     this.views[seatId].setTipsToBetVisible(false);
                     lostSelecting = false;
                 }

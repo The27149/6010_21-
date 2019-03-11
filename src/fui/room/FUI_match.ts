@@ -4,7 +4,7 @@ module fui.room {
 
 	export class FUI_match extends fairygui.GComponent {
 
-		public m_n4:fairygui.GImage;
+		public m_n4:fairygui.GLoader;
 		public m_lang_word:fairygui.GTextField;
 
 		public static URL:string = "ui://2mffi74eujigb4";
@@ -20,7 +20,7 @@ module fui.room {
 		protected constructFromXML(xml: any): void {
 			super.constructFromXML(xml);
 
-			this.m_n4 = <fairygui.GImage><any>(this.getChildAt(0));
+			this.m_n4 = <fairygui.GLoader><any>(this.getChildAt(0));
 			this.m_lang_word = <fairygui.GTextField><any>(this.getChildAt(1));
 		}
 	}

@@ -36,40 +36,19 @@ namespace point21{
 
         //由筹码值得到对应筹码对象
         static getChipImgObj(value:number):object{
-            let obj:object = <any>{};
-            let len = value.toString().length;
-            let numb:number;
-            let n1: number,n2:number;
-            let name:number;
-
-            for(let i = 0; i < len; i++){
-                numb = this.getValueAt(value,len - i);
-                n1 = Math.floor(numb / 5);
-                n2 = numb % 5;
-                if(n1 > 0){
-                    name = 5 * Math.pow(10,i);
-                    obj[name] = n1;
+            let chips = [10000,5000,2000,1000,500,200,100,50,20,10,5,2,1];
+            let result: object = {};
+            let quotient:number, remainder:number;
+            for(let item of chips){
+                quotient = Math.floor( value / item);
+                remainder = value % item;
+                if(quotient > 0){
+                    result[item] = quotient;
+                    value = remainder;
                 }
-                if(n2 > 0){
-                    n1 = Math.floor(n2 / 2);
-                    n2 = n2 % 2;
-                    if(n1 > 0){
-                        name = 2 * Math.pow(10,i);
-                        obj[name] = n1;
-                    }
-                    if(n2 > 0){
-                        name = Math.pow(10,i);
-                        obj[name] = n2;
-                    }
-                }
+                if(remainder === 0) break;
             }
-            return obj;
-        }
-
-        //获取某个数某位的数值
-        static getValueAt(numb:number,index:number):number{
-            let v = numb.toString()[index - 1];
-            return Number(v);
+            return result;
         }
 
         static formatChips(v:number):number{

@@ -4,7 +4,7 @@ module fui.room {
 
 	export class FUI_sider_bet extends fairygui.GComponent {
 
-		public m_n7:fairygui.GImage;
+		public m_n7:fairygui.GLoader;
 		public m_bg:fairygui.GLoader;
 		public m_active:fairygui.GImage;
 		public m_grip:fairygui.GLoader;
@@ -23,7 +23,7 @@ module fui.room {
 		protected constructFromXML(xml: any): void {
 			super.constructFromXML(xml);
 
-			this.m_n7 = <fairygui.GImage><any>(this.getChildAt(0));
+			this.m_n7 = <fairygui.GLoader><any>(this.getChildAt(0));
 			this.m_bg = <fairygui.GLoader><any>(this.getChildAt(1));
 			this.m_active = <fairygui.GImage><any>(this.getChildAt(2));
 			this.m_grip = <fairygui.GLoader><any>(this.getChildAt(3));

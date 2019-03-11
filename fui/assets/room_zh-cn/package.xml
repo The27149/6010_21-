@@ -11,8 +11,8 @@
     <image id="wuvla" name="tp (2).png" path="/" exported="true"/>
     <image id="wuvlb" name="jxyx.png" path="/" exported="true"/>
     <image id="u1w8c" name="djxz.png" path="/" exported="true"/>
-    <image id="u1w8d" name="dragon.png" path="/" exported="true"/>
-    <image id="u1w8e" name="blackjack.png" path="/" exported="true"/>
+    <image id="u1w8d" name="dragon.png" path="/"/>
+    <image id="u1w8e" name="blackjack.png" path="/"/>
     <image id="u1w8f" name="fj.png" path="/" exported="true"/>
     <image id="u1w8g" name="tp.png" path="/" exported="true"/>
     <image id="u1w8h" name="xzwc.png" path="/" exported="true"/>

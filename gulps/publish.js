@@ -1,7 +1,8 @@
 //发布
-module.exports = function (context) {
+module.exports = function (context, isApp) {
     
         return function () {
+            if(isApp) return;
             // console.log(process.argv);
             var devIdx = process.argv.indexOf("--dev");
             var sitIdx = process.argv.indexOf("--sit");

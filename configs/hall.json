@@ -249,16 +249,16 @@
             },
             "items": [
             {
-                "id": "info",
-                "noClickTitleUrl": "words3",
-                "clickTitleUrl": "words32",
-                "contentUrl": "wz02"
-            },
-            {
                 "id": "start",
                 "noClickTitleUrl": "words1",
                 "clickTitleUrl": "words12",
                 "contentUrl": "wz01"
+            },
+            {
+                "id": "info",
+                "noClickTitleUrl": "words3",
+                "clickTitleUrl": "words32",
+                "contentUrl": "wz02"
             },
             {
                 "id": "type",

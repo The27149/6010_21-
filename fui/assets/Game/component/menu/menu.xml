@@ -38,7 +38,7 @@
     <component id="n20_d832" name="n20" src="d8322s" fileName="component/menu/room_rep.xml" xy="26,236" customData="reports">
       <gearDisplay controller="ctr" pages="5,7"/>
     </component>
-    <component id="n21_d832" name="n21" src="d8322u" fileName="component/menu/room_sound.xml" xy="26,337" customData="music">
+    <component id="n21_d832" name="n21" src="d8322u" fileName="component/roomitem/room_sound.xml" xy="26,337" customData="music">
       <gearDisplay controller="ctr" pages="5,7"/>
     </component>
     <component id="n22_d832" name="n22" src="d8322p" fileName="component/menu/room_help.xml" xy="26,438" customData="help">

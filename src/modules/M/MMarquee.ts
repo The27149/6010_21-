@@ -33,8 +33,8 @@ namespace point21{
 
             if(data.id == 1){//牌型跑马灯
                 switch(value){
-                    case 3: value = bx.GData.getLanguage('201320'); break;
-                    case 4: value = bx.GData.getLanguage('201321'); break;
+                    case 25: value = bx.GData.getLanguage('201320'); break;
+                    case 26: value = bx.GData.getLanguage('201321'); break;
                 }
                 word = bx.GData.getLanguage('201318').replace('${name}',name).replace('${room}',room).replace('${value}',value);
             }else if(data.id == 2){//金币跑马灯

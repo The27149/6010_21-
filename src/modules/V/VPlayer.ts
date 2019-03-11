@@ -47,19 +47,19 @@ namespace point21{
         //设置玩家信息
         setPlayer(info:protos.playerInfo | protos.playerMsg):void{
             this.show();
-            this.playerName = info.name;
+            let name = info.name;
+            if(name.length > 8){
+                name = name.substr(0, 8) + '...';
+            }
+            this.playerName = name;
             let headUrl = Utils.getHeadUrl(info.avatar);
             if(this._view){
                 this._view.m_head.url = headUrl;
-                let name = info.name;
-                if(name.length > 8){
-                    name = name.substr(0, 8) + '...';
-                }
                 this._view.m_nick.text = name;
                 this.setCoin(info.chips);
             }else{
                 this._viewSelf.m_headComp.m_head.url = headUrl;
-                this._viewSelf.m_nick.text = info.name;
+                this._viewSelf.m_nick.text = name;
                 this.setCoin(info.chips);
             }
         }

@@ -9,16 +9,6 @@ module fui.Game {
 			fairygui.UIObjectFactory.setPackageItemExtension(FUI_saveHead.URL, FUI_saveHead);
 			fairygui.UIObjectFactory.setPackageItemExtension(FUI_headItem.URL, FUI_headItem);
 			fairygui.UIObjectFactory.setPackageItemExtension(FUI_close.URL, FUI_close);
-			fairygui.UIObjectFactory.setPackageItemExtension(FUI_menu.URL, FUI_menu);
-			fairygui.UIObjectFactory.setPackageItemExtension(FUI_hall_home.URL, FUI_hall_home);
-			fairygui.UIObjectFactory.setPackageItemExtension(FUI_hall_rep.URL, FUI_hall_rep);
-			fairygui.UIObjectFactory.setPackageItemExtension(FUI_hall_help.URL, FUI_hall_help);
-			fairygui.UIObjectFactory.setPackageItemExtension(FUI_hall_sound.URL, FUI_hall_sound);
-			fairygui.UIObjectFactory.setPackageItemExtension(FUI_switch.URL, FUI_switch);
-			fairygui.UIObjectFactory.setPackageItemExtension(FUI_room_help.URL, FUI_room_help);
-			fairygui.UIObjectFactory.setPackageItemExtension(FUI_room_rep.URL, FUI_room_rep);
-			fairygui.UIObjectFactory.setPackageItemExtension(FUI_room_home.URL, FUI_room_home);
-			fairygui.UIObjectFactory.setPackageItemExtension(FUI_room_sound.URL, FUI_room_sound);
 			fairygui.UIObjectFactory.setPackageItemExtension(FUI_set.URL, FUI_set);
 			fairygui.UIObjectFactory.setPackageItemExtension(FUI_musicSlider.URL, FUI_musicSlider);
 			fairygui.UIObjectFactory.setPackageItemExtension(FUI_musicSlider_grip.URL, FUI_musicSlider_grip);

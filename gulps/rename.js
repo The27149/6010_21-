@@ -2,7 +2,7 @@ module.exports = function (context) {
     return function(){
         let fs=context["fs"];
         let root_path="assets/"
-        let renames=["hall",'room_dt'];
+        let renames=["hall",'room_dt','menu'];
         let inpath;
         for(var path of renames){
             inpath=root_path+path;

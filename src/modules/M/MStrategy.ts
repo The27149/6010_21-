@@ -29,7 +29,7 @@ namespace point21{
         }
 
         onShow():void{
-            bx.UIManager.popup(this.strategyView,true,true);
+            bx.UIManager.popup(this.strategyView,true,false);
             this.layout();
         }
 

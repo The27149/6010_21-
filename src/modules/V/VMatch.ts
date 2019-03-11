@@ -5,7 +5,7 @@ namespace point21{
         private str:string = '';
         protected requestGS(...params: Array<any>): void { bx.Framework.notify(bx.GConst.n_gs_send, ...params); }
         constructor(){
-            super('fui.room.FUI_match',"room_");
+            super('fui.room.FUI_match',"room_dt");
             this._view = this.ui as fui.room.FUI_match;
             this.oldStr = this._view.m_lang_word.text;
         }

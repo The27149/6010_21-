@@ -119,7 +119,7 @@
                     "height": 69,//按钮的高
                     "data": "help",//按钮的自定义数据
                     "iconUrl": "xlan1",//按钮未点击时 显示的图片资源名
-                    "iconUrl1": "xdk",//按钮点击时 显示的图片资源名  如果没有的话 跟 iconUrl是一样的
+                    "iconUrl1": "",//按钮点击时 显示的图片资源名  如果没有的话 跟 iconUrl是一样的
                     "isLan": true //是否需要多语言  
                 },
                 {
@@ -127,7 +127,7 @@
                     "height": 69,//按钮的高
                     "data": "music",//按钮的自定义数据
                     "iconUrl": "xlan4",//按钮未点击时 显示的图片资源名
-                    "iconUrl1": "xdk",//按钮点击时 显示的图片资源名  如果没有的话 跟 iconUrl是一样的
+                    "iconUrl1": "",//按钮点击时 显示的图片资源名  如果没有的话 跟 iconUrl是一样的
                     "isLan": true //是否需要多语言  
                 },
                 {
@@ -135,7 +135,7 @@
                     "height": 69,//按钮的高
                     "data": "reports",//按钮的自定义数据
                     "iconUrl": "xlan2",//按钮未点击时 显示的图片资源名
-                    "iconUrl1": "xdk",//按钮点击时 显示的图片资源名  如果没有的话 跟 iconUrl是一样的
+                    "iconUrl1": "",//按钮点击时 显示的图片资源名  如果没有的话 跟 iconUrl是一样的
                     "isLan": true //是否需要多语言
                 },
                 {
@@ -143,7 +143,7 @@
                     "height": 69,//按钮的高
                     "data": "back",//按钮的自定义数据
                     "iconUrl": "xlan3",//按钮未点击时 显示的图片资源名
-                    "iconUrl1": "xdk",//按钮点击时 显示的图片资源名  如果没有的话 跟 iconUrl是一样的
+                    "iconUrl1": "",//按钮点击时 显示的图片资源名  如果没有的话 跟 iconUrl是一样的
                     "isLan": true //是否需要多语言
                 }
             ]

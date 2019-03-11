@@ -151,4 +151,65 @@ namespace Tools {
         }
 
     }
+
+    /** 一般用于结算时 数字的向上飘字 滚动特效
+    */
+    export class NumberEffect{
+        private view: fairygui.GTextField;
+        private time: number = 1000;   //滚动时间 ms
+        private clock: number = 0;
+
+        private distance: number;       //滚动距离
+        constructor(view: fairygui.GTextField){
+            this.view = view;
+        }
+
+        //为GObject添加滚动特效
+        public addRollEffect(time: number = 800): NumberEffect{
+            this.time = time;
+            this.view['runRoll'] = this.runRoll.bind(this);
+            return this;
+        }
+
+        //执行滚动特效
+        private runRoll(value: number): fairygui.GObject{
+            this.clock = 0;
+            let unit = (value / (this.time / 50)).toFixed(2);
+            Laya.timer.loop(50, this, this.changeNumb, [unit, value]);
+            return this.view;
+        }
+
+        //改变数值
+        private changeNumb(unit: number, value: number):void{
+            this.clock += 50;
+            
+            let result = ((this.clock / 50) * unit).toFixed(2);
+            if(unit > 0){
+                this.view.text = '+' + result;
+            }else{
+                this.view.text = result;
+            }
+            if(this.clock == this.time){
+                if(unit > 0){
+                    this.view.text = '+' + value.toString();
+                }else{
+                    this.view.text = value.toString();
+                }
+                Laya.timer.clear(this, this.changeNumb);
+            }
+        }
+
+        // //为GObject添加飘动特效
+        // public addFlyEffect(): NumberEffect{
+        //     this.view['runFly'] = this.runFly.bind(this);
+        //     return this;
+        // }
+
+        // //执行飘动特效
+        // private runFly(distance: number = 70): fairygui.GObject{
+        //     let y = this.view.y - distance;
+        //     Laya.Tween.to(this.view, {y: y}, 500);
+        //     return this.view;
+        // }
+    }
 }

@@ -161,10 +161,18 @@ namespace point21{
             target.visible = true;
             if(value >= 0){
                 target.m_resultCtl.selectedIndex = 1;
-                target.m_win.text = '+' + bx.GData.formatNumber(value);
+                //target.m_win.text = '+' + bx.GData.formatNumber(value);
+                if(!target.m_win['runRoll']){
+                    new Tools.NumberEffect(target.m_win).addRollEffect();
+                }
+                target.m_win['runRoll'](bx.GData.formatNumber(value));
             }else{
                 target.m_resultCtl.selectedIndex = 0;
-                target.m_fail.text = bx.GData.formatNumber(value);
+                //target.m_fail.text = bx.GData.formatNumber(value);
+                if(!target.m_fail['runRoll']){
+                    new Tools.NumberEffect(target.m_fail).addRollEffect();
+                }
+                target.m_fail['runRoll'](bx.GData.formatNumber(value));
             }
         }
 
@@ -252,9 +260,6 @@ namespace point21{
             this._view['m_namebg' + pos].visible = state;
             this._view['m_name' + pos].visible = state;
             if(state && name){
-                if(name.length > 8){
-                    name = name.substr(0) + '...';
-                }
                 this._view['m_name' + pos].text = name;
             }
         }

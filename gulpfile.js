@@ -138,7 +138,13 @@ gulp.task("pub_zip", ["release"], require("./gulps/zip.js")(context));
 //publish 打zip包版本号
 gulp.task("zip_ver", ["pub_zip"], require("./gulps/zip_ver.js")(context));
 //发布dev、sit
-gulp.task("publish", ["update_ver", "zip_ver"], require("./gulps/publish.js")(context));
+gulp.task("publish", ["update_ver", "zip_ver"], require("./gulps/publish.js")(context, false));
+
+//发布app里面用的
+gulp.task("publish_app", ["update_ver", "release"], require("./gulps/publish.js")(context, true));
 
 //生成 ts 文件
 gulp.task("ts", ["consts", "protos"], function () { });
+
+//改图片名
+gulp.task("rename", require("./gulps/rename.js")(context));

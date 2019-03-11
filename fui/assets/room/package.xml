@@ -166,22 +166,22 @@
     <image id="6xefcg" name="_0012_9.png" path="/resource/Horizontal/sz1/"/>
     <font id="6xefch" name="fail.fnt" path="/resource/font/" exported="true"/>
     <component id="ggptci" name="hand.xml" path="/component/player/handAction/"/>
-    <movieclip id="ggptcj" name="hand_bet.jta" path="/component/player/handAction/" atlas="alone_npot"/>
-    <movieclip id="ggptck" name="hand_betLeft.jta" path="/component/player/handAction/" atlas="alone_npot"/>
-    <movieclip id="ggptcl" name="hand_betRight.jta" path="/component/player/handAction/" atlas="alone_npot"/>
-    <movieclip id="ggptcm" name="hand_stopCard.jta" path="/component/player/handAction/" atlas="alone_npot"/>
-    <image id="ggptco" name="handLeft.png" path="/resource/Horizontal/"/>
-    <image id="ggptcp" name="handRight.png" path="/resource/Horizontal/"/>
-    <movieclip id="ggptcq" name="hand_left.jta" path="/component/player/handAction/"/>
-    <movieclip id="ggptcr" name="hand_right.jta" path="/component/player/handAction/"/>
-    <movieclip id="ggptcs" name="hand_needCard.jta" path="/component/player/handAction/" atlas="alone_npot"/>
+    <movieclip id="ggptcj" name="hand_bet.jta" path="/component/player/handAction/" atlas="8"/>
+    <movieclip id="ggptck" name="hand_betLeft.jta" path="/component/player/handAction/" atlas="2"/>
+    <movieclip id="ggptcl" name="hand_betRight.jta" path="/component/player/handAction/" atlas="3"/>
+    <movieclip id="ggptcm" name="hand_stopCard.jta" path="/component/player/handAction/" atlas="7"/>
+    <image id="ggptco" name="handLeft.png" path="/resource/Horizontal/" atlas="1"/>
+    <image id="ggptcp" name="handRight.png" path="/resource/Horizontal/" atlas="1"/>
+    <movieclip id="ggptcq" name="hand_left.jta" path="/component/player/handAction/" atlas="4"/>
+    <movieclip id="ggptcr" name="hand_right.jta" path="/component/player/handAction/" atlas="6"/>
+    <movieclip id="ggptcs" name="hand_needCard.jta" path="/component/player/handAction/" atlas="5"/>
     <image id="d832d1" name="close.png" path="/resource/Horizontal/tanchuang/"/>
     <component id="o440da" name="strategyBt2.xml" path="/component/strategy/" exported="true"/>
     <component id="o440db" name="strategyBtn.xml" path="/component/strategy/" exported="true"/>
-    <image id="o440ev" name="Button1.png" path="/resource/Horizontal/"/>
-    <image id="o440ew" name="Button2.png" path="/resource/Horizontal/"/>
-    <image id="o440ex" name="Button3.png" path="/resource/Horizontal/"/>
-    <image id="o440ey" name="Button4.png" path="/resource/Horizontal/"/>
+    <image id="o440ev" name="Button1.png" path="/resource/Horizontal/" scale="" atlas="1"/>
+    <image id="o440ew" name="Button2.png" path="/resource/Horizontal/" scale="" atlas="1"/>
+    <image id="o440ex" name="Button3.png" path="/resource/Horizontal/" atlas="1"/>
+    <image id="o440ey" name="Button4.png" path="/resource/Horizontal/" atlas="1"/>
     <image id="l4y4ez" name="clipboard_2018-11-28_11-23.png" path="/resource/Design sketch/标准/"/>
     <image id="l4y4f1" name="pz.png" path="/resource/Horizontal/"/>
     <image id="l4y4f2" name="cmg.png" path="/resource/Horizontal/"/>
@@ -198,5 +198,14 @@
     <image id="eia3fg" name="c1.png" path="/resource/Horizontal/"/>
     <image id="ve7zfh" name="f2.png" path="/resource/Design sketch/"/>
   </resources>
-  <publish name="room" path="{rootPath}\assets\room" genCode="true" npot="true"/>
+  <publish name="room" path="{rootPath}\assets\room" genCode="true" npot="true">
+    <atlas compression="true" index="1"/>
+    <atlas compression="true" index="2"/>
+    <atlas compression="true" index="3"/>
+    <atlas compression="true" index="4"/>
+    <atlas compression="true" index="5"/>
+    <atlas compression="true" index="6"/>
+    <atlas compression="true" index="7"/>
+    <atlas compression="true" index="8"/>
+  </publish>
 </packageDescription>
