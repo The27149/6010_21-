@@ -122,7 +122,7 @@ namespace point21 {
         }
 
         //发牌
-        dealCard(endNode:fui.room.FUI_card,data:protos.dealCardsList,type:number):void{
+        dealCard(endNode:fairygui.GObject,data:protos.dealCardsList,type:number, over?: Function):void{
             let _this = this;
             let card: fui.room.FUI_card = Laya.Pool.getItemByCreateFun('card', function () {
                 return fui.room.FUI_card.createInstance();
@@ -137,11 +137,15 @@ namespace point21 {
             deal.props = { scaleX: [deal.start.scaleX,deal.end.scaleX], scaleY: [deal.start.scaleY,deal.end.scaleY] };
             deal.complete = function(){
                 card.removeFromParent();
-                Laya.Pool.recover('card',this.target);
-                Laya.Pool.recover('move',deal);
-                this.end.visible = true;
+                if(over){
+                    this.end = over();
+                }else{
+                    this.end.visible = true;
+                }
                 this.end.m_card.url = Utils.getCardImg(0);
                 _this.dealComplete(this.end,data,type);
+                Laya.Pool.recover('card',this.target);
+                Laya.Pool.recover('move',deal);
             }
             deal.move();
             SoundManager.instance.playSound(AssetsUtils.getSoundUrl('deal'));
@@ -394,7 +398,6 @@ namespace point21 {
             this._view.m_chipsList0.rotation = rotation;
             this._view.m_chipsList1.rotation = rotation;
             this._view.m_chipsList2.rotation = rotation;
-            this._view.m_clickToBet.rotation = rotation;
         }
 
         //设置筹码列表倾斜值
@@ -408,11 +411,10 @@ namespace point21 {
 
         //是否在此区域下注 的显示/隐藏
         setTipsToBetVisible(state: boolean): void {
-            if(this._view){
-                this._view.m_clickToBet.visible = state;
-                this._view.m_chipArea.m_selectedCtl.selectedIndex = state ? 1 : 0;
-                this.canClick = state;
-            }
+            this.canClick = state;
+            let target:fui.room.FUI_clickToBet = this.roomView['m_betTip' + this.seatId];
+            if(target) target.visible = state;
+            if(this._view) this._view.m_chipArea.m_selectedCtl.selectedIndex = state ? 1 : 0;
         }
 
 
@@ -618,6 +620,43 @@ namespace point21 {
             Laya.timer.once(500,this,function(){
                 _this.playerBetBack(value,playerId,id);
             })
+        }
+
+        //获取当前手牌的总张数
+        getCardsNumb(whichOne?: number): number{
+            let count: number;
+            if(this._view){
+                let list = this._view['m_cardsList' + whichOne];
+                count = list.m_list1.numChildren + list.m_list2.numChildren;
+            }
+            if(this._view_banker){
+                count = this._view_banker.m_cardList.numChildren;
+            }
+            return count;
+        }
+
+        //设置新牌替代对象的位置并返回此对象
+        setDealTargetPos(whichOne: number): fairygui.GObject{
+            let pre: fairygui.GObject;
+            let p,p1;
+            if(this._view){
+                let count = this.getCardsNumb(whichOne);
+                if(count < 4){
+                    pre = this._view['m_cardsList' + whichOne].m_list1.getChildAt(count - 1);
+                }else{
+                    pre = this._view['m_cardsList' + whichOne].m_list2.getChildAt(count - 4);
+                }
+                p = pre.localToGlobal();
+                p1 = this._view.globalToLocal(p.x + 60, p.y);
+                this._view.m_dealTarget.setXY(p1.x, p1.y);
+                return this._view.m_dealTarget;
+            }else if(this._view_banker){
+                pre = this._view_banker.m_cardList.getChildAt(this.getCardsNumb() - 1);
+                p = pre.localToGlobal();
+                p1 = this._view_banker.globalToLocal(p.x + 45, p.y);
+                this._view_banker.m_dealTarget.setXY(p1.x, p1.y);
+                return this._view_banker.m_dealTarget;
+            }
         }
     }
 }

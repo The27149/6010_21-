@@ -1,6 +1,6 @@
 {
     "menu": {
-        "isOpen": false,//是否开启
+        "isOpen": true,//是否开启
         "url": "fui.game.FUI_VMenu",//菜单栏组件 默认是用公共库的 如果你没什么大的变化，这里默认
         "soundName": "",        //音效
         "itemUrl": "fui.game.FUI_VMenuItem",//菜单栏按钮组件 默认是用公共库的 如果你没什么大的变化，这里默认

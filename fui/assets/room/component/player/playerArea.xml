@@ -30,6 +30,7 @@
     <graph id="n44_drj3" name="activeMark" xy="90,134" size="92,92" aspect="true" alpha="0.6" type="eclipse" lineSize="0" fillColor="#fffff000">
       <gearDisplay controller="activeCtl" pages="1"/>
     </graph>
+    <graph id="n47_hs68" name="dealTarget" xy="-52,181" size="21,17" visible="false" type="rect"/>
     <component id="n15_wuvl" name="chipCount0" src="wuvl3y" fileName="component/chips/chipCount.xml" xy="93,233">
       <gearDisplay controller="fen" pages="0"/>
     </component>
@@ -80,12 +81,11 @@
       <item/>
       <item/>
     </list>
-    <component id="n28_u1w8" name="clickToBet" src="u1w84h" fileName="component/player/tips/clickToBet.xml" xy="135,115" pivot="0,1" touchable="false"/>
     <component id="n33_u1w8" name="cardType0" src="u1w84i" fileName="component/player/tips/cardType.xml" xy="21,77" touchable="false">
       <gearDisplay controller="fen" pages="0"/>
     </component>
-    <component id="n34_u1w8" name="cardType1" src="u1w84i" fileName="component/player/tips/cardType.xml" xy="-17,95" size="229,77" scale="0.7,0.7" touchable="false"/>
-    <component id="n35_u1w8" name="cardType2" src="u1w84i" fileName="component/player/tips/cardType.xml" xy="134,94" size="229,77" scale="0.7,0.7" touchable="false"/>
+    <component id="n34_u1w8" name="cardType1" src="u1w84i" fileName="component/player/tips/cardType.xml" xy="-14,95" size="229,77" scale="0.7,0.7" touchable="false"/>
+    <component id="n35_u1w8" name="cardType2" src="u1w84i" fileName="component/player/tips/cardType.xml" xy="124,94" size="229,77" scale="0.7,0.7" touchable="false"/>
     <image id="n46_l3ii" name="careSign" src="l3iif9" fileName="resource/Horizontal/care.png" xy="117,200">
       <gearDisplay controller="careCtl" pages="1"/>
     </image>

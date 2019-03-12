@@ -7,6 +7,7 @@ module fui.room {
 		public m_cardList:fairygui.GList;
 		public m_cardPoint:FUI_cardsPoint1;
 		public m_cardType:FUI_cardType;
+		public m_dealTarget:fairygui.GGraph;
 
 		public static URL:string = "ui://2mffi74ewuvl3h";
 
@@ -24,6 +25,7 @@ module fui.room {
 			this.m_cardList = <fairygui.GList><any>(this.getChildAt(0));
 			this.m_cardPoint = <FUI_cardsPoint1><any>(this.getChildAt(1));
 			this.m_cardType = <FUI_cardType><any>(this.getChildAt(2));
+			this.m_dealTarget = <fairygui.GGraph><any>(this.getChildAt(3));
 		}
 	}
 }

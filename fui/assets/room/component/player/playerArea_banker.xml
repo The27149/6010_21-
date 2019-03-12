@@ -10,5 +10,6 @@
     </list>
     <component id="n4_wuvl" name="cardPoint" src="wuvl3b" fileName="component/cards/cardsPoint1.xml" xy="299,92"/>
     <component id="n6_u4ep" name="cardType" src="u1w84i" fileName="component/player/tips/cardType.xml" xy="35,70"/>
+    <graph id="n7_hs68" name="dealTarget" xy="-36,88" size="15,11" visible="false" type="rect"/>
   </displayList>
 </component>

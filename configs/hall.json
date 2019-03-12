@@ -1,6 +1,6 @@
 {
     "hall": {
-        "hallBgSound": "", //大厅背景音乐如果有多个可以用数组: ["gameBgSound_1","gameBgSound_2","gameBgSound_3"]
+        "hallBgSound": "hallbgm", //大厅背景音乐如果有多个可以用数组: ["gameBgSound_1","gameBgSound_2","gameBgSound_3"]
         "hallBgSoundPlayType": 1, //大厅背景音乐播放的模式 1、随机  2、顺序  ，默认1。注：如果没有多个背景音乐，此项配置无效。
         "room_modules": ["point21.MRoom"], //房间资源加载完毕之后才初始化的模块
         "roomBgSound": "bgm", //房间背景音乐

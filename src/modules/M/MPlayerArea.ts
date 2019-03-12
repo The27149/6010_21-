@@ -98,9 +98,48 @@ namespace point21{
 
         //发牌
         dealCard(seatId:number,data:protos.dealCardsList,type:number){
-            let card = this.getNewCard(seatId,data.whichOne);
-            card.visible = false;
-            this.views[seatId].dealCard(card as fui.room.FUI_card,data,type);
+            let addCardOver: Function = null;
+            let obj: fairygui.GObject;
+            let count:number = this.views[seatId].getCardsNumb(data.whichOne);
+            if(seatId == 0){//庄家发牌
+                if(count > 0){
+                    obj = this.views[seatId].setDealTargetPos(data.whichOne);
+                    addCardOver = function(){
+                        let card = this.getNewCard(seatId,data.whichOne);
+                        card.visible = true;
+                        return card;
+                    }.bind(this);
+                }else{
+                    obj = this.getNewCard(seatId,data.whichOne);
+                    obj.visible = false; 
+                }
+            }else{//闲家发牌
+                if(count == 1 || count == 2 || count == 4){
+                    obj = this.views[seatId].setDealTargetPos(data.whichOne);
+                    addCardOver = function(){
+                        let card = this.getNewCard(seatId,data.whichOne);
+                        card.visible = true;
+                        return card;
+                    }.bind(this);
+                }else{
+                    obj = this.getNewCard(seatId,data.whichOne);
+                    obj.visible = false;
+                }
+            }
+            this.views[seatId].dealCard(obj, data, type, addCardOver);
+
+            // let card = this.getNewCard(seatId,data.whichOne);
+            // card.visible = false;
+            //this.views[seatId].dealCard(obj, data, type);
+        }
+
+        //设置发牌替代对象
+        createObj(pre: fairygui.GObject): fairygui.GObject{
+            let obj: fairygui.GObject = new fairygui.GObject();
+            obj.x = pre.x + pre.width + 20;
+            obj.y = pre.y;
+            pre.parent.addChild(obj);
+            return  
         }
 
         //庄家暗牌翻牌
@@ -255,20 +294,19 @@ namespace point21{
 
         layout():void{
             if(this.views.length === 0) return;
-            let skewX = [8,0,0,-18,0],
-                skewY = [0,-18,0,0,12],
-                rotate_view = [67,44,0,-28,-73];
-            let rotate_chip:Array<number> = [-77,-30,0,35,70];
+            let skewX = [10,10,0,-10,-10],
+                rotate_view = [64,27,0,-27,-64];
+            let rotate_chip:Array<number> = [-70,-38,0,38,70];
             let target:VPlayerArea;
             for(let i = 1; i < this.views.length; i++){
                 target = this.views[i];
                 if(bx.Stage.getStage().isLandscape){
                     target._view.rotation = rotate_view[i - 1];
-                    target._view.setSkew(skewX[i - 1],skewY[i - 1]);
+                    target._view.skewX = skewX[i - 1];
                     target.setChipListRotation(rotate_chip[i - 1]);
                 }else{
                     target.setChipListRotation(0);
-                    target._view.setSkew(0,0);
+                    target._view.skewX = 0;
                     target._view.rotation = 0;
                 }
             }
