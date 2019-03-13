@@ -12,5 +12,7 @@
     <image id="nasgb" name="wz03.png" path="/" exported="true"/>
     <image id="nasgc" name="wz01.png" path="/" exported="true"/>
   </resources>
-  <publish name="help_en-us" path="{rootPath}\assets\help\en-us"/>
+  <publish name="help_en-us" path="{rootPath}\assets\help\en-us" npot="true">
+    <atlas compression="true" index="0"/>
+  </publish>
 </packageDescription>

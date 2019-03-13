@@ -8,9 +8,11 @@
     <image id="uz6j4" name="help_title.png" path="/" exported="true"/>
     <image id="uz6j5" name="words12.png" path="/" exported="true"/>
     <image id="uz6j6" name="words1.png" path="/" exported="true"/>
-    <image id="nasgh" name="wz01.png" path="/" exported="true"/>
-    <image id="nasgi" name="wz02.png" path="/" exported="true"/>
     <image id="nasgj" name="wz03.png" path="/" exported="true"/>
+    <image id="hs68k" name="wz01.png" path="/" exported="true"/>
+    <image id="hs68l" name="wz02.png" path="/" exported="true"/>
   </resources>
-  <publish name="help_zh-cn" path="{rootPath}\assets\help\zh-cn"/>
+  <publish name="help_zh-cn" path="{rootPath}\assets\help\zh-cn" npot="true">
+    <atlas compression="true" index="0"/>
+  </publish>
 </packageDescription>
