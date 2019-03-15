@@ -4,7 +4,6 @@ module fui.Game {
 
 	export class GameBinder{
 		public static bindAll():void {
-			fairygui.UIObjectFactory.setPackageItemExtension(FUI_Broadcast.URL, FUI_Broadcast);
 			fairygui.UIObjectFactory.setPackageItemExtension(FUI_item1.URL, FUI_item1);
 			fairygui.UIObjectFactory.setPackageItemExtension(FUI_Roomitems.URL, FUI_Roomitems);
 			fairygui.UIObjectFactory.setPackageItemExtension(FUI_saveHead.URL, FUI_saveHead);
