@@ -10,10 +10,10 @@
       <gearDisplay controller="maskCtl" pages="1"/>
     </graph>
   </displayList>
-  <transition name="trun">
-    <item time="0" type="Size" target="n0_wuvl" tween="true" startValue="95,130" endValue="0,130" duration="6"/>
-    <item time="0" type="Skew" target="n0_wuvl" tween="true" startValue="0,0" endValue="0,-40" duration="6" label2="change"/>
-    <item time="6" type="Size" target="n0_wuvl" tween="true" startValue="0,130" endValue="95,130" duration="6"/>
-    <item time="6" type="Skew" target="n0_wuvl" label="change" tween="true" startValue="0,-40" endValue="0,0" duration="6"/>
+  <transition name="trun" options="4">
+    <item time="0" type="Size" target="n0_wuvl" tween="true" startValue="95,130" endValue="0,130" duration="3"/>
+    <item time="0" type="Skew" target="n0_wuvl" tween="true" startValue="0,0" endValue="0,-40" duration="3" label2="change"/>
+    <item time="3" type="Size" target="n0_wuvl" tween="true" startValue="0,130" endValue="95,130" duration="3"/>
+    <item time="3" type="Skew" target="n0_wuvl" label="change" tween="true" startValue="0,-40" endValue="0,0" duration="3"/>
   </transition>
 </component>

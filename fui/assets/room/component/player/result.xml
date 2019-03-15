@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="178,62">
-  <controller name="resultCtl" pages="0,,1," selected="1">
+<component size="558,62">
+  <controller name="resultCtl" pages="0,,1," selected="0">
     <remark page="0" value="输"/>
     <remark page="1" value="赢"/>
   </controller>
   <displayList>
-    <text id="n0_6xef" name="win" xy="-3,0" pivot="0.5,0.5" size="184,64" font="ui://2mffi74e6xefbq" fontSize="14" align="center" vAlign="middle" leading="0" autoClearText="true" text="9,9.00">
+    <text id="n0_6xef" name="win" xy="0,0" pivot="0.5,0.5" size="559,64" font="ui://2mffi74e6xefbq" fontSize="14" align="center" vAlign="middle" leading="0" autoSize="none" autoClearText="true" text="999999999,9.00">
       <gearDisplay controller="resultCtl" pages="1"/>
     </text>
-    <text id="n1_6xef" name="fail" xy="0,0" pivot="0.5,0.5" size="178,64" font="ui://2mffi74e6xefch" fontSize="14" align="center" vAlign="middle" leading="0" autoClearText="true" text="99,00">
+    <text id="n1_6xef" name="fail" xy="0,0" pivot="0.5,0.5" size="556,64" font="ui://2mffi74e6xefch" fontSize="14" align="center" vAlign="middle" leading="0" autoSize="none" autoClearText="true" text="999999999,9.00">
       <gearDisplay controller="resultCtl" pages="0"/>
+      <relation target="" sidePair=""/>
     </text>
   </displayList>
 </component>

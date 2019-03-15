@@ -191,9 +191,9 @@ namespace Tools {
             }
             if(this.clock == this.time){
                 if(unit > 0){
-                    this.view.text = '+' + value.toString();
+                    this.view.text = '+' + value.toFixed(2);
                 }else{
-                    this.view.text = value.toString();
+                    this.view.text = value.toFixed(2);
                 }
                 Laya.timer.clear(this, this.changeNumb);
             }

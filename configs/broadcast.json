@@ -1,27 +1,29 @@
 {
     "broadcast": {
         "view": {
-            "url": null, //资源地址
+            "url": "", //资源地址
             "txt": "txt", //文本名字(最好创建富文本 可改文本颜色)
-            "showTime": 10, //一次显示时间
+            "fontSize": 18,
+            "showTime": 20, //一次显示时间
+            "changeSizeEnable": false, //是否可以配置组件宽高，即下面横竖屏配置宽高是否有效
             "landscape": {
-                "x": "center",
-                "y": "top",
-                "width": 669,
-                "height": 80,
-                "marginLeft": "15%",
-                "marginRight": "15%",
-                "marginTop": "12%",
+                "x": "",
+                "y": "",
+                "width": 600,
+                "height": 100,
+                "marginLeft": "10%",
+                "marginRight": "10%",
+                "marginTop": "5%",
                 "scaleMode": "show_all"
             },
             "portrait": {
-                "x": "center",
-                "y": "top",
-                "width": 669,
-                "height": 80,
-                "marginLeft": "15%",
-                "marginRight": "15%",
-                "marginTop": "10%",
+                "x": "",
+                "y": "",
+                "width": 600,
+                "height": 100,
+                "marginLeft": "10%",
+                "marginRight": "10%",
+                "marginTop": "5%",
                 "scaleMode": "show_all"
             }
         }

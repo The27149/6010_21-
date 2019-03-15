@@ -8,8 +8,7 @@ namespace point21{
         @bx.$singleton("bx.Stage")
         stage: bx.Stage;
 
-        @bx.$singleton("point21.VStrategy")
-        strategyView: VStrategy;
+        private strategyView: VStrategy;
 
         onRegister(): void {
             super.onRegister();
@@ -29,7 +28,10 @@ namespace point21{
         }
 
         onShow():void{
-            bx.UIManager.popup(this.strategyView,true,false);
+            if(!this.strategyView){
+                this.strategyView = new VStrategy();
+            }
+            bx.UIManager.popup(this.strategyView,true);
             this.layout();
         }
 

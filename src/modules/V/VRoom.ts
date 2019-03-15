@@ -23,10 +23,10 @@ namespace point21{
 
         //初始化
         init():void{
-            this._view.m_result1.m_win.pivotX = 0;
-            this._view.m_result1.m_fail.pivotX = 0;
-            this._view.m_result5.m_win.pivotX = 1;
-            this._view.m_result5.m_fail.pivotX = 1;
+            // this._view.m_result1.m_win. = 0;
+            // this._view.m_result1.m_fail.pivotX = 0;
+            // this._view.m_result5.m_win.pivotX = 1;
+            // this._view.m_result5.m_fail.pivotX = 1;
         }
 
         //将视图分配给其他类管理
@@ -58,6 +58,7 @@ namespace point21{
 
         //买保险 pos:买家位置   index：要买保险的位置序号
         betInsurance(value:number,pos:number,index:number):void{
+            value = Utils.formatChips(value);
             let chips = Utils.getChipImgObj(value);
             let count  = 0;
             let children: Array<fui.room.FUI_chip> = this.addChildToInsuranceList(index,value,false);
@@ -165,14 +166,14 @@ namespace point21{
                 if(!target.m_win['runRoll']){
                     new Tools.NumberEffect(target.m_win).addRollEffect();
                 }
-                target.m_win['runRoll'](bx.GData.formatNumber(value));
+                target.m_win['runRoll'](Utils.formatChips(value));
             }else{
                 target.m_resultCtl.selectedIndex = 0;
                 //target.m_fail.text = bx.GData.formatNumber(value);
                 if(!target.m_fail['runRoll']){
                     new Tools.NumberEffect(target.m_fail).addRollEffect();
                 }
-                target.m_fail['runRoll'](bx.GData.formatNumber(value));
+                target.m_fail['runRoll'](Utils.formatChips(value));
             }
         }
 

@@ -265,24 +265,22 @@ namespace point21{
 
         //更新可下注的区域显示
         showCanBetTips(data:Array<number>):void{
-            console.log('传过来的数据：', data)
             let lostSelecting:boolean = true;
             let seatId;
-            console.log('自己正在选的位置：', MPlayerArea.selecting);
-            for(let　i = 0;i < data.length; i++){
-                seatId = MRoom.getSeatId(data[i]);
-                console.log('该座位空着：',seatId);
-                this.views[seatId].setTipsToBetVisible(true);
-                if(seatId == MPlayerArea.selecting) {
-                    this.views[seatId].setTipsToBetVisible(false);
-                    lostSelecting = false;
+            if(data && data.length > 0){
+                for(let　i = 0;i < data.length; i++){
+                    seatId = MRoom.getSeatId(data[i]);
+                    this.views[seatId].setTipsToBetVisible(true);
+                    if(seatId == MPlayerArea.selecting) {
+                        this.views[seatId].setTipsToBetVisible(false);
+                        lostSelecting = false;
+                    }
                 }
             }
-
             //如果选中的位置真的失去了 发送通知
             if(lostSelecting){
                 bx.Framework.notify(point21.GConst.n_lostSeat);
-            } 
+            }
         }
 
         //隐藏可下注区域 提示

@@ -133,7 +133,7 @@ namespace point21 {
             deal.target = card;
             deal.start = this.deal_startNode;
             deal.end = endNode;
-            deal.duration = 300;
+            deal.duration = 200;
             deal.props = { scaleX: [deal.start.scaleX,deal.end.scaleX], scaleY: [deal.start.scaleY,deal.end.scaleY] };
             deal.complete = function(){
                 card.removeFromParent();
@@ -218,7 +218,7 @@ namespace point21 {
                     target.m_card.url = cardImg;
                 }))
                 target.m_trun.play();
-                Laya.timer.once(500,this,function(){
+                Laya.timer.once(250,this,function(){
                     target.m_card.url = cardImg;
                     target.skewY = 0;
                     target.width = cardWidth;
@@ -286,32 +286,32 @@ namespace point21 {
                     this.skArr1[id] = sk1;
                     this.skArr2[id] = sk2;
                     if(!MPlayerArea.dragonLoaded){
-                        MPlayerArea.dragonLoaded = true;
-                        sk1.loadCompleteShow = this.playSk.bind(this,sk1,id);
-                        sk2.loadCompleteShow = this.playSk.bind(this,sk2,id);
+                        sk1.loadCompleteShow = this.playSk.bind(this,sk1,id, type);
+                        sk2.loadCompleteShow = this.playSk.bind(this,sk2,id, type);
                     }else{
-                        this.playSk(sk1, id);
-                        this.playSk(sk2, id);
+                        this.playSk(sk1, id, type);
+                        this.playSk(sk2, id, type);
                     }
                 }else if(type == 2){//黑杰克
                     sk1 = this.getSK('sk_bj1','heijieke1.sk');
                     sk2 = this.getSK('sk_bj2','heijieke2.sk');
                     this.skArr1[id] = sk1;
                     this.skArr2[id] = sk2;
+                    console.log('!!!!!!!MPlayerArea.bjLoaded:', MPlayerArea.bjLoaded);
+                    console.log('!!!!!!!sk1:', sk1);
                     if(!MPlayerArea.bjLoaded){
-                        MPlayerArea.bjLoaded = true;
-                        sk1.loadCompleteShow = this.playSk.bind(this,sk1,id);
-                        sk2.loadCompleteShow = this.playSk.bind(this,sk2,id);
+                        sk1.loadCompleteShow = this.playSk.bind(this,sk1,id, type);
+                        sk2.loadCompleteShow = this.playSk.bind(this,sk2,id, type);
                     }else{
-                        this.playSk(sk1, id);
-                        this.playSk(sk2, id);
+                        this.playSk(sk1, id, type);
+                        this.playSk(sk2, id, type);
                     }
                 }else if(type == 0){//爆牌
                     sk1 = this.getSK('boom','baopai.sk');
                     this.skArr1[id] = sk1;
                     if(!MPlayerArea.boomLoaded){
-                        MPlayerArea.boomLoaded = true;
                         sk1.loadCompleteShow = function(){
+                            MPlayerArea.boomLoaded = true;
                             target.displayObject.addChild(sk1.sk);
                             sk1.sk.x = target.width / 2; 
                             sk1.sk.y = target.height / 2;
@@ -353,7 +353,12 @@ namespace point21 {
         }
 
         //播放五小龙，黑杰克牌型动画
-        private playSk(sk: bx.Skeleton, id?: number):void{
+        private playSk(sk: bx.Skeleton, id?: number, type?: number):void{
+            if(type == 1){//五小龙下载完成
+                MPlayerArea.dragonLoaded = true;
+            }else if( type == 2){//黑杰克下载完成
+                MPlayerArea.bjLoaded = true;
+            }
             let target:fui.room.FUI_cardType = this._view ? this._view['m_cardType' + id] : this._view_banker.m_cardType;
             let name: string;
             switch(bx.GData.curLanguage){

@@ -70,6 +70,8 @@
     <component id="l3ii3w" name="setGM.xml" path="/component/gm/"/>
     <component id="l3ii3x" name="AddWalletBtn.xml" path="/component/wallet/" exported="true"/>
     <image id="l3ii3y" name="addMoneyBtn.png" path="/assets/wallet/"/>
+    <component id="cesd3z" name="Broadcast.xml" path="/component/broadCast/" exported="true"/>
+    <image id="cesd40" name="zmdk.png" path="/component/broadCast/"/>
   </resources>
   <publish name="Game" path="{rootPath}\assets\preload" genCode="true" npot="true"/>
 </packageDescription>
