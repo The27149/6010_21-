@@ -5,7 +5,7 @@ module fui.Game {
 	export class FUI_item4 extends fairygui.GButton {
 
 		public m_button:fairygui.Controller;
-		public m_n30:fairygui.GImage;
+		public m_n30:fairygui.GLoader;
 		public m_lang_name:fairygui.GLoader;
 		public m_n31:fairygui.GImage;
 		public m_lang_base:fairygui.GTextField;
@@ -27,7 +27,7 @@ module fui.Game {
 			super.constructFromXML(xml);
 
 			this.m_button = this.getControllerAt(0);
-			this.m_n30 = <fairygui.GImage><any>(this.getChildAt(0));
+			this.m_n30 = <fairygui.GLoader><any>(this.getChildAt(0));
 			this.m_lang_name = <fairygui.GLoader><any>(this.getChildAt(1));
 			this.m_n31 = <fairygui.GImage><any>(this.getChildAt(2));
 			this.m_lang_base = <fairygui.GTextField><any>(this.getChildAt(3));

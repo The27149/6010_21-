@@ -2,7 +2,7 @@
 <component size="325,346" extention="Button" designImage="ui://8oy4o0mbcsvz0" designImageOffsetX="-22" designImageOffsetY="-4">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
-    <image id="n23_mtpm" name="n23" src="mtpmc" fileName="assets/roomItem/cjc.png" xy="0,0"/>
+    <loader id="n23_mtpm" name="n23" xy="0,0" size="325,346" customData="cjcBg" url="ui://8oy4o0mbmtpmc"/>
     <loader id="n24_mtpm" name="lang_name" xy="48,263" pivot="0.5,0.5" size="229,83" customData="cjc" align="center" vAlign="middle" autoSize="true"/>
     <image id="n30_d832" name="n30" src="d83236" fileName="assets/roomItem/cck.png" xy="41,358"/>
     <text id="n26_mtpm" name="lang_base" xy="173,378" pivot="1,0.5" anchor="true" size="71,28" customData="201317" font="FZZhunYuan-M02S" fontSize="22" color="#ffffff" align="right" vAlign="middle" autoClearText="true" text="底注："/>

@@ -279,7 +279,12 @@ namespace point21{
             }
             //如果选中的位置真的失去了 发送通知
             if(lostSelecting){
-                bx.Framework.notify(point21.GConst.n_lostSeat);
+                if(data){
+                    bx.Framework.notify(point21.GConst.n_lostSeat);
+                }
+                // else{
+                //     bx.Framework.notify(point21.GConst.n_hideBtns);
+                // }
             }
         }
 

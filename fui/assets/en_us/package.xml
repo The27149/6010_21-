@@ -6,5 +6,5 @@
     <image id="o440s" name="qx.png" path="/leave/" exported="true"/>
     <image id="eia3t" name="logo.png" path="/" exported="true"/>
   </resources>
-  <publish name="en_us" path="{rootPath}\assets\en-us"/>
+  <publish name="en_us" path="{rootPath}\assets\en-us" npot="true"/>
 </packageDescription>

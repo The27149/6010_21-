@@ -297,8 +297,6 @@ namespace point21 {
                     sk2 = this.getSK('sk_bj2','heijieke2.sk');
                     this.skArr1[id] = sk1;
                     this.skArr2[id] = sk2;
-                    console.log('!!!!!!!MPlayerArea.bjLoaded:', MPlayerArea.bjLoaded);
-                    console.log('!!!!!!!sk1:', sk1);
                     if(!MPlayerArea.bjLoaded){
                         sk1.loadCompleteShow = this.playSk.bind(this,sk1,id, type);
                         sk2.loadCompleteShow = this.playSk.bind(this,sk2,id, type);

@@ -68,7 +68,7 @@ namespace point21{
                 this.sliderHidden = true;
                 this.currentBetPos = 3;
                 this.showAsBetComplete = false;
-                if(!this.view.betValue || !this.isEnoughMoney) this.view.btnUnable('continueBet');
+                if(!this.view.betValue || !this.isEnoughMoney()) this.view.btnUnable('continueBet');
                 this.view.setContinueBetContent(0);
                 if(MRoom.selfMoney < this.bet_min){
                     this.view.btnUnable('minBet');
@@ -84,7 +84,7 @@ namespace point21{
                 }else{
                     this.view.btnUnable('divideCard');
                 }
-                if(!this.isEnoughMoney){
+                if(!this.isEnoughMoney()){
                     this.view.btnUnable('divideCard');
                     this.view.btnUnable('double');
                 }

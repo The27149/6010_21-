@@ -15,7 +15,7 @@
     <image id="n4_wuvl" name="n4" src="geyyj" fileName="resource/Horizontal/dz.png" xy="449,151" size="163,117" group="n83_f3g1" aspect="true">
       <gearXY controller="h_v" pages="0,1" values="449,151|95,168"/>
     </image>
-    <loader id="n97_l4y4" name="light" xy="960,211" pivot="0.5,0" anchor="true" size="473,619" group="n83_f3g1" customData="light3" url="ui://2mffi74el4y4f3" align="center" fill="scaleFree">
+    <loader id="n97_l4y4" name="light" xy="960,211" pivot="0.5,0" anchor="true" size="473,619" group="n83_f3g1" customData="light3" align="center" fill="scaleFree">
       <gearDisplay controller="lightCtl" pages="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30"/>
       <gearXY controller="h_v" pages="0,1" values="960,211|540,234"/>
       <gearSize controller="lightCtl" pages="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30" values="172,619,1,1|122,619,1,1|144,619,1,1|222,619,1,1|127,619,1,1|152,539,1,1|218,499,1,1|165,534,1,1|162,524,1,1|199,627,1,1|148,619,1,1|148,619,1,1|182,619,1,1|129,602,1,1|127,619,1,1|186,513,1,1|136,531,1,1|153,501,1,1|160,1016,1,1|121,980,1,1|127,944,1,1|166,1277,1,1|133,1277,1,1|118,1196,1,1|168,1068,1,1|123,918,1,1|125,932,1,1|205,489,1,1|159,492,1,1|150,533,1,1" default="473,619,1,1"/>
@@ -38,7 +38,7 @@
       <gearXY controller="h_v" pages="0,1" values="1232,212|727,318"/>
       <gearSize controller="h_v" pages="1" values="95,130,0.5,0.5" default="95,130,0.7,0.7"/>
     </component>
-    <group id="n83_f3g1" name="n83" xy="19,-282" size="1878,1558" collapsed="true"/>
+    <group id="n83_f3g1" name="n83" xy="19,-282" size="1878,1558" locked="true" hideByEditor="true"/>
     <loader id="n78_ujig" name="chip1" xy="195,405" size="20,25" group="n19_wuvl" url="ui://2mffi74egeyyh" align="center" vAlign="middle">
       <gearXY controller="h_v" pages="0" values="195,405" default="132,661"/>
       <gearIcon controller="h_v" pages="0,1" values="ui://2mffi74egeyyh|ui://2mffi74eujigbi"/>
@@ -124,7 +124,7 @@
     <component id="n117_hs68" name="betTip5" src="u1w84h" fileName="component/player/tips/clickToBet.xml" xy="1556,301" group="n26_wuvl">
       <gearXY controller="h_v" pages="0" values="1556,301" default="716,651"/>
     </component>
-    <group id="n26_wuvl" name="playerArea" xy="259,247" size="1565,559" collapsed="true"/>
+    <group id="n26_wuvl" name="playerArea" xy="259,247" size="1565,559" locked="true" hideByEditor="true" collapsed="true"/>
     <component id="n9_wuvl" name="player3" src="wuvl32" fileName="component/player/selfPlayer.xml" xy="9,907" group="n21_wuvl">
       <gearXY controller="h_v" pages="1" values="6,1751" default="9,907"/>
     </component>
@@ -140,7 +140,7 @@
     <component id="n13_wuvl" name="player5" src="wuvl31" fileName="component/player/otherPlayer.xml" xy="1716,353" group="n21_wuvl">
       <gearXY controller="h_v" pages="0,1" values="1716,353|850,500"/>
     </component>
-    <group id="n21_wuvl" name="players" xy="9,353" size="1902,720" collapsed="true"/>
+    <group id="n21_wuvl" name="players" xy="9,353" size="1902,720" locked="true" hideByEditor="true" collapsed="true"/>
     <text id="n53_u1w8" name="numb1" xy="139,602" size="70,70" group="n58_u1w8" font="ui://2mffi74eu1w859" fontSize="30" align="center" vAlign="middle" text="1">
       <gearXY controller="h_v" pages="0,1" values="139,602|33,824"/>
     </text>
@@ -278,6 +278,6 @@
     <component id="n89_6xef" name="result5" src="6xefbp" fileName="component/player/result.xml" xy="1373,258" group="n90_6xef">
       <gearXY controller="h_v" pages="0,1" values="1373,258|506,427"/>
     </component>
-    <group id="n90_6xef" name="result" xy="-54,258" size="1985,726"/>
+    <group id="n90_6xef" name="result" xy="-54,258" size="1985,726" locked="true" hideByEditor="true"/>
   </displayList>
 </component>

@@ -6,5 +6,5 @@
     <image id="o440i" name="qx.png" path="/leave/" exported="true"/>
     <image id="o440j" name="logo.png" path="/" exported="true"/>
   </resources>
-  <publish name="zh_cn" path="{rootPath}\assets\zh-cn"/>
+  <publish name="zh_cn" path="{rootPath}\assets\zh-cn" npot="true"/>
 </packageDescription>

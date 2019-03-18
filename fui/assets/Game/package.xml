@@ -3,10 +3,6 @@
   <resources>
     <component id="csvz5" name="item1.xml" path="/component/roomitem/"/>
     <component id="csvz9" name="Roomitems.xml" path="/component/roomitem/" exported="true"/>
-    <image id="mtpmc" name="cjc.png" path="/assets/roomItem/"/>
-    <image id="mtpmd" name="gjc.png" path="/assets/roomItem/"/>
-    <image id="mtpme" name="zzc.png" path="/assets/roomItem/"/>
-    <image id="mtpmf" name="zjc.png" path="/assets/roomItem/"/>
     <component id="mtpmh" name="item2.xml" path="/component/roomitem/"/>
     <component id="mtpmi" name="item3.xml" path="/component/roomitem/"/>
     <component id="mtpmj" name="item4.xml" path="/component/roomitem/"/>

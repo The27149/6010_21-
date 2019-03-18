@@ -199,6 +199,7 @@
     <image id="ve7zfh" name="f2.png" path="/resource/Design sketch/"/>
   </resources>
   <publish name="room" path="{rootPath}\assets\room" genCode="true" npot="true">
+    <atlas compression="true" index="0"/>
     <atlas compression="true" index="1"/>
     <atlas compression="true" index="2"/>
     <atlas compression="true" index="3"/>

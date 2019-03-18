@@ -133,7 +133,7 @@ namespace point21 {
                     break;
                 //失去想下注的其他位置
                 case point21.GConst.n_lostSeat:
-                    this.mBtnPlay.hideView();
+                    this.mBtnPlay.resp_bet();
                     break;
                 //自己的余额改变了
                 case point21.GConst.n_selfMoneyChange:
