@@ -1,9 +1,9 @@
 info creator=UIBuilder size=12 resizable=true
-char id=45 img=6xefbr xoffset=0 yoffset=0 xadvance=0
-char id=44 img=6xefbs xoffset=-18 yoffset=0 xadvance=5
-char id=46 img=6xefbt xoffset=-18 yoffset=0 xadvance=5
+char id=45 img=6xefbr xoffset=-5 yoffset=0 xadvance=28
+char id=44 img=6xefbs xoffset=-15 yoffset=0 xadvance=8
+char id=46 img=6xefbt xoffset=-15 yoffset=0 xadvance=8
 char id=48 img=6xefbu xoffset=0 yoffset=0 xadvance=0
-char id=49 img=6xefbv xoffset=0 yoffset=0 xadvance=0
+char id=49 img=6xefbv xoffset=-5 yoffset=0 xadvance=0
 char id=50 img=6xefbw xoffset=0 yoffset=0 xadvance=0
 char id=51 img=6xefbx xoffset=0 yoffset=0 xadvance=0
 char id=52 img=6xefby xoffset=0 yoffset=0 xadvance=0
@@ -12,3 +12,6 @@ char id=54 img=6xefc0 xoffset=0 yoffset=0 xadvance=0
 char id=55 img=6xefc1 xoffset=0 yoffset=0 xadvance=0
 char id=56 img=6xefc2 xoffset=0 yoffset=0 xadvance=0
 char id=57 img=6xefc3 xoffset=0 yoffset=0 xadvance=0
+char id=66 img=j77cfm xoffset=-8 yoffset=-6 xadvance=34
+char id=77 img=j77cfn xoffset=-2 yoffset=-6 xadvance=46
+char id=75 img=j77cfo xoffset=-8 yoffset=-6 xadvance=34

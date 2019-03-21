@@ -373,7 +373,7 @@ namespace point21 {
         //修改筹码值
         setChip(n: number,id:number = 0): void {
             if(!this._view) return;
-            let str = n.toString();
+            let str = bx.GData.formatCoin(n * 100);
             if (n == 0) {
                 str = '';
             }

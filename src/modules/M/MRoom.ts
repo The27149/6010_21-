@@ -535,7 +535,7 @@ namespace point21 {
             bx.Stage.getStage().layerAddChild(this.viewBg, bx.GLayer.scene);
             bx.Stage.getStage().layerAddChild(this.view, bx.GLayer.scene);
             bx.Stage.getStage().layerAddChild(this.strategyBtn,bx.GLayer.scene);
-            SoundManager.instance.bgmUrls = AssetsUtils.getSoundUrl('bgm');
+            // SoundManager.instance.bgmUrls = AssetsUtils.getSoundUrl('bgm');
             this.layout();
         }
 

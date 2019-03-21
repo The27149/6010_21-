@@ -174,7 +174,7 @@ namespace Tools {
         //执行滚动特效
         private runRoll(value: number): fairygui.GObject{
             this.clock = 0;
-            let unit = (value / (this.time / 50)).toFixed(2);
+            let unit = Math.round(value / (this.time / 50));
             Laya.timer.loop(50, this, this.changeNumb, [unit, value]);
             return this.view;
         }
@@ -183,18 +183,11 @@ namespace Tools {
         private changeNumb(unit: number, value: number):void{
             this.clock += 50;
             
-            let result = ((this.clock / 50) * unit).toFixed(2);
-            if(unit > 0){
-                this.view.text = '+' + result;
-            }else{
-                this.view.text = result;
-            }
+            let result = bx.GData.formatCoin( ((this.clock / 50) * unit) * 100);
+            this.view.text = (unit > 0) ? ('+' + result) : result;
             if(this.clock == this.time){
-                if(unit > 0){
-                    this.view.text = '+' + value.toFixed(2);
-                }else{
-                    this.view.text = value.toFixed(2);
-                }
+                let val = bx.GData.formatCoin(value * 100);
+                this.view.text = (unit > 0) ? ('+' + val) : val;
                 Laya.timer.clear(this, this.changeNumb);
             }
         }

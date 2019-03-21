@@ -40,8 +40,8 @@ namespace point21{
                 this._view.getChildAt(i).enabled = true;
             }
             if(index === 0){
-                this._view.m_maxBet.m_value.text = '(' + this.bet_max + ')';
-                this._view.m_minBet.m_value.text = '(' + this.bet_min + ')';
+                this._view.m_maxBet.m_value.text = '(' + bx.GData.formatCoin(this.bet_max * 100) + ')';
+                this._view.m_minBet.m_value.text = '(' + bx.GData.formatCoin(this.bet_min * 100) + ')';
             }
         }
 
@@ -104,7 +104,7 @@ namespace point21{
 
         //设置当前筹码显示值
         setCurrentChip(v:number):void{
-            this._view.m_betSlider.m_title.m_value.text = v.toString();
+            this._view.m_betSlider.m_title.m_value.text = bx.GData.formatCoin(v * 100);
         }
 
         //点击slider背景时

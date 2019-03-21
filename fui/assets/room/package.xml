@@ -197,6 +197,12 @@
     <image id="l3iiff" name="chip3.png" path="/resource/Vertical/"/>
     <image id="eia3fg" name="c1.png" path="/resource/Horizontal/"/>
     <image id="ve7zfh" name="f2.png" path="/resource/Design sketch/"/>
+    <image id="j77cfj" name="_0000_B.png" path="/resource/Horizontal/sz1/"/>
+    <image id="j77cfk" name="_0001_M.png" path="/resource/Horizontal/sz1/"/>
+    <image id="j77cfl" name="_0002_K.png" path="/resource/Horizontal/sz1/"/>
+    <image id="j77cfm" name="_0000_B.png" path="/resource/Horizontal/sz2/"/>
+    <image id="j77cfn" name="_0001_M.png" path="/resource/Horizontal/sz2/"/>
+    <image id="j77cfo" name="_0000_K.png" path="/resource/Horizontal/sz2/"/>
   </resources>
   <publish name="room" path="{rootPath}\assets\room" genCode="true" npot="true">
     <atlas compression="true" index="0"/>

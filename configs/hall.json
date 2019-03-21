@@ -88,7 +88,8 @@
             "url": "fui.Game.FUI_brief", // 简要 fui 组件名
             "isClick": true, //是否有点击功能
             "soundName": "btn",
-            "ctl": "h_v"
+            "ctl": "h_v",
+            "isSymbol": true
         },
         "briefPop": {
             "url": "fui.Game.FUI_briefPopup", // 简要 fui 组件名         
@@ -145,6 +146,7 @@
                 4
             ],
             "soundName": "btn",
+            "itemUseLetter": true,
             "skeleton_flag": true, //是否动态创建skeleton
             "skeleton_flag_ctl": false, //skeleton  是否有横竖区分
             "ctl": "h_v", // roomitems 控制器 

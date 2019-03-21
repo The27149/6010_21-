@@ -37,10 +37,12 @@ namespace point21{
         //由筹码值得到对应筹码对象
         static getChipImgObj(value:number):object{
             let chips = [10000,5000,2000,1000,500,200,100,50,20,10,5,2,1];
+            let rate = bx.GData.currencyInfo.rate;
+            value /= rate;
             let result: object = {};
             let quotient:number, remainder:number;
             for(let item of chips){
-                quotient = Math.floor( value / item);
+                quotient = Math.floor( value / item );
                 remainder = value % item;
                 if(quotient > 0){
                     result[item] = quotient;

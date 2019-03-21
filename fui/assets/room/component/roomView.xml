@@ -38,7 +38,7 @@
       <gearXY controller="h_v" pages="0,1" values="1232,212|727,318"/>
       <gearSize controller="h_v" pages="1" values="95,130,0.5,0.5" default="95,130,0.7,0.7"/>
     </component>
-    <group id="n83_f3g1" name="n83" xy="19,-282" size="1878,1558" locked="true" hideByEditor="true"/>
+    <group id="n83_f3g1" name="n83" xy="19,-282" size="1878,1558" locked="true" hideByEditor="true" collapsed="true"/>
     <loader id="n78_ujig" name="chip1" xy="195,405" size="20,25" group="n19_wuvl" url="ui://2mffi74egeyyh" align="center" vAlign="middle">
       <gearXY controller="h_v" pages="0" values="195,405" default="132,661"/>
       <gearIcon controller="h_v" pages="0,1" values="ui://2mffi74egeyyh|ui://2mffi74eujigbi"/>
@@ -112,16 +112,16 @@
     <component id="n25_wuvl" name="playerArea5" src="wuvl3f" fileName="component/player/playerArea.xml" xy="1393,247" pivot="0.5,0.5" group="n26_wuvl" skew="-10,0" rotation="-64">
       <gearXY controller="h_v" pages="0,1" values="1393,247|595,548"/>
     </component>
-    <component id="n114_hs68" name="betTip1" src="u1w84h" fileName="component/player/tips/clickToBet.xml" xy="321,308" group="n26_wuvl">
+    <component id="n114_hs68" name="betTip1" src="u1w84h" fileName="component/player/tips/clickToBet.xml" xy="321,308" group="n26_wuvl" touchable="false">
       <gearXY controller="h_v" pages="1" values="324,653" default="321,308"/>
     </component>
-    <component id="n115_hs68" name="betTip2" src="u1w84h" fileName="component/player/tips/clickToBet.xml" xy="558,584" group="n26_wuvl">
+    <component id="n115_hs68" name="betTip2" src="u1w84h" fileName="component/player/tips/clickToBet.xml" xy="558,584" group="n26_wuvl" touchable="false">
       <gearXY controller="h_v" pages="0" values="558,584" default="327,1117"/>
     </component>
-    <component id="n116_hs68" name="betTip4" src="u1w84h" fileName="component/player/tips/clickToBet.xml" xy="1334,574" group="n26_wuvl">
+    <component id="n116_hs68" name="betTip4" src="u1w84h" fileName="component/player/tips/clickToBet.xml" xy="1334,574" group="n26_wuvl" touchable="false">
       <gearXY controller="h_v" pages="0" values="1334,574" default="724,1115"/>
     </component>
-    <component id="n117_hs68" name="betTip5" src="u1w84h" fileName="component/player/tips/clickToBet.xml" xy="1556,301" group="n26_wuvl">
+    <component id="n117_hs68" name="betTip5" src="u1w84h" fileName="component/player/tips/clickToBet.xml" xy="1556,301" group="n26_wuvl" touchable="false">
       <gearXY controller="h_v" pages="0" values="1556,301" default="716,651"/>
     </component>
     <group id="n26_wuvl" name="playerArea" xy="259,247" size="1565,559" locked="true" hideByEditor="true" collapsed="true"/>

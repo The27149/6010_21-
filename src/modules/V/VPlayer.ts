@@ -67,10 +67,10 @@ namespace point21{
         //设置金币
         setCoin(n:number):void{
             if(this._view){
-                this._view.m_coin.text = bx.GData.formatNumber(n);
+                this._view.m_coin.text = bx.Utils.convertToShowingCoin(n);
             }else{
                 bx.Framework.notify(point21.GConst.n_selfMoneyChange,n);
-                this._viewSelf.m_coin.text = bx.GData.formatNumber(n);
+                this._viewSelf.m_coin.text = bx.Utils.convertToShowingCoin(n);
             }
             
         }

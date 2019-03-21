@@ -10,7 +10,7 @@
     <image id="uz6j6" name="words1.png" path="/" exported="true"/>
     <image id="nasgj" name="wz03.png" path="/" exported="true"/>
     <image id="hs68l" name="wz02.png" path="/" exported="true"/>
-    <image id="ly66n" name="wz01.png" path="/" exported="true"/>
+    <image id="nf4co" name="wz01.png" path="/" exported="true"/>
   </resources>
   <publish name="help_zh-cn" path="{rootPath}\assets\help\zh-cn" npot="true">
     <atlas compression="true" index="0"/>
