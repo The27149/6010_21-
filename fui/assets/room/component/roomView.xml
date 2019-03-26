@@ -124,7 +124,7 @@
     <component id="n117_hs68" name="betTip5" src="u1w84h" fileName="component/player/tips/clickToBet.xml" xy="716,651" group="n26_wuvl" touchable="false">
       <gearXY controller="h_v" pages="0" values="1547,310" default="716,651"/>
     </component>
-    <group id="n26_wuvl" name="playerArea" xy="206,366" size="786,1164" collapsed="true"/>
+    <group id="n26_wuvl" name="playerArea" xy="206,366" size="786,1164"/>
     <component id="n9_wuvl" name="player3" src="wuvl32" fileName="component/player/selfPlayer.xml" xy="6,1751" group="n21_wuvl">
       <gearXY controller="h_v" pages="1" values="6,1751" default="9,907"/>
     </component>
@@ -140,7 +140,7 @@
     <component id="n13_wuvl" name="player5" src="wuvl31" fileName="component/player/otherPlayer.xml" xy="850,500" group="n21_wuvl">
       <gearXY controller="h_v" pages="0,1" values="1716,353|850,500"/>
     </component>
-    <group id="n21_wuvl" name="players" xy="6,500" size="1064,1417" collapsed="true"/>
+    <group id="n21_wuvl" name="players" xy="6,500" size="1064,1417" locked="true" hideByEditor="true" collapsed="true"/>
     <text id="n53_u1w8" name="numb1" xy="33,824" size="70,70" group="n58_u1w8" font="ui://2mffi74eu1w859" fontSize="30" align="center" vAlign="middle" text="1">
       <gearXY controller="h_v" pages="0,1" values="139,602|33,824"/>
     </text>
@@ -263,24 +263,24 @@
     <component id="n36_wuvl" name="clock" src="wuvl3v" fileName="component/clock.xml" xy="476,845" locked="true" hideByEditor="true" scale="0.8,0.8">
       <gearXY controller="h_v" pages="0,1" values="901,416|476,845"/>
     </component>
-    <component id="n85_6xef" name="result1" src="6xefbp" fileName="component/player/result.xml" xy="85,640" group="n90_6xef">
-      <gearXY controller="h_v" pages="0,1" values="8,462|85,640"/>
+    <component id="n85_6xef" name="result1" src="6xefbp" fileName="component/player/result.xml" xy="135,698" group="n90_6xef">
+      <gearXY controller="h_v" pages="0,1" values="8,462|135,698"/>
     </component>
-    <component id="n86_6xef" name="result2" src="6xefbp" fileName="component/player/result.xml" xy="92,1153" group="n90_6xef">
-      <gearXY controller="h_v" pages="0,1" values="182,767|92,1153"/>
+    <component id="n86_6xef" name="result2" src="6xefbp" fileName="component/player/result.xml" xy="131,1174" group="n90_6xef">
+      <gearXY controller="h_v" pages="0,1" values="182,767|131,1174"/>
     </component>
     <component id="n87_6xef" name="result3" src="6xefbp" fileName="component/player/result.xml" xy="340,1432" group="n90_6xef">
       <gearXY controller="h_v" pages="0,1" values="748,833|340,1432"/>
     </component>
-    <component id="n88_6xef" name="result4" src="6xefbp" fileName="component/player/result.xml" xy="561,1142" group="n90_6xef">
-      <gearXY controller="h_v" pages="0,1" values="1315,776|561,1142"/>
+    <component id="n88_6xef" name="result4" src="6xefbp" fileName="component/player/result.xml" xy="522,1174" group="n90_6xef">
+      <gearXY controller="h_v" pages="0,1" values="1315,776|522,1174"/>
     </component>
-    <component id="n89_6xef" name="result5" src="6xefbp" fileName="component/player/result.xml" xy="575,644" group="n90_6xef">
-      <gearXY controller="h_v" pages="0,1" values="1493,461|575,644"/>
+    <component id="n89_6xef" name="result5" src="6xefbp" fileName="component/player/result.xml" xy="520,699" group="n90_6xef">
+      <gearXY controller="h_v" pages="0,1" values="1493,461|520,699"/>
     </component>
     <component id="n118_ssnu" name="result_self" src="6xefbp" fileName="component/player/result.xml" xy="86,1749" group="n90_6xef">
       <gearXY controller="h_v" pages="0,1" values="72,922|86,1749"/>
     </component>
-    <group id="n90_6xef" name="result" xy="85,640" size="913,1171"/>
+    <group id="n90_6xef" name="result" xy="86,644" size="912,1167"/>
   </displayList>
 </component>
