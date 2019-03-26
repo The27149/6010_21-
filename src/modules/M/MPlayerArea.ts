@@ -4,10 +4,6 @@ namespace point21{
         public optionSeat = [];                            //除了自己外还可以选择的位置
         public static selecting:number = -1;                            //除了自己 正选中的座位
 
-        
-        static dragonLoaded: boolean = false;                                 //五小龙资源已下载
-        static bjLoaded: boolean = false;                                      //黑杰克动画资源已下载
-        static boomLoaded: boolean = false;                                    //爆牌资源已下载
         constructor(){}
         instanceView(v:Array<fui.room.FUI_playerArea | fui.room.FUI_playerArea_banker>,roomView:fui.room.FUI_roomView):void{
             let item:VPlayerArea;
