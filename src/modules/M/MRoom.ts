@@ -241,6 +241,7 @@ namespace point21 {
                 case 5://玩家在原位置下注了
                     this.mPlayerArea.bet(pos, value);
                     this.mPlayer.setCoin(pos, value[2]);
+                    MBtnPlay.betValArr[pos - 1] = value[0] / 100;
                     if (pos == 3){
                         this.view.handAction(1);
                         this.mBtnPlay.view.betValue = value[0] / 100;
@@ -251,6 +252,7 @@ namespace point21 {
                     this.mPlayerArea.betToOther(pos, value);
                     this.mPlayer.setCoin(pos, value[3]);
                     this.view.seatNameVisible(true,id,this.mPlayer.views[pos - 1].playerName);
+                    MBtnPlay.betValArr[id - 1] = value[1] / 100;
                     if (pos == 3) {
                         this.mBtnPlay.view.betValue = value[1] / 100;
                         MPlayerArea.selecting = -1;
@@ -650,7 +652,14 @@ namespace point21 {
             Laya.timer.once(2000, this, function () {
                 for (let i = 0; i < data.length; i++) {
                     let pos = MRoom.getSeatId(data[i].pos);
-                    this.view.showResult(pos, data[i].balance);
+                    // this.view.showResult(pos, data[i].balance);
+                    let seatList: protos.posBalance[] = data[i].posAllBalance;
+                    for(let j = 0; j < seatList.length; j++){
+                        this.view.showResult(MRoom.getSeatId(seatList[j].pos), seatList[j].balance);
+                    }
+                    if(pos == 3){
+                        this.view.showResult('_self', data[i].balance);
+                    }
                     this.mPlayer.setCoin(pos, data[i].chips);
                     this.mBtnPlay.inStage(3);
                 }
@@ -673,15 +682,15 @@ namespace point21 {
             this.popupMatch.y = bx.Align.middle;
             this.strategyBtn.x = bx.Align.right;
             this.strategyBtn.y = bx.Align.top;
-            this.strategyBtn.marginTop = 20;
-            this.strategyBtn.marginRight = 20;
+            this.strategyBtn.marginTop = 60;
+            this.strategyBtn.marginRight = 30;
             if (bx.Stage.getStage().isLandscape) {
                 this.view.width = this.viewBg.width = 1920;
                 this.view.height = this.viewBg.height = 1080;
                 this.view._view.m_h_v.selectedIndex = 0;
                 this.view._view.m_table.url = 'assets/room_dt/horizon/pz.png';
                 this.view._view.m_chipBank.url= 'assets/room_dt/horizon/cmg.png'
-                this.viewBg._view.m_roombg.url = 'assets/room_dt/horizon/bg.png';
+                this.viewBg._view.m_roombg.url = 'assets/room_dt/horizon/bg.jpg';
                 let index = this.view._view.m_lightCtl.selectedIndex;
                 if(index > 15) this.view._view.m_lightCtl.selectedIndex = index - 15;
             } else {
@@ -690,12 +699,13 @@ namespace point21 {
                 this.view._view.m_h_v.selectedIndex = 1;
                 this.view._view.m_table.url = 'assets/room_dt/vertical/pzs.png';
                 this.view._view.m_chipBank.url= 'assets/room_dt/vertical/cmgs.png'
-                this.viewBg._view.m_roombg.url = 'assets/room_dt/vertical/bg2.png';
+                this.viewBg._view.m_roombg.url = 'assets/room_dt/vertical/bg2.jpg';
                 let index = this.view._view.m_lightCtl.selectedIndex;
                 if(index > 0){
                     if(index < 15 || index == 15) this.view._view.m_lightCtl.selectedIndex = index + 15;
                 } 
             }
+            
         }
     }
 }

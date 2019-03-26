@@ -54,6 +54,7 @@ namespace point21{
                 this.hideResult(j + 1);
                 this.seatNameVisible(false, j + 1);
             }
+            this.hideResult('_self');
         }
 
         //买保险 pos:买家位置   index：要买保险的位置序号
@@ -152,12 +153,12 @@ namespace point21{
         }
 
         //隐藏结果
-        hideResult(pos:number):void{
+        hideResult(pos:number | string):void{
             this._view['m_result' + pos].visible = false;
         }
 
         //显示结算结果 
-        showResult(pos:number,value:number):void{
+        showResult(pos:number | string,value:number):void{
             let target:fui.room.FUI_result = this._view['m_result' + pos];
             target.visible = true;
             if(value >= 0){

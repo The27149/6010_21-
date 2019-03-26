@@ -14,8 +14,8 @@
 
                 "x": "right", //x 坐标  这些是布局 跟以前的是一样的
                 "y": "top", //y 坐标
-                "marginTop": "20",
-                "marginRight": "20",
+                "marginTop": "60",
+                "marginRight": "30",
                 "fringe_x": "", //x 坐标(刘海屏app)
                 "fringe_y": "" //y 坐标(刘海屏app)
             },
@@ -25,8 +25,8 @@
                 "popDir": "left",
                 "x": "right", //x 坐标
                 "y": "top", //y 坐标
-                "marginTop": "20",
-                "marginRight": "20",
+                "marginTop": "60",
+                "marginRight": "30",
                 "fringe_x": "", //x 坐标(刘海屏app)
                 "fringe_y": "" //y 坐标(刘海屏app)
             },
@@ -81,8 +81,8 @@
                 "popDir": "down",
                 "x": "left", //x 坐标
                 "y": "top", //y 坐标
-                "marginTop": "20",
-                "marginLeft": "20",
+                "marginTop": "60",
+                "marginLeft": "30",
                 "fringe_x": "", //x 坐标(刘海屏app)
                 "fringe_y": "" //y 坐标(刘海屏app)
             },
@@ -92,8 +92,8 @@
                 "popDir": "down",
                 "x": "left", //x 坐标
                 "y": "top", //y 坐标
-                "marginTop": "20",
-                "marginLeft": "20",
+                "marginTop": "60",
+                "marginLeft": "30",
                 "fringe_x": "", //x 坐标(刘海屏app)
                 "fringe_y": "" //y 坐标(刘海屏app)
             },

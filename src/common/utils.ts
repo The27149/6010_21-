@@ -18,7 +18,7 @@ namespace point21{
 
         //获取头像url
         static getHeadUrl(type:number):string{
-            let str = 'assets/avatar/head_';
+            let str = 'assets/avatar/avatar_';
             if(type > 1000){
                 type -= 1000;
                 str +=  (4 + type);

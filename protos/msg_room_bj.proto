@@ -18,6 +18,7 @@ enum c_cmd {
     recBankerOpState = 13;
     gmReq = 14;
     gmResp = 15;
+    clientError = 16;
 }
 
 service msg_room_bj_service {
@@ -34,6 +35,7 @@ service msg_room_bj_service {
     rpc reconnect_role_op_state (undefined) returns (recRoleOpState);           // 断线重连 - 玩家操作阶段
     rpc reconnect_banker_op_state (undefined) returns (recBankerOpState);       // 断线重连 - 庄家操作阶段
     rpc gm (gmReq) returns (gmResp);                                            // GM
+    rpc client_error (clientError) returns (undefined);                         // 客户端错误
 }
 
 message playerInfoPush {
@@ -166,16 +168,22 @@ message gameSettlementPush {
 }
 
 message gameResult {
-    required uint32 pos = 1;        // 座位号
-    required int64 balance = 2;     // 输赢钱,赢钱为正,输钱为负
-    required uint64 chips = 3;      // 余额
-    repeated posResult result = 4;  // 每个座位的结果列表
+    required uint32 pos = 1;            // 座位号
+    required int64 balance = 2;         // 输赢钱,赢钱为正,输钱为负
+    required uint64 chips = 3;          // 余额
+    repeated posResult result = 4;      // 每个座位的结果列表, 细化到某副牌
+    repeated posBalance pos_all_balance = 5;   // 统计每个座位的总收支
 }
 
 message posResult {
     required uint32 pos = 1;        // 座位号
     required uint32 which_one = 2;  // 某一副牌
     required int64 balance = 3;     // 该座位输赢钱金额
+}
+
+message posBalance {
+    required uint32 pos = 1;        // 某个座位
+    required int64 balance = 2;     // 该座位的总收支
 }
 
 // 断线重连 - 房间信息
@@ -284,4 +292,8 @@ message gmCardsList {
 
 message gmResp {
     required uint32 result = 1;             // 1: 成功, 2: 失败
+}
+
+message clientError {
+    required string error = 1;              // 客户端错误
 }

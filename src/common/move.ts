@@ -185,6 +185,7 @@ namespace Tools {
             
             let result = bx.GData.formatCoin( ((this.clock / 50) * unit) * 100);
             this.view.text = (unit >= 0) ? ('+' + result) : result;
+            
             if(this.clock == this.time){
                 let val = bx.GData.formatCoin(value * 100);
                 this.view.text = (unit >= 0) ? ('+' + val) : val;

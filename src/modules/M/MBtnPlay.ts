@@ -12,7 +12,7 @@ namespace point21{
         public activyId:number = 0;                                //当前正在操作的牌（左中右）
         public card1:number;
         public card2:number;
-
+        public static betValArr: number[];                   //五个位置的下注值
         public roomType:number;                                 //房间类型
 
         constructor(){}
@@ -26,6 +26,7 @@ namespace point21{
         //重置
         reset():void{
             this.view.hide();
+            MBtnPlay.betValArr = [0,0,0,0,0];
         }
 
         //设置底注 最大注 最小注
@@ -75,8 +76,6 @@ namespace point21{
                     this.view.btnUnable('maxBet');
                     this.view.btnUnable('bet');
                     this.view.btnUnable('continueBet');
-                }else if(this.view.betValue && MRoom.selfMoney < this.view.betValue){
-                    this.view.btnUnable('continueBet');
                 }
             }else if(stage == 1){
                 if(this.card1 && (this.card1 % 16 == this.card2 % 16) && (this.activyId == 0)){
@@ -89,7 +88,7 @@ namespace point21{
                     this.view.btnUnable('double');
                 }
             }else if(stage == 2){
-                let insuranceMoney = this.view.betValue / 2;
+                let insuranceMoney = MBtnPlay.betValArr[MRoom.getSeatId(this.activyPos) - 1] / 2;
                 if(MRoom.selfMoney < insuranceMoney){
                     this.view.btnUnable('insurance');
                 }
@@ -100,7 +99,7 @@ namespace point21{
          * 判断当前余额是否大于当前下注金额
          */
         isEnoughMoney():boolean{
-            return MRoom.selfMoney > this.view.betValue;
+            return MRoom.selfMoney > MBtnPlay.betValArr[MRoom.getSeatId(this.activyPos) - 1];
         }
 
         //设置cards

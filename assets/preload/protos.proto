@@ -49,11 +49,16 @@ message gameResult {
 	required int64 balance = 2;
 	required uint64 chips = 3;
 	repeated posResult result = 4;
+	repeated posBalance pos_all_balance = 5;
 }
 message posResult {
 	required uint32 pos = 1;
 	required uint32 which_one = 2;
 	required int64 balance = 3;
+}
+message posBalance {
+	required uint32 pos = 1;
+	required int64 balance = 2;
 }
 message recRoomInfo {
 	required uint32 cur_pos = 1;
@@ -138,4 +143,7 @@ message gmCardsList {
 }
 message gmResp {
 	required uint32 result = 1;
+}
+message clientError {
+	required string error = 1;
 }

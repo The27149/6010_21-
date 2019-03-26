@@ -1,1 +1,1 @@
-{"modules+":["xys.MGM","point21.MMarquee","point21.MStrategy","point21.MWalletBtn"]}
+{"modules+":["point21.MError","xys.MGM","point21.MMarquee","point21.MStrategy","point21.MWalletBtn"]}

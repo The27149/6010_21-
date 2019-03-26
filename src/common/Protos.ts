@@ -16,6 +16,7 @@ namespace protos {
 		recBankerOpState = 12301,
 		gmReq = 12302,
 		gmResp = 12303,
+		clientError = 12304,
 	}
 	export interface playerInfoPush {
 		curPos: number;
@@ -89,8 +90,10 @@ namespace protos {
 		balance: number;
 		/** 余额 */
 		chips: number;
-		/** 每个座位的结果列表 */
+		/** 每个座位的结果列表, 细化到某副牌 */
 		result: Array<posResult>;
+		/** 统计每个座位的总收支 */
+		posAllBalance: Array<posBalance>;
 	}
 	export interface posResult {
 		/** 座位号 */
@@ -98,6 +101,12 @@ namespace protos {
 		/** 某一副牌 */
 		whichOne: number;
 		/** 该座位输赢钱金额 */
+		balance: number;
+	}
+	export interface posBalance {
+		/** 某个座位 */
+		pos: number;
+		/** 该座位的总收支 */
 		balance: number;
 	}
 	/** 断线重连 - 房间信息 */
@@ -246,5 +255,9 @@ namespace protos {
 	export interface gmResp {
 		/** 1: 成功, 2: 失败 */
 		result: number;
+	}
+	export interface clientError {
+		/** 客户端错误 */
+		error: string;
 	}
 }
