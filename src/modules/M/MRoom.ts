@@ -151,6 +151,7 @@ namespace point21 {
                     break;
                 //玩家信息推送
                 case protos.CCMD.playerInfoPush:
+                    bx.MMenu.gameOver = false;
                     SoundManager.instance.playSound(AssetsUtils.getSoundUrl('start'));
                     this.popupMatchVisible(false);
                     this.getPlayerInfo(data[0]);
@@ -367,6 +368,7 @@ namespace point21 {
 
         //断线重连 房间信息
         recRoomInfo(res: protos.recRoomInfo): void {
+            bx.MMenu.gameOver = false;
             this.reset();
             this.mBtnPlay.roomType = res.roomType;
             MRoom.gap = res.curPos - 3;
@@ -662,6 +664,7 @@ namespace point21 {
                     }
                     this.mPlayer.setCoin(pos, data[i].chips);
                     this.mBtnPlay.inStage(3);
+                    bx.MMenu.gameOver = true;
                 }
             })
         }
