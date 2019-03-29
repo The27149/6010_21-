@@ -1,6 +1,6 @@
 {
     "game_id": 6010, //游戏id
-    "game_version": 44, //游戏版本号
+    "game_version": 46, //游戏版本号
     "modules-": [], //需要移除的公共模块完整类名（含包名）
     "preload-": [], //需要移除的公共预加载资源包名
     "preload+": [ //需要预加载的资源包名
@@ -8,7 +8,7 @@
         "languages",
         "sound"
     ],
-    "language": "en-us", //当前语言
+    "language": "zh-cn", //当前语言
     "languages": [ //多语言列表
         "zh-cn",
         "en-us"
