@@ -67,6 +67,7 @@ module fui.room {
 		public m_result4:FUI_result;
 		public m_result5:FUI_result;
 		public m_result_self:FUI_result;
+		public m_resultTip:FUI_resultTip;
 
 		public static URL:string = "ui://2mffi74ewuvl2w";
 
@@ -144,6 +145,7 @@ module fui.room {
 			this.m_result4 = <FUI_result><any>(this.getChildAt(58));
 			this.m_result5 = <FUI_result><any>(this.getChildAt(59));
 			this.m_result_self = <FUI_result><any>(this.getChildAt(60));
+			this.m_resultTip = <FUI_resultTip><any>(this.getChildAt(61));
 		}
 	}
 }

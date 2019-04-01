@@ -5,6 +5,7 @@ module fui.room {
 	export class roomBinder{
 		public static bindAll():void {
 			fairygui.UIObjectFactory.setPackageItemExtension(FUI_result.URL, FUI_result);
+			fairygui.UIObjectFactory.setPackageItemExtension(FUI_resultTip.URL, FUI_resultTip);
 			fairygui.UIObjectFactory.setPackageItemExtension(FUI_hand.URL, FUI_hand);
 			fairygui.UIObjectFactory.setPackageItemExtension(FUI_chip.URL, FUI_chip);
 			fairygui.UIObjectFactory.setPackageItemExtension(FUI_strategyBt2.URL, FUI_strategyBt2);

@@ -651,6 +651,16 @@ namespace point21 {
         onGetResult(res: protos.gameSettlementPush): void {
             let data = res.result;
             this.mPlayerArea.settlement(data);
+            let isTongpei = true,
+                isTongsha = true;
+            for(let item of data){
+                if(item.balance < 0) isTongpei = false;
+                if(item.balance > 0) isTongsha = false;
+            }
+            if(isTongpei) this.view.playSk_tongpei();
+            Laya.timer.once(1000, this, function(){
+                if(isTongsha) this.view.playSk_tongsha();
+            });
             Laya.timer.once(2000, this, function () {
                 for (let i = 0; i < data.length; i++) {
                     let pos = MRoom.getSeatId(data[i].pos);

@@ -203,6 +203,7 @@
     <image id="j77cfm" name="_0000_B.png" path="/resource/Horizontal/sz2/"/>
     <image id="j77cfn" name="_0001_M.png" path="/resource/Horizontal/sz2/"/>
     <image id="j77cfo" name="_0000_K.png" path="/resource/Horizontal/sz2/"/>
+    <component id="esmifp" name="resultTip.xml" path="/component/"/>
   </resources>
   <publish name="room" path="{rootPath}\assets\room" genCode="true" npot="true">
     <atlas compression="true" index="0"/>

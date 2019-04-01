@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="423,62">
-  <controller name="resultCtl" pages="0,,1," selected="1">
+  <controller name="resultCtl" pages="0,,1," selected="0">
     <remark page="0" value="输"/>
     <remark page="1" value="赢"/>
   </controller>
   <displayList>
-    <text id="n0_6xef" name="win" xy="-2,0" pivot="0.5,0.5" size="428,64" font="ui://2mffi74e6xefbq" fontSize="14" align="center" vAlign="middle" leading="0" autoSize="none" autoClearText="true" text="15K62M56">
+    <text id="n0_6xef" name="win" xy="-2,0" pivot="0.5,0.5" size="428,64" locked="true" hideByEditor="true" font="ui://2mffi74e6xefbq" fontSize="14" align="center" vAlign="middle" leading="0" autoSize="none" autoClearText="true" text="15K62M56+">
       <gearDisplay controller="resultCtl" pages="1"/>
     </text>
-    <text id="n1_6xef" name="fail" xy="0,0" pivot="0.5,0.5" size="422,64" font="ui://2mffi74e6xefch" fontSize="14" align="center" vAlign="middle" leading="0" autoSize="none" autoClearText="true" text="454555">
+    <text id="n1_6xef" name="fail" xy="0,0" pivot="0.5,0.5" size="422,64" font="ui://2mffi74e6xefch" fontSize="14" align="center" vAlign="middle" leading="0" autoSize="none" autoClearText="true" text="4125">
       <gearDisplay controller="resultCtl" pages="0"/>
     </text>
   </displayList>

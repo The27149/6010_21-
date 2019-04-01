@@ -9,7 +9,9 @@ namespace point21{
 
         private timeVal:number;                     //倒计时剩余时间
         private isPlayingClockSound:boolean = false;              //正在播放倒计时声音
-        
+        private tongshaSk: bx.Skeleton[] = [];           //通杀的骨骼动画
+        private tongpeiSk: bx.Skeleton[] = [];           //通赔的骨骼动画
+
         constructor(){
             super('fui.room.FUI_roomView',"room_dt");
             this._view = this.ui as fui.room.FUI_roomView;
@@ -27,6 +29,35 @@ namespace point21{
             // this._view.m_result1.m_fail.pivotX = 0;
             // this._view.m_result5.m_win.pivotX = 1;
             // this._view.m_result5.m_fail.pivotX = 1;
+            this.tongshaSk[0] = new bx.Skeleton('tongsha1.sk'),
+            this.tongshaSk[1] = new bx.Skeleton('tongsha2.sk'),
+            this.tongpeiSk[0] = new bx.Skeleton('tongpei1.sk'),
+            this.tongpeiSk[1] = new bx.Skeleton('tongpei2.sk');
+            this.tongshaSk[0].sk.blendMode = this.tongpeiSk[0].sk.blendMode = 'lighter';
+            this.tongshaSk[0].completeHandle = this.tongpeiSk[0].completeHandle = Laya.Handler.create(this, function(){
+                this._view.m_resultTip.m_ctl.selectedIndex = 0;
+            },null,false)
+            let tongshaTip = this._view.m_resultTip.m_tongsha,
+                tongpeiTip = this._view.m_resultTip.m_tongpei;
+            tongshaTip.displayObject.addChildren(this.tongshaSk[1].sk,this.tongshaSk[0].sk);
+            tongpeiTip.displayObject.addChildren(this.tongpeiSk[1].sk,this.tongpeiSk[0].sk);
+            this.tongshaSk[0].sk.x = this.tongshaSk[1].sk.x = tongshaTip.width / 2;
+            this.tongshaSk[0].sk.y = this.tongshaSk[1].sk.y = tongshaTip.height / 2;
+            this.tongpeiSk[0].sk.x = this.tongpeiSk[1].sk.x = tongpeiTip.width / 2;
+            this.tongpeiSk[0].sk.y = this.tongpeiSk[1].sk.y = tongpeiTip.height / 2;
+        }
+
+        playSk_tongsha(): void{
+            this._view.m_resultTip.m_ctl.selectedIndex = 1;
+            let name = 'tongsha_' + bx.GData.curLanguage.replace('-', '_');
+            this.tongshaSk[0].play(name, false);
+            this.tongshaSk[1].play(name, false);
+        }
+        playSk_tongpei(): void{
+            this._view.m_resultTip.m_ctl.selectedIndex = 2;
+            let name = 'tongpei_' + bx.GData.curLanguage.replace('-', '_');
+            this.tongpeiSk[0].play(name, false);
+            this.tongpeiSk[1].play(name, false);
         }
 
         //将视图分配给其他类管理
@@ -43,7 +74,10 @@ namespace point21{
             bx.Framework.notify(point21.GConst.n_Vmanager_player,players);
         }
 
+
+
         reset():void{
+            this._view.m_resultTip.m_ctl.selectedIndex = 0;
             this.isPlayingClockSound = false;
             this._view.m_clock.visible = false;
             this._view.m_card1.visible = false;
