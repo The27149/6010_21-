@@ -654,8 +654,8 @@ namespace point21 {
             let isTongpei = true,
                 isTongsha = true;
             for(let item of data){
-                if(item.balance < 0) isTongpei = false;
-                if(item.balance > 0) isTongsha = false;
+                if(item.balance <= 0) isTongpei = false;
+                if(item.balance >= 0) isTongsha = false;
             }
             if(isTongpei) this.view.playSk_tongpei();
             Laya.timer.once(1000, this, function(){

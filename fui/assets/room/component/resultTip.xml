@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="400,163">
+  <controller name="ctl" pages="0,,1,,2," selected="0">
+    <remark page="0" value="都隐藏"/>
+    <remark page="1" value="通杀"/>
+    <remark page="2" value="通赔"/>
+  </controller>
+  <displayList>
+    <loader id="n0_esmi" name="tongsha" xy="175,56" size="50,50" align="center" vAlign="middle">
+      <gearDisplay controller="ctl" pages="1"/>
+    </loader>
+    <loader id="n1_esmi" name="tongpei" xy="175,56" size="50,50" align="center" vAlign="middle">
+      <gearDisplay controller="ctl" pages="2"/>
+    </loader>
+  </displayList>
+</component>
