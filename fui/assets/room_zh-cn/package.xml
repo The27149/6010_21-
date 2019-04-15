@@ -20,7 +20,6 @@
     <image id="u1w8j" name="sb2.png" path="/" exported="true"/>
     <image id="ujigx" name="tips.png" path="/tankuang/tips/" exported="true"/>
     <image id="ujig13" name="ds.png" path="/tankuang/Strategy/" exported="true"/>
-    <image id="ujig15" name="mpds.png" path="/tankuang/Strategy/" exported="true"/>
     <image id="ujig17" name="spds.png" path="/tankuang/Strategy/" exported="true"/>
     <image id="ujig18" name="Strategy.png" path="/tankuang/Strategy/" exported="true"/>
     <image id="ujig19" name="qd.png" path="/" exported="true"/>
@@ -30,6 +29,7 @@
     <image id="o4401d" name="bd.png" path="/" exported="true"/>
     <image id="v5fh1e" name="tablez.png" path="/" exported="true"/>
     <image id="l3ii1f" name="double.png" path="/" exported="true"/>
+    <image id="cnmx1g" name="mpds.png" path="/tankuang/Strategy/" exported="true"/>
   </resources>
   <publish name="room_zh-cn" path="{rootPath}\assets\room\zh-cn" npot="true"/>
 </packageDescription>

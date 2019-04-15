@@ -60,7 +60,7 @@ namespace point21{
                     let card = this.getNewCard(pos,whichOne);
                     (card as fui.room.FUI_card).m_card.url = Utils.getCardImg(cards[j]);
                 }
-                MBtnPlay.betValArr[pos - 1] = anteChips;
+                MBtnPlay.betValArr[pos - 1] = anteChips / 100;
                 this.views[pos].setCardAndPoint(cardType,false,whichOne,minSum,maxSum);
                 this.views[pos].doubleSignVisible(isDouble,whichOne);
                 anteChips && this.views[pos].getChipListChildren(Utils.formatChips(anteChips),true,whichOne);
